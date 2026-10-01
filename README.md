@@ -10,6 +10,9 @@ foundation for the first half of the TWEAKR paper.
 **Status:** repository initialised; analysis not started.
 See [`docs/TASK_BRIEF.md`](docs/TASK_BRIEF.md) for the founding task description.
 
+The proposed design for the first analysis is under review in
+[`docs/STEP2_DEVELOPMENTAL_AXIS_PLAN.md`](docs/STEP2_DEVELOPMENTAL_AXIS_PLAN.md).
+
 ## Data
 
 No large data files live in this repo. All raw/processed/result data lives under
