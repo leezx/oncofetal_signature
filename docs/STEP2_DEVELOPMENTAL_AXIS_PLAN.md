@@ -1,315 +1,362 @@
-# Step 2 analysis plan — a conserved intestinal developmental axis
+# Step 2 — Conserved Fetal-High Intestinal Genes
 
 ## Material Passport
 
 - Origin Skill: academic-research-suite / experiment-agent
-- Origin Mode: plan
+- Origin Mode: plan revision
 - Origin Date: 2026-10-01
 - Verification Status: PLAN REVIEW REQUIRED; no analysis has been run
-- Version Label: step2_plan_v1
+- Version Label: step2_plan_v2
 
-## Decision to be made
+## Objective
 
-Identify genes that are genuinely higher in **in vivo fetal intestinal
-epithelium** than in adult intestinal epithelium in both human and mouse, while
-excluding genes whose apparent fetal enrichment is explained by the adult
-crypt/stem/transit-amplifying (TA) compartment.
+Identify genes that show reproducible fetal-high expression in intestinal
+epithelium across two independent human datasets and mouse in vivo intestine.
 
-The primary product is a table of **Conserved Fetal-High Candidates** with an
-auditable pass/fail result for every required contrast. Organoid and spheroid
-data are validation datasets only and cannot establish developmental status.
+This step is deliberately narrow. It does not attempt to reconstruct the full
+trajectory of intestinal development or model every source of technical
+variation. It tests a simple evidence chain:
 
-## Biological hypothesis
+```text
+HGCA human discovery
+        ∩
+Gao independent human replication
+        ∩
+mouse in vivo developmental evidence
+        =
+Conserved Fetal-High Candidates
+```
 
-A conserved intestinal developmental program exists that is enriched in fetal
-epithelium, is attenuated in both differentiated and proliferative adult
-epithelial compartments, and is directionally reproducible across species and
-independent human cohorts.
+The analysis stops when this set is frozen. It must not be optimized using CRC
+expression, TNFRSF12A/TWEAKR association, or downstream manuscript results.
 
 ## Scope and non-goals
 
-This step establishes only the developmental axis. It does not:
+The primary analysis:
 
-- use CRC expression to select genes;
-- optimize a score against TNFRSF12A/TWEAKR or any favored marker;
-- infer a fetal program from organoids, spheroids, injury, YAP activation, or
-  published gene lists;
-- treat cells as biological replicates;
-- merge studies before estimating within-study effects.
+- includes epithelial cells only;
+- uses donors or animals, never individual cells, as biological replicates;
+- estimates fetal-versus-adult effects independently within each dataset;
+- uses an adult proliferative epithelial compartment as a negative control;
+- uses an in vivo mouse dataset for the required cross-species evidence;
+- uses Ensembl one-to-one orthologues for the conserved set.
 
-CRC enrichment, tissue specificity, literature support, and gene-module
-coherence are later evidence axes.
+The primary analysis does not require:
+
+- cross-dataset batch correction or joint integration;
+- region-specific statistical gates;
+- leave-one-donor-out analysis;
+- developmental-stage regression;
+- human–mouse developmental-time conversion;
+- effect-size meta-analysis or rank aggregation;
+- a second mouse validation cohort;
+- rescue of one-to-many orthologues.
+
+Organoid and fetal spheroid datasets may be shown as optional validation but
+cannot establish primary developmental evidence.
 
 ## Dataset roles
 
-| Role | Dataset | Required material | Planned use |
+| Role | Dataset | Primary comparison | Evidence rule |
 |---|---|---|---|
-| Human discovery | Elmentaite et al. 2021, Space-Time Gut Cell Atlas; ArrayExpress E-MTAB-9543, E-MTAB-9536, E-MTAB-9532, E-MTAB-9533, E-MTAB-10386, and E-MTAB-8901 where relevant | raw UMI/count matrix plus donor, age, region, chemistry/library, and cell-type metadata | Primary fetal-versus-adult contrasts and adult proliferative negative control |
-| Human independent validation | Gao et al. 2018; fetal GSE95630 and adult large intestine GSE103154 (SuperSeries GSE103239) | processed counts/TPM and barcode metadata; raw data only if necessary | Large-intestine-only replication. Adult n=2 means emphasis is effect direction, magnitude, and donor consistency rather than a standalone significance claim |
-| Mouse primary | To be selected from the existing data inventory | in vivo, epithelial-resolved fetal and adult intestine; raw counts and biological replicate metadata | Required cross-species developmental contrast |
-| Culture validation | Fetal/adult organoid or spheroid datasets, including GSE228519 subseries where useful | expression matrix and replicate metadata | Sensitivity/biological interpretation only; never a primary gate |
+| Human discovery | Elmentaite et al. 2021 Human Gut Cell Atlas (HGCA) | fetal vs adult intestinal epithelium | H1 discovery plus adult proliferative control |
+| Independent human validation | Gao et al. 2018; fetal GSE95630 and adult GSE103154 | fetal vs adult large-intestinal epithelium | H2 direction and effect size; no FDR gate |
+| Mouse primary | one qualifying in vivo fetal/adult intestinal epithelial dataset | fetal vs adult intestinal epithelium | M1 effect size and FDR |
+| Culture validation | fetal/adult organoid or spheroid data | dataset-specific | optional annotation only; never a gate |
 
-The Human Gut Cell Atlas reports more than 428,000 cells across fetal,
-paediatric, and adult gut regions and supplies downloadable raw and normalized
-objects. Gao et al. profile fetal digestive tract from 6–25 gestational weeks;
-the paired adult GEO series contains 1,463 QC-passing cells from two adult large
-intestines.
+HGCA is the discovery dataset because it contains fetal, paediatric, and adult
+human gut cells from multiple anatomical regions. Gao is analyzed separately as
+an external replication cohort; its adult arm contains only two individuals,
+so it is not treated as a second high-powered discovery analysis.
 
-### Mouse dataset admission gate
+## Preflight requirements
 
-The mouse dataset must satisfy all of the following before analysis:
+Before differential expression, create and freeze a dataset manifest containing:
 
-1. freshly isolated **in vivo** intestinal epithelium at both fetal and adult
-   stages;
-2. at least three independent biological replicates per stage, or a documented
-   limitation with no cell-level pseudo-replication;
-3. raw gene-level counts and replicate-level metadata available;
-4. comparable anatomical region(s), with small and large intestine kept
-   separate when possible;
-5. no treatment, injury, tumour, transgene activation, or culture as the
-   developmental comparison;
-6. epithelial identity can be established without selecting on the candidate
-   genes being tested.
+- accession, source URL, assay, genome build, and matrix provenance;
+- donor/animal ID, library ID, developmental stage, age, region, chemistry, and
+  batch when available;
+- original and harmonized epithelial labels;
+- number of retained epithelial cells per biological replicate;
+- exclusions and reasons;
+- availability of raw counts;
+- source-file checksums.
 
-If no existing asset passes this gate, execution stops for dataset selection or
-acquisition. An organoid dataset must not be promoted to primary evidence.
-
-## Preflight audit and frozen metadata
-
-Before differential expression (DE), create a dataset manifest containing:
-
-- accession, paper, assay, genome build, and matrix provenance;
-- donor/animal ID, library ID, developmental stage, exact age, anatomical
-  region, sex when available, chemistry, and batch;
-- original and harmonized epithelial cell labels;
-- cells per donor/animal × region × compartment;
-- exclusions and their reasons;
-- whether raw counts, normalized values, or both are present;
-- checksums for downloaded source files.
-
-The manifest and a frozen cell-inclusion table are required inputs. Cell labels
-must be harmonized without reference to the eventual candidate-gene results.
-Paediatric samples are descriptive and are excluded from the primary fetal vs
-adult contrast.
+Cell inclusion and label harmonization must be completed without reference to
+the candidate-gene results. Paediatric samples are excluded from the primary
+fetal-versus-adult contrast.
 
 ### Epithelial inclusion
 
-Retain high-confidence epithelial cells after dataset-appropriate QC and
-doublet removal. Confirm epithelial identity using a panel (for example EPCAM,
-KRT8, KRT18, KRT19) and exclude immune, endothelial, and mesenchymal
-contamination using multi-gene panels. Do not require TACSTD2, CLU, ANXA1,
-LY6A, TNFRSF12A, or other proposed oncofetal markers for inclusion.
+Restrict all primary comparisons to high-confidence epithelial cells after
+dataset-appropriate QC and doublet removal. Confirm epithelial identity using
+multiple epithelial markers and exclude immune, endothelial, and mesenchymal
+cells using multi-gene evidence.
 
-Adult epithelium is partitioned before testing into:
+Do not use TACSTD2, CLU, ANXA1, LY6A, TNFRSF12A, or other proposed oncofetal
+markers as required inclusion markers.
 
-1. **adult proliferative**: crypt stem, cycling stem/progenitor, and TA cells;
-2. **adult differentiated**: absorptive and secretory epithelial lineages;
-3. **adult all-epithelium**: the union of adult epithelial cells.
+Each human donor or mouse animal must contribute at least 50 retained epithelial
+cells to a single-cell pseudobulk. This is a pragmatic eligibility threshold,
+not a claim that 50 cells guarantees statistical power.
 
-Original annotations are preserved, and every harmonized label must map back to
-an original label. Ambiguous cells are retained only in all-epithelium
-sensitivity analyses, not in compartment-specific gates.
+## H1 — human discovery in HGCA
 
-## Statistical unit and pseudobulk construction
+### Pseudobulk unit
 
-The biological replicate is the donor (human) or animal (mouse), not the cell
-or sequencing library.
+Aggregate raw counts to:
 
-1. Sum raw counts within donor/animal × broad anatomical region × developmental
-   stage × epithelial compartment.
-2. Combine technical libraries from the same biological replicate before DE.
-3. Require a pre-specified minimum of 30 retained cells per pseudobulk and at
-   least 10 detected counts for a gene in enough biological replicates to make
-   the contrast estimable. Report sensitivity at 20 and 50 cells.
-4. Do not pseudobulk normalized or integrated expression values.
-5. Never use batch-corrected embeddings or imputed expression for DE.
+```text
+donor × developmental stage
+```
 
-When a donor contributes multiple regions, repeated observations must not be
-treated as independent. The primary analysis will either sum within a matched
-broad region per donor or use a repeated-measures model; the exact choice is
-frozen after the metadata audit and before examining candidate results.
+for all eligible epithelial cells. If one donor contributes multiple intestinal
+regions or technical libraries, combine them within that donor for the primary
+analysis. A donor × region observation must not be treated as an independent
+biological replicate.
 
-## Primary contrasts
+Region-specific results may be reported descriptively as a sensitivity analysis
+but do not determine H1.
 
-Estimate effects independently within each dataset. Small intestine and large
-intestine/colon are analyzed separately first; a pooled regional estimate is
-secondary and must model region.
+### Primary discovery comparison
 
-For each eligible region, fit a count-aware pseudobulk model (edgeR
-quasi-likelihood is the default) with developmental stage as the coefficient of
-interest and known technical covariates included only when estimable. Report
-log2 fold change, 95% confidence interval, raw P value, and Benjamini–Hochberg
-FDR.
+Compare:
 
-Required contrasts are:
+```text
+fetal intestinal epithelium vs adult intestinal epithelium
+```
 
-- fetal epithelium vs adult all-epithelium;
-- fetal epithelium vs adult differentiated epithelium;
-- fetal epithelium vs adult proliferative epithelium.
+using edgeR quasi-likelihood differential expression on donor-level raw-count
+pseudobulks with:
 
-Cell-cycle scores are reported as diagnostics, not regressed from the primary
-model. The proliferative-compartment contrast is the biological negative
-control. A cell-cycle-regressed result may be shown only as sensitivity analysis.
+```text
+~ developmental_stage
+```
 
-## Candidate gates
+as the default design. Add a technical covariate only when it is not perfectly
+confounded with developmental stage and the available donor count supports its
+estimation. Do not use normalized, integrated, batch-corrected, or imputed
+expression values for differential expression. Apply `edgeR::filterByExpr`
+using the donor-level developmental-stage groups before model fitting.
 
-Thresholds are frozen before DE and applied gene-by-gene without exceptions.
+The primary HGCA fetal-high criterion is:
 
-### Gate H1 — human discovery (HGCA)
+- log2FC ≥ 0.5; and
+- Benjamini–Hochberg FDR < 0.05.
 
-A gene passes H1 only when:
+### Adult proliferative epithelial negative control
 
-- log2FC ≥ 0.5 and FDR < 0.05 for all three required contrasts in at least one
-  anatomically matched intestinal region;
-- the log2FC is positive in every other estimable human region;
-- the leave-one-donor-out log2FC remains positive; and
-- no single donor contributes more than 50% of total pseudobulk counts for that
-  gene within either stage.
+Construct a single adult proliferative epithelial compartment by combining
+annotated adult:
 
-### Gate H2 — independent human validation (Gao)
+- stem cells;
+- progenitor cells;
+- transit-amplifying cells;
+- cycling epithelial cells.
 
-Because only two adult donors are available, H2 is a replication gate rather
-than a second discovery test. A gene passes when:
+Aggregate its raw counts at the donor level and compare fetal epithelium with
+adult proliferative epithelium. This contrast asks whether a gene is fetal-high
+rather than merely high in proliferating or crypt-progenitor cells.
 
-- fetal large-intestinal epithelium has log2FC ≥ 0.5 versus adult large-
-  intestinal epithelium;
-- the effect is positive against each adult donor separately; and
-- the direction is positive in the adult proliferative comparison when the
-  published cell labels permit that contrast.
+The negative-control criterion is directional:
 
-Nominal P values/FDR are reported but are not used to rescue a weak or
-discordant effect. If raw-count-compatible pseudobulk cannot be reconstructed,
-the result is explicitly labeled `effect-only validation`.
+- fetal/adult-proliferative log2FC > 0.
 
-### Gate M1 — mouse in vivo
+It is not required to meet a separate FDR threshold. Separate adult stem, TA,
+progenitor, or cycling comparisons may be shown descriptively but are not hard
+gates.
 
-The one-to-one mouse orthologue must show log2FC ≥ 0.5 and FDR < 0.05 for fetal
-versus adult in vivo epithelium, remain positive in leave-one-animal-out
-analysis, and—when adult annotations allow—remain positive versus adult
-proliferative and adult differentiated compartments separately.
+A gene passes **H1** when it passes both the primary HGCA fetal-high criterion
+and the adult proliferative directional control.
 
-### Final labels
+## H2 — independent human validation in Gao et al. 2018
+
+Restrict validation to:
+
+- fetal large-intestinal epithelial cells; and
+- adult large-intestinal epithelial cells.
+
+Exclude oesophagus and stomach. Aggregate at the biological donor/sample level
+where the metadata permit. Analyze Gao independently from HGCA; do not batch
+correct or integrate the two datasets.
+
+Because the adult reference contains only two individuals, statistical
+significance is not a hard replication requirement. A gene passes **H2** when:
+
+- the overall fetal/adult log2FC is ≥ 0.5; and
+- fetal expression is directionally higher than each adult donor separately.
+
+The operational donor-consistency check must be frozen before testing. By
+default, the median normalized fetal pseudobulk expression must exceed the
+normalized expression of each adult donor. Report any nominal P value or FDR,
+but do not use it to rescue or reject H2.
+
+If donor-level raw-count pseudobulk cannot be reconstructed, label this result
+`effect-only validation` and document the expression scale used.
+
+## M1 — mouse in vivo developmental evidence
+
+Select one mouse dataset that provides:
+
+- freshly isolated in vivo fetal and adult intestinal epithelium;
+- identifiable biological replicates in both stages;
+- raw gene-level counts;
+- no injury, tumour, treatment, transgene activation, organoid culture, or
+  spheroid culture in the primary comparison.
+
+Purified epithelial bulk RNA-seq and epithelial scRNA-seq with animal-level
+pseudobulk are both acceptable. A well-replicated purified epithelial bulk
+dataset is not downgraded merely because it is not single-cell.
+
+For scRNA-seq, combine eligible regions and technical libraries within each
+animal for the primary pseudobulk. For sorted bulk RNA-seq, use the animal-level
+libraries directly after confirming that technical replicates are not counted
+as independent animals.
+
+Compare:
+
+```text
+mouse fetal vs adult in vivo intestinal epithelium
+```
+
+A one-to-one mouse orthologue passes **M1** when:
+
+- log2FC ≥ 0.5; and
+- Benjamini–Hochberg FDR < 0.05.
+
+If no existing dataset meets the admission requirements, stop at dataset
+selection or acquisition. Do not promote an organoid or spheroid dataset to
+primary evidence.
+
+## Cross-species mapping and final definition
+
+Map human and mouse genes using Ensembl one-to-one orthologues from a frozen,
+documented Ensembl release.
+
+Genes without a one-to-one orthologue are excluded from the primary conserved
+set but may be retained in a separate species-specific table. No one-to-many
+rescue, cross-species meta-analysis, weighted score, or rank aggregation is
+required for this step.
+
+A gene is a **Conserved Fetal-High Candidate** only when:
+
+1. it passes HGCA discovery and the adult proliferative control (**H1**);
+2. it passes Gao directional/effect-size replication (**H2**); and
+3. its one-to-one mouse orthologue passes in vivo mouse evidence (**M1**).
+
+Therefore:
+
+```text
+Conserved Fetal-High = H1 ∩ H2 ∩ M1
+```
+
+Additional labels are retained for auditability:
 
 | Label | Definition |
 |---|---|
 | Conserved Fetal-High Candidate | passes H1, H2, and M1 |
-| Conserved discovery-only holdout | passes H1 and M1 but fails or is untestable in H2; excluded from the final strict set |
-| Human fetal-high only | passes H1/H2 but not M1 or lacks a one-to-one orthologue |
-| Proliferation-associated reject | fetal-high vs adult all/differentiated but fails fetal vs adult proliferative |
-| Culture-supported | annotation added after primary classification; cannot change a fail to pass |
+| Conserved discovery holdout | passes H1 and M1 but not H2; excluded from the strict set |
+| Human fetal-high only | passes H1 and H2 but not M1 or lacks a one-to-one orthologue |
+| Proliferation-associated reject | passes primary HGCA fetal/adult criterion but has fetal/adult-proliferative log2FC ≤ 0 |
+| Species-specific developmental candidate | passes within species but has no one-to-one orthologue |
+| Culture-supported | optional annotation added after primary classification; never changes pass/fail status |
 
-Human–mouse mapping uses Ensembl one-to-one orthologues frozen to a documented
-release. Ambiguous one-to-many mappings are reported but excluded from the
-strict conserved set.
+## Minimal diagnostics and hard stops
 
-## Robustness and falsification analyses
+The following diagnostics are required:
 
-The following are mandatory and cannot be substituted by a larger cell count:
+- donor/animal-level expression plots for final candidates and prespecified
+  markers;
+- pseudobulk library sizes and retained cell counts for single-cell datasets;
+- PCA/MDS of pseudobulks colored by stage and known technical variables;
+- the number of donors/animals contributing to every contrast;
+- region composition per donor in HGCA;
+- enrichment of canonical S/G2M genes among the proliferation-associated
+  rejects;
+- explicit display of TACSTD2, CLU, ANXA1, LY6A, and TNFRSF12A regardless of
+  whether they pass.
 
-- donor/animal-level expression plots with all biological replicates visible;
-- leave-one-donor/animal-out effect estimates;
-- small-intestine and colon effects shown separately;
-- early and late fetal strata where sample numbers permit;
-- downsampling cells per donor to test cell-number dominance;
-- label sensitivity using narrow versus broad adult proliferative definitions;
-- comparison of results with and without ambiguous epithelial cells;
-- enrichment of canonical S/G2M genes among passes and rejects;
-- detection of chemistry/batch–stage confounding;
-- comparison with culture datasets only after the primary list is frozen.
+Stop and revise the affected contrast when:
 
-Hard stop conditions:
+- developmental stage is perfectly confounded with an unmodelled technical
+  batch;
+- raw counts or biological replicate identifiers are unavailable for HGCA or
+  the mouse primary dataset;
+- fewer than three usable biological replicates per stage are available for
+  HGCA or mouse primary evidence;
+- epithelial labels cannot be defended without using the target genes;
+- Gao cannot be separated into fetal and adult large-intestinal epithelial
+  samples or its adult donors cannot be distinguished.
 
-- stage is perfectly confounded with an unmodelled processing batch in the
-  proposed primary contrast;
-- fewer than three usable biological replicates exist in an HGCA stratum or the
-  selected mouse dataset;
-- raw counts or donor/animal identifiers are unavailable for a primary dataset;
-- epithelial or adult proliferative labels cannot be defended independently of
-  the target genes.
+Do not replace a stopped pseudobulk analysis with cell-level Wilcoxon testing.
 
-Under a hard stop, report the limitation and redesign the contrast; do not fall
-back to cell-level Wilcoxon tests.
+## Multiple testing and reporting
 
-## Multiple testing and reporting rules
+- Apply BH correction over all genes tested in each primary discovery dataset.
+- Analyze HGCA, Gao, and mouse independently; do not pool their P values.
+- Treat H1 ∩ H2 ∩ M1 as a deterministic evidence rule.
+- Report effect size even when a gene fails a gate.
+- Define all thresholds and labels before examining CRC or TWEAKR-associated
+  results.
 
-- BH correction is performed over all tested genes separately for each primary
-  dataset × region × contrast family.
-- The conjunction across contrasts/datasets is a deterministic evidence rule;
-  P values are not pooled across studies with incompatible assays.
-- Report effect sizes and confidence intervals even for genes failing FDR.
-- Show all proposed markers (including TACSTD2, CLU, ANXA1, LY6A and
-  TNFRSF12A) in the audit table regardless of outcome, without overriding gates.
-- Freeze thresholds, label mappings, and exclusions before viewing final gene
-  ranks.
+## Required output
 
-## Planned implementation and separation of repositories
+Generate one auditable gene-level table containing at least:
+
+| Column | Meaning |
+|---|---|
+| `gene` | human gene symbol/stable identifier |
+| `HGCA_log2FC` | fetal vs adult epithelial effect |
+| `HGCA_FDR` | BH-adjusted discovery P value |
+| `HGCA_proliferative_control_log2FC` | fetal vs adult proliferative effect |
+| `H1_pass` | HGCA discovery plus negative-control result |
+| `Gao_log2FC` | fetal vs adult large-intestinal effect |
+| `Gao_direction_consistent` | fetal exceeds each adult donor |
+| `H2_pass` | independent human replication result |
+| `mouse_gene` | mapped one-to-one mouse orthologue |
+| `Mouse_log2FC` | mouse fetal vs adult effect |
+| `Mouse_FDR` | BH-adjusted mouse P value |
+| `M1_pass` | mouse in vivo result |
+| `one_to_one_orthologue` | Ensembl relationship status |
+| `final_label` | final evidence category |
+| `Final_conserved_fetal_high` | strict H1 ∩ H2 ∩ M1 flag |
+
+Also produce:
+
+- the dataset manifest and source checksums;
+- the frozen epithelial label map and sample-inclusion table;
+- pseudobulk QC tables and plots;
+- complete HGCA, Gao, and mouse effect tables;
+- the frozen Ensembl orthologue map and release;
+- scripts, package versions, commands, and session information needed for a
+  clean rerun.
+
+## Repository separation
 
 All executable analysis, downloaded data, intermediate objects, and large
 results must live under:
 
 `/Volumes/Stelligen_SSD/Stelligen/DATA/2.PROJECTS/oncofetal_signature/step2_developmental_axis/`
 
-Proposed structure:
-
-```text
-step2_developmental_axis/
-├── raw/                 # immutable source files and checksums
-├── metadata/            # manifests, label maps, inclusion tables
-├── processed/           # filtered objects and pseudobulk counts
-├── scripts/             # numbered, reproducible scripts
-├── results/
-│   ├── tables/
-│   ├── figures/
-│   └── qc/
-└── logs/                # commands, package versions, session information
-```
-
 This GitHub repository receives only lightweight, reviewable artifacts:
-analysis plans, source code, environment lock files, final tables, figure files,
-and provenance manifests. It must not contain raw data, serialized single-cell
-objects, or large intermediate matrices.
+analysis plans, source code, environment lock files, provenance manifests,
+final tables, and figure files. It must not contain raw data, serialized
+single-cell objects, or large intermediate matrices.
 
-## Required deliverables
+## Execution sequence and checkpoints
 
-| Deliverable | Minimum content | Acceptance criterion |
-|---|---|---|
-| Dataset manifest | accessions, source URLs, checksums, assay/build, replicate and region counts | every analyzed matrix traceable to a source |
-| Cell-label map | original label, harmonized label, evidence/rule | no target-gene-based selection |
-| Pseudobulk QC | cells, library size, detected genes per replicate/stratum | exclusions documented before DE |
-| Within-dataset DE tables | gene ID/symbol, base expression, log2FC, CI, P, FDR, contrast, region | one row per tested gene/contrast; no cell-level P values |
-| Orthologue map | human and mouse stable IDs, relationship type, Ensembl release | strict set uses one-to-one only |
-| Candidate audit table | H1/H2/M1 subcriteria and final label | every gate is machine-readable and independently checkable |
-| Robustness report | leave-one-out, region, cell-number, label, and batch sensitivities | conclusions stable or limitations explicit |
-| Figures | replicate-level effects, contrast UpSets, heatmap/forest plot | donor/animal values visible; no cell-count-inflated error bars |
-| Reproducibility record | commands, package versions, seeds, file hashes | clean rerun produces the same candidate table |
-
-## Planned figure set
-
-1. Dataset and contrast schematic with discovery/validation roles.
-2. Pseudobulk sample map and QC by donor/animal, stage, region, and compartment.
-3. HGCA effect-size concordance across adult all, differentiated, and
-   proliferative contrasts.
-4. Cross-species human–mouse log2FC plot with Gao validation status.
-5. Donor-level forest/strip plots for all final candidates and prespecified
-   markers.
-6. Candidate flow diagram showing removals at H1, proliferation control, H2,
-   orthology, and M1.
-
-## Execution sequence and review checkpoints
-
-1. **Checkpoint A — dataset admission:** approve manifests, mouse primary
-   dataset, replicate counts, and confounding assessment.
-2. **Checkpoint B — annotation freeze:** approve epithelial inclusion and adult
-   proliferative/differentiated label map.
-3. Construct pseudobulks and publish QC; no gene ranking yet.
-4. **Checkpoint C — model freeze:** approve contrasts, covariates, filtering,
-   and thresholds.
-5. Run HGCA H1, then lock the human discovery table.
-6. Run Gao H2 and mouse M1 independently.
-7. Apply the deterministic conjunction and orthology rules.
-8. Run robustness/falsification analyses and generate deliverables.
-9. **Checkpoint D — interpretation:** approve the final strict and holdout
-   tables before any CRC-axis analysis.
+1. **Checkpoint A — dataset admission:** approve manifests, the mouse primary
+   dataset, biological replicate counts, and the confounding assessment.
+2. **Checkpoint B — annotation freeze:** approve epithelial inclusion and the
+   combined adult proliferative label map.
+3. Construct donor/animal-level pseudobulks and publish QC.
+4. **Checkpoint C — model freeze:** approve the simple within-dataset models,
+   thresholds, and the Gao donor-consistency operation.
+5. Run and freeze H1, H2, and M1 independently.
+6. Apply the frozen one-to-one orthologue and deterministic intersection rules.
+7. **Checkpoint D — result freeze:** approve the auditable candidate table.
+8. Stop Step 2 and proceed to the CRC-high axis; do not tune the developmental
+   definition using downstream results.
 
 ## Sources verified for this plan
 
