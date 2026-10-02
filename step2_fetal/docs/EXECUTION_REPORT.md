@@ -10,7 +10,7 @@
 
 ## Frozen implementation
 
-The approved gates in `STEP2_DEVELOPMENTAL_AXIS_PLAN.md` were applied without
+The approved gates in `ANALYSIS_PLAN.md` were applied without
 adding integration, trajectory, region-specific differential expression, GSEA,
 or additional validation cohorts.
 
@@ -64,7 +64,7 @@ or additional validation cohorts.
 - HGCA was joined to Ensembl by stable human gene ID; Gao was joined by the
   HGCA gene symbol; mouse evidence was joined by Ensembl mouse gene symbol.
 - Result: 13,397 HGCA-tested genes had a one-to-one mapping; 706 passed H1,
-  H2, and M1 and are written to `results/step2/Conserved_Fetal_High.csv`.
+  H2, and M1 and are written to `results/tables/Conserved_Fetal_High.csv`.
 
 ## DATA locations
 
@@ -76,8 +76,13 @@ or additional validation cohorts.
 
 ## Reproduction order
 
-1. `scripts/01_hgca_pseudobulk.py`
-2. `scripts/02_hgca_fetal_high.R`
-3. `scripts/03_gao_validation.py`
-4. `scripts/04_mouse_fetal_high.R`
-5. `scripts/05_cross_species_intersection.py`
+1. `scripts/00_download_inputs.sh`
+2. `scripts/01_hgca_pseudobulk.py`
+3. `scripts/02_hgca_fetal_high.R`
+4. `scripts/03_gao_validation.py`
+5. `scripts/04_mouse_fetal_high.R`
+6. `scripts/05_cross_species_intersection.py`
+7. `scripts/06_plot_volcano.R`
+
+The complete command sequence is encoded in `scripts/run_step2.sh` and explained
+in `docs/RUNBOOK.md`.

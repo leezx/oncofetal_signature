@@ -1,0 +1,76 @@
+---
+title: "Step 2 — Conserved fetal-high intestinal genes"
+date: "2026-10-02"
+format:
+  html:
+    toc: true
+    embed-resources: true
+    code-fold: true
+execute:
+  enabled: false
+---
+
+## Objective
+
+Identify intestinal epithelial genes with reproducible fetal-high expression in
+HGCA human discovery, Gao 2018 human replication, and an in-vivo mouse
+fetal-versus-adult comparison.
+
+## Frozen evidence chain
+
+```text
+HGCA H1 ∩ Gao H2 ∩ mouse M1 = Conserved Fetal-High Candidates
+```
+
+The complete statistical definitions are in [ANALYSIS_PLAN.md](ANALYSIS_PLAN.md),
+and exact execution details are in [EXECUTION_REPORT.md](EXECUTION_REPORT.md).
+
+## Inputs and biological replicates
+
+| Dataset | Role | Biological replicates |
+|---|---|---:|
+| HGCA | human discovery | 16 fetal, 7 adult donors |
+| Gao 2018 | human replication | 12 fetal embryos, 2 adult donors |
+| GSE230581 | mouse in-vivo evidence | 3 fetal, 3 adult samples |
+
+Raw and processed data are managed under `/Volumes/Stelligen_SSD/Stelligen/DATA`.
+They are not stored in GitHub.
+
+## Differential expression results
+
+| Gate | Passing genes |
+|---|---:|
+| HGCA primary | 4,733 |
+| Complete H1 with proliferative control | 4,645 |
+| Gao H2 | 5,271 |
+| Mouse M1 | 3,140 |
+| Strict H1 ∩ H2 ∩ M1 | **706** |
+
+Positive fold change denotes fetal-high expression. HGCA and mouse differential
+expression used edgeR quasi-likelihood models on biological-replicate count
+profiles. Gao was retained as effect-only validation.
+
+## Human and mouse volcano plots
+
+![Human HGCA and mouse in-vivo fetal-versus-adult differential expression. Red denotes fetal-high, blue adult-high, and grey genes that do not pass both |log2FC| ≥ 0.5 and FDR < 0.05.](../results/figures/human_mouse_fetal_vs_adult_volcano.png){fig-alt="Paired volcano plots for human and mouse fetal versus adult intestinal epithelium" width=100%}
+
+The full DEG tables are:
+
+- `results/tables/human_HGCA_fetal_vs_adult_DEG.csv`
+- `results/tables/mouse_in_vivo_fetal_vs_adult_DEG.csv`
+
+## Final output
+
+`results/tables/Conserved_Fetal_High.csv` contains 706 genes. Each row retains
+human discovery, adult-proliferative control, Gao adult-donor values, mouse
+evidence, and Ensembl release 116 one-to-one orthology fields.
+
+## Reproduction and QA
+
+- Run the complete workflow with `bash step2_fetal/scripts/run_step2.sh`.
+- See [RUNBOOK.md](RUNBOOK.md) for dependencies and restart points.
+- See [QA.md](QA.md) for integrity, assertion, and figure checks.
+- See the repository-level `WORKLOG.md` for chronological decisions.
+
+No joint integration, UMAP, trajectory, fetal-age analysis, GSEA, or organoid
+substitution was introduced in Step 2.

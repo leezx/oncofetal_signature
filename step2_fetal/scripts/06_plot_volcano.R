@@ -8,9 +8,14 @@ suppressPackageStartupMessages({
 })
 
 args <- commandArgs(trailingOnly = TRUE)
-input_dir <- if (length(args) >= 1L) args[[1]] else "step2_fetal"
-output_dir <- if (length(args) >= 2L) args[[2]] else input_dir
+if (length(args) != 3L) {
+  stop("Usage: 06_plot_volcano.R <tables_dir> <figures_dir> <source_data_dir>")
+}
+input_dir <- args[[1]]
+output_dir <- args[[2]]
+source_data_dir <- args[[3]]
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(source_data_dir, recursive = TRUE, showWarnings = FALSE)
 
 palette <- c(
   "Fetal-high" = "#C84B31",
@@ -119,8 +124,8 @@ mouse_raw$plot_gene <- ifelse(
 human <- prepare_volcano(human_raw, "gene", "HGCA_log2FC", "HGCA_FDR")
 mouse <- prepare_volcano(mouse_raw, "plot_gene", "Mouse_log2FC", "Mouse_FDR")
 
-write.csv(human, file.path(output_dir, "human_volcano_source_data.csv"), row.names = FALSE)
-write.csv(mouse, file.path(output_dir, "mouse_volcano_source_data.csv"), row.names = FALSE)
+write.csv(human, file.path(source_data_dir, "human_volcano_source_data.csv"), row.names = FALSE)
+write.csv(mouse, file.path(source_data_dir, "mouse_volcano_source_data.csv"), row.names = FALSE)
 
 p_human <- make_volcano(human, "Human HGCA: fetal vs adult intestinal epithelium")
 p_mouse <- make_volcano(mouse, "Mouse in vivo: fetal epithelium vs adult crypt")
