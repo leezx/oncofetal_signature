@@ -619,6 +619,564 @@ fails (17/24 +)",0.0775316054593175,"*"
 fails (17/24 +)",NA,""
 "EPS8L1","Hnew3_debug",-1.16940691251907,0.012042090787275,"Hnew3_debug
 fails (17/24 +)",-1.16940691251907,"*"
+"TACSTD2","HGCA_early",0.811148830696118,0.191256956524953,"HGCA_early
+fails (13/23 +)",0.811148830696118,""
+"CLU","HGCA_early",1.03190620400861,0.171143354669339,"HGCA_early
+fails (13/23 +)",1.03190620400861,""
+"ANXA1","HGCA_early",-1.37027340482826,0.0008201541828044,"HGCA_early
+fails (13/23 +)",-1.37027340482826,"*"
+"TNFRSF12A","HGCA_early",-1.58182790752298,0.0062217726826155,"HGCA_early
+fails (13/23 +)",-1.58182790752298,"*"
+"GJA1","HGCA_early",6.32144226227431,3.53475191085662e-08,"HGCA_early
+fails (13/23 +)",4,"*"
+"ANXA3","HGCA_early",1.15149228143887,0.0010354908491006,"HGCA_early
+fails (13/23 +)",1.15149228143887,"*"
+"ANXA6","HGCA_early",2.02038468905562,0.0005867055998213,"HGCA_early
+fails (13/23 +)",2.02038468905562,"*"
+"LY6A","HGCA_early",NA,NA,"HGCA_early
+fails (13/23 +)",NA,""
+"SPP1","HGCA_early",NA,NA,"HGCA_early
+fails (13/23 +)",NA,""
+"SPRR1A","HGCA_early",NA,NA,"HGCA_early
+fails (13/23 +)",NA,""
+"IL33","HGCA_early",NA,NA,"HGCA_early
+fails (13/23 +)",NA,""
+"MIF","HGCA_early",0.176058899665043,0.716228647660614,"HGCA_early
+fails (13/23 +)",0.176058899665043,""
+"CCN2","HGCA_early",2.77223443930261,0.0001602241969987,"HGCA_early
+fails (13/23 +)",2.77223443930261,"*"
+"CCN1","HGCA_early",1.74254418361949,0.0279312744247702,"HGCA_early
+fails (13/23 +)",1.74254418361949,"*"
+"ANKRD1","HGCA_early",8.66602824947898,2.61160757077537e-05,"HGCA_early
+fails (13/23 +)",4,"*"
+"SOX17","HGCA_early",NA,NA,"HGCA_early
+fails (13/23 +)",NA,""
+"RBP1","HGCA_early",5.70427252386562,1.23771365427465e-05,"HGCA_early
+fails (13/23 +)",4,"*"
+"AREG","HGCA_early",-3.82901956673075,0.0001217691786365,"HGCA_early
+fails (13/23 +)",-3.82901956673075,"*"
+"EREG","HGCA_early",0.88090635489837,0.219995055388387,"HGCA_early
+fails (13/23 +)",0.88090635489837,""
+"CD44","HGCA_early",-5.30649439898185,3.342645453874e-08,"HGCA_early
+fails (13/23 +)",-4,"*"
+"CXADR","HGCA_early",0.237607192132105,0.239342073839363,"HGCA_early
+fails (13/23 +)",0.237607192132105,""
+"BASP1","HGCA_early",4.15231643881026,6.51595040780146e-05,"HGCA_early
+fails (13/23 +)",4,"*"
+"EDN1","HGCA_early",-0.532359587917886,0.24449141227152,"HGCA_early
+fails (13/23 +)",-0.532359587917886,""
+"IL1RN","HGCA_early",-10.2786752922574,1.54311878805689e-05,"HGCA_early
+fails (13/23 +)",-4,"*"
+"MSLN","HGCA_early",-3.62073277266444,0.0028319975525667,"HGCA_early
+fails (13/23 +)",-3.62073277266444,"*"
+"REG3B","HGCA_early",NA,NA,"HGCA_early
+fails (13/23 +)",NA,""
+"EMP1","HGCA_early",-9.92198054414705,4.609015499354e-09,"HGCA_early
+fails (13/23 +)",-4,"*"
+"LAMC2","HGCA_early",-2.35693226617472,0.0018645551917896,"HGCA_early
+fails (13/23 +)",-2.35693226617472,"*"
+"MMP7","HGCA_early",NA,NA,"HGCA_early
+fails (13/23 +)",NA,""
+"L1CAM","HGCA_early",NA,NA,"HGCA_early
+fails (13/23 +)",NA,""
+"EPS8L1","HGCA_early",-2.59907487826682,4.64586761839193e-05,"HGCA_early
+fails (13/23 +)",-2.59907487826682,"*"
+"TACSTD2","HGCA_late",0.19798865128589,0.749220062902486,"HGCA_late
+fails (15/25 +)",0.19798865128589,""
+"CLU","HGCA_late",2.39020429652892,0.0011297535325881,"HGCA_late
+fails (15/25 +)",2.39020429652892,"*"
+"ANXA1","HGCA_late",-2.37689523735549,1.77035136356332e-06,"HGCA_late
+fails (15/25 +)",-2.37689523735549,"*"
+"TNFRSF12A","HGCA_late",-0.0079116097550831,0.988473049419114,"HGCA_late
+fails (15/25 +)",-0.0079116097550831,""
+"GJA1","HGCA_late",6.05432625132332,1.33898947629916e-09,"HGCA_late
+fails (15/25 +)",4,"*"
+"ANXA3","HGCA_late",1.98732901132584,6.7248354618785e-09,"HGCA_late
+fails (15/25 +)",1.98732901132584,"*"
+"ANXA6","HGCA_late",2.41044937648594,6.09503618318197e-06,"HGCA_late
+fails (15/25 +)",2.41044937648594,"*"
+"LY6A","HGCA_late",NA,NA,"HGCA_late
+fails (15/25 +)",NA,""
+"SPP1","HGCA_late",2.51852984972419,0.0144161597019829,"HGCA_late
+fails (15/25 +)",2.51852984972419,"*"
+"SPRR1A","HGCA_late",NA,NA,"HGCA_late
+fails (15/25 +)",NA,""
+"IL33","HGCA_late",-2.49412446880068,0.0013300804174449,"HGCA_late
+fails (15/25 +)",-2.49412446880068,"*"
+"MIF","HGCA_late",0.954081325459462,0.0423802441365801,"HGCA_late
+fails (15/25 +)",0.954081325459462,"*"
+"CCN2","HGCA_late",0.382628097563692,0.473103960554125,"HGCA_late
+fails (15/25 +)",0.382628097563692,""
+"CCN1","HGCA_late",-0.361591332412759,0.604854294765779,"HGCA_late
+fails (15/25 +)",-0.361591332412759,""
+"ANKRD1","HGCA_late",NA,NA,"HGCA_late
+fails (15/25 +)",NA,""
+"SOX17","HGCA_late",NA,NA,"HGCA_late
+fails (15/25 +)",NA,""
+"RBP1","HGCA_late",5.53939307843699,1.85467070710895e-06,"HGCA_late
+fails (15/25 +)",4,"*"
+"AREG","HGCA_late",-3.60257957999715,3.12138839441096e-06,"HGCA_late
+fails (15/25 +)",-3.60257957999715,"*"
+"EREG","HGCA_late",1.02480786364073,0.0473560640186704,"HGCA_late
+fails (15/25 +)",1.02480786364073,"*"
+"CD44","HGCA_late",-3.86940889072015,7.75089254843065e-08,"HGCA_late
+fails (15/25 +)",-3.86940889072015,"*"
+"CXADR","HGCA_late",0.149840629269991,0.346385748630503,"HGCA_late
+fails (15/25 +)",0.149840629269991,""
+"BASP1","HGCA_late",1.11085002609987,0.0687794893992071,"HGCA_late
+fails (15/25 +)",1.11085002609987,""
+"EDN1","HGCA_late",0.202491617283925,0.609769014923418,"HGCA_late
+fails (15/25 +)",0.202491617283925,""
+"IL1RN","HGCA_late",-5.8201708107557,1.17555758270226e-08,"HGCA_late
+fails (15/25 +)",-4,"*"
+"MSLN","HGCA_late",0.456223111436911,0.589326718247022,"HGCA_late
+fails (15/25 +)",0.456223111436911,""
+"REG3B","HGCA_late",NA,NA,"HGCA_late
+fails (15/25 +)",NA,""
+"EMP1","HGCA_late",-5.05271659215968,2.68730010763004e-06,"HGCA_late
+fails (15/25 +)",-4,"*"
+"LAMC2","HGCA_late",-1.07314818313707,0.0371518334988072,"HGCA_late
+fails (15/25 +)",-1.07314818313707,"*"
+"MMP7","HGCA_late",NA,NA,"HGCA_late
+fails (15/25 +)",NA,""
+"L1CAM","HGCA_late",1.97755952698707,0.0012240822891056,"HGCA_late
+fails (15/25 +)",1.97755952698707,"*"
+"EPS8L1","HGCA_late",-2.681023923876,1.10334426330144e-07,"HGCA_late
+fails (15/25 +)",-2.681023923876,"*"
+"TACSTD2","HGCA_late_vs_early",-0.618866398214117,0.285729516111604,"HGCA_late_vs_early
+fails (14/24 +)",-0.618866398214117,""
+"CLU","HGCA_late_vs_early",1.3466245978595,4.23412014615355e-05,"HGCA_late_vs_early
+fails (14/24 +)",1.3466245978595,"*"
+"ANXA1","HGCA_late_vs_early",-0.959893158378874,0.0493572369964793,"HGCA_late_vs_early
+fails (14/24 +)",-0.959893158378874,"*"
+"TNFRSF12A","HGCA_late_vs_early",1.60048427224622,0.0089243293569793,"HGCA_late_vs_early
+fails (14/24 +)",1.60048427224622,"*"
+"GJA1","HGCA_late_vs_early",-0.256738583086356,0.459312583273844,"HGCA_late_vs_early
+fails (14/24 +)",-0.256738583086356,""
+"ANXA3","HGCA_late_vs_early",0.829788997375013,0.0024365259681497,"HGCA_late_vs_early
+fails (14/24 +)",0.829788997375013,"*"
+"ANXA6","HGCA_late_vs_early",0.38760279635295,0.158003658792937,"HGCA_late_vs_early
+fails (14/24 +)",0.38760279635295,""
+"LY6A","HGCA_late_vs_early",NA,NA,"HGCA_late_vs_early
+fails (14/24 +)",NA,""
+"SPP1","HGCA_late_vs_early",2.63083561049707,0.02125843984985,"HGCA_late_vs_early
+fails (14/24 +)",2.63083561049707,"*"
+"SPRR1A","HGCA_late_vs_early",NA,NA,"HGCA_late_vs_early
+fails (14/24 +)",NA,""
+"IL33","HGCA_late_vs_early",2.25213117360957,0.055865043893551,"HGCA_late_vs_early
+fails (14/24 +)",2.25213117360957,""
+"MIF","HGCA_late_vs_early",0.806563900735365,0.153268521727748,"HGCA_late_vs_early
+fails (14/24 +)",0.806563900735365,""
+"CCN2","HGCA_late_vs_early",-2.37419186621988,0.0013571743094122,"HGCA_late_vs_early
+fails (14/24 +)",-2.37419186621988,"*"
+"CCN1","HGCA_late_vs_early",-2.10892209685009,0.0077033800927412,"HGCA_late_vs_early
+fails (14/24 +)",-2.10892209685009,"*"
+"ANKRD1","HGCA_late_vs_early",-3.18231026318044,0.0005540736730864,"HGCA_late_vs_early
+fails (14/24 +)",-3.18231026318044,"*"
+"SOX17","HGCA_late_vs_early",NA,NA,"HGCA_late_vs_early
+fails (14/24 +)",NA,""
+"RBP1","HGCA_late_vs_early",-0.192918794797602,0.508921857454586,"HGCA_late_vs_early
+fails (14/24 +)",-0.192918794797602,""
+"AREG","HGCA_late_vs_early",0.185338129693737,0.516607497136899,"HGCA_late_vs_early
+fails (14/24 +)",0.185338129693737,""
+"EREG","HGCA_late_vs_early",0.11204031522225,0.837483011306272,"HGCA_late_vs_early
+fails (14/24 +)",0.11204031522225,""
+"CD44","HGCA_late_vs_early",1.47851137443762,0.0357423102919318,"HGCA_late_vs_early
+fails (14/24 +)",1.47851137443762,"*"
+"CXADR","HGCA_late_vs_early",-0.0893992937473962,0.539099576140404,"HGCA_late_vs_early
+fails (14/24 +)",-0.0893992937473962,""
+"BASP1","HGCA_late_vs_early",-3.00743596675219,6.24888839665583e-05,"HGCA_late_vs_early
+fails (14/24 +)",-3.00743596675219,"*"
+"EDN1","HGCA_late_vs_early",0.717120817947884,0.0255484169546795,"HGCA_late_vs_early
+fails (14/24 +)",0.717120817947884,"*"
+"IL1RN","HGCA_late_vs_early",NA,NA,"HGCA_late_vs_early
+fails (14/24 +)",NA,""
+"MSLN","HGCA_late_vs_early",4.00827677328703,0.0006311220448835,"HGCA_late_vs_early
+fails (14/24 +)",4,"*"
+"REG3B","HGCA_late_vs_early",NA,NA,"HGCA_late_vs_early
+fails (14/24 +)",NA,""
+"EMP1","HGCA_late_vs_early",4.97300752599251,0.0001583074335665,"HGCA_late_vs_early
+fails (14/24 +)",4,"*"
+"LAMC2","HGCA_late_vs_early",1.32561224423803,0.0031011666158781,"HGCA_late_vs_early
+fails (14/24 +)",1.32561224423803,"*"
+"MMP7","HGCA_late_vs_early",NA,NA,"HGCA_late_vs_early
+fails (14/24 +)",NA,""
+"L1CAM","HGCA_late_vs_early",NA,NA,"HGCA_late_vs_early
+fails (14/24 +)",NA,""
+"EPS8L1","HGCA_late_vs_early",-0.114168107288658,0.637279691716543,"HGCA_late_vs_early
+fails (14/24 +)",-0.114168107288658,""
+"TACSTD2","GaoOriginal_early",-0.971484876710093,0.427915240706595,"GaoOriginal_early
+fails (10/28 +)",-0.971484876710093,""
+"CLU","GaoOriginal_early",0.678458065280789,0.153996740791881,"GaoOriginal_early
+fails (10/28 +)",0.678458065280789,""
+"ANXA1","GaoOriginal_early",-1.30757180386846,0.226761158551477,"GaoOriginal_early
+fails (10/28 +)",-1.30757180386846,""
+"TNFRSF12A","GaoOriginal_early",-1.44083978500183,0.376219475296393,"GaoOriginal_early
+fails (10/28 +)",-1.44083978500183,""
+"GJA1","GaoOriginal_early",1.73382713893931,0.120910244593473,"GaoOriginal_early
+fails (10/28 +)",1.73382713893931,""
+"ANXA3","GaoOriginal_early",-0.71765023691275,0.685115262593959,"GaoOriginal_early
+fails (10/28 +)",-0.71765023691275,""
+"ANXA6","GaoOriginal_early",3.8144301229876,0.0101386500646483,"GaoOriginal_early
+fails (10/28 +)",3.8144301229876,"*"
+"LY6A","GaoOriginal_early",NA,NA,"GaoOriginal_early
+fails (10/28 +)",NA,""
+"SPP1","GaoOriginal_early",0.290972839699627,0.97703393528104,"GaoOriginal_early
+fails (10/28 +)",0.290972839699627,""
+"SPRR1A","GaoOriginal_early",-0.0126359921657839,0.370172362307844,"GaoOriginal_early
+fails (10/28 +)",-0.0126359921657839,""
+"IL33","GaoOriginal_early",-1.08947639212689,0.27177540044405,"GaoOriginal_early
+fails (10/28 +)",-1.08947639212689,""
+"MIF","GaoOriginal_early",NA,NA,"GaoOriginal_early
+fails (10/28 +)",NA,""
+"CCN2","GaoOriginal_early",2.47717435826177,0.0350752590406316,"GaoOriginal_early
+fails (10/28 +)",2.47717435826177,"*"
+"CCN1","GaoOriginal_early",2.27044920234619,0.032984514054335,"GaoOriginal_early
+fails (10/28 +)",2.27044920234619,"*"
+"ANKRD1","GaoOriginal_early",0.446598269803693,0.522407041726374,"GaoOriginal_early
+fails (10/28 +)",0.446598269803693,""
+"SOX17","GaoOriginal_early",-0.792906175175934,0.333743759169535,"GaoOriginal_early
+fails (10/28 +)",-0.792906175175934,""
+"RBP1","GaoOriginal_early",5.48606566556065,0.0004017928287813,"GaoOriginal_early
+fails (10/28 +)",4,"*"
+"AREG","GaoOriginal_early",-4.84100761751238,1.98024626413988e-06,"GaoOriginal_early
+fails (10/28 +)",-4,"*"
+"EREG","GaoOriginal_early",-2.11548536050989,0.0234896297969653,"GaoOriginal_early
+fails (10/28 +)",-2.11548536050989,"*"
+"CD44","GaoOriginal_early",-1.93739078419414,0.0297019884527569,"GaoOriginal_early
+fails (10/28 +)",-1.93739078419414,"*"
+"CXADR","GaoOriginal_early",-1.12385548732287,0.308274293488076,"GaoOriginal_early
+fails (10/28 +)",-1.12385548732287,""
+"BASP1","GaoOriginal_early",3.81689236369254,3.67685732446357e-05,"GaoOriginal_early
+fails (10/28 +)",3.81689236369254,"*"
+"EDN1","GaoOriginal_early",-2.46728698204556,0.106076632120371,"GaoOriginal_early
+fails (10/28 +)",-2.46728698204556,""
+"IL1RN","GaoOriginal_early",-2.65882461681141,0.221195207892278,"GaoOriginal_early
+fails (10/28 +)",-2.65882461681141,""
+"MSLN","GaoOriginal_early",-3.34973448405269,0.189871420290091,"GaoOriginal_early
+fails (10/28 +)",-3.34973448405269,""
+"REG3B","GaoOriginal_early",NA,NA,"GaoOriginal_early
+fails (10/28 +)",NA,""
+"EMP1","GaoOriginal_early",-3.16038896010173,0.0257678451624155,"GaoOriginal_early
+fails (10/28 +)",-3.16038896010173,"*"
+"LAMC2","GaoOriginal_early",-1.75222347016857,0.0875954253833588,"GaoOriginal_early
+fails (10/28 +)",-1.75222347016857,""
+"MMP7","GaoOriginal_early",-0.787673979306869,0.499223014975644,"GaoOriginal_early
+fails (10/28 +)",-0.787673979306869,""
+"L1CAM","GaoOriginal_early",2.94643162001167,0.0063449304091904,"GaoOriginal_early
+fails (10/28 +)",2.94643162001167,"*"
+"EPS8L1","GaoOriginal_early",-2.73468018205452,0.0036674884665945,"GaoOriginal_early
+fails (10/28 +)",-2.73468018205452,"*"
+"TACSTD2","GaoOriginal_late",1.33798529533416,0.171252253178361,"GaoOriginal_late
+fails (14/28 +)",1.33798529533416,""
+"CLU","GaoOriginal_late",1.40887749369916,0.038675745388394,"GaoOriginal_late
+fails (14/28 +)",1.40887749369916,"*"
+"ANXA1","GaoOriginal_late",-0.0985725383406075,0.681283443844453,"GaoOriginal_late
+fails (14/28 +)",-0.0985725383406075,""
+"TNFRSF12A","GaoOriginal_late",-0.0090194756794843,0.94968723907425,"GaoOriginal_late
+fails (14/28 +)",-0.0090194756794843,""
+"GJA1","GaoOriginal_late",-0.160723599566361,0.986965205541793,"GaoOriginal_late
+fails (14/28 +)",-0.160723599566361,""
+"ANXA3","GaoOriginal_late",1.04845756342745,0.0300479642008005,"GaoOriginal_late
+fails (14/28 +)",1.04845756342745,"*"
+"ANXA6","GaoOriginal_late",3.63750887334671,0.0155142336541523,"GaoOriginal_late
+fails (14/28 +)",3.63750887334671,"*"
+"LY6A","GaoOriginal_late",NA,NA,"GaoOriginal_late
+fails (14/28 +)",NA,""
+"SPP1","GaoOriginal_late",-0.0132263109767341,0.622825302943401,"GaoOriginal_late
+fails (14/28 +)",-0.0132263109767341,""
+"SPRR1A","GaoOriginal_late",-0.0126359921657839,0.5,"GaoOriginal_late
+fails (14/28 +)",-0.0126359921657839,""
+"IL33","GaoOriginal_late",-0.583414168213049,0.820333270664664,"GaoOriginal_late
+fails (14/28 +)",-0.583414168213049,""
+"MIF","GaoOriginal_late",NA,NA,"GaoOriginal_late
+fails (14/28 +)",NA,""
+"CCN2","GaoOriginal_late",1.05131565386245,0.0037714439477626,"GaoOriginal_late
+fails (14/28 +)",1.05131565386245,"*"
+"CCN1","GaoOriginal_late",2.81924754785142,0.000494742926744,"GaoOriginal_late
+fails (14/28 +)",2.81924754785142,"*"
+"ANKRD1","GaoOriginal_late",-1.08075143669357,0.0332054849313841,"GaoOriginal_late
+fails (14/28 +)",-1.08075143669357,"*"
+"SOX17","GaoOriginal_late",-0.405835016405537,0.924515798719117,"GaoOriginal_late
+fails (14/28 +)",-0.405835016405537,""
+"RBP1","GaoOriginal_late",4.23867216251114,0.000310811468712,"GaoOriginal_late
+fails (14/28 +)",4,"*"
+"AREG","GaoOriginal_late",-2.99098677263737,4.13755555813923e-05,"GaoOriginal_late
+fails (14/28 +)",-2.99098677263737,"*"
+"EREG","GaoOriginal_late",-1.0372450186324,0.151677456379257,"GaoOriginal_late
+fails (14/28 +)",-1.0372450186324,""
+"CD44","GaoOriginal_late",-0.835182252329971,0.174282997394311,"GaoOriginal_late
+fails (14/28 +)",-0.835182252329971,""
+"CXADR","GaoOriginal_late",0.912225787500457,0.117832747761063,"GaoOriginal_late
+fails (14/28 +)",0.912225787500457,""
+"BASP1","GaoOriginal_late",1.655210991395,0.0127989257288707,"GaoOriginal_late
+fails (14/28 +)",1.655210991395,"*"
+"EDN1","GaoOriginal_late",-1.5424315201828,0.364571032140804,"GaoOriginal_late
+fails (14/28 +)",-1.5424315201828,""
+"IL1RN","GaoOriginal_late",-0.80344611097548,0.704840931928975,"GaoOriginal_late
+fails (14/28 +)",-0.80344611097548,""
+"MSLN","GaoOriginal_late",1.20357993764005,0.0800110250343535,"GaoOriginal_late
+fails (14/28 +)",1.20357993764005,""
+"REG3B","GaoOriginal_late",NA,NA,"GaoOriginal_late
+fails (14/28 +)",NA,""
+"EMP1","GaoOriginal_late",0.128293597197628,0.461461619211097,"GaoOriginal_late
+fails (14/28 +)",0.128293597197628,""
+"LAMC2","GaoOriginal_late",0.299359310993831,0.428749591687999,"GaoOriginal_late
+fails (14/28 +)",0.299359310993831,""
+"MMP7","GaoOriginal_late",0.120067310629925,0.910904007314553,"GaoOriginal_late
+fails (14/28 +)",0.120067310629925,""
+"L1CAM","GaoOriginal_late",0.800173797254371,0.224677325333292,"GaoOriginal_late
+fails (14/28 +)",0.800173797254371,""
+"EPS8L1","GaoOriginal_late",-1.7549102191876,0.024990179533622,"GaoOriginal_late
+fails (14/28 +)",-1.7549102191876,"*"
+"TACSTD2","GaoLI_late_vs_early",2.30947017204425,0.110075414302044,"GaoLI_late_vs_early
+fails (19/28 +)",2.30947017204425,""
+"CLU","GaoLI_late_vs_early",0.730419428418368,0.798813496335528,"GaoLI_late_vs_early
+fails (19/28 +)",0.730419428418368,""
+"ANXA1","GaoLI_late_vs_early",1.20899926552785,0.0520361695393732,"GaoLI_late_vs_early
+fails (19/28 +)",1.20899926552785,""
+"TNFRSF12A","GaoLI_late_vs_early",1.43182030932235,0.362570598109897,"GaoLI_late_vs_early
+fails (19/28 +)",1.43182030932235,""
+"GJA1","GaoLI_late_vs_early",-1.89455073850568,0.0191349652353125,"GaoLI_late_vs_early
+fails (19/28 +)",-1.89455073850568,"*"
+"ANXA3","GaoLI_late_vs_early",1.7661078003402,0.114374609699212,"GaoLI_late_vs_early
+fails (19/28 +)",1.7661078003402,""
+"ANXA6","GaoLI_late_vs_early",-0.176921249640884,0.36852492497265,"GaoLI_late_vs_early
+fails (19/28 +)",-0.176921249640884,""
+"LY6A","GaoLI_late_vs_early",NA,NA,"GaoLI_late_vs_early
+fails (19/28 +)",NA,""
+"SPP1","GaoLI_late_vs_early",-0.304199150676361,0.557084295822432,"GaoLI_late_vs_early
+fails (19/28 +)",-0.304199150676361,""
+"SPRR1A","GaoLI_late_vs_early",0,0.36379476398703,"GaoLI_late_vs_early
+fails (19/28 +)",0,""
+"IL33","GaoLI_late_vs_early",0.506062223913845,0.397722772506437,"GaoLI_late_vs_early
+fails (19/28 +)",0.506062223913845,""
+"MIF","GaoLI_late_vs_early",NA,NA,"GaoLI_late_vs_early
+fails (19/28 +)",NA,""
+"CCN2","GaoLI_late_vs_early",-1.42585870439932,0.251889732239971,"GaoLI_late_vs_early
+fails (19/28 +)",-1.42585870439932,""
+"CCN1","GaoLI_late_vs_early",0.548798345505233,0.787020210819388,"GaoLI_late_vs_early
+fails (19/28 +)",0.548798345505233,""
+"ANKRD1","GaoLI_late_vs_early",-1.52734970649726,0.235221657055049,"GaoLI_late_vs_early
+fails (19/28 +)",-1.52734970649726,""
+"SOX17","GaoLI_late_vs_early",0.387071158770397,0.352203610109262,"GaoLI_late_vs_early
+fails (19/28 +)",0.387071158770397,""
+"RBP1","GaoLI_late_vs_early",-1.24739350304951,0.021751756738683,"GaoLI_late_vs_early
+fails (19/28 +)",-1.24739350304951,"*"
+"AREG","GaoLI_late_vs_early",1.85002084487501,0.0003593524968691,"GaoLI_late_vs_early
+fails (19/28 +)",1.85002084487501,"*"
+"EREG","GaoLI_late_vs_early",1.07824034187749,0.214338090552503,"GaoLI_late_vs_early
+fails (19/28 +)",1.07824034187749,""
+"CD44","GaoLI_late_vs_early",1.10220853186417,0.107528812233755,"GaoLI_late_vs_early
+fails (19/28 +)",1.10220853186417,""
+"CXADR","GaoLI_late_vs_early",2.03608127482332,0.0694684492628661,"GaoLI_late_vs_early
+fails (19/28 +)",2.03608127482332,""
+"BASP1","GaoLI_late_vs_early",-2.16168137229754,0.0007290604811278,"GaoLI_late_vs_early
+fails (19/28 +)",-2.16168137229754,"*"
+"EDN1","GaoLI_late_vs_early",0.924855461862763,0.222912466416957,"GaoLI_late_vs_early
+fails (19/28 +)",0.924855461862763,""
+"IL1RN","GaoLI_late_vs_early",1.85537850583593,0.0931544898595338,"GaoLI_late_vs_early
+fails (19/28 +)",1.85537850583593,""
+"MSLN","GaoLI_late_vs_early",4.55331442169275,0.0412165341791325,"GaoLI_late_vs_early
+fails (19/28 +)",4,"*"
+"REG3B","GaoLI_late_vs_early",NA,NA,"GaoLI_late_vs_early
+fails (19/28 +)",NA,""
+"EMP1","GaoLI_late_vs_early",3.28868255729936,0.0036401402640498,"GaoLI_late_vs_early
+fails (19/28 +)",3.28868255729936,"*"
+"LAMC2","GaoLI_late_vs_early",2.0515827811624,0.0490199725757463,"GaoLI_late_vs_early
+fails (19/28 +)",2.0515827811624,"*"
+"MMP7","GaoLI_late_vs_early",0.907741289936794,0.156957934125666,"GaoLI_late_vs_early
+fails (19/28 +)",0.907741289936794,""
+"L1CAM","GaoLI_late_vs_early",-2.1462578227573,0.0591415514126339,"GaoLI_late_vs_early
+fails (19/28 +)",-2.1462578227573,""
+"EPS8L1","GaoLI_late_vs_early",0.979769962866919,0.142680660943161,"GaoLI_late_vs_early
+fails (19/28 +)",0.979769962866919,""
+"TACSTD2","Hnew3_early",0.505391586047006,0.36976027548355,"Hnew3_early
+fails (12/24 +)",0.505391586047006,""
+"CLU","Hnew3_early",3.52104129031808,0.0007356277194862,"Hnew3_early
+fails (12/24 +)",3.52104129031808,"*"
+"ANXA1","Hnew3_early",2.10719281804622,0.0463912797489104,"Hnew3_early
+fails (12/24 +)",2.10719281804622,"*"
+"TNFRSF12A","Hnew3_early",-1.17521318668054,0.198201140129085,"Hnew3_early
+fails (12/24 +)",-1.17521318668054,""
+"GJA1","Hnew3_early",5.35066398367809,4.74983260382693e-05,"Hnew3_early
+fails (12/24 +)",4,"*"
+"ANXA3","Hnew3_early",0.317168846522661,0.0686713904501305,"Hnew3_early
+fails (12/24 +)",0.317168846522661,""
+"ANXA6","Hnew3_early",5.67237264802032,1.70696899530664e-07,"Hnew3_early
+fails (12/24 +)",4,"*"
+"LY6A","Hnew3_early",NA,NA,"Hnew3_early
+fails (12/24 +)",NA,""
+"SPP1","Hnew3_early",NA,NA,"Hnew3_early
+fails (12/24 +)",NA,""
+"SPRR1A","Hnew3_early",NA,NA,"Hnew3_early
+fails (12/24 +)",NA,""
+"IL33","Hnew3_early",0.992442781084156,0.0096439551603742,"Hnew3_early
+fails (12/24 +)",0.992442781084156,"*"
+"MIF","Hnew3_early",-8.1520409291321,3.68951519028627e-08,"Hnew3_early
+fails (12/24 +)",-4,"*"
+"CCN2","Hnew3_early",4.88942638137034,2.43385255402803e-05,"Hnew3_early
+fails (12/24 +)",4,"*"
+"CCN1","Hnew3_early",5.56573140591305,9.53375272104457e-07,"Hnew3_early
+fails (12/24 +)",4,"*"
+"ANKRD1","Hnew3_early",NA,NA,"Hnew3_early
+fails (12/24 +)",NA,""
+"SOX17","Hnew3_early",NA,NA,"Hnew3_early
+fails (12/24 +)",NA,""
+"RBP1","Hnew3_early",8.9649810283838,3.84256395159161e-08,"Hnew3_early
+fails (12/24 +)",4,"*"
+"AREG","Hnew3_early",-6.2917855822004,1.71484778295097e-07,"Hnew3_early
+fails (12/24 +)",-4,"*"
+"EREG","Hnew3_early",-1.23871795361856,0.0494954443336618,"Hnew3_early
+fails (12/24 +)",-1.23871795361856,"*"
+"CD44","Hnew3_early",-0.302136618227371,0.569515122929591,"Hnew3_early
+fails (12/24 +)",-0.302136618227371,""
+"CXADR","Hnew3_early",-1.29506423909916,0.0723719251486597,"Hnew3_early
+fails (12/24 +)",-1.29506423909916,""
+"BASP1","Hnew3_early",6.09686494594244,2.20044963737796e-07,"Hnew3_early
+fails (12/24 +)",4,"*"
+"EDN1","Hnew3_early",-0.592402497374718,0.0887912235682521,"Hnew3_early
+fails (12/24 +)",-0.592402497374718,""
+"IL1RN","Hnew3_early",-0.810710520334677,0.0120437132246315,"Hnew3_early
+fails (12/24 +)",-0.810710520334677,"*"
+"MSLN","Hnew3_early",-2.51933242859527,0.113524340276669,"Hnew3_early
+fails (12/24 +)",-2.51933242859527,""
+"REG3B","Hnew3_early",NA,NA,"Hnew3_early
+fails (12/24 +)",NA,""
+"EMP1","Hnew3_early",-3.15540435825068,0.0007753278040111,"Hnew3_early
+fails (12/24 +)",-3.15540435825068,"*"
+"LAMC2","Hnew3_early",-0.351092236947982,0.590200877257162,"Hnew3_early
+fails (12/24 +)",-0.351092236947982,""
+"MMP7","Hnew3_early",0.0552076243813154,0.29862565479157,"Hnew3_early
+fails (12/24 +)",0.0552076243813154,""
+"L1CAM","Hnew3_early",NA,NA,"Hnew3_early
+fails (12/24 +)",NA,""
+"EPS8L1","Hnew3_early",-1.69142212091133,0.0058332190948279,"Hnew3_early
+fails (12/24 +)",-1.69142212091133,"*"
+"TACSTD2","Hnew3_late",2.30995547681045,0.0021166386618696,"Hnew3_late
+fails (20/24 +)",2.30995547681045,"*"
+"CLU","Hnew3_late",5.26082658584062,5.65477514071735e-05,"Hnew3_late
+fails (20/24 +)",4,"*"
+"ANXA1","Hnew3_late",3.4420908384911,1.03703108556001e-05,"Hnew3_late
+fails (20/24 +)",3.4420908384911,"*"
+"TNFRSF12A","Hnew3_late",0.694922346117507,0.0893002732409905,"Hnew3_late
+fails (20/24 +)",0.694922346117507,""
+"GJA1","Hnew3_late",3.94891227653739,5.0412020810899e-07,"Hnew3_late
+fails (20/24 +)",3.94891227653739,"*"
+"ANXA3","Hnew3_late",1.79720408041917,0.0004878432644368,"Hnew3_late
+fails (20/24 +)",1.79720408041917,"*"
+"ANXA6","Hnew3_late",4.04753329822388,2.46531406512084e-06,"Hnew3_late
+fails (20/24 +)",4,"*"
+"LY6A","Hnew3_late",NA,NA,"Hnew3_late
+fails (20/24 +)",NA,""
+"SPP1","Hnew3_late",NA,NA,"Hnew3_late
+fails (20/24 +)",NA,""
+"SPRR1A","Hnew3_late",NA,NA,"Hnew3_late
+fails (20/24 +)",NA,""
+"IL33","Hnew3_late",2.06867557116024,0.0012811409238369,"Hnew3_late
+fails (20/24 +)",2.06867557116024,"*"
+"MIF","Hnew3_late",-8.1520409291321,3.68951519028627e-08,"Hnew3_late
+fails (20/24 +)",-4,"*"
+"CCN2","Hnew3_late",2.92474593200626,0.0007316371945876,"Hnew3_late
+fails (20/24 +)",2.92474593200626,"*"
+"CCN1","Hnew3_late",3.75743742409581,0.0056238703010199,"Hnew3_late
+fails (20/24 +)",3.75743742409581,"*"
+"ANKRD1","Hnew3_late",NA,NA,"Hnew3_late
+fails (20/24 +)",NA,""
+"SOX17","Hnew3_late",NA,NA,"Hnew3_late
+fails (20/24 +)",NA,""
+"RBP1","Hnew3_late",7.37359187776726,3.42040793468686e-08,"Hnew3_late
+fails (20/24 +)",4,"*"
+"AREG","Hnew3_late",-4.74909898338072,8.01686992360845e-08,"Hnew3_late
+fails (20/24 +)",-4,"*"
+"EREG","Hnew3_late",0.309591368132927,0.420911689242424,"Hnew3_late
+fails (20/24 +)",0.309591368132927,""
+"CD44","Hnew3_late",0.0894613441962834,0.524806265398429,"Hnew3_late
+fails (20/24 +)",0.0894613441962834,""
+"CXADR","Hnew3_late",0.464972350087142,0.188644252683155,"Hnew3_late
+fails (20/24 +)",0.464972350087142,""
+"BASP1","Hnew3_late",4.07339193529044,4.17635635734934e-05,"Hnew3_late
+fails (20/24 +)",4,"*"
+"EDN1","Hnew3_late",0.186351331417591,0.740715477630448,"Hnew3_late
+fails (20/24 +)",0.186351331417591,""
+"IL1RN","Hnew3_late",0.607654545047515,0.407594737349043,"Hnew3_late
+fails (20/24 +)",0.607654545047515,""
+"MSLN","Hnew3_late",1.19315562687524,0.105608699677665,"Hnew3_late
+fails (20/24 +)",1.19315562687524,""
+"REG3B","Hnew3_late",NA,NA,"Hnew3_late
+fails (20/24 +)",NA,""
+"EMP1","Hnew3_late",-0.739305456354133,0.486350028298232,"Hnew3_late
+fails (20/24 +)",-0.739305456354133,""
+"LAMC2","Hnew3_late",2.04234127414748,7.84762537233882e-08,"Hnew3_late
+fails (20/24 +)",2.04234127414748,"*"
+"MMP7","Hnew3_late",0.77043960209953,0.0105300933760333,"Hnew3_late
+fails (20/24 +)",0.77043960209953,"*"
+"L1CAM","Hnew3_late",NA,NA,"Hnew3_late
+fails (20/24 +)",NA,""
+"EPS8L1","Hnew3_late",-0.478568937477205,0.13237664149147,"Hnew3_late
+fails (20/24 +)",-0.478568937477205,""
+"TACSTD2","GaoSILI_late_vs_early",1.80456389076344,0.112723187716641,"GaoSILI_late_vs_early
+fails (20/28 +)",1.80456389076344,""
+"CLU","GaoSILI_late_vs_early",1.73978529552254,0.0410655303492277,"GaoSILI_late_vs_early
+fails (20/28 +)",1.73978529552254,"*"
+"ANXA1","GaoSILI_late_vs_early",1.33489802044487,0.0142087318542812,"GaoSILI_late_vs_early
+fails (20/28 +)",1.33489802044487,"*"
+"TNFRSF12A","GaoSILI_late_vs_early",1.87013553279805,0.0701919140715071,"GaoSILI_late_vs_early
+fails (20/28 +)",1.87013553279805,""
+"GJA1","GaoSILI_late_vs_early",-1.40175170714069,0.155294834210073,"GaoSILI_late_vs_early
+fails (20/28 +)",-1.40175170714069,""
+"ANXA3","GaoSILI_late_vs_early",1.4800352338965,0.0425947782609207,"GaoSILI_late_vs_early
+fails (20/28 +)",1.4800352338965,"*"
+"ANXA6","GaoSILI_late_vs_early",-1.62483934979644,0.0236569269264722,"GaoSILI_late_vs_early
+fails (20/28 +)",-1.62483934979644,"*"
+"LY6A","GaoSILI_late_vs_early",NA,NA,"GaoSILI_late_vs_early
+fails (20/28 +)",NA,""
+"SPP1","GaoSILI_late_vs_early",0.609113086575976,0.254232974671693,"GaoSILI_late_vs_early
+fails (20/28 +)",0.609113086575976,""
+"SPRR1A","GaoSILI_late_vs_early",0,0.368379790624527,"GaoSILI_late_vs_early
+fails (20/28 +)",0,""
+"IL33","GaoSILI_late_vs_early",1.07623279007608,0.0688226346321583,"GaoSILI_late_vs_early
+fails (20/28 +)",1.07623279007608,""
+"MIF","GaoSILI_late_vs_early",NA,NA,"GaoSILI_late_vs_early
+fails (20/28 +)",NA,""
+"CCN2","GaoSILI_late_vs_early",-1.96468044936408,0.0012196148906248,"GaoSILI_late_vs_early
+fails (20/28 +)",-1.96468044936408,"*"
+"CCN1","GaoSILI_late_vs_early",-1.80829398181724,0.0084009736616473,"GaoSILI_late_vs_early
+fails (20/28 +)",-1.80829398181724,"*"
+"ANKRD1","GaoSILI_late_vs_early",0.0021417758625438,0.7045005208817,"GaoSILI_late_vs_early
+fails (20/28 +)",0.0021417758625438,""
+"SOX17","GaoSILI_late_vs_early",1.07814577152583,0.256621171872608,"GaoSILI_late_vs_early
+fails (20/28 +)",1.07814577152583,""
+"RBP1","GaoSILI_late_vs_early",-1.59138915061654,0.0010047122285263,"GaoSILI_late_vs_early
+fails (20/28 +)",-1.59138915061654,"*"
+"AREG","GaoSILI_late_vs_early",1.54268659881968,0.001603232828179,"GaoSILI_late_vs_early
+fails (20/28 +)",1.54268659881968,"*"
+"EREG","GaoSILI_late_vs_early",1.54830932175149,0.0207959304001913,"GaoSILI_late_vs_early
+fails (20/28 +)",1.54830932175149,"*"
+"CD44","GaoSILI_late_vs_early",0.391597962423654,0.262132790394989,"GaoSILI_late_vs_early
+fails (20/28 +)",0.391597962423654,""
+"CXADR","GaoSILI_late_vs_early",1.76003658918631,0.0204909475225156,"GaoSILI_late_vs_early
+fails (20/28 +)",1.76003658918631,"*"
+"BASP1","GaoSILI_late_vs_early",-2.023473010652,0.0004195605231243,"GaoSILI_late_vs_early
+fails (20/28 +)",-2.023473010652,"*"
+"EDN1","GaoSILI_late_vs_early",0.778753828792308,0.146684782080222,"GaoSILI_late_vs_early
+fails (20/28 +)",0.778753828792308,""
+"IL1RN","GaoSILI_late_vs_early",1.41836506538219,0.029088457764844,"GaoSILI_late_vs_early
+fails (20/28 +)",1.41836506538219,"*"
+"MSLN","GaoSILI_late_vs_early",3.71248805547051,0.0142543312746,"GaoSILI_late_vs_early
+fails (20/28 +)",3.71248805547051,"*"
+"REG3B","GaoSILI_late_vs_early",NA,NA,"GaoSILI_late_vs_early
+fails (20/28 +)",NA,""
+"EMP1","GaoSILI_late_vs_early",2.41609890189655,0.0010092234739158,"GaoSILI_late_vs_early
+fails (20/28 +)",2.41609890189655,"*"
+"LAMC2","GaoSILI_late_vs_early",2.39343351109546,0.0010541616416758,"GaoSILI_late_vs_early
+fails (20/28 +)",2.39343351109546,"*"
+"MMP7","GaoSILI_late_vs_early",0.715231977718215,0.0215291432290705,"GaoSILI_late_vs_early
+fails (20/28 +)",0.715231977718215,"*"
+"L1CAM","GaoSILI_late_vs_early",-1.94597237674052,0.0083522673283731,"GaoSILI_late_vs_early
+fails (20/28 +)",-1.94597237674052,"*"
+"EPS8L1","GaoSILI_late_vs_early",1.21285318343412,0.0537073588459808,"GaoSILI_late_vs_early
+fails (20/28 +)",1.21285318343412,""
 "TACSTD2","Pikkupeura_LN",9.44039138235667,7.9109040781903e-11,"Pikkupeura_LN
 QUALIFIES (24/27 +)",4,"*"
 "CLU","Pikkupeura_LN",8.49513950784813,4.45738147141709e-09,"Pikkupeura_LN

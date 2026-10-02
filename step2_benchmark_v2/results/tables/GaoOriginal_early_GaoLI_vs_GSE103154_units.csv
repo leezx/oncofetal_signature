@@ -1,0 +1,8 @@
+unit,n_cells,tissues,week,group
+6W_embryo1,72,LI,6.0,Fetal_early
+6W_embryo2,68,LI,6.0,Fetal_early
+7W_embryo2,118,LI,7.0,Fetal_early
+8W_embryo1,43,LI,8.0,Fetal_early
+8W_embryo2,46,LI,8.0,Fetal_early
+P1,935,,,Adult
+P2,956,,,Adult

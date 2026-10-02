@@ -56,6 +56,15 @@ DATASETS = [
     ("Hbulk2", "2 (benchmark v2)", "H-bulk2 Roadmap fetal SI vs HPA duodenum [tier B subset]", "Human", "duodenum-only subset of H-bulk1 (Senger 2018 primary-tissue comparison)", "fetal"),
     ("Hnew3", "2 (benchmark v2)", "H-new3 Gao fetal + Wang adult", "Human", "Gao fetal SI+LI vs Wang ileum/colon/rectum, effect-only (GSE95630 / GSE125970)", "fetal"),
     ("Hnew3_debug", "2 (benchmark v2)", "H-new3-debug", "Human", "Gao fetal LI vs Wang colon+rectum (adult arm swapped)", "fetal"),
+    ("HGCA_early", "2 (benchmark v2, stage v1.2)", "HGCA early fetal (<9 PCW) vs adult [stage-resolved]", "Human", "edgeR, 6 vs 7 donors", "fetal"),
+    ("HGCA_late", "2 (benchmark v2, stage v1.2)", "HGCA mid/late fetal (>=9 PCW) vs adult [stage-resolved]", "Human", "edgeR, 10 vs 7 donors", "fetal"),
+    ("HGCA_late_vs_early", "2 (benchmark v2, stage v1.2)", "HGCA mid/late vs early fetal [within-fetal]", "Human", "edgeR, 10 vs 6 donors; positive = higher at >=9 PCW", "later fetal"),
+    ("GaoOriginal_early", "2 (benchmark v2, stage v1.2)", "Gao early fetal LI (<9 W) vs GSE103154 [stage-resolved]", "Human", "effect-only, 5 vs 2", "fetal"),
+    ("GaoOriginal_late", "2 (benchmark v2, stage v1.2)", "Gao mid/late fetal LI (>=9 W) vs GSE103154 [stage-resolved]", "Human", "effect-only, 7 vs 2", "fetal"),
+    ("GaoLI_late_vs_early", "2 (benchmark v2, stage v1.2)", "Gao LI mid/late vs early fetal [within-fetal]", "Human", "effect-only, 7 vs 5 embryos; positive = higher at >=9 W", "later fetal"),
+    ("Hnew3_early", "2 (benchmark v2, stage v1.2)", "Gao early fetal SI+LI (<9 W) vs Wang [stage-resolved]", "Human", "effect-only, 6 vs 6", "fetal"),
+    ("Hnew3_late", "2 (benchmark v2, stage v1.2)", "Gao mid/late fetal SI+LI (>=9 W) vs Wang [stage-resolved]", "Human", "effect-only, 9 vs 6", "fetal"),
+    ("GaoSILI_late_vs_early", "2 (benchmark v2, stage v1.2)", "Gao SI+LI mid/late vs early fetal [within-fetal]", "Human", "effect-only, 9 vs 6 embryos; positive = higher at >=9 W", "later fetal"),
     ("TCGA", "3", "TCGA COAD+READ (T1)", "Human", "primary tumour vs normal, ~ tissue + project", "tumour"),
     ("TCGA_paired", "3", "TCGA paired", "Human", "tumour vs matched normal (50 pairs)", "tumour"),
     ("TCGA_GTEx", "3", "TCGA vs GTEx", "Human", "TCGA tumour vs GTEx transverse colon (direction only)", "tumour"),
@@ -159,6 +168,15 @@ def main():
         "Hbulk2": lookup(pd.read_csv(BM2 / "Hbulk2_Roadmap_vs_HPA_duodenum_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
         "Hnew3": lookup(pd.read_csv(BM2 / "Hnew3_GaoSILI_vs_Wang_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
         "Hnew3_debug": lookup(pd.read_csv(BM2 / "Hnew3debug_GaoLI_vs_WangColonRectum_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "HGCA_early": lookup(pd.read_csv(BM2 / "HGCA_early_fetal_vs_adult_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "HGCA_late": lookup(pd.read_csv(BM2 / "HGCA_late_fetal_vs_adult_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "HGCA_late_vs_early": lookup(pd.read_csv(BM2 / "HGCA_late_vs_early_fetal_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "GaoOriginal_early": lookup(pd.read_csv(BM2 / "GaoOriginal_early_GaoLI_vs_GSE103154_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "GaoOriginal_late": lookup(pd.read_csv(BM2 / "GaoOriginal_late_GaoLI_vs_GSE103154_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "GaoLI_late_vs_early": lookup(pd.read_csv(BM2 / "GaoLI_late_vs_early_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "Hnew3_early": lookup(pd.read_csv(BM2 / "Hnew3_early_GaoSILI_vs_Wang_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "Hnew3_late": lookup(pd.read_csv(BM2 / "Hnew3_late_GaoSILI_vs_Wang_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "GaoSILI_late_vs_early": lookup(pd.read_csv(BM2 / "GaoSILI_late_vs_early_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
         "TCGA": lookup(tcga, "symbol", human_keys, ["T1_log2FC", "T1_PValue", "T1_FDR"], tcga_u),
         "TCGA_paired": lookup(tcga, "symbol", human_keys, ["Paired_log2FC", None, "Paired_FDR"], tcga_u),
         "TCGA_GTEx": lookup(tcga, "symbol", human_keys, ["GTEx_log2FC", None, "GTEx_FDR"], tcga_u),
@@ -221,7 +239,7 @@ def write_xlsx(wide, status, base, DATASETS, filename, restricted):
     white = Font(name="Arial", size=10, bold=True, color="FFFFFF")
     thin = Side(style="thin", color="BFBFBF")
     box = Border(left=thin, right=thin, top=thin, bottom=thin)
-    fills = {"2": "1F4E78", "2 (benchmark)": "595959", "2 (benchmark v2)": "7030A0", "3": "375623"}
+    fills = {"2": "1F4E78", "2 (benchmark)": "595959", "2 (benchmark v2)": "7030A0", "2 (benchmark v2, stage v1.2)": "B4009E", "3": "375623"}
     nbase = base.shape[1]
     # Row 1: step; row 2: dataset; row 3: contrast; row 4: statistic.
     for j, col in enumerate(base.columns, 1):

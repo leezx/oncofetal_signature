@@ -1,0 +1,13 @@
+unit,n_cells,tissues,week,group
+11W_embryo1,57,LI,11,Fetal_midlate
+14W_embryo1,57,LI,14,Fetal_midlate
+16W_embryo1,38,LI,16,Fetal_midlate
+19W_embryo1,53,LI,19,Fetal_midlate
+24W_embryo1,188,LI,24,Fetal_midlate
+25W_embryo1,32,LI,25,Fetal_midlate
+9W_embryo1,77,LI,9,Fetal_midlate
+6W_embryo1,72,LI,6,Fetal_early
+6W_embryo2,68,LI,6,Fetal_early
+7W_embryo2,118,LI,7,Fetal_early
+8W_embryo1,43,LI,8,Fetal_early
+8W_embryo2,46,LI,8,Fetal_early

@@ -11,3 +11,12 @@ Pikkupeura_LN	mouse_culture_benchmark	qualifies; culture, not in-vivo primary	mo
 Pikkupeura_collagen	mouse_culture_benchmark	qualifies; culture, not in-vivo primary	mouse culture	Pikkupeura2023
 Hbulk1	tier_B_primary_tissue_bulk	Roadmap fetal SI vs HPA adult SI+duodenum (Finkbeiner 2015 design); independent of H-new2; whole tissue; total RNA vs polyA; bulk benchmark closed (review 2026-10-02); H-bulk1 + H-bulk2 count as 1 independent dataset, 2 related contrasts	B	Roadmap_SRP001371+HPA_E-MTAB-1733
 Hbulk2	tier_B_supporting_subset	duodenum-only subset of H-bulk1 (Senger 2018 primary-tissue comparison); not independent of H-bulk1; counts with H-bulk1 as 1 independent dataset	B	Roadmap_SRP001371+HPA_E-MTAB-1733
+HGCA_early	stage_resolved_failed_qualification	stage-resolved HGCA (addendum v1.2); does not meet promotion criterion (mid/late qualifies AND panel fraction rises)	C (stage-resolved HGCA)	HGCA
+HGCA_late	stage_resolved_failed_qualification	stage-resolved HGCA (addendum v1.2); does not meet promotion criterion (mid/late qualifies AND panel fraction rises)	C (stage-resolved HGCA)	HGCA
+HGCA_late_vs_early	stage_resolved_within_fetal	within-fetal stage contrast (addendum v1.2); tests the 9-week breakpoint, not fetal vs adult	C (stage-resolved HGCA)	HGCA
+GaoOriginal_early	stage_resolved_failed_qualification	stage-resolved GaoOriginal (addendum v1.2); does not meet promotion criterion (mid/late qualifies AND panel fraction rises)	C (stage-resolved GaoOriginal)	Gao2018+GSE103154
+GaoOriginal_late	stage_resolved_failed_qualification	stage-resolved GaoOriginal (addendum v1.2); does not meet promotion criterion (mid/late qualifies AND panel fraction rises)	C (stage-resolved GaoOriginal)	Gao2018+GSE103154
+GaoLI_late_vs_early	stage_resolved_within_fetal	within-fetal stage contrast (addendum v1.2); tests the 9-week breakpoint, not fetal vs adult	C (stage-resolved GaoOriginal)	Gao2018
+Hnew3_early	stage_resolved_failed_qualification	stage-resolved Hnew3 (addendum v1.2); does not meet promotion criterion (mid/late qualifies AND panel fraction rises)	C (stage-resolved Hnew3)	Gao2018+Wang2020
+Hnew3_late	stage_resolved_failed_qualification	stage-resolved Hnew3 (addendum v1.2); does not meet promotion criterion (mid/late qualifies AND panel fraction rises)	C (stage-resolved Hnew3)	Gao2018+Wang2020
+GaoSILI_late_vs_early	stage_resolved_within_fetal	within-fetal stage contrast (addendum v1.2); tests the 9-week breakpoint, not fetal vs adult	C (stage-resolved Hnew3)	Gao2018

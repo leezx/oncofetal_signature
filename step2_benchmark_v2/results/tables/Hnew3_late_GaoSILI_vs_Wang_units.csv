@@ -1,0 +1,16 @@
+unit,n_cells,tissues,week,group
+11W_embryo1,106,LI;SI,11.0,Fetal_midlate
+14W_embryo1,111,LI;SI,14.0,Fetal_midlate
+16W_embryo1,60,LI;SI,16.0,Fetal_midlate
+19W_embryo1,94,LI;SI,19.0,Fetal_midlate
+21W_embryo1,38,SI,21.0,Fetal_midlate
+21W_embryo2,42,SI,21.0,Fetal_midlate
+24W_embryo1,301,LI;SI,24.0,Fetal_midlate
+25W_embryo1,76,LI;SI,25.0,Fetal_midlate
+9W_embryo1,163,LI;SI,9.0,Fetal_midlate
+Colon-1,1819,,,Adult
+Colon-2,2653,,,Adult
+Ileum-1,2745,,,Adult
+Ileum-2,3422,,,Adult
+Rectum-1,2842,,,Adult
+Rectum-2,1056,,,Adult

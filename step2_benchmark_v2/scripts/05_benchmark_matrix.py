@@ -6,6 +6,8 @@ Rule 1: TNFRSF12A log2FC > 0 and P < 0.05 (Pikkupeura retains only FDR, which
 Rule 2: one-sided exact binomial test that > 50% of measured markers have
         log2FC > 0, P < 0.05. LY6A/REG3B are not counted in human contrasts.
 A contrast qualifies only if both hold. No signature is built here.
+Addendum v1.2 adds stage-resolved contrasts (early < 9 W, mid/late >= 9 W);
+for within-fetal contrasts "fetal-positive" means higher at mid/late stage.
 """
 import argparse
 import pathlib
@@ -15,6 +17,27 @@ import pandas as pd
 from scipy.stats import binomtest
 
 PRIORITY = ["TACSTD2", "CLU", "ANXA1", "TNFRSF12A"]
+
+DE_FILES = {
+    "GaoOriginal": "GaoOriginal_GaoLI_vs_GSE103154.csv", "Hnew1": "Hnew1_Fawkner_spatial_units.csv",
+    "Hnew1_colon": "Hnew1_Fawkner_spatial_units_colon_only.csv", "Hnew2": "Hnew2_Fawkner_Burclaff.csv",
+    "Hbulk1": "Hbulk1_Roadmap_vs_HPA_SI.csv", "Hbulk2": "Hbulk2_Roadmap_vs_HPA_duodenum.csv",
+    "Hnew3": "Hnew3_GaoSILI_vs_Wang.csv", "Hnew3_debug": "Hnew3debug_GaoLI_vs_WangColonRectum.csv",
+    "HGCA_early": "HGCA_early_fetal_vs_adult.csv", "HGCA_late": "HGCA_late_fetal_vs_adult.csv",
+    "HGCA_late_vs_early": "HGCA_late_vs_early_fetal.csv",
+    "GaoOriginal_early": "GaoOriginal_early_GaoLI_vs_GSE103154.csv",
+    "GaoOriginal_late": "GaoOriginal_late_GaoLI_vs_GSE103154.csv", "GaoLI_late_vs_early": "GaoLI_late_vs_early.csv",
+    "Hnew3_early": "Hnew3_early_GaoSILI_vs_Wang.csv", "Hnew3_late": "Hnew3_late_GaoSILI_vs_Wang.csv",
+    "GaoSILI_late_vs_early": "GaoSILI_late_vs_early.csv",
+}
+STAGE = {"HGCA_early": "early_vs_adult", "GaoOriginal_early": "early_vs_adult", "Hnew3_early": "early_vs_adult",
+         "HGCA_late": "midlate_vs_adult", "GaoOriginal_late": "midlate_vs_adult", "Hnew3_late": "midlate_vs_adult",
+         "HGCA_late_vs_early": "midlate_vs_early", "GaoLI_late_vs_early": "midlate_vs_early",
+         "GaoSILI_late_vs_early": "midlate_vs_early"}
+PARENT = {k: k.split("_")[0] if not k.startswith("Gao") else
+          {"GaoOriginal_early": "GaoOriginal", "GaoOriginal_late": "GaoOriginal", "GaoLI_late_vs_early": "GaoOriginal",
+           "GaoSILI_late_vs_early": "Hnew3"}[k] for k in STAGE}
+PARENT.update({"Hnew3_early": "Hnew3", "Hnew3_late": "Hnew3"})
 
 # key, label, species, source description
 CONTRASTS = [
@@ -28,6 +51,16 @@ CONTRASTS = [
     ("Hbulk2", "H-bulk2 Roadmap fetal SI vs HPA adult duodenum (Senger primary-tissue subset)", "Human", "addendum v1.1"),
     ("Hnew3", "H-new3 Gao fetal SI+LI vs Wang adult", "Human", "new"),
     ("Hnew3_debug", "H-new3-debug Gao fetal LI vs Wang colon+rectum", "Human", "new"),
+    # Addendum v1.2: stage-resolved (breakpoint 9 weeks; early < 9, mid/late >= 9).
+    ("HGCA_early", "HGCA early fetal (<9 PCW) vs adult", "Human", "addendum v1.2"),
+    ("HGCA_late", "HGCA mid/late fetal (>=9 PCW) vs adult", "Human", "addendum v1.2"),
+    ("HGCA_late_vs_early", "HGCA mid/late vs early fetal (within-fetal; positive = higher at >=9 PCW)", "Human", "addendum v1.2"),
+    ("GaoOriginal_early", "Gao early fetal LI (<9 W) vs GSE103154 adult", "Human", "addendum v1.2"),
+    ("GaoOriginal_late", "Gao mid/late fetal LI (>=9 W) vs GSE103154 adult", "Human", "addendum v1.2"),
+    ("GaoLI_late_vs_early", "Gao LI mid/late vs early fetal (within-fetal)", "Human", "addendum v1.2"),
+    ("Hnew3_early", "Gao early fetal SI+LI (<9 W) vs Wang adult", "Human", "addendum v1.2"),
+    ("Hnew3_late", "Gao mid/late fetal SI+LI (>=9 W) vs Wang adult", "Human", "addendum v1.2"),
+    ("GaoSILI_late_vs_early", "Gao SI+LI mid/late vs early fetal (within-fetal)", "Human", "addendum v1.2"),
     ("Pikkupeura_LN", "Pikkupeura fetal vs adult culture, laminin (GSE160449)", "Mouse", "existing benchmark"),
     ("Pikkupeura_collagen", "Pikkupeura fetal vs adult culture, collagen (GSE160449)", "Mouse", "existing benchmark"),
 ]
@@ -59,18 +92,12 @@ def main():
 
     vals = {
         "HGCA": by_symbol(hgca, "gene", "HGCA_log2FC", "HGCA_PValue", "HGCA_FDR", keys),
-        "GaoOriginal": by_symbol(pd.read_csv(de / "GaoOriginal_GaoLI_vs_GSE103154.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
         "Senger": by_symbol(bm, "gene", "Human_Senger_log2FC", "Human_Senger_PValue", "Human_Senger_FDR", bm_keys),
-        "Hnew1": by_symbol(pd.read_csv(de / "Hnew1_Fawkner_spatial_units.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
-        "Hnew1_colon": by_symbol(pd.read_csv(de / "Hnew1_Fawkner_spatial_units_colon_only.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
-        "Hnew2": by_symbol(pd.read_csv(de / "Hnew2_Fawkner_Burclaff.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
-        "Hbulk1": by_symbol(pd.read_csv(de / "Hbulk1_Roadmap_vs_HPA_SI.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
-        "Hbulk2": by_symbol(pd.read_csv(de / "Hbulk2_Roadmap_vs_HPA_duodenum.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
-        "Hnew3": by_symbol(pd.read_csv(de / "Hnew3_GaoSILI_vs_Wang.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
-        "Hnew3_debug": by_symbol(pd.read_csv(de / "Hnew3debug_GaoLI_vs_WangColonRectum.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
         "Pikkupeura_LN": by_symbol(bm, "gene", "Mouse_Pikkupeura_LN_log2FC", None, "Mouse_Pikkupeura_LN_FDR", bm_keys),
         "Pikkupeura_collagen": by_symbol(bm, "gene", "Mouse_Pikkupeura_collagen_log2FC", None, "Mouse_Pikkupeura_collagen_FDR", bm_keys),
     }
+    vals.update({k: by_symbol(pd.read_csv(de / f), "symbol", "log2FC", "PValue", "FDR", keys)
+                 for k, f in DE_FILES.items()})
     order = PRIORITY + [g for g in cand.gene if g not in PRIORITY]
     mat = pd.DataFrame({"marker": order, "priority_control": [g in PRIORITY for g in order]})
     for k, *_ in CONTRASTS:
@@ -92,6 +119,8 @@ def main():
         r1 = bool(tn[0] > 0 and support < 0.05) if not np.isnan(tn[0]) else False
         r2 = bool(binom_p < 0.05)
         rows.append(dict(contrast=k, description=label, species=species, source=src,
+                         stage_resolution=STAGE.get(k, "all_fetal_vs_adult" if species == "Human" else "culture"),
+                         parent_contrast=PARENT.get(k, k),
                          TNFRSF12A_log2FC=tn[0], TNFRSF12A_P=tn[1], TNFRSF12A_FDR=tn[2],
                          rule1_TNFRSF12A_fetal_high_supported=r1,
                          markers_measured=len(meas), markers_fetal_positive=n_pos,
@@ -101,12 +130,8 @@ def main():
                          qualifies=r1 and r2))
     q = pd.DataFrame(rows)
     olfm4 = {}
-    srcs = {"HGCA": (hgca, "gene", "HGCA_log2FC"), "Senger": None, "Pikkupeura_LN": None, "Pikkupeura_collagen": None}
     for k, *_ in CONTRASTS:
-        f = {"GaoOriginal": "GaoOriginal_GaoLI_vs_GSE103154.csv", "Hnew1": "Hnew1_Fawkner_spatial_units.csv",
-             "Hnew1_colon": "Hnew1_Fawkner_spatial_units_colon_only.csv", "Hnew2": "Hnew2_Fawkner_Burclaff.csv",
-             "Hbulk1": "Hbulk1_Roadmap_vs_HPA_SI.csv", "Hbulk2": "Hbulk2_Roadmap_vs_HPA_duodenum.csv",
-             "Hnew3": "Hnew3_GaoSILI_vs_Wang.csv", "Hnew3_debug": "Hnew3debug_GaoLI_vs_WangColonRectum.csv"}.get(k)
+        f = DE_FILES.get(k)
         if f:
             d = pd.read_csv(de / f).drop_duplicates("symbol").set_index("symbol")
             olfm4[k] = d.loc["OLFM4", "log2FC"] if "OLFM4" in d.index else np.nan

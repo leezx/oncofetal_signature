@@ -157,3 +157,73 @@ also showing TNFRSF12A fetal ≤ adult, the automated benchmark stops.
    the manual developmental-state analysis of Gao and Fawkner
    ([`step2_fetal_state/`](../../step2_fetal_state/)), which asks *when, where
    and in which epithelial state* TNFRSF12A is high in human fetal intestine.
+
+## Addendum v1.2 — stage-resolved re-analysis (Gao, HGCA; Senger not splittable)
+
+The plan was frozen in `618356e` before any stage-split contrast was
+computed.
+
+- **Breakpoint:** 9 weeks, taken from the fetal-only analysis in
+  `step2_fetal_state/`.
+- **Groups:** early fetal < 9 W and mid/late fetal ≥ 9 W, applied to the
+  age as each source reports it.
+- **Methods:** units, filters and statistics are unchanged, and the frozen
+  rule is applied to every contrast. The recomputed HGCA all-fetal contrast
+  reproduces the original (TNFRSF12A −0.46, P = 0.38).
+
+| Dataset | Contrast | TNFRSF12A log2FC (P) | Panel fetal-positive | Binomial P | Verdict |
+|---|---|---|---|---|---|
+| HGCA | all fetal vs adult (16 vs 7) | −0.46 (0.38) | 14/25 (56%) | 0.35 | fails |
+| | early (6) vs adult | −1.58 (0.006) | 13/23 (57%) | 0.34 | fails |
+| | mid/late (10) vs adult | −0.01 (0.99) | 15/25 (60%) | 0.21 | fails |
+| | mid/late vs early | **+1.60 (0.009)** | 14/24 | 0.27 | (within-fetal) |
+| Gao-original (LI vs GSE103154) | all fetal (12) vs adult | −0.08 (0.45) | 14/28 (50%) | 0.57 | fails |
+| | early (5) vs adult | −1.44 (0.38) | 10/28 (36%) | 0.96 | fails |
+| | mid/late (7) vs adult | −0.01 (0.95) | 14/28 (50%) | 0.57 | fails |
+| | mid/late vs early | +1.43 (0.36) | 19/28 | 0.044 | (within-fetal) |
+| H-new3 (Gao SI+LI vs Wang) | all fetal (15) vs adult | +0.31 (0.81) | 17/24 (71%) | 0.032 | fails (rule 1) |
+| | early (6) vs adult | −1.18 (0.20) | 12/24 (50%) | 0.58 | fails |
+| | mid/late (9) vs adult | +0.69 (0.089) | **20/24 (83%)** | **0.0008** | fails (rule 1) |
+| | mid/late vs early | +1.87 (0.070) | 20/28 | 0.018 | (within-fetal) |
+| Senger | — | — | — | — | not splittable (all fetal 11–22.5 W GA) |
+
+The answers to the frozen questions follow.
+
+1. **Does TNFRSF12A become fetal-positive with support?** No.
+   - Removing the early stratum moves TNFRSF12A from negative to about zero
+     (HGCA −0.46 → −0.01; Gao-original −0.08 → −0.01).
+   - It reaches +0.69 (P = 0.089) only in H-new3.
+   - Every early-vs-adult contrast is negative (HGCA significantly so).
+2. **Does the panel fraction rise with it?** Only in H-new3 (71% → 83%). For
+   HGCA it barely moves (56% → 60%) and for Gao-original not at all (50% →
+   50%).
+
+**Promotion criterion (frozen): not met for any dataset.** No mid/late
+contrast qualifies.
+
+**Reading.**
+- **Developmental-window mixing is real but explains only part of the
+  failure.**
+  - Early fetal epithelium is TNFRSF12A-low relative to adult.
+  - Mid/late is higher than early in both datasets. This is significant in
+    HGCA, an independent check of the 9-week breakpoint, which was derived
+    from Gao/Fawkner fetal data only.
+  - Pooling therefore dilutes the signal.
+- **Removing the dilution does not produce a fetal-high TNFRSF12A in HGCA or
+  Gao-original:** mid/late ≈ adult.
+- **The only stage-resolved contrast that approaches the H-new2 pattern is
+  H-new3-late.** It has a strong panel bias (83%) but TNFRSF12A is not
+  significant.
+
+Failure types:
+- **Type I (developmental-window mixing):** contributes in HGCA and Gao.
+- **Type II (composition/design):** remains the explanation for Roadmap/HPA
+  bulk and Visium.
+- **Neither type** accounts for HGCA/Gao mid/late ≈ adult. The adult
+  reference and cross-study platform effects remain candidates.
+
+Tables:
+- `results/tables/Benchmark_v2_qualification.csv` (columns
+  `stage_resolution`, `parent_contrast`), the matrix, and `*_DE.csv` for
+  each stage contrast.
+- `HGCA_stage_resolved_units.csv` and `*_units.csv` (Gao).

@@ -8,7 +8,7 @@ Chronological append-only record; newest entries are at the bottom.
 |---|---|---|---|
 | 1. Literature candidate collection | completed | — | Curated evidence tables under `docs/step1_literature_candidates/` |
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
-| 2b. Human benchmark v2 | **closed (review round 3)** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A (cross-study, not used alone for discovery); bulk H-bulk1/2 = 1 dataset, fail; Visium dropped; no more datasets |
+| 2b. Human benchmark v2 | **closed (review round 3); stage-resolved addendum v1.2 run** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A (cross-study, not used alone for discovery); bulk H-bulk1/2 = 1 dataset, fail; Visium dropped; no more datasets |
 | 2c. Fetal epithelial state (manual) | **executed; in review** | (this PR) | Gao early-embryo effect; TNFRSF12A pan-fetal-epithelial, stem/TA-enriched detection; no adult arm |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
@@ -382,3 +382,19 @@ progenitor sub-state; variance mostly within state. ANXA1 marks the Fawkner
 Fetal-progenitor state. No consistent region effect in Fawkner; Gao LI > SI.
 **Open**: state-matched fetal vs adult comparison, or Gao ≥ 9 W vs adult (new
 frozen contrast either way); final human discovery contrast still undecided.
+
+## 2026-10-02 — Benchmark v2 addendum v1.2: stage-resolved re-analysis
+
+**Plan**: frozen (`618356e`) before computation; breakpoint 9 weeks from the
+fetal-only state analysis; early < 9 W, mid/late ≥ 9 W, reported ages.
+**Scope**: HGCA (6 early / 10 mid-late / 7 adult donors), Gao-original and
+H-new3 (Gao 5–6 early / 7–9 mid-late embryos); Senger not splittable (all
+fetal ≥ 11 W GA); Roadmap bulk already all ≥ 9 W.
+**Results**: early vs adult TNFRSF12A negative everywhere (HGCA −1.58,
+P = 0.006); mid/late vs adult ≈ 0 (HGCA −0.01, Gao-original −0.01) or +0.69
+(H-new3, P = 0.089, panel 20/24); mid/late vs early positive (HGCA +1.60,
+P = 0.009 — independent support for the breakpoint). No contrast qualifies;
+promotion criterion not met; panel fraction rises only in H-new3 (71 → 83%).
+**Updated**: qualification + matrix + heatmap (21 contrasts), stage DE tables,
+review_decisions, marker summary (public committed; full mirrored to DATA
+restricted), dataset registry notes.
