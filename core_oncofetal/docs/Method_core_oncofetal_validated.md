@@ -210,6 +210,51 @@ Two contrasts:
 - **NE** if neither measured contrast fails but at least one is not measured.
 - TCGA bulk is support only, with no veto.
 
+### Panel-gene evaluation and NA provenance (data-QC amendment, frozen before recomputation)
+
+**Problem.** A 31-gene feature audit (`scripts/feature_audit_31.py`) found
+that almost every non-orthology NA in the gate contrasts came from the
+genome-wide edgeR `filterByExpr` step, not from the gene being absent.
+- **Present in the raw matrices but filtered:** for example, GJA1 in both CRC
+  epithelial matrices (Pelka 3,017 counts, Joanito 346 counts).
+- **True zeros:** for example, mouse Sox17.
+- **Symbol mapping:** no failures were found. Symbols, historical symbols
+  and Ensembl IDs were all checked.
+
+**Rule.** The 31 candidates form a predefined targeted panel, so a
+genome-wide expression filter does not decide whether they can be evaluated.
+1. **Filter exemption.** In every edgeR gate contrast, a panel gene is kept
+   if it has any counts in the contrast's samples:
+   `keep = filterByExpr OR (panel gene AND total count > 0)`.
+   - The model, normalisation, dispersion estimation and BH FDR (over all
+     tested genes) are otherwise identical to the original contrast.
+   - This applies to HGCA ≥ 9 PCW, H-new2 ≥ 9 PCW, GSE230581, Joanito and
+     Pelka. Gao has no expression filter beyond all-zero.
+2. **Zero expression.** A panel gene with zero counts in all relevant
+   samples is called `zero_expression`.
+   - It is evaluable and shows no enrichment: it counts as not positive in
+     H and fails M or C.
+   - An implausible zero in a source matrix (a ubiquitously expressed gene
+     at zero in every unit) is flagged as a likely quantification artefact
+     and treated as `not_available_in_source`.
+3. **NA vocabulary.** NA reasons are restricted to:
+   - `not_in_annotation`;
+   - `no_1to1_orthologue`;
+   - `zero_expression`;
+   - `filtered_low_expression`;
+   - `mapping_failure`;
+   - `not_available_in_source`.
+
+   "Not measured" is no longer used. After the exemption, a remaining NA
+   can only be one of these.
+4. **Low-count display flag.** Panel genes whose mean CPM is below 1 in both
+   arms of a contrast are flagged as low expression. The flag is shown in
+   the matrix and is not selecting.
+
+The gate rules (H, M, C thresholds) are unchanged. CIOC membership is
+recomputed only after this amendment is applied to all 31 genes and all gate
+contrasts.
+
 ## 4. Core definition
 
 **Conserved Intestinal Oncofetal Core (CIOC) = literature candidates passing Gates H, M and C.**
@@ -318,3 +363,4 @@ name; it is not a revision of the CIOC.
 | v3.0 (final) | L evidence from the full-text audit (rule unchanged); explicit H missing-data rule; mouse replication evaluated and not adopted (GSE44433 supportive, decision disclosed). No further framework revisions. |
 | v3.0, presentation only (after freeze) | CIOC name and claim scope (§0); H reporting wording and H-new2 role; per-gene H support source; discordance flags; v1.0 renamed "sensitivity analysis using single-dataset hard intersections". **Membership unchanged.** |
 | v4.0 | Logic correction: literature defines the candidate universe (all 31 = YES); provenance (A/B/C, studies, resolved/unresolved) is annotation, not a gate. Core = H ∧ M ∧ C. Applied identically to all 31 genes. Last framework revision. |
+| v4.0 data-QC amendment | Panel genes exempt from the genome-wide expression filter; explicit NA provenance vocabulary; zero expression treated as evaluable; low-count flag. Gate rules unchanged. Frozen before recomputation. |

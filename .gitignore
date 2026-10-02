@@ -45,3 +45,4 @@ core_oncofetal/results/Core_oncofetal_gate_statistics.*
 core_oncofetal/results/Core_oncofetal_gate_long.csv
 core_oncofetal/results/CIOC_manuscript_text.md
 core_oncofetal/results/CIOC_gate_funnel_31.xlsx
+core_oncofetal/results/Feature_audit_31_restricted.csv
