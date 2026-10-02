@@ -21,3 +21,22 @@ __pycache__/
 .Rhistory
 .RData
 renv/library/
+
+# Joanito 2022 (Synapse syn26844071) data-use terms: no transfer or disclosure
+# of the data or derived material. Everything derived from Joanito stays local
+# (and under DATA/.../restricted_joanito/), never in this public repository.
+step3_cancer/restricted/
+step3_cancer/results/tables/Joanito_*
+step3_cancer/results/tables/CRC_high_evidence.csv
+step3_cancer/results/tables/Dataset_admission_QA.csv
+step3_cancer/results/tables/Literature_31_CRC_axis_audit.csv
+step3_cancer/results/figures/Joanito_*
+step3_cancer/results/figures/TCGA_vs_epithelial_effect_scatter.*
+step3_cancer/results/figures/Dataset_admission_QA.*
+step3_cancer/results/source_data/Joanito_*
+step3_cancer/results/source_data/TCGA_vs_epithelial_effect_scatter_source_data.csv
+step3_cancer/results/source_data/Dataset_admission_QA_source_data.csv
+marker_summary/results/Literature_31_marker_summary_statistics.*
+marker_summary/results/Literature_31_marker_measurement_status.csv
+marker_summary/results.zip
+*.zip

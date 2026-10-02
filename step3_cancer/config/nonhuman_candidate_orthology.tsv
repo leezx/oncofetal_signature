@@ -1,0 +1,3 @@
+candidate	species_origin	ensembl_release	human_gene	human_gene_id	homology_type	orthology_confidence	audit_status
+LY6A	mouse (Ly6a/Sca-1)	116	LY6S	ENSG00000291309	ortholog_one2many	0	no_direct_human_one2one_orthologue
+REG3B	mouse (Reg3b)	116	REG1B	ENSG00000172023	ortholog_one2many	0	no_direct_human_one2one_orthologue

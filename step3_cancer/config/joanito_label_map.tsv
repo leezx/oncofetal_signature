@@ -1,0 +1,12 @@
+sample_origin	iCMS	reason	analysis_group
+LymphNode	iCMS2	lymph-node metastasis, not primary tumour	EXCLUDED
+LymphNode	iCMS3	lymph-node metastasis, not primary tumour	EXCLUDED
+Normal	Normal	author normal epithelial call in adjacent-normal sample	Normal
+Normal	iCMS2	tumour-labelled cells in adjacent-normal sample; ambiguous	EXCLUDED
+Normal	iCMS3	tumour-labelled cells in adjacent-normal sample; ambiguous	EXCLUDED
+Tumor	Normal	normal-like epithelium inside tumour sample (plan: excluded from both groups)	EXCLUDED
+Tumor	iCMS2	author tumour-epithelial call (iCMS2/iCMS3) in primary tumour sample	Malignant
+Tumor	iCMS3	author tumour-epithelial call (iCMS2/iCMS3) in primary tumour sample	Malignant
+Tumor-2	Normal	normal-like epithelium inside tumour sample (plan: excluded from both groups)	EXCLUDED
+Tumor-2	iCMS2	author tumour-epithelial call in additional tumour sample (Tumor-2) of the same patient; pooled within patient	Malignant
+Tumor-2	iCMS3	author tumour-epithelial call in additional tumour sample (Tumor-2) of the same patient; pooled within patient	Malignant

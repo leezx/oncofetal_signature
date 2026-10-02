@@ -8,7 +8,7 @@ Chronological append-only record; newest entries are at the bottom.
 |---|---|---|---|
 | 1. Literature candidate collection | completed | — | Curated evidence tables under `docs/step1_literature_candidates/` |
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
-| 3. CRC-high axis | blocked | — | Do not start until Step 2 is rerun with a suitable contrast |
+| 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
 
@@ -151,3 +151,138 @@ matched adult epithelial reference remains unresolved. Step 3 remains blocked.
 
 **Audit**: See `step2_dataset_benchmark/docs/BENCHMARK_REPORT.md` and
 `step2_dataset_benchmark/results/tables/`.
+
+## 2026-10-02 — Step 3 started at user instruction (independent of Step 2)
+
+**Decision**: The user instructed that Step 3 begin now although Step 2 is
+invalidated. Step 3 is therefore run genome-wide and does not use the
+provisional 706-gene output in any way. The fetal ∩ CRC intersection is
+deferred until a replacement Step 2 passes biological QA, and Step 3 results
+must not be used to choose the replacement Step 2 datasets or thresholds.
+
+**Plan**: `step3_cancer/docs/ANALYSIS_PLAN.md`, committed (`a2db19f`) before
+any tumour/normal result was examined. CRC-high = T1 (TCGA COAD+READ primary
+tumour vs normal, log2FC ≥ 0.5, FDR < 0.05, `~ tissue + project`) ∩ S1
+(Joanito malignant vs normal epithelium, same thresholds, plus a malignant >
+normal stem/TA proliferation control) ∩ S2 (Pelka tumour vs normal epithelium,
+log2FC > 0, FDR < 0.05). New relative to Step 2: an oncofetal-independent
+dataset admission QA (8 canonical tumour-up and 10 tumour-down CRC markers;
+≥ 80% in the expected direction per gated contrast).
+
+**Executed**:
+- recount3 TCGA COAD/READ + GTEx COLON (uniform Monorail processing). After
+  excluding FFPE, non-01/11 sample types, and duplicate aliquots: 624 primary
+  tumours (458 COAD, 166 READ) and 51 normals. T1: 28,204 genes tested,
+  10,266 tumour-high, 6,011 normal-high (all GENCODE gene types). Paired
+  sensitivity: 50 pairs. GTEx sensitivity: 433 transverse colon samples
+  (direction only; source fully confounded).
+- Pelka GSE178341: 62 tumour and 35 eligible normal patient pseudobulks
+  (one normal pseudobulk < 50 cells excluded); 14,696 genes tested.
+- Admission QA: T1 and S2 recovered 18/18 panel genes in the expected
+  direction. The Pelka proliferation-control contrast is not a gated contrast
+  and is reported as not applicable.
+- Bulk vs epithelial effect sizes: Spearman rho = 0.702 over 14,460 jointly
+  tested genes.
+
+**Descriptive candidate notes (not gates)**: TACSTD2, TNFRSF12A, SPP1, MMP7,
+RBP1, IL1RN and LAMC2 pass both T1 and S2. CLU and ANXA6 are normal-high in
+bulk but tumour-high in Pelka epithelium; ANXA1 is flat in bulk but tumour-high
+in epithelium — candidates for the `Epithelial_only` label once S1 exists.
+EMP1 is normal-high in both bulk and Pelka whole-epithelium, yet higher in
+tumour than normal stem/TA cells. CCN1/CCN2 were matched through their
+GENCODE v26 symbols CYR61/CTGF (`config/symbol_aliases.tsv`); LY6A and REG3B
+have no human annotation; GJA1, SPRR1A, ANKRD1, SOX17 and L1CAM were removed
+by Pelka expression filtering.
+
+**Blocker**: Joanito Synapse syn26844071 has a self-sign access requirement
+(9606933) that the account owner must accept in the Synapse web UI. No
+`CRC_high` call is made until S1 runs; current labels are
+`T1_pass_S1_pending` / `Not_T1`.
+
+## 2026-10-02 — Step 3 plan v2 after user review
+
+**Review verdict**: "Approve with one conceptual modification: do not let TCGA
+bulk veto a malignant-epithelial CRC-high gene."
+
+**Change**: `CRC_high` = S1 ∩ S2 (Joanito primary + Pelka replication). TCGA T1
+is reported per gene as `bulk_support` and no longer gates the label. No
+threshold, model, dataset, or QA rule changed; Joanito had not been examined.
+
+**Also applied**: final tables now carry `hgnc_symbol` (current HGNC, e.g.
+CCN1/CCN2) plus `source_symbol` (CYR61/CTGF in GENCODE v26/Pelka). LY6A and
+REG3B are recorded as having no direct human one-to-one orthologue (Ensembl
+116: Ly6a → LY6S and Reg3b → REG1B, both `ortholog_one2many`, confidence 0) in
+`config/nonhuman_candidate_orthology.tsv`, replacing the earlier "no human
+gene" wording.
+
+**Confirmed unchanged**: Pelka log2FC > 0 + FDR < 0.05; direction-only stem/TA
+control; patient-level pseudobulk only; admission-QA markers never used to tune
+thresholds; EMP1's pattern (normal-high in whole epithelium, higher than normal
+stem/TA) is reported as-is.
+
+**Gate before S1**: the Joanito label mapping must be shown to the user and
+frozen before any Joanito DE. Interim labels: 6,296 `S2_pass_S1_pending`,
+22,147 `S2_fail_S1_pending`.
+
+## 2026-10-02 — Joanito downloaded; label map frozen (plan v3)
+
+**Data**: Synapse terms accepted by the account owner; epithelial count matrix,
+epithelial metadata, and clinical table downloaded with MD5 verification.
+Terms: non-commercial use; no transfer or disclosure of data or derived
+material. Because this repository is public, **no Joanito-derived numbers,
+tables, figures, or labels are committed**; they are kept in the git-ignored
+`step3_cancer/restricted/` record and under `DATA` (see below).
+
+**Label map** (`step3_cancer/config/joanito_label_map.tsv`, rules only): Malignant =
+iCMS2/iCMS3 cells in `Tumor`/`Tumor-2` samples (pooled per patient); Normal =
+iCMS `Normal` cells in `Normal` samples; excluded = normal-like cells in tumour
+samples, iCMS2/3-labelled cells in normal samples, and lymph-node samples.
+Joanito has no normal stem/TA labels and none were constructed. The map was
+reviewed and frozen before any Joanito pseudobulk or DE (plan v3).
+
+## 2026-10-02 — Step 3 plan v3 executed (S1 Joanito)
+
+**Review (v3)**: S1 is Joanito malignant vs normal epithelium only; the Pelka
+tumour vs normal stem/TA comparison is an independent progenitor-specificity
+check (P), not a substitute Joanito gate. A cohort-confounding check
+(cohort × group patient table) and a sensitivity S1 restricted to cohorts with
+both groups were added.
+
+**Outcome (qualitative; numbers restricted)**: the full and sensitivity S1
+models were highly concordant, so Joanito is retained; S1 passed the dataset
+admission QA; `CRC_high` (S1 ∩ S2 passing P) and all other labels were
+produced. Detailed counts, statistics, and gene-level observations are in the
+restricted record.
+
+**Open review items (no rule changed)**: whether to add an ambient
+plasma-cell (immunoglobulin) flag; the progenitor check P removes few genes,
+so separation of stem/WNT programmes from oncofetal genes is left to the fetal
+intersection rather than to retuning P.
+
+**Data-terms remediation**: commit `59e345a` had pushed Joanito-derived label
+counts and per-patient cell counts. The branch was rebuilt from `c9916f8`
+without any restricted file and force-pushed; restricted outputs are
+git-ignored and mirrored to
+`DATA/2.PROJECTS/1.TWEAKR-oncoFetal/results/2026-10-02_step3_cancer_axis_v0.1/restricted_joanito/`.
+
+## 2026-10-02 — Cross-step 31-marker summary statistics; symbol-lookup corrections
+
+**What**: `marker_summary/` tabulates log2FC, P value and FDR for the 31 Step 1
+positive markers across 16 dataset contrasts (Step 2 primary, Step 2
+benchmarks, Step 3), with a per-dataset measurement-status grid. Descriptive
+only; no gate computed.
+
+**Corrections found while building it**:
+1. Step 2 audit (`Literature_31_gate_failure_audit.csv`, MAJOR_REVISION_LOG)
+   reported CCN1/CCN2 as "not tested in HGCA". HGCA and Gao did test them under
+   `CYR61`/`CTGF` (HGCA log2FC CCN1 0.73, CCN2 1.66). The other six "absent"
+   genes are a mix: SPRR1A, SOX17, MMP7 and L1CAM are in the HGCA annotation but
+   were removed by `filterByExpr`; LY6A and REG3B have no human one-to-one
+   orthologue. The invalidated Step 2 outputs are left frozen; this note
+   corrects the record.
+2. Step 2 benchmark: Senger and Fawkner lookups now resolve CYR61/CTGF, and
+   Fawkner absent genes are NA instead of 0 (see BENCHMARK_REPORT correction).
+   Senger 14/29 (was 14/27); Fawkner 28/29 detected (was 26/31). No decision
+   changes.
+
+**Data terms**: the full summary contains Joanito-derived values and is git-ignored; a public version without Joanito columns or Step 3 labels is committed.

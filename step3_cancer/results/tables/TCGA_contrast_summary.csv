@@ -1,0 +1,4 @@
+"contrast","n_normal","n_tumor","n_tested","n_up"
+"T1_tumor_vs_normal",51,624,28204,10266
+"Paired_tumor_vs_normal",50,50,23306,5685
+"TCGA_tumor_vs_GTEx_transverse",433,624,24925,8473

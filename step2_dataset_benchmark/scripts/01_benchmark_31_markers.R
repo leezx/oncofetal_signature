@@ -16,6 +16,11 @@ dir.create(file.path(data_root, "processed"), recursive = TRUE, showWarnings = F
 
 candidates <- read.delim(file.path(repo, "step2_fetal", "config", "literature_candidates_31.tsv"),
                          stringsAsFactors = FALSE)
+# Older human annotations (Senger RPKM, Fawkner 10x features) still use
+# pre-2019 symbols (CYR61, CTGF). Look candidates up under their source symbol.
+aliases <- read.delim(file.path(repo, "step3_cancer", "config", "symbol_aliases.tsv"), stringsAsFactors = FALSE)
+source_symbol <- function(g) ifelse(g %in% aliases$current_hgnc_symbol,
+                                    aliases$source_symbol[match(g, aliases$current_hgnc_symbol)], g)
 orth <- read.delim(
   "/Volumes/Stelligen_SSD/Stelligen/DATA/1.Databases/Ensembl_orthologues/release_116/raw/human_mouse_orthologues.tsv",
   check.names = FALSE, stringsAsFactors = FALSE
@@ -50,6 +55,9 @@ stopifnot(sum(senger_stage == "fetal") == 6L, sum(senger_stage == "adult") == 3L
 senger_fit <- eBayes(lmFit(log2(senger_mat + 1), model.matrix(~factor(senger_stage, levels = c("adult", "fetal")))))
 senger_de <- topTable(senger_fit, coef = 2, number = Inf, sort.by = "none")
 senger_de$gene <- rownames(senger_de)
+to_current <- setNames(aliases$current_hgnc_symbol, aliases$source_symbol)
+renamed <- senger_de$gene %in% names(to_current) & !(to_current[senger_de$gene] %in% senger_de$gene)
+senger_de$gene[renamed] <- to_current[senger_de$gene[renamed]]
 senger_de <- senger_de[c("gene", "logFC", "P.Value", "adj.P.Val")]
 names(senger_de)[2:4] <- c("Human_Senger_log2FC", "Human_Senger_PValue", "Human_Senger_FDR")
 
@@ -74,18 +82,20 @@ for (archive in fawkner_files) {
   symbols <- features[[2]]
   for (g in candidates$gene) {
     idx <- which(symbols == g)
-    counts <- if (length(idx)) Matrix::colSums(x[idx, , drop = FALSE]) else rep(0, ncol(x))
+    if (!length(idx)) idx <- which(symbols == source_symbol(g))
+    # A gene absent from the feature list is not measured (NA), not zero.
+    counts <- if (length(idx)) Matrix::colSums(x[idx, , drop = FALSE]) else NULL
     fawkner_rows[[length(fawkner_rows) + 1L]] <- data.frame(
       gene = g, pool = pool, n_cells = ncol(x),
-      fetal_mean_UMI_per_10k = mean(counts / Matrix::colSums(x) * 1e4),
-      fetal_detection_fraction = mean(counts > 0)
+      fetal_mean_UMI_per_10k = if (is.null(counts)) NA_real_ else mean(counts / Matrix::colSums(x) * 1e4),
+      fetal_detection_fraction = if (is.null(counts)) NA_real_ else mean(counts > 0)
     )
   }
 }
 fawkner_long <- do.call(rbind, fawkner_rows)
 write.csv(fawkner_long, file.path(out_dir, "Fawkner_fetal_expression_by_pool.csv"), row.names = FALSE)
 fawkner <- aggregate(cbind(fetal_mean_UMI_per_10k, fetal_detection_fraction) ~ gene,
-                     fawkner_long, median)
+                     fawkner_long, median, na.action = na.pass)
 names(fawkner)[2:3] <- c("Human_Fawkner_fetal_median_UMI_per_10k",
                          "Human_Fawkner_fetal_median_detection_fraction")
 fawkner$Human_Fawkner_log2FC <- NA_real_

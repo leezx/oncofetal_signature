@@ -1,0 +1,29 @@
+# Dataset registry — Steps 2 and 3
+
+Compiled 2026-10-02 from dataset `link.md` files, step reports, GEO series
+records, and PubMed. "Units used" are biological replicates entering each
+contrast after the frozen eligibility rules.
+
+| Step | Role | Dataset | Source publication | Journal, year | PMID / DOI | Species | Accession | Assay / platform | Material & contrast | Units used | Status / notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 2 | H1 human discovery | Human Gut Cell Atlas (HGCA) | Elmentaite R et al. | Nature, 2021 | 34497389 / 10.1038/s41586-021-03852-1 | Human | gutcellatlas.org (`epi_raw_counts02_v2.h5ad`) | 10x scRNA-seq, raw counts; 142,113 epithelial cells | Fetal vs healthy adult intestinal epithelium; adult stem/TA/progenitor control | 16 fetal / 7 adult donors | **Invalidated** (failed 31-marker biological QA) |
+| 2 | H2 human replication | Gao 2018 fetal digestive tract | Gao S et al. | Nat Cell Biol, 2018 | 29802404 / 10.1038/s41556-018-0105-4 | Human | GSE103239 (super-series): fetal GSE95630, adult GSE103154 | scRNA-seq, GPL20301 (HiSeq 4000); fetal TPM, adult UMI-normalized TPM | Fetal vs adult large-intestinal epithelium; effect-only | 12 fetal embryos / 2 adult donors | **Invalidated** with Step 2 |
+| 2 | M1 mouse in vivo | Pikkupeura in vivo (sub-series IV) | Pikkupeura LM et al. | Sci Adv, 2023 | 37436997 / 10.1126/sciadv.adf9460 | Mouse | GSE230581 | Bulk RNA-seq, GPL19057 (NextSeq 500), raw counts | E16.5 proximal SI epithelium vs adult proximal SI crypt epithelium | 3 fetal / 3 adult | **Invalidated** with Step 2 |
+| 2 | Orthology reference | Ensembl BioMart orthologues | Ensembl | Release 116 | — | Human–mouse | Ensembl 116 `hsapiens_gene_ensembl` | Reference table | One-to-one orthologue mapping | — | Also used in Step 3 for LY6A/REG3B orthology notes |
+| 2 (benchmark) | Replacement candidate, human | Senger enterospheres | Senger S et al. | Cell Mol Gastroenterol Hepatol, 2018 | 29930978 / 10.1016/j.jcmgh.2018.01.014 | Human | GSE101531 | Bulk RNA-seq, GPL16791 (HiSeq 2500), RPKM | Fetal vs adult epithelial enterospheres (culture) | 6 fetal / 3 adult | Failed marker benchmark (14/29 positive) |
+| 2 (benchmark) | Replacement candidate, human | Fawkner-Corbett fetal atlas | Fawkner-Corbett D et al. | Cell, 2021 | 33406409 / 10.1016/j.cell.2020.12.016 | Human | GSE158702 | 10x scRNA-seq, raw UMI (GPL15520/GPL18573/GPL24676) | Fetal EpCAM+ epithelium only; no adult arm | 4 fetal pools | Fetal-expression annotation only; no fetal/adult FC possible |
+| 2 (benchmark) | Replacement candidate, mouse | Pikkupeura organoid cultures (sub-series I) | Pikkupeura LM et al. (series also linked to Hansen SL et al., Sci Adv 2023, PMID 37436979) | Sci Adv, 2023 | 37436997 / 10.1126/sciadv.adf9460 | Mouse | GSE160449 | Bulk RNA-seq, GPL13112 / GPL19057, raw counts | Fetal vs adult epithelial cultures, laminin and collagen arms | 6 fetal / 6 adult (two arms) | Strong culture benchmark (25/27 positive); culture-based |
+| 2 (benchmark) | Replacement candidate, mouse | Hemmerling LCM ileum | Hemmerling J et al. | PLoS One, 2014 | 24849654 / 10.1371/journal.pone.0098237 | Mouse | GSE44433 | Microarray, GPL16702 | Laser-microdissected distal ileal epithelium, WT E17.5 vs WT 8-week | 5 fetal / 5 adult | In vivo replication only (10/23 positive) |
+| 3 | T1 bulk tumour support | TCGA COAD + READ | Cancer Genome Atlas Network | Nature, 2012 | 22810696 / 10.1038/nature11252 | Human | TCGA-COAD, TCGA-READ (GDC) via recount3 | Bulk RNA-seq, recount3 Monorail, GENCODE v26 read counts | Primary tumour vs solid-tissue normal, `~ tissue + project` | 624 tumours (458 COAD, 166 READ) / 51 normals | `bulk_support` annotation (no veto, plan v2) |
+| 3 | T1 sensitivity | GTEx v8 colon | GTEx Consortium | Science, 2020 | 32913098 / 10.1126/science.aaz1776 | Human | GTEx v8 (dbGaP phs000424) via recount3 | Bulk RNA-seq, same recount3 pipeline | TCGA tumour vs GTEx Colon – Transverse; direction only (source confounded) | 433 GTEx / 624 tumours | Descriptive only |
+| 3 | Processing resource | recount3 | Wilks C et al. | Genome Biol, 2021 | 34844637 / 10.1186/s13059-021-02533-6 | Human | duffel.rail.bio/recount3; R `recount3` 1.20.0 | Uniform re-processing of TCGA + GTEx | — | 1,545 samples downloaded | Ensures TCGA/GTEx share one pipeline |
+| 3 | S1 primary malignant epithelium | Joanito CRC epithelial scRNA (5 cohorts: CRC-SG1, CRC-SG2, KUL3, KUL5, SMC) | Joanito I et al. | Nat Genet, 2022 | 35773407 / 10.1038/s41588-022-01100-4 | Human | Synapse syn26844071 (counts syn26844072, metadata syn26844073, clinical syn39828015) | 10x scRNA-seq, raw counts, GRCh38 Ensembl 93, symbols only; 49,155 epithelial cells | Author malignant (iCMS2/iCMS3, Tumor + Tumor-2) vs normal epithelium, `~ cohort + group` | Patient-level pseudobulks (≥ 50 cells); counts restricted | **Terms: non-commercial use; no transfer/disclosure of data or derived material** |
+| 3 | S2 epithelial replication + P progenitor check | Pelka CRC immune-hub atlas | Pelka K et al. | Cell, 2021 | 34450029 / 10.1016/j.cell.2021.08.003 | Human | GSE178341 (raw FASTQ: dbGaP phs002407) | 10x scRNA-seq, raw counts, GPL16791; 370,115 cells | Tumour- vs normal-specimen epithelium (S2); tumour vs normal stem/TA cE01–03 (P) | 62 tumour / 35 normal patients (P: 62 / 35) | Admitted; GEO release has no per-cell malignancy call |
+
+## Not used / deferred
+
+| Dataset | Intended role | Reason |
+|---|---|---|
+| In-house CRC Atlas | Large-scale replication, gene–gene network (Fig 1F) | Not available locally; `PR/CRC-Atlas` holds registry metadata only |
+| FAP → adenoma → CRC progression (HTAN) | Disease-evolution validation | Deferred; not used for discovery |
+| Joanito non-epithelial matrix (syn26844078, syn39828012) | — | Not required for S1 |
