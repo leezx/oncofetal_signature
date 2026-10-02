@@ -45,6 +45,18 @@
 - **Disclosure:** membership is recorded in the restricted workbook (Joanito
   data-use terms, §10).
 
+- **Wording for the members.** Write "N of the 31 literature-curated
+  candidates satisfied all transcriptomic validation criteria." Do not write that all members have established literature
+  evidence for intestinal fetal biology: RBP1's provenance is unresolved and
+  stays recorded as such in the provenance table.
+- **No ranking.** Members are not ranked or tiered in the manuscript. The
+  evidence matrix shows every value as computed, including values at the
+  threshold margin; thresholds are not adjusted in response.
+- **Compartment.** CRC validation was performed specifically in epithelial /
+  malignant epithelial pseudobulks. Downstream spatial or bulk readouts need
+  cell-type resolution before a member-high signal (for example SPP1, which is
+  also macrophage-expressed) is read as CIOC-high cancer cells.
+
 ## 1. Principle
 
 **Literature nominates; data validate.** The CIOC is not an intersection of
@@ -83,8 +95,10 @@ fully deterministic: no gene is added or removed by judgement.
 ## 3. Gate rules
 
 Each gate returns **pass**, **fail** or **not evaluable (NE)**. NE means the
-evidence needed was not measured (no orthologue, or below the contrast's
-expression filter). **NE is never reported as a biological fail.**
+required dataset has no evaluable value for the gene (no one-to-one
+orthologue, or `not_available_in_source`; after the data-QC amendment no gate
+NA arises from expression filtering). **NE is never reported as a biological
+fail.**
 
 | Gate | Status | Datasets |
 |---|---|---|
@@ -175,7 +189,7 @@ crypt epithelium, 3 vs 3, edgeR. The human gene is mapped through its Ensembl
 one-to-one orthologue (CXADR: high-confidence one2many).
 
 - **Pass** if the gene shows support.
-- **NE** if there is no orthologue or the gene is not measured.
+- **NE** if there is no one-to-one orthologue or no evaluable value (NA).
 - **Fail** otherwise.
 - GSE44433 is replication evidence only (not selecting). It is reported
   beside every gene.
@@ -207,7 +221,7 @@ Two contrasts:
 
 - **Pass** if **both** contrasts show support.
 - **Fail** if either measured contrast lacks support.
-- **NE** if neither measured contrast fails but at least one is not measured.
+- **NE** if neither evaluable contrast fails but at least one has no evaluable value (NA).
 - TCGA bulk is support only, with no veto.
 
 ### Panel-gene evaluation and NA provenance (data-QC amendment, frozen before recomputation)
@@ -216,18 +230,29 @@ Two contrasts:
 that almost every non-orthology NA in the gate contrasts came from the
 genome-wide edgeR `filterByExpr` step, not from the gene being absent.
 - **Present in the raw matrices but filtered:** for example, GJA1 in both CRC
-  epithelial matrices (Pelka 3,017 counts, Joanito 346 counts).
+  epithelial matrices (Pelka 3,017 counts; Joanito count in the restricted audit).
 - **True zeros:** for example, mouse Sox17.
 - **Symbol mapping:** no failures were found. Symbols, historical symbols
   and Ensembl IDs were all checked.
 
-**Rule.** The 31 candidates form a predefined targeted panel, so a
-genome-wide expression filter does not decide whether they can be evaluated.
+**Rule.** Genome-wide DE uses standard expression filtering
+(`filterByExpr`), whose purpose is to limit the multiple-testing burden of
+low-count genes. The 31 CIOC candidates were prespecified independently of
+the expression data, so candidate-level validation retains any candidate
+with nonzero counts and applies the same statistical model, with low-count
+candidates explicitly flagged (item 4). The genome-wide filter therefore does
+not decide whether a candidate can be evaluated.
 1. **Filter exemption.** In every edgeR gate contrast, a panel gene is kept
    if it has any counts in the contrast's samples:
    `keep = filterByExpr OR (panel gene AND total count > 0)`.
-   - The model, normalisation, dispersion estimation and BH FDR (over all
-     tested genes) are otherwise identical to the original contrast.
+   - The model, normalisation and dispersion estimation are otherwise
+     identical to the original contrast.
+   - **FDR universe.** The rescued candidates are fitted jointly with the
+     genome-wide filtered genes in one edgeR fit, and Benjamini–Hochberg FDR
+     is computed once over that enlarged tested set (genome-wide filtered
+     genes + rescued candidates; 4–6 extra hypotheses per contrast). There is
+     no separate 31-gene BH, so rescued and non-rescued candidates share one
+     hypothesis family.
    - This applies to HGCA ≥ 9 PCW, H-new2 ≥ 9 PCW, GSE230581, Joanito and
      Pelka. Gao has no expression filter beyond all-zero.
 2. **Zero expression.** A panel gene with zero counts in all relevant
@@ -245,7 +270,7 @@ genome-wide expression filter does not decide whether they can be evaluated.
    - `mapping_failure`;
    - `not_available_in_source`.
 
-   "Not measured" is no longer used. After the exemption, a remaining NA
+   The label "not measured" is no longer used. After the exemption, a remaining NA
    can only be one of these.
 4. **Low-count display flag.** Panel genes whose mean CPM is below 1 in both
    arms of a contrast are flagged as low expression. The flag is shown in
@@ -262,8 +287,22 @@ contrasts.
     H-new2, Pelka and Joanito use `filterByExpr(group)`, `normLibSizes` and
     QL, with Joanito `~ cohort + group`.
   - The only change is the panel exemption.
-- **Reproduction check:** genes already in the original DE tables reproduce
-  their log2FC to within 0.0005 in every contrast.
+- **Reproduction check** (genes matched by gene ID to the original DE
+  tables):
+
+  | Contrast | Tested genes (original → panel) | max \|ΔFDR\|, all genes | max \|ΔFDR\|, panel genes |
+  |---|---|---|---|
+  | HGCA ≥ 9 PCW | 17,804 → 17,808 | 1.1e-3 | 4.6e-4 |
+  | H-new2 ≥ 9 PCW | 14,914 → 14,920 | 7.3e-4 | 2.9e-4 |
+  | GSE230581 | 13,314 → 13,318 | 1.6e-3 | 8.6e-4 |
+  | Pelka | 14,696 → 14,701 | 5.2e-4 | 7.0e-5 |
+
+  - Joanito passes the same checks (values restricted).
+  - log2FC reproduces to within 0.0005 in every contrast.
+  - FDR in the rescued run equals BH over all tested genes (checked
+    directly).
+  - One genome-wide, non-panel gene crosses 0.05 (H-new2 SERPINB8,
+    0.04998 → 0.05001). No panel-gene gate call changes.
 - **Values:** `results/Panel_gate_values_public.csv`; Joanito values are
   restricted.
 - **Remaining NA in the gate contrasts:**
@@ -320,7 +359,7 @@ visible rather than summarised away. Bulk discrepancies are described only as
 - **Rule:** literature candidates ∩ G1 HGCA ≥ 9 PCW ∩ G2 GSE230581 ∩ G3 Joanito ∩ G4
   Pelka.
 - **Pass in each gate:** log2FC ≥ 0.5 and FDR < 0.05.
-- **Not measured** means not evaluable, never "fail".
+- **NA** (no evaluable value) means not evaluable, never "fail".
 - **Developmental intersection (G1 ∧ G2):** GJA1, CLU, ANXA6, SPP1, RBP1.
 - **Purpose:** the hard-intersection result is a **sensitivity analysis**,
   not an alternative Core. It shows that the conclusions do not depend on the
@@ -385,3 +424,4 @@ name; it is not a revision of the CIOC.
 | v3.0, presentation only (after freeze) | CIOC name and claim scope (§0); H reporting wording and H-new2 role; per-gene H support source; discordance flags; v1.0 renamed "sensitivity analysis using single-dataset hard intersections". **Membership unchanged.** |
 | v4.0 | Logic correction: literature defines the candidate universe (all 31 = YES); provenance (A/B/C, studies, resolved/unresolved) is annotation, not a gate. Core = H ∧ M ∧ C. Applied identically to all 31 genes. Last framework revision. |
 | v4.0 data-QC amendment | Panel genes exempt from the genome-wide expression filter; explicit NA provenance vocabulary; zero expression treated as evaluable; low-count flag. Gate rules unchanged. Frozen before recomputation. |
+| v4.0 final freeze (wording only) | Rationale and FDR universe of the panel exemption stated (one joint fit, BH over genome-wide filtered + rescued genes; FDR reproduction table); NE wording no longer says "not measured"; §0 member wording, no-ranking and compartment statements. No numerical or membership change. **CIOC membership frozen** (membership in the restricted workbook, §10). |

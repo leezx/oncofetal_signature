@@ -18,7 +18,7 @@
   (`scripts/feature_audit_31.py`, `scripts/panel_edger.R`,
   `scripts/panel_contrasts.py`). NA reasons use a fixed vocabulary; "not
   measured" is no longer used.
-- **Calls** are pass, fail or not evaluable. Not measured is never treated
+- **Calls** are pass, fail or not evaluable. A missing value (NA) is never treated
   as a fail.
 - **Former v1.0** (a four-dataset intersection) is kept as a *sensitivity
   analysis using single-dataset hard intersections*, not as an alternative Core.

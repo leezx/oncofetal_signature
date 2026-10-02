@@ -71,8 +71,8 @@ def main():
         ("Gate M Mouse in vivo", "GSE230581 E16.5 epithelium vs adult crypt: log2FC≥0.5 & FDR<0.05 (one-to-one orthologue)"),
         ("Core", "YES = passes Gates H, M and C (CIOC, method v4.0); blank = not Core"),
         ("Core human", "YES = passes Gates H and C, ignoring Gate M (human-only view; not the CIOC definition); blank = not"),
-        ("NOT EVALUABLE", "not measured / no orthologue in the required dataset; not a biological fail"),
-        ("Cells", "log2FC (FDR); ** log2FC≥0.5 & FDR<0.05; * FDR<0.05 below effect threshold; NA not measured"),
+        ("NOT EVALUABLE", "no evaluable value in the required dataset (no one-to-one orthologue / not available in source); not a biological fail"),
+        ("Cells", "log2FC (FDR); ** log2FC≥0.5 & FDR<0.05; * FDR<0.05 below effect threshold; NA (reason); [low count] = mean CPM<1 in both arms; FDR = BH over genome-wide filtered + rescued panel genes (one joint edgeR fit)"),
         ("Restriction", "Contains Joanito-derived results (Synapse data-use terms): do not share or commit"),
     ], columns=["Item", "Definition"])
     wb = Workbook()

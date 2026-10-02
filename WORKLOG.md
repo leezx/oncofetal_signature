@@ -522,3 +522,13 @@ reproduced (|Δlog2FC| ≤ 0.0005). Gate rules unchanged.
 **Effect (public)**: SPP1 now passes H (H-new2 +7.30); MSLN passes M (+7.18);
 GJA1 evaluable in Pelka (+3.89); LY6A and IL1RN now measured mouse fails. Final
 membership restricted (Joanito).
+
+### 2026-10-02 — CIOC final freeze (wording only)
+**FDR universe confirmed**: rescued panel genes are fitted jointly with the
+genome-wide filtered genes; BH is computed once over that enlarged tested set
+(4–6 extra hypotheses per contrast), not a separate 31-gene BH. Max |ΔFDR| vs
+original ≤ 3.7e-3 (all genes), ≤ 8.6e-4 (panel genes); no panel gate call
+changes. Methods now state the exemption rationale and FDR universe, member
+wording, no-ranking and CRC-compartment statements; NE wording no longer says
+"not measured". No numerical or membership change; membership frozen
+(restricted).
