@@ -7,8 +7,8 @@ Chronological append-only record; newest entries are at the bottom.
 | Step | Status | PR | Notes |
 |---|---|---|---|
 | 1. Literature candidate collection | completed | — | Curated evidence tables under `docs/step1_literature_candidates/` |
-| 2. Conserved developmental axis | completed, PR open | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706 strict H1 ∩ H2 ∩ M1 candidates |
-| 3. CRC-high axis | not started | — | Next planned analysis |
+| 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
+| 3. CRC-high axis | blocked | — | Do not start until Step 2 is rerun with a suitable contrast |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
 
@@ -99,3 +99,28 @@ and TNFRSF12A passed neither downstream gate.
 
 **Review**: The former rho = 0.485 is now explicitly documented as conditioned
 on the final 706-gene selection and is not presented as genome-wide conservation.
+
+## 2026-10-02 — MAJOR REVISION: developmental dataset suitability failure
+
+**Trigger**: The 31-candidate gate audit revealed a systematic contradiction
+between the selected developmental contrasts and literature-curated positive
+oncofetal markers. Only five candidates passed the final intersection. In HGCA,
+11 of 23 tested candidates had negative fetal/adult log2FC and eight candidates
+were absent from the tested output; 15 first failed HGCA primary.
+
+**Assessment**: The workflow is computationally reproducible, but reproducibility
+does not establish biological validity. The selected datasets and contrasts are
+not sufficiently fit for the intended conserved fetal-high definition. The
+precise cause—region, developmental stage, epithelial composition, annotation,
+gene coverage, or a combination—has not yet been isolated.
+
+**Decision**: Step 2 is no longer complete. The 706-gene result is provisional,
+must not be used for biological claims or Step 3, and will not be rescued by
+changing thresholds. Existing outputs remain frozen as an audit trail.
+
+**Remediation**: Re-audit dataset metadata, gene coverage, epithelial subsets,
+and a prespecified positive-control panel before choosing or rerunning the
+developmental contrasts. Any replacement analysis must use a new versioned
+directory and preserve the current failed-analysis checkpoint.
+
+**Full record**: See `docs/MAJOR_REVISION_LOG.md`.

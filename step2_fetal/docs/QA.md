@@ -1,5 +1,10 @@
 # Step 2 QA record
 
+> Computational QA passed, but biological positive-control QA failed. This run
+> is invalidated pending dataset/contrast review. Passing checksums, assertions,
+> and reproducibility tests must not be interpreted as validation of the
+> developmental comparison. See `../../docs/MAJOR_REVISION_LOG.md`.
+
 Checkpoint date: 2026-10-02.
 
 ## Source integrity
@@ -60,3 +65,9 @@ Checkpoint date: 2026-10-02.
 Gao is effect-only replication because the released fetal and adult matrices are
 processed TPM/UMI-normalized TPM from only two adult donors. It is not used as an
 FDR gate and cannot rescue failure in HGCA or mouse.
+
+More importantly, the current datasets/contrasts failed biological
+positive-control QA: only 5 of 31 literature candidates passed the final set,
+11 of 23 HGCA-tested candidates were estimated as adult-high, and 8 were absent
+from HGCA testing. This is analysis-invalidating until the dataset and metadata
+selection are re-audited.

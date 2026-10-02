@@ -1,5 +1,10 @@
 # Step 2 fetal differential expression
 
+> **Major validity warning (2026-10-02):** the 31-marker audit identified a
+> dataset/contrast suitability failure. The 706-gene output is provisional and
+> must not be used for downstream Step 3 analysis. See
+> [`../docs/MAJOR_REVISION_LOG.md`](../docs/MAJOR_REVISION_LOG.md).
+
 This is the complete, reproducible Step 2 analysis package. Raw and processed
 expression matrices remain outside GitHub under the managed `DATA` hierarchy.
 

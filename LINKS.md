@@ -10,7 +10,8 @@
 - Step 2 root: `step2_fetal/`
 - Runbook: `step2_fetal/docs/RUNBOOK.md`
 - Rendered report: `step2_fetal/docs/STEP2_REPORT.html`
-- Final conserved set: `step2_fetal/results/tables/Conserved_Fetal_High.csv`
+- Provisional/invalidated 706-gene output: `step2_fetal/results/tables/Conserved_Fetal_High.csv`
+- Major revision record: `docs/MAJOR_REVISION_LOG.md`
 
 ## DATA datasets
 

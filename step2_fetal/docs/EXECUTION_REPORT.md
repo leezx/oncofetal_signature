@@ -1,5 +1,10 @@
 # Step 2 execution report
 
+> **Superseded as a biological conclusion:** the computations below remain a
+> reproducible audit record, but the selected dataset contrasts failed
+> literature-marker biological QA. Step 2 is invalidated pending dataset review.
+> See [`../../docs/MAJOR_REVISION_LOG.md`](../../docs/MAJOR_REVISION_LOG.md).
+
 ## Material Passport
 
 - Origin Skill: academic-research-suite / experiment-agent

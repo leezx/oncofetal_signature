@@ -17,3 +17,7 @@
 
 Configuration is centralized in `step2_fetal/config/step2.env`. See
 `step2_fetal/docs/RUNBOOK.md` for commands and restart points.
+
+**Validity status:** the modules remain reproducible, but the current Step 2
+dataset/contrast failed literature-marker biological QA. Do not use the 706-gene
+output downstream; see `docs/MAJOR_REVISION_LOG.md`.
