@@ -15,6 +15,10 @@ epithelium) qualifies among human contrasts (TNFRSF12A +1.83, P < 0.001;
 18/24 markers fetal-positive). Visium is composition-confounded; the Gao debug
 pair places the Gao failure in the fetal arm, not the adult reference.
 
+**Review decision (2026-10-02):** H-new2 is the new human primary developmental
+contrast — a cross-study contrast that still needs independent validation.
+Visium is dropped from quantitative Step 2 and kept only as a failed QC record.
+
 | Path | Content |
 |---|---|
 | `scripts/00–06`, `run_benchmark_v2.sh` | acquisition, pseudobulks, contrasts, matrix, heatmap |

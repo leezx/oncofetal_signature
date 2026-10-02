@@ -1,0 +1,11 @@
+contrast	review_decision	note
+HGCA	failed_qualification	original H1; not used as primary
+GaoOriginal	failed_qualification	fetal-arm problem localised by debug pair
+Senger	failed_qualification	culture benchmark
+Hnew1	dropped_failed_QC_record	Visium composition-confounded; dropped from quantitative Step 2 (review 2026-10-02); kept as QC record only
+Hnew1_colon	dropped_failed_QC_record	as Hnew1
+Hnew2	human_primary_cross_study	new human primary developmental contrast (review 2026-10-02); cross-study (study/platform confounded with stage); requires independent validation, not final proof on its own
+Hnew3	failed_qualification	panel bias passes, TNFRSF12A unsupported
+Hnew3_debug	failed_qualification	debug contrast only
+Pikkupeura_LN	mouse_culture_benchmark	qualifies; culture, not in-vivo primary
+Pikkupeura_collagen	mouse_culture_benchmark	qualifies; culture, not in-vivo primary

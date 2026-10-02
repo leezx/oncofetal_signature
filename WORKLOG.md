@@ -8,7 +8,7 @@ Chronological append-only record; newest entries are at the bottom.
 |---|---|---|---|
 | 1. Literature candidate collection | completed | — | Curated evidence tables under `docs/step1_literature_candidates/` |
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
-| 2b. Human benchmark v2 | **completed; in review** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 (Fawkner fetal + Burclaff adult) is the only qualifying human contrast; no signature built |
+| 2b. Human benchmark v2 | **completed; in review** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 adopted as cross-study human primary (needs independent validation); Visium dropped; no signature built |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
@@ -319,3 +319,17 @@ minimum-units argument (H-new1 adult arm has two sections).
 **Not done**: no replacement Step 2 signature; no change to Step 3; the
 proposed manual TNFRSF12A follow-up (donor × gestational age × region ×
 subtype) awaits review.
+
+## 2026-10-02 — Review decisions on benchmark v2
+
+1. **H-new2 = new human primary** developmental contrast, explicitly labelled a
+   cross-study developmental contrast (Fawkner fetal vs Burclaff adult). It
+   needs independent validation and is not final proof on its own.
+2. **Visium dropped** from quantitative Step 2; kept only as a failed
+   dataset/QC record.
+
+Recorded in `step2_benchmark_v2/config/review_decisions.tsv` (surfaced as
+`review_decision` in the qualification table), the v2 report, READMEs, the
+dataset registry, and the 31-marker summary notes. Frozen verdicts unchanged.
+Open: manual TNFRSF12A follow-up; choice of an independent validation source
+for H-new2.

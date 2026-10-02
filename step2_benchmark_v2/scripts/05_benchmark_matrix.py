@@ -96,6 +96,10 @@ def main():
                          **{f"{g}_log2FC": vals[k][g][0] for g in ["TACSTD2", "CLU", "ANXA1"]},
                          qualifies=r1 and r2))
     q = pd.DataFrame(rows)
+    # Review decisions recorded after the frozen verdicts (never change them).
+    dec = repo / "step2_benchmark_v2/config/review_decisions.tsv"
+    if dec.exists():
+        q = q.merge(pd.read_csv(dec, sep="\t"), on="contrast", how="left")
     q.to_csv(out / "Benchmark_v2_qualification.csv", index=False)
     pd.set_option("display.width", 200)
     print(q[["contrast", "TNFRSF12A_log2FC", "TNFRSF12A_P", "rule1_TNFRSF12A_fetal_high_supported",

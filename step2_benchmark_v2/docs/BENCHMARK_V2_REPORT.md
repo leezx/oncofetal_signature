@@ -76,3 +76,18 @@ embryos. Panel bias (17/24) is significant in both H-new3 contrasts.
   H-new2-like data, with a second independent fetal epithelial scRNA source to
   break the study-stage confound. TNFRSF12A by gestational age × region ×
   epithelial subtype (Gao, Fawkner) is the natural manual follow-up.
+
+## Review decisions (2026-10-02)
+
+1. **H-new2 becomes the new human primary developmental contrast**, labelled a
+   **cross-study developmental contrast** (Fawkner fetal vs Burclaff adult;
+   study/platform confounded with stage). It requires independent validation
+   and is not to be treated as final proof on its own.
+2. **Visium (H-new1, H-new1-colon) is dropped from quantitative Step 2.** Its
+   outputs are retained only as a failed dataset/QC record; no further work is
+   planned on it.
+
+Decisions are recorded per contrast in `config/review_decisions.tsv` and appear
+as `review_decision` in `results/tables/Benchmark_v2_qualification.csv`; they
+do not alter the frozen verdicts. Not yet decided: the manual TNFRSF12A
+follow-up (gestational age × region × epithelial subtype).
