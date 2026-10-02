@@ -63,7 +63,7 @@ def main():
     pelka_ctrl = prefixed(de / "Pelka_Tumor_vs_Normal_prolif.csv", "PelkaProlifCtrl")
 
     joanito_f = de / "Joanito_Malignant_vs_Normal.csv"
-    joanito_ctrl_f = de / "Joanito_Malignant_vs_Normal_prolif.csv"
+    sens_f = de / "Joanito_Malignant_vs_Normal_sensitivity_paired_cohorts.csv"
     have_s1 = joanito_f.exists()
 
     qa = [admission("T1_TCGA", tcga.rename(columns={"T1_log2FC": "lfc"}), "lfc"),
@@ -74,6 +74,9 @@ def main():
         qa.append(admission("S1_Joanito", s1, "Joanito_log2FC"))
     qa = pd.concat(qa, ignore_index=True)
     qa.to_csv(out / "Dataset_admission_QA.csv", index=False)
+    # Public copy without Joanito rows (Synapse terms forbid disclosing
+    # Joanito-derived material; this repository is public).
+    qa[~qa.contrast.str.contains("Joanito")].to_csv(out / "Dataset_admission_QA_TCGA_Pelka.csv", index=False)
 
     ev = tcga[["gene_id", "symbol", "gene_type", "T1_log2FC", "T1_FDR", "T1_pass",
                "Paired_log2FC", "Paired_FDR", "Paired_concordant",
@@ -85,39 +88,39 @@ def main():
     ev["match_key"] = "ensembl_gene_id"
 
     ev["S2_pass"] = (ev.Pelka_log2FC > 0) & (ev.Pelka_FDR < a.max_fdr)
+    # Independent progenitor-specificity check (plan v3): Pelka tumour
+    # epithelium vs Pelka normal stem/TA (cE01-03), direction only. It is a
+    # separate biological check, not part of S1 and not a substitute for
+    # Joanito labels; it keeps cycling/crypt-progenitor genes out of CRC_high.
+    ev["Progenitor_check"] = ev.PelkaProlifCtrl_log2FC > 0
     if have_s1:
-        ev = ev.merge(s1.drop(columns="symbol"), on="gene_id", how="outer")
-        if joanito_ctrl_f.exists():
-            ctrl = prefixed(joanito_ctrl_f, "ProlifCtrl")
-            ctrl_source = "Joanito"
-        else:
-            ctrl = pelka_ctrl.rename(columns={"PelkaProlifCtrl_log2FC": "ProlifCtrl_log2FC",
-                                              "PelkaProlifCtrl_FDR": "ProlifCtrl_FDR"})
-            ctrl_source = "Pelka_cE01-03"
-        if "ProlifCtrl_log2FC" not in ev:
-            ev = ev.merge(ctrl.drop(columns="symbol"), on="gene_id", how="left")
-        ev["ProlifCtrl_source"] = ctrl_source
-        ev["S1_discovery"] = (ev.Joanito_log2FC >= a.min_log2fc) & (ev.Joanito_FDR < a.max_fdr)
-        ev["S1_prolif_ctrl"] = ev.ProlifCtrl_log2FC > 0
-        ev["S1_pass"] = ev.S1_discovery & ev.S1_prolif_ctrl
+        # Joanito releases symbols only (GRCh38 Ensembl 93): match by symbol
+        # against the source symbol of the Ensembl-keyed table.
+        s1 = s1.drop(columns="gene_id").drop_duplicates("symbol")
+        ev = ev.merge(s1, on="symbol", how="left")
+        ev.loc[ev.Joanito_log2FC.notna(), "match_key"] = "ensembl_gene_id; Joanito by symbol"
+        if sens_f.exists():
+            sens = prefixed(sens_f, "JoanitoSens").drop(columns="gene_id").drop_duplicates("symbol")
+            ev = ev.merge(sens, on="symbol", how="left")
+            ev["S1_sensitivity_pass"] = (ev.JoanitoSens_log2FC >= a.min_log2fc) & (ev.JoanitoSens_FDR < a.max_fdr)
+        ev["S1_pass"] = (ev.Joanito_log2FC >= a.min_log2fc) & (ev.Joanito_FDR < a.max_fdr)
     else:
-        for c in ["Joanito_log2FC", "Joanito_FDR", "S1_discovery", "S1_prolif_ctrl", "S1_pass"]:
+        for c in ["Joanito_log2FC", "Joanito_FDR", "S1_pass"]:
             ev[c] = np.nan
-        ev["ProlifCtrl_source"] = "pending"
 
-    # Review decision 2026-10-02 (plan v2): malignant-epithelial evidence
-    # defines CRC-high; TCGA bulk is orthogonal population-level support and
-    # has no veto, because stromal/immune composition can dilute or invert
-    # epithelial re-expression in bulk tumour RNA.
+    # Plan v2: malignant-epithelial evidence defines CRC-high; TCGA bulk is
+    # orthogonal population-level support with no veto, because
+    # stromal/immune composition can dilute or invert epithelial
+    # re-expression in bulk tumour RNA.
     ev["bulk_support"] = ev.T1_pass.fillna(False).astype(bool)
     t1 = ev.bulk_support
     s2p = ev.S2_pass.fillna(False).astype(bool)
+    chk = ev.Progenitor_check.fillna(False).astype(bool)
     if have_s1:
-        s1d = ev.S1_discovery.fillna(False).astype(bool)
         s1p = ev.S1_pass.fillna(False).astype(bool)
         lab = np.select(
-            [s1p & s2p, s1p & ~s2p, s1d & ~s1p, t1 & ~s1d],
-            ["CRC_high", "CRC_high_unreplicated", "Proliferation_associated_reject",
+            [s1p & s2p & chk, s1p & s2p & ~chk, s1p & ~s2p, t1 & ~s1p],
+            ["CRC_high", "Progenitor_associated_reject", "CRC_high_unreplicated",
              "Tumour_level_only"],
             default="Not_CRC_high")
     else:

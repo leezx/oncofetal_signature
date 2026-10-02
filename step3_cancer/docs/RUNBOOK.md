@@ -32,7 +32,8 @@ bash step3_cancer/scripts/run_step3.sh
 | `04_pseudobulk_edger.R` | generic pseudobulk edgeR QL (S1, S2, proliferation controls) |
 | `05_crc_high_integration.py` | admission QA, evidence table, final labels, 31-gene audit |
 | `06_plot_cancer_axis.R` | volcanoes, bulk-vs-epithelial scatter, QA panel |
-| `07_joanito_pseudobulk.py` | Joanito pseudobulks (written once metadata is accessible) |
+| `07_joanito_pseudobulk.py` | Joanito pseudobulks from the frozen label map, with per-patient iCMS composition |
+| `08_joanito_cohort_check.py` | cohort × group contingency, sensitivity sample sheet, full-vs-sensitivity concordance |
 
 Large intermediates go to `DATA` (see `config/step3.env`); only tables,
 source data, and figures are copied into `step3_cancer/results/`.
@@ -43,7 +44,7 @@ source data, and figures are copied into `step3_cancer/results/`.
 |---|---|
 | Admission QA | ≥ 80% of measured tumour-up and tumour-down panel genes in the expected direction |
 | T1 TCGA | log2FC ≥ 0.5, FDR < 0.05, `~ tissue + project` |
-| S1 Joanito discovery | log2FC ≥ 0.5, FDR < 0.05, `~ group + cohort` |
-| S1 proliferation control | malignant / normal stem-TA-cycling log2FC > 0 |
+| S1 Joanito | log2FC ≥ 0.5, FDR < 0.05, `~ cohort + group`; sensitivity on cohorts with both groups (reported) |
+| P progenitor check | Pelka tumour / normal stem-TA (cE01–03) log2FC > 0 |
 | S2 Pelka | log2FC > 0, FDR < 0.05, `~ group` |
-| Final | `CRC_high` = S1 ∩ S2; `bulk_support` = T1 (no veto) |
+| Final | `CRC_high` = S1 ∩ S2 passing P; `bulk_support` = T1 (no veto) |

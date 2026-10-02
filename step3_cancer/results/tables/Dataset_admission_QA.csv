@@ -1,7 +1,0 @@
-contrast,panel,n_panel,n_measured,n_expected_direction,fraction,wrong_direction,not_measured,panel_pass,contrast_admitted
-T1_TCGA,tumour_up,8,8,8,1.0,,,True,True
-T1_TCGA,tumour_down,10,10,10,1.0,,,True,True
-S2_Pelka,tumour_up,8,8,8,1.0,,,True,True
-S2_Pelka,tumour_down,10,10,10,1.0,,,True,True
-Ctrl_Pelka_vs_normal_prolif,tumour_up,8,8,8,1.0,,,True,not_applicable
-Ctrl_Pelka_vs_normal_prolif,tumour_down,10,10,6,0.6,CEACAM7;CLCA4;SLC26A3;GUCA2A,,False,not_applicable

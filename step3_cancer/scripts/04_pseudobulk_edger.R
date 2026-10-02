@@ -33,7 +33,7 @@ if (covar != "none") {
   if (nlevels(smp[[covar]]) > 1) {
     trial <- model.matrix(~ group + smp[[covar]], data = smp)
     if (qr(trial)$rank == ncol(trial)) {
-      form <- as.formula(paste("~ group +", covar))
+      form <- as.formula(paste("~", covar, "+ group"))
     } else {
       message("Covariate ", covar, " not estimable; falling back to ~ group")
     }

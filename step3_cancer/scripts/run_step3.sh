@@ -32,16 +32,24 @@ for ref in Normal Normal_prolif; do
     "$PELKA_PB/Pelka_pseudobulk_samples.csv" Tumor "$ref" none "$de_dir/Pelka_Tumor_vs_${ref}.csv"
 done
 
-# S1 — Joanito (only when downloaded).
+# S1 — Joanito (only when downloaded). Label map is frozen (plan v3).
 if [[ -s "$JOANITO_RAW/Epithelial_Count_matrix.h5" ]]; then
   python3 "$script_dir/07_joanito_pseudobulk.py" --raw-dir "$JOANITO_RAW" \
     --label-map "$step_dir/config/joanito_label_map.tsv" --out-dir "$JOANITO_PB" --min-cells "$MIN_CELLS"
-  for ref in Normal Normal_prolif; do
-    if awk -F'\t' -v g="$ref" 'NR>1 && $NF==g {f=1} END {exit !f}' "$step_dir/config/joanito_label_map.tsv"; then
-      Rscript "$script_dir/04_pseudobulk_edger.R" "$JOANITO_PB/Joanito_epithelial_pseudobulk_counts.csv.gz" \
-        "$JOANITO_PB/Joanito_pseudobulk_samples.csv" Malignant "$ref" cohort "$de_dir/Joanito_Malignant_vs_${ref}.csv"
-    fi
-  done
+  python3 "$script_dir/08_joanito_cohort_check.py" prepare \
+    --samples "$JOANITO_PB/Joanito_pseudobulk_samples.csv" \
+    --contingency "$de_dir/Joanito_cohort_group_contingency.csv" \
+    --sensitivity-samples "$JOANITO_PB/Joanito_pseudobulk_samples_paired_cohorts.csv"
+  counts="$JOANITO_PB/Joanito_epithelial_pseudobulk_counts.csv.gz"
+  Rscript "$script_dir/04_pseudobulk_edger.R" "$counts" "$JOANITO_PB/Joanito_pseudobulk_samples.csv" \
+    Malignant Normal cohort "$de_dir/Joanito_Malignant_vs_Normal.csv"
+  Rscript "$script_dir/04_pseudobulk_edger.R" "$counts" "$JOANITO_PB/Joanito_pseudobulk_samples_paired_cohorts.csv" \
+    Malignant Normal cohort "$de_dir/Joanito_Malignant_vs_Normal_sensitivity_paired_cohorts.csv"
+  python3 "$script_dir/08_joanito_cohort_check.py" compare \
+    --full "$de_dir/Joanito_Malignant_vs_Normal.csv" \
+    --sensitivity "$de_dir/Joanito_Malignant_vs_Normal_sensitivity_paired_cohorts.csv" \
+    --out "$de_dir/Joanito_full_vs_sensitivity_concordance.csv" \
+    --min-log2fc "$MIN_LOG2FC" --max-fdr "$MAX_FDR"
 fi
 
 # Integration, QA, audit, figures.
@@ -55,8 +63,20 @@ cp "$de_dir/TCGA_tumor_vs_normal_DEG.csv" "$de_dir/TCGA_sample_inclusion.csv" \
 cp "$de_dir/Pelka_Tumor_vs_Normal.csv" "$tables_dir/Pelka_tumor_vs_normal_epithelium_DEG.csv"
 cp "$de_dir/Pelka_Tumor_vs_Normal_prolif.csv" "$tables_dir/Pelka_tumor_vs_normal_prolif_control_DEG.csv"
 cp "$PELKA_PB/Pelka_pseudobulk_samples.csv" "$tables_dir/"
-for f in "$de_dir"/Joanito_Malignant_vs_*.csv; do [[ -e "$f" ]] && cp "$f" "$tables_dir/"; done
+for f in "$de_dir"/Joanito_*.csv; do [[ -e "$f" ]] && cp "$f" "$tables_dir/"; done
 [[ -e "$JOANITO_PB/Joanito_pseudobulk_samples.csv" ]] && cp "$JOANITO_PB/Joanito_pseudobulk_samples.csv" "$tables_dir/"
 
 Rscript "$script_dir/06_plot_cancer_axis.R" "$tables_dir" "$figures_dir" "$source_data_dir" "$MIN_LOG2FC" "$MAX_FDR"
+Rscript "$script_dir/06_plot_cancer_axis.R" "$tables_dir" "$figures_dir" "$source_data_dir" "$MIN_LOG2FC" "$MAX_FDR" public
+
+# Joanito-derived outputs are git-ignored (Synapse data-use terms); mirror them
+# into the DATA analysis root so they are not held only in the working tree.
+restricted="$DATA_RESULTS/restricted_joanito"
+mkdir -p "$restricted"/{tables,figures,source_data}
+cp "$tables_dir"/{CRC_high_evidence.csv,Dataset_admission_QA.csv,Literature_31_CRC_axis_audit.csv} "$restricted/tables/"
+for f in "$tables_dir"/Joanito_*; do [[ -e "$f" ]] && cp "$f" "$restricted/tables/"; done
+for f in "$figures_dir"/{Joanito_*,TCGA_vs_epithelial_effect_scatter.*,Dataset_admission_QA.*}; do
+  [[ -e "$f" ]] && cp "$f" "$restricted/figures/"; done
+for f in "$source_data_dir"/{Joanito_*,TCGA_vs_epithelial_effect_scatter_source_data.csv,Dataset_admission_QA_source_data.csv}; do
+  [[ -e "$f" ]] && cp "$f" "$restricted/source_data/"; done
 printf 'Step 3 complete. Version-controlled outputs: %s/results\n' "$step_dir"

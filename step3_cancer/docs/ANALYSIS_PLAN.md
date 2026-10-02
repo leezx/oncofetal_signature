@@ -3,7 +3,7 @@
 ## Material Passport
 
 - Origin: user task brief "Step 3 — Cancer axis: TCGA + malignant epithelial scRNA" (2026-10-02)
-- Version label: step3_plan_v2 (v1 committed `a2db19f`)
+- Version label: step3_plan_v3 (v1 `a2db19f`, v2 `c9916f8`)
 - Status: v1 was frozen before any tumour/normal expression result was
   examined. v2 changes only the final-label rule, after user review on
   2026-10-02 (see "Revision v2"); no threshold, model, dataset, or QA rule
@@ -15,11 +15,12 @@ Define, genome-wide and independently of the developmental axis, which genes
 are re-expressed in colorectal cancer at two levels of resolution:
 
 ```text
-S1  Joanito malignant vs normal epithelium (+ stem/TA control)  → primary malignant-epithelial evidence
-S2  Pelka tumour vs normal epithelium                          → independent epithelial replication
-T1  TCGA COAD+READ primary tumour vs normal colon              → population-level support
+S1  Joanito malignant vs normal epithelium        → primary malignant-epithelial evidence
+S2  Pelka tumour vs normal epithelium             → independent epithelial replication
+P   Pelka tumour vs normal stem/TA epithelium     → independent progenitor-specificity check
+T1  TCGA COAD+READ primary tumour vs normal colon → population-level support
 
-CRC-High     = S1 ∩ S2
+CRC-High     = S1 ∩ S2, passing P
 bulk_support = T1 (reported per gene; no veto)
 ```
 
@@ -51,7 +52,7 @@ At the user's explicit instruction Step 3 starts now, under these constraints:
 | Bulk sensitivity | TCGA paired subset | tumour vs matched normal, same patient | descriptive only |
 | scRNA primary | Joanito et al. 2022 Nat Genet, Synapse syn26844071 (5 cohorts) | author-called malignant epithelial vs normal epithelial | **S1** |
 | scRNA replication | Pelka et al. 2021 Cell, GSE178341 | tumour-specimen epithelium vs normal-specimen epithelium | **S2** |
-| Proliferation control | normal stem/TA/cycling epithelium (see below) | malignant vs normal proliferative epithelium | directional, part of S1 |
+| Progenitor check | Pelka normal stem/TA epithelium (cE01–03) | Pelka tumour vs normal stem/TA epithelium | **P**, direction only, independent of S1 |
 
 Joanito and Pelka do not share patients or cohorts. Deferred (not in this
 step): the in-house CRC Atlas (large-scale replication / gene–gene network,
@@ -128,21 +129,17 @@ T1 passes when tumour/normal **log2FC ≥ 0.5** and **BH FDR < 0.05**.
   the authors' dataset of origin). If cohort is not estimable, fall back to
   `~ group` and record it.
 
-S1 discovery passes when malignant/normal **log2FC ≥ 0.5** and **FDR < 0.05**.
+S1 passes when malignant/normal **log2FC ≥ 0.5** and **FDR < 0.05**.
 
-### Proliferation control (part of S1)
+### Progenitor-specificity check (P; superseded wording, see Revision v3)
 
 Tumour epithelium is depleted of differentiated colonocytes and enriched in
-stem/TA-like cells, so malignant vs whole-normal-epithelium partly measures
-differentiation and proliferation. Compare malignant epithelium with normal
-**stem/TA/cycling** epithelium only (author labels; patient-level pseudobulk,
-same eligibility and model). Required: log2FC **> 0** (directional, no FDR).
-
-If Joanito lacks normal epithelial subtype labels, the control is computed in
-Pelka using normal-specimen clusters `cE01`, `cE02`, `cE03` (Stem/TA-like,
-Stem/TA-like/Immature Goblet, Stem/TA-like prolif), with the same rule.
-
-**S1 = discovery ∩ proliferation control.**
+stem/TA-like cells, so tumour vs whole-normal-epithelium partly measures
+differentiation and proliferation. P compares Pelka tumour-specimen epithelium
+with Pelka normal-specimen stem/TA clusters `cE01`, `cE02`, `cE03`
+(patient-level pseudobulk, `~ group`). Required: log2FC **> 0** (direction
+only, no FDR). P is an independent dataset-internal check; Joanito has no
+normal stem/TA labels and none are constructed.
 
 ## Level 2 — S2, Pelka 2021 replication
 
@@ -161,10 +158,10 @@ the discovery effect-size threshold is applied once, in S1).
 
 | Label | Rule |
 |---|---|
-| `CRC_high` | S1 ∩ S2 (S1 = discovery ∩ proliferation control) |
+| `CRC_high` | S1 ∩ S2 and P (Pelka tumour / normal stem-TA log2FC > 0) |
+| `Progenitor_associated_reject` | S1 ∩ S2 but fails P |
 | `CRC_high_unreplicated` | S1, fails S2 |
-| `Proliferation_associated_reject` | passes S1 discovery but malignant/normal-proliferative log2FC ≤ 0 |
-| `Tumour_level_only` | T1 but fails S1 discovery — possible microenvironment-driven bulk signal |
+| `Tumour_level_only` | T1 but fails S1 — possible microenvironment-driven bulk signal |
 | `Not_CRC_high` | everything else tested |
 
 `bulk_support` (= T1 pass) is reported for every gene and does not change
@@ -195,6 +192,26 @@ a malignant-epithelial CRC-high gene." Changes:
    literature candidates (e.g. EMP1) are not used to adjust any rule.
 3. The Joanito label mapping (`config/joanito_label_map.tsv`) must be shown to
    the user and frozen before any Joanito differential expression is run.
+
+## Revision v3 (2026-10-02, user review of the Joanito label map)
+
+1. **Label map frozen** as `config/joanito_label_map.tsv` (Malignant =
+   iCMS2/iCMS3 cells of `Tumor`/`Tumor-2` samples pooled per patient; Normal =
+   `Normal` cells of `Normal` samples; normal-like cells in tumour samples,
+   tumour-labelled cells in normal samples, and lymph-node samples excluded).
+   iCMS2 and iCMS3 are merged and never gated separately; per-patient
+   `pct_iCMS2`/`pct_iCMS3` are reported descriptively only.
+2. **Cohort confounding check**: CRC-SG2 has malignant patients only. S1 uses
+   `~ cohort + group` on all eligible patients; a sensitivity S1 restricted
+   to cohorts containing both groups (CRC-SG1, KUL3, KUL5, SMC) is run and
+   compared (Spearman of log2FC; retention of full-model S1 calls). Joanito is
+   abandoned only if the two disagree substantially; the sensitivity result
+   is reported, never used to rescue or replace S1 calls.
+3. **Proliferation control restructured**: Joanito provides no stem/TA labels
+   and none are created. S1 is Joanito malignant vs normal epithelium only.
+   The Pelka stem/TA comparison is an independent progenitor-specificity
+   check (P), not a substitute for a Joanito gate. Its rule is unchanged
+   (direction only, log2FC > 0).
 
 ## Hard stops
 
