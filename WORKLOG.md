@@ -8,7 +8,7 @@ Chronological append-only record; newest entries are at the bottom.
 |---|---|---|---|
 | 1. Literature candidate collection | completed | — | Curated evidence tables under `docs/step1_literature_candidates/` |
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
-| 3. CRC-high axis | blocked | — | Do not start until Step 2 is rerun with a suitable contrast |
+| 3. CRC-high axis | **in progress — T1 + S2 done; S1 (Joanito) blocked on Synapse terms acceptance** | branch `plan/step3-cancer-axis` | Run genome-wide and independently of Step 2 at user instruction; fetal ∩ CRC intersection deferred |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
 
@@ -151,3 +151,50 @@ matched adult epithelial reference remains unresolved. Step 3 remains blocked.
 
 **Audit**: See `step2_dataset_benchmark/docs/BENCHMARK_REPORT.md` and
 `step2_dataset_benchmark/results/tables/`.
+
+## 2026-10-02 — Step 3 started at user instruction (independent of Step 2)
+
+**Decision**: The user instructed that Step 3 begin now although Step 2 is
+invalidated. Step 3 is therefore run genome-wide and does not use the
+provisional 706-gene output in any way. The fetal ∩ CRC intersection is
+deferred until a replacement Step 2 passes biological QA, and Step 3 results
+must not be used to choose the replacement Step 2 datasets or thresholds.
+
+**Plan**: `step3_cancer/docs/ANALYSIS_PLAN.md`, committed (`a2db19f`) before
+any tumour/normal result was examined. CRC-high = T1 (TCGA COAD+READ primary
+tumour vs normal, log2FC ≥ 0.5, FDR < 0.05, `~ tissue + project`) ∩ S1
+(Joanito malignant vs normal epithelium, same thresholds, plus a malignant >
+normal stem/TA proliferation control) ∩ S2 (Pelka tumour vs normal epithelium,
+log2FC > 0, FDR < 0.05). New relative to Step 2: an oncofetal-independent
+dataset admission QA (8 canonical tumour-up and 10 tumour-down CRC markers;
+≥ 80% in the expected direction per gated contrast).
+
+**Executed**:
+- recount3 TCGA COAD/READ + GTEx COLON (uniform Monorail processing). After
+  excluding FFPE, non-01/11 sample types, and duplicate aliquots: 624 primary
+  tumours (458 COAD, 166 READ) and 51 normals. T1: 28,204 genes tested,
+  10,266 tumour-high, 6,011 normal-high (all GENCODE gene types). Paired
+  sensitivity: 50 pairs. GTEx sensitivity: 433 transverse colon samples
+  (direction only; source fully confounded).
+- Pelka GSE178341: 62 tumour and 35 eligible normal patient pseudobulks
+  (one normal pseudobulk < 50 cells excluded); 14,696 genes tested.
+- Admission QA: T1 and S2 recovered 18/18 panel genes in the expected
+  direction. The Pelka proliferation-control contrast is not a gated contrast
+  and is reported as not applicable.
+- Bulk vs epithelial effect sizes: Spearman rho = 0.702 over 14,460 jointly
+  tested genes.
+
+**Descriptive candidate notes (not gates)**: TACSTD2, TNFRSF12A, SPP1, MMP7,
+RBP1, IL1RN and LAMC2 pass both T1 and S2. CLU and ANXA6 are normal-high in
+bulk but tumour-high in Pelka epithelium; ANXA1 is flat in bulk but tumour-high
+in epithelium — candidates for the `Epithelial_only` label once S1 exists.
+EMP1 is normal-high in both bulk and Pelka whole-epithelium, yet higher in
+tumour than normal stem/TA cells. CCN1/CCN2 were matched through their
+GENCODE v26 symbols CYR61/CTGF (`config/symbol_aliases.tsv`); LY6A and REG3B
+have no human annotation; GJA1, SPRR1A, ANKRD1, SOX17 and L1CAM were removed
+by Pelka expression filtering.
+
+**Blocker**: Joanito Synapse syn26844071 has a self-sign access requirement
+(9606933) that the account owner must accept in the Synapse web UI. No
+`CRC_high` call is made until S1 runs; current labels are
+`T1_pass_S1_pending` / `Not_T1`.

@@ -7,15 +7,17 @@ epithelium, tissue-specificity vs other fetal organs) and benchmarked against
 published fetal / regenerative / revSC / revCSC signatures. Methodological
 foundation for the first half of the TWEAKR paper.
 
-**Status:** Step 2 is **invalidated pending dataset/contrast review**. The
-previous 706-gene result is retained as a failed-analysis checkpoint and must
-not be used for Step 3. CRC-high analysis is blocked.
+**Status:** Step 2 is **invalidated pending dataset/contrast review**; its
+706-gene result must not be used downstream. Step 3 (CRC-high cancer axis) is
+**in progress** at user instruction, genome-wide and independent of Step 2:
+TCGA (T1) and Pelka (S2) are complete, Joanito (S1) awaits Synapse access.
 
 - Founding task: [`docs/TASK_BRIEF.md`](docs/TASK_BRIEF.md)
 - Current checkpoint: [`WORKLOG.md`](WORKLOG.md)
 - Major revision record: [`docs/MAJOR_REVISION_LOG.md`](docs/MAJOR_REVISION_LOG.md)
 - Replacement dataset benchmark: [`step2_dataset_benchmark/`](step2_dataset_benchmark/)
 - Step 2 analysis package: [`step2_fetal/`](step2_fetal/)
+- Step 3 analysis package: [`step3_cancer/`](step3_cancer/)
 - Module inventory: [`docs/MODULE_INDEX.md`](docs/MODULE_INDEX.md)
 
 ## Data
@@ -36,5 +38,6 @@ step2_fetal/
     tables/                 DEG and cross-species evidence tables
     source_data/            plotting source data
     figures/                PDF and 600-dpi PNG figures
+step3_cancer/               same layout; TCGA + CRC scRNA cancer axis
 WORKLOG.md                  chronological project record
 ```

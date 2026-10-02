@@ -30,3 +30,19 @@ output downstream; see `docs/MAJOR_REVISION_LOG.md`.
 | `step2_dataset_benchmark/scripts/01_benchmark_31_markers.R` | Evaluate 31 prespecified markers without constructing a signature | four-dataset benchmark, metadata audit, priority-five table |
 
 See `step2_dataset_benchmark/docs/BENCHMARK_REPORT.md` for the review decision.
+
+## Step 3 — CRC-high cancer axis
+
+| Module | Purpose | Primary outputs |
+|---|---|---|
+| `step3_cancer/scripts/00_synapse_download.py` | Joanito Synapse files via REST, MD5-checked | raw Joanito files |
+| `step3_cancer/scripts/01_recount3_tcga_gtex.R` | recount3 TCGA COAD/READ + GTEx COLON counts | combined RSE + coldata |
+| `step3_cancer/scripts/02_pelka_pseudobulk.py` | Pelka patient × group epithelial pseudobulks | counts + inclusion table |
+| `step3_cancer/scripts/03_tcga_tumor_vs_normal.R` | T1 plus paired and GTEx sensitivity | TCGA DEG table |
+| `step3_cancer/scripts/04_pseudobulk_edger.R` | generic pseudobulk edgeR QL | S1/S2/control DEG tables |
+| `step3_cancer/scripts/05_crc_high_integration.py` | admission QA, evidence table, labels, 31-gene audit | `CRC_high_evidence.csv` |
+| `step3_cancer/scripts/06_plot_cancer_axis.R` | volcanoes, bulk-vs-epithelial scatter, QA panel | figures + source data |
+| `step3_cancer/scripts/run_step3.sh` | run the full step | complete package |
+
+`07_joanito_pseudobulk.py` and `config/joanito_label_map.tsv` are written once
+the Joanito metadata is accessible. See `step3_cancer/docs/RUNBOOK.md`.
