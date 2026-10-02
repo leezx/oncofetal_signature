@@ -1,0 +1,5 @@
+"dataset","species","assay","material","fetal_units","adult_units","adult_reference_status","benchmark_use","primary_limitation"
+"GSE101531","human","bulk_RNAseq_RPKM","epithelial_enterospheres",6,3,"matched_within_study","fetal_adult_FC","culture_state"
+"GSE158702","human","scRNAseq_raw_UMI","primary_fetal_EpCAM_positive_epithelium",4,0,"absent","fetal_expression_only","no_adult_and_pooled_libraries"
+"GSE160449","mouse","bulk_RNAseq_counts","fetal_and_adult_epithelial_cultures",6,6,"matched_within_arm","two_arm_fetal_adult_FC","culture_state_and_matrix_arm"
+"GSE44433","mouse","microarray_normalized_matrix","laser_microdissected_distal_ileal_epithelium",5,5,"matched_WT_within_study","WT_fetal_adult_FC","older_microarray_and_partial_marker_coverage"

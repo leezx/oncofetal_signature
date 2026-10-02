@@ -1,0 +1,73 @@
+# Step 2 QA record
+
+> Computational QA passed, but biological positive-control QA failed. This run
+> is invalidated pending dataset/contrast review. Passing checksums, assertions,
+> and reproducibility tests must not be interpreted as validation of the
+> developmental comparison. See `../../docs/MAJOR_REVISION_LOG.md`.
+
+Checkpoint date: 2026-10-02.
+
+## Source integrity
+
+- HGCA local MD5 matched the upstream MD5: `2a149b8cf04567569707e9d1fab27209`.
+- SHA-256 checks passed for HGCA, all Gao inputs, mouse counts, and Ensembl mapping.
+- Raw files are confined to DATA and are not tracked in Git.
+
+## Metadata and replicate checks
+
+- HGCA: 16 fetal and 7 adult donors after the ≥50-cell eligibility rule.
+- HGCA proliferative control: 7 adult donors.
+- Gao: 849 author-labelled fetal large-intestinal epithelial cells aggregated
+  into 12 embryo identifiers; adult donors P1 and P2 retained separately.
+- Mouse: 3 fetal and 3 adult in-vivo biological replicates.
+- Mouse non-empty gene symbols: 24,587; duplicated rows: 0.
+
+## Result assertions
+
+- HGCA primary fetal-high: 4,733 genes.
+- Complete H1: 4,645 genes.
+- Gao H2: 5,271 genes.
+- Mouse M1: 3,140 genes.
+- Strict H1 ∩ H2 ∩ M1: 706 genes.
+- Every final row was asserted to satisfy all frozen numerical and directional gates.
+
+## Figure QA
+
+- Human volcano: 4,733 fetal-high and 5,238 adult-high genes.
+- Mouse volcano: 3,140 fetal-high and 2,270 adult-high genes.
+- Two mouse genes without symbols are retained using Entrez labels.
+- PDF is vector output; PNG is 600 dpi.
+- Direction, thresholds, labels, clipping, and combined-panel readability were
+  visually inspected at final size.
+
+## Reviewer sanity checks
+
+- `Mouse_log2FC > 5`: 425 genes.
+- Minimum fetal mean raw CPM among these genes: 1.522.
+- Median fetal mean raw CPM among these genes: 9.630.
+- Genes with fetal mean raw CPM < 1: 0.
+- Conclusion: the extreme-right mouse volcano cluster is supported by measurable
+  fetal expression and near-zero adult expression, not a retained near-zero/near-zero artifact.
+- The 706-gene HGCA–mouse Spearman rho = 0.485 is explicitly treated as
+  selection-conditioned and is not used to assess genome-wide conservation.
+- All 11,049 one-to-one genes tested in both datasets were included in the
+  unbiased diagnostic: Spearman rho = 0.222 (P = 2.56e-123).
+- Frozen H1/M1 quadrant counts were both = 998, human-only = 1,686,
+  mouse-only = 1,580, and neither = 6,785. One-sided Fisher enrichment gave
+  odds ratio 2.542 and P = 2.40e-79.
+- The 31-row literature audit is complete. First-failure counts are HGCA primary
+  15, HGCA not tested 8, Gao effect size 2, mouse M1 1, and final pass 5.
+- TACSTD2, ANXA1, and TNFRSF12A first fail HGCA primary; none is excluded first
+  by Gao. Their full evidence values remain in the audit table.
+
+## Known limitation
+
+Gao is effect-only replication because the released fetal and adult matrices are
+processed TPM/UMI-normalized TPM from only two adult donors. It is not used as an
+FDR gate and cannot rescue failure in HGCA or mouse.
+
+More importantly, the current datasets/contrasts failed biological
+positive-control QA: only 5 of 31 literature candidates passed the final set,
+11 of 23 HGCA-tested candidates were estimated as adult-high, and 8 were absent
+from HGCA testing. This is analysis-invalidating until the dataset and metadata
+selection are re-audited.
