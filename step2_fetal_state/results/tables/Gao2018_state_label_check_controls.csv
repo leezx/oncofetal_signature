@@ -1,0 +1,36 @@
+state,gene,n_cells,mean_lognorm,pct_detected
+BEST4/OTOP2,EPCAM,28,6.382,100.0
+BEST4/OTOP2,OLFM4,28,1.554,71.429
+BEST4/OTOP2,LGR5,28,0.281,10.714
+BEST4/OTOP2,ASCL2,28,0.0,0.0
+BEST4/OTOP2,MKI67,28,0.291,10.714
+EEC/secretory progenitor,EPCAM,13,6.341,100.0
+EEC/secretory progenitor,OLFM4,13,1.311,53.846
+EEC/secretory progenitor,LGR5,13,0.45,15.385
+EEC/secretory progenitor,ASCL2,13,1.947,46.154
+EEC/secretory progenitor,MKI67,13,0.0,0.0
+Early enterocyte,EPCAM,58,7.209,100.0
+Early enterocyte,OLFM4,58,0.052,3.448
+Early enterocyte,LGR5,58,0.0,0.0
+Early enterocyte,ASCL2,58,0.031,1.724
+Early enterocyte,MKI67,58,2.505,79.31
+Goblet,EPCAM,77,6.459,98.701
+Goblet,OLFM4,77,0.623,24.675
+Goblet,LGR5,77,0.279,9.091
+Goblet,ASCL2,77,0.225,7.792
+Goblet,MKI67,77,0.895,27.273
+Mature enterocyte,EPCAM,221,6.473,98.643
+Mature enterocyte,OLFM4,221,1.233,33.484
+Mature enterocyte,LGR5,221,1.08,38.462
+Mature enterocyte,ASCL2,221,0.372,13.575
+Mature enterocyte,MKI67,221,1.713,44.796
+TA,EPCAM,399,2.154,66.667
+TA,OLFM4,399,0.135,5.514
+TA,LGR5,399,0.15,5.263
+TA,ASCL2,399,0.097,4.01
+TA,MKI67,399,2.801,69.173
+Unresolved,EPCAM,921,3.979,78.067
+Unresolved,OLFM4,921,0.767,20.087
+Unresolved,LGR5,921,0.543,18.132
+Unresolved,ASCL2,921,0.221,8.143
+Unresolved,MKI67,921,1.387,43.865

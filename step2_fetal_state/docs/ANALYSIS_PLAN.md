@@ -112,3 +112,29 @@ showed sex agreement for every unit with ≥ 50 cells. Two refinements follow.
    - ABZ2 (8.4%, about 3× background; the only large ≤ 9-PCW unit) is kept
      and flagged. Every Fawkner result is repeated without it.
    - Sex-discordant cells are removed from all units.
+
+## Addendum v1.2 — state-label confidence (2026-10-02, after the label check, before any analysed test gene was read)
+
+The forced argmax labelling from plan v1 was checked against the control genes
+(`results/tables/*_state_label_check_controls.csv`) and the cluster scores
+(`*_cluster_state_scores.csv`).
+
+**Fawkner — partly validated.**
+- TA is MKI67-highest and OLFM4 is absent from every fetal state.
+- 7 clusters (about 5,700 cells) score ≤ 0 for every state, so their
+  labels are arbitrary (e.g. "Paneth").
+- Most Stem clusters lead by < 0.1.
+
+**Gao — not validated.**
+- No cluster is labelled Stem.
+- The "Paneth" and "TA" clusters have low EPCAM, suggesting low-quality cells.
+- Most margins are < 0.1.
+
+**Rule added (both datasets).** A cluster keeps its state only if the
+winning score is > 0.2 and it leads the runner-up by ≥ 0.1. Otherwise it is
+labelled `Unresolved`, and that label is reported but not interpreted as a
+state.
+
+**Gao state layer: exploratory only.** Gao contributes to the donor, age and
+region layers. Its state-level panels are shown for completeness, but
+conclusions about epithelial state rest on Fawkner.
