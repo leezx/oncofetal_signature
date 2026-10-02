@@ -56,6 +56,18 @@ DATASETS = [
     ("Hbulk2", "2 (benchmark v2)", "H-bulk2 Roadmap fetal SI vs HPA duodenum [tier B subset]", "Human", "duodenum-only subset of H-bulk1 (Senger 2018 primary-tissue comparison)", "fetal"),
     ("Hnew3", "2 (benchmark v2)", "H-new3 Gao fetal + Wang adult", "Human", "Gao fetal SI+LI vs Wang ileum/colon/rectum, effect-only (GSE95630 / GSE125970)", "fetal"),
     ("Hnew3_debug", "2 (benchmark v2)", "H-new3-debug", "Human", "Gao fetal LI vs Wang colon+rectum (adult arm swapped)", "fetal"),
+    ("HGCA_early", "2 (benchmark v2, stage v1.2)", "HGCA early fetal (<9 PCW) vs adult [stage-resolved]", "Human", "edgeR, 6 vs 7 donors", "fetal"),
+    ("HGCA_late", "2 (benchmark v2, stage v1.2)", "HGCA mid/late fetal (>=9 PCW) vs adult [stage-resolved]", "Human", "edgeR, 10 vs 7 donors", "fetal"),
+    ("HGCA_late_vs_early", "2 (benchmark v2, stage v1.2)", "HGCA mid/late vs early fetal [within-fetal]", "Human", "edgeR, 10 vs 6 donors; positive = higher at >=9 PCW", "later fetal"),
+    ("GaoOriginal_early", "2 (benchmark v2, stage v1.2)", "Gao early fetal LI (<9 W) vs GSE103154 [stage-resolved]", "Human", "effect-only, 5 vs 2", "fetal"),
+    ("GaoOriginal_late", "2 (benchmark v2, stage v1.2)", "Gao mid/late fetal LI (>=9 W) vs GSE103154 [stage-resolved]", "Human", "effect-only, 7 vs 2", "fetal"),
+    ("GaoLI_late_vs_early", "2 (benchmark v2, stage v1.2)", "Gao LI mid/late vs early fetal [within-fetal]", "Human", "effect-only, 7 vs 5 embryos; positive = higher at >=9 W", "later fetal"),
+    ("Hnew3_early", "2 (benchmark v2, stage v1.2)", "Gao early fetal SI+LI (<9 W) vs Wang [stage-resolved]", "Human", "effect-only, 6 vs 6", "fetal"),
+    ("Hnew3_late", "2 (benchmark v2, stage v1.2)", "Gao mid/late fetal SI+LI (>=9 W) vs Wang [stage-resolved]", "Human", "effect-only, 9 vs 6", "fetal"),
+    ("GaoSILI_late_vs_early", "2 (benchmark v2, stage v1.2)", "Gao SI+LI mid/late vs early fetal [within-fetal]", "Human", "effect-only, 9 vs 6 embryos; positive = higher at >=9 W", "later fetal"),
+    ("Hnew2_early", "2 (benchmark v2, stage v1.2)", "Fawkner early fetal (<9 PCW) vs Burclaff adult [stage-resolved]", "Human", "edgeR, 2 vs 3", "fetal"),
+    ("Hnew2_late", "2 (benchmark v2, stage v1.2)", "Fawkner mid/late fetal (>=9 PCW) vs Burclaff adult [stage-resolved]", "Human", "edgeR, 20 vs 3", "fetal"),
+    ("Fawkner_late_vs_early", "2 (benchmark v2, stage v1.2)", "Fawkner mid/late vs early fetal [within-fetal]", "Human", "edgeR, 20 vs 2 units; positive = higher at >=9 PCW", "later fetal"),
     ("TCGA", "3", "TCGA COAD+READ (T1)", "Human", "primary tumour vs normal, ~ tissue + project", "tumour"),
     ("TCGA_paired", "3", "TCGA paired", "Human", "tumour vs matched normal (50 pairs)", "tumour"),
     ("TCGA_GTEx", "3", "TCGA vs GTEx", "Human", "TCGA tumour vs GTEx transverse colon (direction only)", "tumour"),
@@ -159,6 +171,18 @@ def main():
         "Hbulk2": lookup(pd.read_csv(BM2 / "Hbulk2_Roadmap_vs_HPA_duodenum_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
         "Hnew3": lookup(pd.read_csv(BM2 / "Hnew3_GaoSILI_vs_Wang_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
         "Hnew3_debug": lookup(pd.read_csv(BM2 / "Hnew3debug_GaoLI_vs_WangColonRectum_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "HGCA_early": lookup(pd.read_csv(BM2 / "HGCA_early_fetal_vs_adult_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "HGCA_late": lookup(pd.read_csv(BM2 / "HGCA_late_fetal_vs_adult_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "HGCA_late_vs_early": lookup(pd.read_csv(BM2 / "HGCA_late_vs_early_fetal_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "GaoOriginal_early": lookup(pd.read_csv(BM2 / "GaoOriginal_early_GaoLI_vs_GSE103154_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "GaoOriginal_late": lookup(pd.read_csv(BM2 / "GaoOriginal_late_GaoLI_vs_GSE103154_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "GaoLI_late_vs_early": lookup(pd.read_csv(BM2 / "GaoLI_late_vs_early_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "Hnew3_early": lookup(pd.read_csv(BM2 / "Hnew3_early_GaoSILI_vs_Wang_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "Hnew3_late": lookup(pd.read_csv(BM2 / "Hnew3_late_GaoSILI_vs_Wang_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "GaoSILI_late_vs_early": lookup(pd.read_csv(BM2 / "GaoSILI_late_vs_early_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "Hnew2_early": lookup(pd.read_csv(BM2 / "Hnew2_early_Fawkner_vs_Burclaff_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "Hnew2_late": lookup(pd.read_csv(BM2 / "Hnew2_late_Fawkner_vs_Burclaff_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "Fawkner_late_vs_early": lookup(pd.read_csv(BM2 / "Fawkner_late_vs_early_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
         "TCGA": lookup(tcga, "symbol", human_keys, ["T1_log2FC", "T1_PValue", "T1_FDR"], tcga_u),
         "TCGA_paired": lookup(tcga, "symbol", human_keys, ["Paired_log2FC", None, "Paired_FDR"], tcga_u),
         "TCGA_GTEx": lookup(tcga, "symbol", human_keys, ["GTEx_log2FC", None, "GTEx_FDR"], tcga_u),
@@ -208,6 +232,7 @@ def main():
     pub, pub_status = wide.drop(columns=drop), status.drop(columns=[c for c in status.columns if c.startswith("Joanito")])
     pub.to_csv(OUT / "Literature_31_marker_summary_statistics_public.csv", index=False)
     pub_status.to_csv(OUT / "Literature_31_marker_measurement_status_public.csv", index=False)
+    write_stage_summary()
     write_xlsx(pub, pub_status, base, pub_sets, "Literature_31_marker_summary_statistics_public.xlsx", restricted=False)
     print(f"{len(wide)} markers x {len(DATASETS)} dataset contrasts written to {OUT}")
 
@@ -221,7 +246,7 @@ def write_xlsx(wide, status, base, DATASETS, filename, restricted):
     white = Font(name="Arial", size=10, bold=True, color="FFFFFF")
     thin = Side(style="thin", color="BFBFBF")
     box = Border(left=thin, right=thin, top=thin, bottom=thin)
-    fills = {"2": "1F4E78", "2 (benchmark)": "595959", "2 (benchmark v2)": "7030A0", "3": "375623"}
+    fills = {"2": "1F4E78", "2 (benchmark)": "595959", "2 (benchmark v2)": "7030A0", "2 (benchmark v2, stage v1.2)": "B4009E", "3": "375623"}
     nbase = base.shape[1]
     # Row 1: step; row 2: dataset; row 3: contrast; row 4: statistic.
     for j, col in enumerate(base.columns, 1):
@@ -329,6 +354,25 @@ def write_xlsx(wide, status, base, DATASETS, filename, restricted):
         nt.cell(nt.max_row, 1).font = arial
     nt.column_dimensions["A"].width = 150
     wb.save(OUT / filename)
+
+
+def write_stage_summary():
+    """Fetal stage decomposition (benchmark v2 addenda v1.2-v1.3), one row per
+    human fetal-vs-adult parent contrast x stage resolution. Public data only."""
+    q = pd.read_csv(BM2 / "Benchmark_v2_qualification.csv")
+    q = q[(q.species == "Human") & q.stage_resolution.ne("culture")]
+    parents = q[q.stage_resolution != "all_fetal_vs_adult"].parent_contrast.unique().tolist() + ["Senger", "Hbulk1", "Hbulk2"]
+    q = q[q.parent_contrast.isin(parents)].copy()
+    q["stage_split"] = q.parent_contrast.map(lambda p: "not splittable (all fetal >= 9 W)"
+                                             if p in ("Senger", "Hbulk1", "Hbulk2") else "split at 9 weeks")
+    order = {"all_fetal_vs_adult": 0, "early_vs_adult": 1, "midlate_vs_adult": 2, "midlate_vs_early": 3}
+    q = q.sort_values(["parent_contrast", "stage_resolution"], key=lambda c: c.map(order) if c.name == "stage_resolution" else c)
+    cols = ["parent_contrast", "stage_resolution", "contrast", "description", "stage_split", "TNFRSF12A_log2FC",
+            "TNFRSF12A_P", "TNFRSF12A_FDR", "TACSTD2_log2FC", "CLU_log2FC", "ANXA1_log2FC", "markers_measured",
+            "markers_fetal_positive", "fraction_fetal_positive", "binomial_P_one_sided",
+            "rule1_TNFRSF12A_fetal_high_supported", "rule2_panel_bias", "qualifies", "OLFM4_log2FC_sanity",
+            "review_decision", "independent_source"]
+    q[cols].round(4).to_csv(OUT / "Fetal_stage_decomposition_summary.csv", index=False)
 
 
 if __name__ == "__main__":

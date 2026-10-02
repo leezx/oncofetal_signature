@@ -128,3 +128,137 @@ dataset. Both are independent of Fawkner/Burclaff (H-new2).
   binomial P < 0.05). Tier labels for reporting: Tier A epithelial scRNA
   (H-new2); Tier B primary-tissue bulk (H-bulk1, H-bulk2); Tier C problematic
   references (HGCA, Gao, Senger enterospheres); Visium dropped.
+
+## Addendum v1.2 — stage-resolved re-analysis (frozen 2026-10-02, before any stage-split contrast was computed)
+
+**Breakpoint.** 9 weeks. It comes from the fetal-only manual analysis in
+`step2_fetal_state/` (Gao TNFRSF12A: ≤ 8 W low and erratic, plateau from
+9 W). No adult data were used to choose it. The breakpoint is applied to the
+age as each source reports it:
+
+- **HGCA:** post-conception weeks (e.g. "8.4Wk").
+- **Gao:** "W", convention not stated (possibly gestational).
+- **Senger:** "weeks gestational age".
+
+| Stage | Definition |
+|---|---|
+| Early fetal | reported age < 9 weeks |
+| Mid/late fetal | reported age ≥ 9 weeks |
+| Adult | unchanged |
+
+**Contrasts, per dataset.** These use the same units, filters and statistics
+as the original contrast; only the fetal arm is subset.
+
+1. All fetal vs adult (the original, recomputed).
+2. Early fetal vs adult.
+3. Mid/late fetal vs adult.
+4. Mid/late fetal vs early fetal (within-fetal, same platform).
+
+**Datasets.**
+
+| Dataset | Fetal age distribution | Early / late units | Statistic |
+|---|---|---|---|
+| HGCA (H1) | 6.1–17 PCW | 6 donors (6.1–8.4) / 10 donors (9.2–17); adult 7 | edgeR QL `~ stage`, donor pseudobulk |
+| Gao-original (Gao fetal LI vs GSE103154) | 6–25 W | 5 / 7 embryos; adult 2 | effect-only (module 04) |
+| H-new3 (Gao fetal SI + LI vs Wang) | 6–25 W | 6 / 9 embryos; adult Wang samples | effect-only (module 04) |
+| Senger enterospheres | 11–22.5 W GA | 0 / 6 | **not splittable**: no early stratum, so mid/late vs adult is identical to the original |
+| H-bulk1/2 (Roadmap) | 13–17 W | 0 / 6 | not splittable (already all ≥ 9 W) |
+
+H-new3-debug is not split (it is a debug contrast only). For the within-fetal
+contrast 4, Gao uses the same effect-only statistic (no platform
+confounding); HGCA uses edgeR.
+
+**Readouts.** Every stage contrast receives the unchanged frozen rule (rule 1
+TNFRSF12A; rule 2 panel binomial). Two questions are reported:
+
+1. Does TNFRSF12A become fetal-positive with statistical support?
+2. Does the fetal-positive fraction of the whole 31-marker panel rise at the
+   same time?
+
+**Promotion criterion.** A dataset is a candidate for promotion back into
+primary human developmental evidence only if its mid/late-vs-adult contrast
+qualifies under the frozen rule **and** its panel fraction rises compared with
+all-fetal. A TNFRSF12A-only reversal is not enough. Promotion remains a
+review decision.
+
+## Addendum v1.3 — stage-resolved H-new2 (frozen 2026-10-02, before computation)
+
+This applies the v1.2 breakpoint and rules unchanged to the third fetal scRNA
+source, so that all three (HGCA, Gao, Fawkner) have the same stage
+decomposition.
+
+- **Ages:** H-new2 fetal units (pool × hashtag) get their PCW from
+  `step2_fetal_state/config/sample_key_fawkner.tsv`, which comes from the
+  authors' Mendeley sample overview.
+- **Units and model:** the same as H-new2: eligibility ≥ 50 cells, edgeR QL
+  `~ stage`, Burclaff adult donors.
+
+| Group | Eligible units |
+|---|---|
+| Early fetal (< 9 PCW) | 2: ABZ2 and ABM1, both 8 PCW |
+| Mid/late fetal (≥ 9 PCW) | 20 |
+| Adult | 3 Burclaff donors |
+
+**Contrasts.**
+- Hnew2_early (early vs adult).
+- Hnew2_late (mid/late vs adult).
+- Fawkner_late_vs_early (within-fetal).
+
+The minimum group size is 2 because the early arm has only two units.
+
+**Caveats, reported and not corrected.**
+- Both early units are TI from two donors.
+- ABZ2 has elevated sex-discordant cells (8.4%).
+- The parent H-new2 units ABF1 (EPI2 HTO2) and AAU2 (pool 4) failed the later
+  hashtag QC of `step2_fetal_state` but are kept here, so the units stay
+  identical to the parent contrast. They are flagged in the units table.
+
+## Addendum v1.4 — Core-gate dataset selection benchmark (frozen 2026-10-02, before the metrics were computed)
+
+**Purpose.** Report the evidence needed to choose the human and mouse
+in-vivo developmental gates for the future Core. The rule is **design
+eligibility first, literature recovery second**. **TNFRSF12A is not an
+admission criterion.** Nothing in this addendum builds a signature or selects
+a gate; the choice stays a review decision.
+
+**Correction to the dataset map.**
+- The Pikkupeura "pure in-vivo" contrast (freshly isolated E16.5 proximal SI
+  epithelium vs adult proximal SI crypt epithelium, 3 vs 3; paper Fig 1D–G)
+  **is** GSE230581, the existing Step 2 M1 contrast. It is not a second
+  dataset.
+- The independent in-vivo mouse replicate is GSE44433 (Hemmerling 2014,
+  wild-type E17.5 vs 8-week LCM ileal epithelium, 5 vs 5, microarray).
+
+**Design eligibility (all five required).**
+- E1: fetal and adult come from the same study.
+- E2: primary in-vivo tissue (no culture).
+- E3: epithelium-resolved (annotated or sorted epithelial cells, or
+  epithelial isolation/LCM; not whole tissue).
+- E4: ≥ 3 biological replicates per arm (donor/animal).
+- E5: a replicate-level model giving per-gene P and FDR.
+
+**Metrics (per contrast, 31 literature markers).**
+- **Applicable panel:** human 29 (LY6A and REG3B have no one-to-one
+  orthologue); mouse 30 (SPRR1A has no orthologue).
+- **Reported:**
+  - n measured;
+  - % fetal-positive (log2FC > 0);
+  - % fetal-positive with FDR < 0.05;
+  - % fetal-positive with log2FC ≥ 0.5 and FDR < 0.05.
+- **Two denominators** are given for each percentage: measured markers, and
+  the applicable panel (unmeasured counts as not recovered).
+- A per-marker table lists log2FC and FDR for every candidate contrast.
+
+**Candidate contrasts.** Values are taken from the existing results
+(`marker_summary`); nothing is recomputed.
+
+| Species | Contrasts |
+|---|---|
+| Human | HGCA ≥ 9 W vs adult (A), HGCA all fetal, Gao-original ≥ 9 W (B), H-new2 ≥ 9 W (C), H-new2 all |
+| Human, reference only | H-new3 ≥ 9 W, H-bulk1, Senger |
+| Mouse | Pikkupeura in vivo (GSE230581, M1), GSE44433 |
+| Mouse, reference only | Pikkupeura LN and collagen culture |
+
+**Disclosure.** The direction-only panel fractions of these contrasts have
+been seen in earlier addenda. The FDR- and effect-size-based metrics and the
+eligibility criteria are fixed here.

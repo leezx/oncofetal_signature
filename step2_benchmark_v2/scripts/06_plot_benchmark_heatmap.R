@@ -41,7 +41,7 @@ p <- ggplot(long, aes(contrast_label, marker, fill = capped)) +
        x = NULL, y = NULL) +
   theme_minimal(base_size = 9) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.grid = element_blank())
-ggsave(file.path(fig, "Benchmark_v2_31_marker_heatmap.pdf"), p, width = 8.5, height = 8.5, device = cairo_pdf)
-ggsave(file.path(fig, "Benchmark_v2_31_marker_heatmap.png"), p, width = 8.5, height = 8.5, dpi = 600,
+ggsave(file.path(fig, "Benchmark_v2_31_marker_heatmap.pdf"), p, width = 3 + 0.5 * length(keys), height = 9, device = cairo_pdf)
+ggsave(file.path(fig, "Benchmark_v2_31_marker_heatmap.png"), p, width = 3 + 0.5 * length(keys), height = 9, dpi = 600,
        device = ragg::agg_png)
 cat("Heatmap written\n")

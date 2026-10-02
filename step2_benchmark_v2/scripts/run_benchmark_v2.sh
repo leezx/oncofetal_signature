@@ -48,6 +48,23 @@ for f in Hbulk1_Roadmap_vs_HPA_SI Hbulk2_Roadmap_vs_HPA_duodenum; do
   cp "$work/de/$f.csv" "$tables/${f}_DE.csv"; cp "$work/de/${f}_model.csv" "$tables/${f}_DE_model.csv"
 done
 
+# Addendum v1.2: stage-resolved Gao and HGCA (breakpoint 9 weeks).
+python3 "$script_dir/08_gao_stage_resolved.py" \
+  --gao-dir "$DATA_ROOT/scRNAseq/GSE103239_Gao2018/raw" --wang-dir "$DATA_ROOT/scRNAseq/GSE125970_Wang2020/raw" \
+  --de-dir "$work/de" --tables-dir "$tables"
+Rscript "$script_dir/09_hgca_stage_resolved.R" "$DATA_ROOT/scRNAseq/HGCA_Elmentaite2021/processed/v0.1" "$work/de" "$tables"
+for f in HGCA_early_fetal_vs_adult HGCA_late_fetal_vs_adult HGCA_late_vs_early_fetal HGCA_all_fetal_vs_adult \
+         GaoOriginal_early_GaoLI_vs_GSE103154 GaoOriginal_late_GaoLI_vs_GSE103154 GaoLI_late_vs_early \
+         Hnew3_early_GaoSILI_vs_Wang Hnew3_late_GaoSILI_vs_Wang GaoSILI_late_vs_early; do
+  cp "$work/de/$f.csv" "$tables/${f}_DE.csv"
+done
+
+# Addendum v1.3: stage-resolved H-new2.
+python3 "$script_dir/10_hnew2_stage_resolved.py" --repo "$repo" --work-dir "$work/pseudobulk" --de-dir "$work/de" --tables-dir "$tables"
+for f in Hnew2_early_Fawkner_vs_Burclaff Hnew2_late_Fawkner_vs_Burclaff Fawkner_late_vs_early; do
+  cp "$work/de/$f.csv" "$tables/${f}_DE.csv"
+done
+
 # Version-controlled copies.
 cp "$work/de/GaoOriginal_GaoLI_vs_GSE103154.csv" "$tables/GaoOriginal_GaoLI_vs_GSE103154_DE.csv"
 cp "$work/de/Hnew3_GaoSILI_vs_Wang.csv" "$tables/Hnew3_GaoSILI_vs_Wang_DE.csv"

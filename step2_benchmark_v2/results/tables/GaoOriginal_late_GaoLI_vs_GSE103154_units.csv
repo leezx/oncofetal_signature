@@ -1,0 +1,10 @@
+unit,n_cells,tissues,week,group
+11W_embryo1,57,LI,11.0,Fetal_midlate
+14W_embryo1,57,LI,14.0,Fetal_midlate
+16W_embryo1,38,LI,16.0,Fetal_midlate
+19W_embryo1,53,LI,19.0,Fetal_midlate
+24W_embryo1,188,LI,24.0,Fetal_midlate
+25W_embryo1,32,LI,25.0,Fetal_midlate
+9W_embryo1,77,LI,9.0,Fetal_midlate
+P1,935,,,Adult
+P2,956,,,Adult

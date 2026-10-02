@@ -8,7 +8,7 @@ Chronological append-only record; newest entries are at the bottom.
 |---|---|---|---|
 | 1. Literature candidate collection | completed | — | Curated evidence tables under `docs/step1_literature_candidates/` |
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
-| 2b. Human benchmark v2 | **closed (review round 3)** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A (cross-study, not used alone for discovery); bulk H-bulk1/2 = 1 dataset, fail; Visium dropped; no more datasets |
+| 2b. Human benchmark v2 | **closed (review round 3); stage-resolved addendum v1.2 run** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A (cross-study, not used alone for discovery); bulk H-bulk1/2 = 1 dataset, fail; Visium dropped; no more datasets |
 | 2c. Fetal epithelial state (manual) | **executed; in review** | (this PR) | Gao early-embryo effect; TNFRSF12A pan-fetal-epithelial, stem/TA-enriched detection; no adult arm |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
@@ -382,3 +382,47 @@ progenitor sub-state; variance mostly within state. ANXA1 marks the Fawkner
 Fetal-progenitor state. No consistent region effect in Fawkner; Gao LI > SI.
 **Open**: state-matched fetal vs adult comparison, or Gao ≥ 9 W vs adult (new
 frozen contrast either way); final human discovery contrast still undecided.
+
+## 2026-10-02 — Benchmark v2 addendum v1.2: stage-resolved re-analysis
+
+**Plan**: frozen (`618356e`) before computation; breakpoint 9 weeks from the
+fetal-only state analysis; early < 9 W, mid/late ≥ 9 W, reported ages.
+**Scope**: HGCA (6 early / 10 mid-late / 7 adult donors), Gao-original and
+H-new3 (Gao 5–6 early / 7–9 mid-late embryos); Senger not splittable (all
+fetal ≥ 11 W GA); Roadmap bulk already all ≥ 9 W.
+**Results**: early vs adult TNFRSF12A negative everywhere (HGCA −1.58,
+P = 0.006); mid/late vs adult ≈ 0 (HGCA −0.01, Gao-original −0.01) or +0.69
+(H-new3, P = 0.089, panel 20/24); mid/late vs early positive (HGCA +1.60,
+P = 0.009 — independent support for the breakpoint). No contrast qualifies;
+promotion criterion not met; panel fraction rises only in H-new3 (71 → 83%).
+**Updated**: qualification + matrix + heatmap (21 contrasts), stage DE tables,
+review_decisions, marker summary (public committed; full mirrored to DATA
+restricted), dataset registry notes.
+
+## 2026-10-02 — Benchmark v2 addendum v1.3: stage-resolved H-new2; results audit
+
+**Audit**: every contrast run so far is present in `marker_summary/results`
+(public: all except Joanito; full: restricted mirror in DATA). Gap found:
+H-new2 (Fawkner) had no stage split. Frozen as v1.3 (`9571e29`), same
+breakpoint and rules.
+**Results**: early (2 units, 8 PCW) vs adult TNFRSF12A +0.86 (P = 0.015);
+mid/late vs adult +1.94; mid/late vs early +1.08 (P = 0.008). Within-fetal
+rise across 9 weeks now seen in HGCA, Fawkner (significant) and Gao (P = 0.07).
+**Added**: `marker_summary/results/Fetal_stage_decomposition_summary.csv`
+(all human fetal-vs-adult parents × stage resolution); marker summary now 36
+contrasts; matrix/qualification/heatmap 24 contrasts.
+
+## 2026-10-02 — Benchmark v2 addendum v1.4: Core-gate dataset selection benchmark
+
+**Plan**: frozen (`da9a1cb`): design eligibility E1–E5 (same study, in vivo,
+epithelium-resolved, ≥ 3 replicates/arm, replicate-level FDR) first, then
+31-marker recovery (% positive; + FDR < 0.05; + log2FC ≥ 0.5). TNFRSF12A not
+an admission criterion. No gate selected.
+**Correction**: Pikkupeura pure in-vivo contrast = GSE230581 (Step 2 M1), not a
+second dataset; independent mouse in-vivo replicate = GSE44433.
+**Results**: eligible — HGCA ≥ 9 PCW 15/25 positive, 7 FDR-supported (7
+adult-high); Pikkupeura in vivo 18/25, 15 FDR-supported; GSE44433 10/23, 8.
+Ineligible H-new2 ≥ 9 PCW 16/22, 14 FDR-supported. HGCA ∩ Pikkupeura in vivo
+FDR-supported fetal-high: GJA1, CLU, ANXA6, SPP1, RBP1.
+**Outputs**: `Core_gate_dataset_recovery.csv`, `Core_gate_marker_by_dataset.csv`
+(step2_benchmark_v2/results/tables and marker_summary/results).

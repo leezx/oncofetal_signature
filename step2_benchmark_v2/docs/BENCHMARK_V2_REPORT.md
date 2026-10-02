@@ -157,3 +157,166 @@ also showing TNFRSF12A fetal ≤ adult, the automated benchmark stops.
    the manual developmental-state analysis of Gao and Fawkner
    ([`step2_fetal_state/`](../../step2_fetal_state/)), which asks *when, where
    and in which epithelial state* TNFRSF12A is high in human fetal intestine.
+
+## Addendum v1.2 — stage-resolved re-analysis (Gao, HGCA; Senger not splittable)
+
+The plan was frozen in `618356e` before any stage-split contrast was
+computed.
+
+- **Breakpoint:** 9 weeks, taken from the fetal-only analysis in
+  `step2_fetal_state/`.
+- **Groups:** early fetal < 9 W and mid/late fetal ≥ 9 W, applied to the
+  age as each source reports it.
+- **Methods:** units, filters and statistics are unchanged, and the frozen
+  rule is applied to every contrast. The recomputed HGCA all-fetal contrast
+  reproduces the original (TNFRSF12A −0.46, P = 0.38).
+
+| Dataset | Contrast | TNFRSF12A log2FC (P) | Panel fetal-positive | Binomial P | Verdict |
+|---|---|---|---|---|---|
+| HGCA | all fetal vs adult (16 vs 7) | −0.46 (0.38) | 14/25 (56%) | 0.35 | fails |
+| | early (6) vs adult | −1.58 (0.006) | 13/23 (57%) | 0.34 | fails |
+| | mid/late (10) vs adult | −0.01 (0.99) | 15/25 (60%) | 0.21 | fails |
+| | mid/late vs early | **+1.60 (0.009)** | 14/24 | 0.27 | (within-fetal) |
+| Gao-original (LI vs GSE103154) | all fetal (12) vs adult | −0.08 (0.45) | 14/28 (50%) | 0.57 | fails |
+| | early (5) vs adult | −1.44 (0.38) | 10/28 (36%) | 0.96 | fails |
+| | mid/late (7) vs adult | −0.01 (0.95) | 14/28 (50%) | 0.57 | fails |
+| | mid/late vs early | +1.43 (0.36) | 19/28 | 0.044 | (within-fetal) |
+| H-new3 (Gao SI+LI vs Wang) | all fetal (15) vs adult | +0.31 (0.81) | 17/24 (71%) | 0.032 | fails (rule 1) |
+| | early (6) vs adult | −1.18 (0.20) | 12/24 (50%) | 0.58 | fails |
+| | mid/late (9) vs adult | +0.69 (0.089) | **20/24 (83%)** | **0.0008** | fails (rule 1) |
+| | mid/late vs early | +1.87 (0.070) | 20/28 | 0.018 | (within-fetal) |
+| Senger | — | — | — | — | not splittable (all fetal 11–22.5 W GA) |
+
+The answers to the frozen questions follow.
+
+1. **Does TNFRSF12A become fetal-positive with support?** No.
+   - Removing the early stratum moves TNFRSF12A from negative to about zero
+     (HGCA −0.46 → −0.01; Gao-original −0.08 → −0.01).
+   - It reaches +0.69 (P = 0.089) only in H-new3.
+   - Every early-vs-adult contrast is negative (HGCA significantly so).
+2. **Does the panel fraction rise with it?** Only in H-new3 (71% → 83%). For
+   HGCA it barely moves (56% → 60%) and for Gao-original not at all (50% →
+   50%).
+
+**Promotion criterion (frozen): not met for any dataset.** No mid/late
+contrast qualifies.
+
+**Reading.**
+- **Developmental-window mixing is real but explains only part of the
+  failure.**
+  - Early fetal epithelium is TNFRSF12A-low relative to adult.
+  - Mid/late is higher than early in both datasets. This is significant in
+    HGCA, an independent check of the 9-week breakpoint, which was derived
+    from Gao/Fawkner fetal data only.
+  - Pooling therefore dilutes the signal.
+- **Removing the dilution does not produce a fetal-high TNFRSF12A in HGCA or
+  Gao-original:** mid/late ≈ adult.
+- **The only stage-resolved contrast that approaches the H-new2 pattern is
+  H-new3-late.** It has a strong panel bias (83%) but TNFRSF12A is not
+  significant.
+
+Failure types:
+- **Type I (developmental-window mixing):** contributes in HGCA and Gao.
+- **Type II (composition/design):** remains the explanation for Roadmap/HPA
+  bulk and Visium.
+- **Neither type** accounts for HGCA/Gao mid/late ≈ adult. The adult
+  reference and cross-study platform effects remain candidates.
+
+Tables:
+- `results/tables/Benchmark_v2_qualification.csv` (columns
+  `stage_resolution`, `parent_contrast`), the matrix, and `*_DE.csv` for
+  each stage contrast.
+- `HGCA_stage_resolved_units.csv` and `*_units.csv` (Gao).
+
+## Addendum v1.3 — stage-resolved H-new2 (Fawkner fetal vs Burclaff adult)
+
+The plan was frozen in `9571e29`. Units and model are the same as H-new2;
+fetal PCW comes from the authors' sample key.
+
+| Contrast | TNFRSF12A log2FC (P) | Panel fetal-positive | Binomial P | Verdict |
+|---|---|---|---|---|
+| all fetal (22) vs adult (3) | +1.83 (< 0.001) | 18/24 (75%) | 0.011 | qualifies |
+| early, 8 PCW (2) vs adult | +0.86 (0.015) | 18/25 (72%) | 0.022 | qualifies |
+| mid/late ≥ 9 PCW (20) vs adult | +1.94 (< 0.001) | 16/22 (73%) | 0.026 | qualifies |
+| mid/late vs early | **+1.08 (0.008)** | 13/23 | 0.34 | (within-fetal) |
+
+**Reading.**
+- **The rise across the breakpoint replicates.** Mid/late fetal is higher than
+  early fetal in all three fetal scRNA sources:
+
+  | Source | Mid/late vs early, TNFRSF12A log2FC (P) |
+  |---|---|
+  | HGCA | +1.60 (0.009) |
+  | Fawkner | +1.08 (0.008) |
+  | Gao SI+LI | +1.87 (0.07) |
+
+- **What differs is where the adult reference falls.**
+  - Fawkner/Burclaff: adult sits below even the early fetal epithelium.
+  - HGCA and Gao: adult is about level with mid/late fetal.
+- **Caveat:** the early Fawkner arm is 2 TI units (8 PCW). ABZ2 is flagged
+  (8.4% sex-discordant cells), and ABF1 and AAU2 are kept as in the parent
+  contrast. See `results/tables/Hnew2_stage_resolved_units.csv`.
+
+**Combined table.** `marker_summary/results/Fetal_stage_decomposition_summary.csv`
+gives every human fetal-vs-adult parent contrast at every stage resolution,
+including Senger and H-bulk1/2, which are marked not splittable.
+
+## Addendum v1.4 — Core-gate dataset selection benchmark
+
+The plan was frozen in `da9a1cb`. This addendum selects nothing; it reports
+evidence for the review decision on the Core gates.
+
+**Dataset-map correction.** The Pikkupeura pure in-vivo contrast (E16.5 SI
+epithelium vs adult crypt epithelium, 3 vs 3) is GSE230581, i.e. the existing
+Step 2 M1. The independent in-vivo mouse replicate is GSE44433.
+
+**Recovery of the 31 literature markers.** % is of measured markers.
+
+| Contrast | Eligible (E1–E5) | Measured | Fetal-positive | + FDR < 0.05 | + log2FC ≥ 0.5 | Adult-high FDR < 0.05 |
+|---|---|---|---|---|---|---|
+| **HGCA ≥ 9 PCW vs adult** (A; 10 vs 7) | yes | 25 | 15 (60%) | 7 (28%) | 7 (28%) | 7 |
+| HGCA all fetal vs adult (16 vs 7) | yes | 25 | 14 (56%) | 9 (36%) | 9 (36%) | 8 |
+| Gao ≥ 9 W vs GSE103154 (B; 7 vs 2) | no (E4, E5) | 28 | 14 (50%) | 2 (7%) | 2 (7%) | 1 |
+| H-new2 ≥ 9 PCW (C; 20 vs 3) | no (E1) | 22 | 16 (73%) | 14 (64%) | 14 (64%) | 3 |
+| H-new2 all fetal | no (E1) | 24 | 18 (75%) | 15 (63%) | 15 (63%) | 3 |
+| **Pikkupeura in vivo = GSE230581** (3 vs 3) | yes | 25 | 18 (72%) | 15 (60%) | 15 (60%) | 5 |
+| GSE44433 (5 vs 5) | yes | 23 | 10 (43%) | 8 (35%) | 6 (26%) | 7 |
+| Pikkupeura LN culture | no (E2) | 27 | 24 (89%) | 24 (89%) | 24 (89%) | 2 |
+| Pikkupeura collagen culture | no (E2) | 27 | 26 (96%) | 26 (96%) | 26 (96%) | 1 |
+
+Reference-only contrasts (H-new3 ≥ 9 W, H-bulk1, Senger) and the version
+using the applicable panel as denominator are in
+`results/tables/Core_gate_dataset_recovery.csv`. The per-marker table is
+`Core_gate_marker_by_dataset.csv`; both are also copied to
+`marker_summary/results/`.
+
+**Human, HGCA ≥ 9 PCW (the only design-eligible human contrast).**
+- **Fetal-high at FDR < 0.05 (7):** GJA1, CLU, ANXA3, ANXA6, SPP1, RBP1,
+  L1CAM.
+- **Adult-high at FDR < 0.05 (7):** ANXA1, IL33, AREG, CD44, IL1RN, EMP1,
+  EPS8L1. These are largely injury/repair-associated genes.
+- **Not significant:** TACSTD2 and TNFRSF12A.
+- **Restricting to ≥ 9 weeks** raises direction-only recovery (56% → 60%)
+  but lowers FDR-supported recovery (9 → 7). CCN2 and BASP1 lose
+  significance, and ANKRD1 drops below the expression filter. These are
+  early-fetal/YAP-type genes.
+- **Design caveat:** within the atlas, the fetal (HDBR) and adult
+  (transplant-donor) cohorts were collected and processed separately, so
+  "same study" does not remove all cohort effects.
+
+**Mouse, Pikkupeura in vivo (GSE230581).** 15 of 25 measured markers are
+fetal-high at FDR < 0.05, including TACSTD2, GJA1, ANXA1, CLU, SPP1, CCN1,
+CCN2, BASP1, AREG, EREG and EMP1.
+- **Caveat:** the adult arm is crypt-only epithelium while the fetal arm is
+  whole epithelium, so the compartments are asymmetric.
+- **GSE44433** recovers less: 8 of 23 at FDR < 0.05, 6 with log2FC ≥ 0.5.
+
+**Agreement between the two eligible in-vivo gates.** Markers fetal-high at
+FDR < 0.05 in both HGCA ≥ 9 PCW and Pikkupeura in vivo: GJA1, CLU, ANXA6,
+SPP1, RBP1 (5).
+- **Disagree (fetal-high in one, significantly opposite in the other):**
+  ANXA1, AREG, EMP1 (mouse fetal-high, human adult-high) and ANXA3, L1CAM
+  (human fetal-high, mouse adult-high).
+
+**Not done.** The gates are not frozen and no Core is built; that awaits
+review.

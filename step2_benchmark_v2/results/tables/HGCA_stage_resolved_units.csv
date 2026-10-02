@@ -1,0 +1,24 @@
+"donor_id","stage","age","age_weeks","stage_group","n_cells"
+"A26 (386C)","adult","70-75",NA,"Adult",4397
+"A30 (398B)","adult","20-25",NA,"Adult",2276
+"A32 (411C)","adult","25-30",NA,"Adult",6449
+"A33 (414C)","adult","20-25",NA,"Adult",35327
+"A34 (417C)","adult","65-70",NA,"Adult",18829
+"A38 (432C)","adult","60-65",NA,"Adult",5159
+"A39 (440C)","adult","45-50",NA,"Adult",4904
+"BRC2026","fetal","8.4Wk",8.4,"Fetal_early",703
+"BRC2029","fetal","6.1Wk",6.1,"Fetal_early",141
+"BRC2043","fetal","10.2Wk",10.2,"Fetal_midlate",5561
+"BRC2046","fetal","6.7Wk",6.7,"Fetal_early",1725
+"BRC2049","fetal","6.9Wk",6.9,"Fetal_early",1232
+"BRC2119","fetal","7.9Wk",7.9,"Fetal_early",3165
+"BRC2121","fetal","9.2Wk",9.2,"Fetal_midlate",6232
+"BRC2133","fetal","9.9Wk",9.9,"Fetal_midlate",5559
+"BRC2134","fetal","10Wk",10,"Fetal_midlate",3251
+"BRC2258","fetal","11.1Wk",11.1,"Fetal_midlate",3529
+"BRC2259","fetal","7.4Wk",7.4,"Fetal_early",582
+"F66","fetal","15Wk",15,"Fetal_midlate",2845
+"F67","fetal","12Wk",12,"Fetal_midlate",595
+"F72","fetal","16Wk",16,"Fetal_midlate",9088
+"F73","fetal","15Wk",15,"Fetal_midlate",5846
+"F78","fetal","17Wk",17,"Fetal_midlate",2121
