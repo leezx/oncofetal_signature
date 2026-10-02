@@ -411,3 +411,18 @@ rise across 9 weeks now seen in HGCA, Fawkner (significant) and Gao (P = 0.07).
 **Added**: `marker_summary/results/Fetal_stage_decomposition_summary.csv`
 (all human fetal-vs-adult parents × stage resolution); marker summary now 36
 contrasts; matrix/qualification/heatmap 24 contrasts.
+
+## 2026-10-02 — Benchmark v2 addendum v1.4: Core-gate dataset selection benchmark
+
+**Plan**: frozen (`da9a1cb`): design eligibility E1–E5 (same study, in vivo,
+epithelium-resolved, ≥ 3 replicates/arm, replicate-level FDR) first, then
+31-marker recovery (% positive; + FDR < 0.05; + log2FC ≥ 0.5). TNFRSF12A not
+an admission criterion. No gate selected.
+**Correction**: Pikkupeura pure in-vivo contrast = GSE230581 (Step 2 M1), not a
+second dataset; independent mouse in-vivo replicate = GSE44433.
+**Results**: eligible — HGCA ≥ 9 PCW 15/25 positive, 7 FDR-supported (7
+adult-high); Pikkupeura in vivo 18/25, 15 FDR-supported; GSE44433 10/23, 8.
+Ineligible H-new2 ≥ 9 PCW 16/22, 14 FDR-supported. HGCA ∩ Pikkupeura in vivo
+FDR-supported fetal-high: GJA1, CLU, ANXA6, SPP1, RBP1.
+**Outputs**: `Core_gate_dataset_recovery.csv`, `Core_gate_marker_by_dataset.csv`
+(step2_benchmark_v2/results/tables and marker_summary/results).

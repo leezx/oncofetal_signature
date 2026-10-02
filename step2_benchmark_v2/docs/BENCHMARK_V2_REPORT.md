@@ -260,3 +260,63 @@ fetal PCW comes from the authors' sample key.
 **Combined table.** `marker_summary/results/Fetal_stage_decomposition_summary.csv`
 gives every human fetal-vs-adult parent contrast at every stage resolution,
 including Senger and H-bulk1/2, which are marked not splittable.
+
+## Addendum v1.4 — Core-gate dataset selection benchmark
+
+The plan was frozen in `da9a1cb`. This addendum selects nothing; it reports
+evidence for the review decision on the Core gates.
+
+**Dataset-map correction.** The Pikkupeura pure in-vivo contrast (E16.5 SI
+epithelium vs adult crypt epithelium, 3 vs 3) is GSE230581, i.e. the existing
+Step 2 M1. The independent in-vivo mouse replicate is GSE44433.
+
+**Recovery of the 31 literature markers.** % is of measured markers.
+
+| Contrast | Eligible (E1–E5) | Measured | Fetal-positive | + FDR < 0.05 | + log2FC ≥ 0.5 | Adult-high FDR < 0.05 |
+|---|---|---|---|---|---|---|
+| **HGCA ≥ 9 PCW vs adult** (A; 10 vs 7) | yes | 25 | 15 (60%) | 7 (28%) | 7 (28%) | 7 |
+| HGCA all fetal vs adult (16 vs 7) | yes | 25 | 14 (56%) | 9 (36%) | 9 (36%) | 8 |
+| Gao ≥ 9 W vs GSE103154 (B; 7 vs 2) | no (E4, E5) | 28 | 14 (50%) | 2 (7%) | 2 (7%) | 1 |
+| H-new2 ≥ 9 PCW (C; 20 vs 3) | no (E1) | 22 | 16 (73%) | 14 (64%) | 14 (64%) | 3 |
+| H-new2 all fetal | no (E1) | 24 | 18 (75%) | 15 (63%) | 15 (63%) | 3 |
+| **Pikkupeura in vivo = GSE230581** (3 vs 3) | yes | 25 | 18 (72%) | 15 (60%) | 15 (60%) | 5 |
+| GSE44433 (5 vs 5) | yes | 23 | 10 (43%) | 8 (35%) | 6 (26%) | 7 |
+| Pikkupeura LN culture | no (E2) | 27 | 24 (89%) | 24 (89%) | 24 (89%) | 2 |
+| Pikkupeura collagen culture | no (E2) | 27 | 26 (96%) | 26 (96%) | 26 (96%) | 1 |
+
+Reference-only contrasts (H-new3 ≥ 9 W, H-bulk1, Senger) and the version
+using the applicable panel as denominator are in
+`results/tables/Core_gate_dataset_recovery.csv`. The per-marker table is
+`Core_gate_marker_by_dataset.csv`; both are also copied to
+`marker_summary/results/`.
+
+**Human, HGCA ≥ 9 PCW (the only design-eligible human contrast).**
+- **Fetal-high at FDR < 0.05 (7):** GJA1, CLU, ANXA3, ANXA6, SPP1, RBP1,
+  L1CAM.
+- **Adult-high at FDR < 0.05 (7):** ANXA1, IL33, AREG, CD44, IL1RN, EMP1,
+  EPS8L1. These are largely injury/repair-associated genes.
+- **Not significant:** TACSTD2 and TNFRSF12A.
+- **Restricting to ≥ 9 weeks** raises direction-only recovery (56% → 60%)
+  but lowers FDR-supported recovery (9 → 7). CCN2 and BASP1 lose
+  significance, and ANKRD1 drops below the expression filter. These are
+  early-fetal/YAP-type genes.
+- **Design caveat:** within the atlas, the fetal (HDBR) and adult
+  (transplant-donor) cohorts were collected and processed separately, so
+  "same study" does not remove all cohort effects.
+
+**Mouse, Pikkupeura in vivo (GSE230581).** 15 of 25 measured markers are
+fetal-high at FDR < 0.05, including TACSTD2, GJA1, ANXA1, CLU, SPP1, CCN1,
+CCN2, BASP1, AREG, EREG and EMP1.
+- **Caveat:** the adult arm is crypt-only epithelium while the fetal arm is
+  whole epithelium, so the compartments are asymmetric.
+- **GSE44433** recovers less: 8 of 23 at FDR < 0.05, 6 with log2FC ≥ 0.5.
+
+**Agreement between the two eligible in-vivo gates.** Markers fetal-high at
+FDR < 0.05 in both HGCA ≥ 9 PCW and Pikkupeura in vivo: GJA1, CLU, ANXA6,
+SPP1, RBP1 (5).
+- **Disagree (fetal-high in one, significantly opposite in the other):**
+  ANXA1, AREG, EMP1 (mouse fetal-high, human adult-high) and ANXA3, L1CAM
+  (human fetal-high, mouse adult-high).
+
+**Not done.** The gates are not frozen and no Core is built; that awaits
+review.
