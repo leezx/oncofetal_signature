@@ -19,10 +19,16 @@ pair places the Gao failure in the fetal arm, not the adult reference.
 contrast — a cross-study contrast that still needs independent validation.
 Visium is dropped from quantitative Step 2 and kept only as a failed QC record.
 
+**Addendum v1.1 (primary-tissue bulk, tier B):** H-bulk1 (Roadmap fetal SI vs
+HPA adult SI, the Finkbeiner 2015 samples) and its duodenum-only subset H-bulk2
+(Senger 2018 primary tissue) both fail: TNFRSF12A −0.50 / −0.90 (n.s.), panel
+not fetal-biased, despite the OLFM4 maturation control being strongly
+adult-high. TNFRSF12A is fetal-high only in the epithelium-resolved H-new2.
+
 | Path | Content |
 |---|---|
-| `scripts/00–06`, `run_benchmark_v2.sh` | acquisition, pseudobulks, contrasts, matrix, heatmap |
-| `results/tables/Benchmark_v2_31_marker_matrix.csv` | 31 markers × 10 contrasts: log2FC / P / FDR |
+| `scripts/00–07`, `run_benchmark_v2.sh` | acquisition, pseudobulks, contrasts (07 = H-bulk1/2), matrix, heatmap |
+| `results/tables/Benchmark_v2_31_marker_matrix.csv` | 31 markers × 12 contrasts: log2FC / P / FDR |
 | `results/tables/Benchmark_v2_qualification.csv` | rule 1, rule 2, verdict per contrast |
 | `results/tables/*_DE.csv` | full gene tables of the new contrasts |
 | `results/tables/*_units.csv`, `*_marker_unit_values.csv` | per-unit inclusion and marker values |

@@ -40,6 +40,14 @@ python3 "$script_dir/04_gao_cross_platform_effect.py" \
   --candidates "$repo/step2_fetal/config/literature_candidates_31.tsv" \
   --aliases "$repo/step3_cancer/config/symbol_aliases.tsv" --de-dir "$work/de" --tables-dir "$tables"
 
+# H-bulk1 / H-bulk2 (addendum v1.1): Roadmap fetal SI vs HPA adult SI / duodenum, recount3.
+Rscript "$script_dir/07_bulk_primary_tissue.R" "$DATA_ROOT/bulkRNAseq/recount3_Roadmap_HPA_intestine" \
+  "$work/pseudobulk" "$tables" "$edger"
+for f in Hbulk1_Roadmap_vs_HPA_SI Hbulk2_Roadmap_vs_HPA_duodenum; do
+  cp "$work/pseudobulk/$f.csv" "$work/de/$f.csv"; cp "$work/pseudobulk/${f}_model.csv" "$work/de/${f}_model.csv"
+  cp "$work/de/$f.csv" "$tables/${f}_DE.csv"; cp "$work/de/${f}_model.csv" "$tables/${f}_DE_model.csv"
+done
+
 # Version-controlled copies.
 cp "$work/de/GaoOriginal_GaoLI_vs_GSE103154.csv" "$tables/GaoOriginal_GaoLI_vs_GSE103154_DE.csv"
 cp "$work/de/Hnew3_GaoSILI_vs_Wang.csv" "$tables/Hnew3_GaoSILI_vs_Wang_DE.csv"

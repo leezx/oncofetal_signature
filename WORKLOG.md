@@ -8,7 +8,7 @@ Chronological append-only record; newest entries are at the bottom.
 |---|---|---|---|
 | 1. Literature candidate collection | completed | — | Curated evidence tables under `docs/step1_literature_candidates/` |
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
-| 2b. Human benchmark v2 | **completed; in review** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 adopted as cross-study human primary (needs independent validation); Visium dropped; no signature built |
+| 2b. Human benchmark v2 | **completed; in review** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A human primary (cross-study); tier B bulk H-bulk1/2 fail; Visium dropped; no signature built |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
@@ -333,3 +333,23 @@ Recorded in `step2_benchmark_v2/config/review_decisions.tsv` (surfaced as
 dataset registry, and the 31-marker summary notes. Frozen verdicts unchanged.
 Open: manual TNFRSF12A follow-up; choice of an independent validation source
 for H-new2.
+
+## 2026-10-02 — Benchmark v2 addendum: primary-tissue bulk (H-bulk1, H-bulk2)
+
+**Plan**: addendum v1.1 frozen (`cd39210`) before data were opened.
+**Source tracing**: Finkbeiner 2015 and Senger 2018 "primary tissue" both use 6
+Roadmap fetal SI total-RNA samples (SRP001371, six donors, 91–120 days) and HPA
+E-MTAB-1733 adult SI/duodenum (ERP003613). H-bulk2 (duodenum only) is a subset
+of H-bulk1. Senger Table 2 lists GSM1059508 for two ages (paper inconsistency).
+**Data**: recount3 raw counts for both studies (new DATA dataset
+`bulkRNAseq/recount3_Roadmap_HPA_intestine`); HPA technical runs summed per
+sample (6 adult samples).
+**Results**: H-bulk1 TNFRSF12A −0.50 (P = 0.20), 13/26 markers fetal-positive;
+H-bulk2 −0.90 (P = 0.12), 16/27; both fail. OLFM4 sanity control strongly
+adult-high (−6.9). TACSTD2 +2.49 and RBP1 +1.50 fetal-high; ANXA1 −2.66
+adult-high; CLU flat.
+**Tiers recorded**: A = H-new2 (qualifies); B = H-bulk1/2 (fail); C = HGCA, Gao,
+Senger (fail); Visium dropped.
+**Stop condition reached**: bulk contrasts also give TNFRSF12A fetal ≤ adult;
+the manual single-cell TNFRSF12A examination is the proposed next step (not
+started).

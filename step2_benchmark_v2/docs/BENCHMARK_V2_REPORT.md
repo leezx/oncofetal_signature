@@ -91,3 +91,42 @@ Decisions are recorded per contrast in `config/review_decisions.tsv` and appear
 as `review_decision` in `results/tables/Benchmark_v2_qualification.csv`; they
 do not alter the frozen verdicts. Not yet decided: the manual TNFRSF12A
 follow-up (gestational age × region × epithelial subtype).
+
+## Addendum v1.1 — primary-tissue bulk (H-bulk1, H-bulk2)
+
+Frozen in `cd39210` before data were opened. Source tracing showed that the
+Finkbeiner 2015 fetal/adult comparison and the Senger 2018 "primary tissue"
+comparison use the **same public samples**: 6 Roadmap Epigenomics fetal
+small-intestine total-RNA libraries (SRP001371; six donors, 91–120 days) and
+HPA E-MTAB-1733 adult small intestine/duodenum (ERP003613). H-bulk2 (duodenum
+only) is therefore a subset of H-bulk1, not an independent dataset. Both arms
+were taken from recount3 as raw counts (the authors share FPKM only) and
+analysed with edgeR `~ stage`.
+
+| Contrast | TNFRSF12A log2FC (P) | Fetal-positive | Binomial P | OLFM4 log2FC (sanity) | Verdict |
+|---|---|---|---|---|---|
+| H-bulk1 fetal SI (6) vs adult SI + duodenum (6) | −0.50 (0.20) | 13/26 | 0.58 | −6.87 | fails |
+| H-bulk2 fetal SI (6) vs adult duodenum (2) | −0.90 (0.12) | 16/27 | 0.22 | −6.83 | fails |
+
+Priority markers in H-bulk1: TACSTD2 +2.49 (P = 1e-4), CLU +0.14 (n.s.),
+ANXA1 −2.66 (P < 1e-5), TNFRSF12A −0.50 (n.s.); GJA1 +0.55 (n.s.), RBP1 +1.50
+(P < 1e-4), BASP1 +1.10 (P = 0.03).
+
+**Reading.** The data capture fetal-to-adult maturation (the authors' OLFM4
+control is strongly adult-high), yet the panel is not fetal-biased and
+TNFRSF12A is not fetal-high. These are whole-tissue libraries (adult full-wall
+specimens vs fetal intestine with abundant mesenchyme) prepared with different
+chemistries (fetal total RNA vs adult poly(A)), so epithelial-intrinsic signals
+can be diluted or inverted by composition — the same failure mode as HGCA,
+Gao and Visium. Across the human evidence, TNFRSF12A is fetal-high only in the
+epithelium-resolved Tier A contrast (H-new2) and in the mouse cultures.
+
+**Evidence tiers** (`config/review_decisions.tsv`, column `evidence_tier`):
+Tier A epithelial scRNA — H-new2 (qualifies); Tier B primary-tissue bulk —
+H-bulk1, H-bulk2 (both fail); Tier C problematic references — HGCA, Gao,
+Senger enterospheres (fail); Visium dropped.
+
+This matches the stop condition stated in the review: with the bulk contrasts
+also showing TNFRSF12A fetal ≤ adult, the next step proposed is the manual
+single-cell examination of TNFRSF12A by donor × gestational age × region ×
+epithelial subtype, rather than adding further automated datasets. Not started.

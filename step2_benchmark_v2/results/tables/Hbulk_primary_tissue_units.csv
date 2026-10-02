@@ -1,0 +1,13 @@
+"pseudobulk","patient","group","source","sample_id","runs_summed","age","tissue","library_size","n_cells","eligible"
+"Fetal_H-23769","Fetal_H-23769","Fetal","Roadmap SRP001371","GSM1059486",1,"day 108","fetal small intestine",33715971,1,TRUE
+"Fetal_H-23887","Fetal_H-23887","Fetal","Roadmap SRP001371","GSM1059507",1,"day 108","fetal small intestine",34936510,1,TRUE
+"Fetal_H-23914","Fetal_H-23914","Fetal","Roadmap SRP001371","GSM1059508",1,"day 91","fetal small intestine",34275196,1,TRUE
+"Fetal_H-23808","Fetal_H-23808","Fetal","Roadmap SRP001371","GSM1059517",1,"day 115","fetal small intestine",34962558,1,TRUE
+"Fetal_H-23941","Fetal_H-23941","Fetal","Roadmap SRP001371","GSM1059519",1,"day 120","fetal small intestine",35629097,1,TRUE
+"Fetal_H-23964","Fetal_H-23964","Fetal","Roadmap SRP001371","GSM1059521",1,"day 98","fetal small intestine",34465162,1,TRUE
+"Adult_duodenum_4b","Adult_duodenum_4b","Adult","HPA ERP003613 (E-MTAB-1733)","duodenum_4b",2,"adult","adult duodenum",75058445,1,TRUE
+"Adult_duodenum_4c","Adult_duodenum_4c","Adult","HPA ERP003613 (E-MTAB-1733)","duodenum_4c",2,"adult","adult duodenum",73669353,1,TRUE
+"Adult_smallintestine_4a","Adult_smallintestine_4a","Adult","HPA ERP003613 (E-MTAB-1733)","smallintestine_4a",2,"adult","adult small intestine",73447235,1,TRUE
+"Adult_smallintestine_4b","Adult_smallintestine_4b","Adult","HPA ERP003613 (E-MTAB-1733)","smallintestine_4b",2,"adult","adult small intestine",74169881,1,TRUE
+"Adult_smallintestine_4c","Adult_smallintestine_4c","Adult","HPA ERP003613 (E-MTAB-1733)","smallintestine_4c",2,"adult","adult small intestine",74599667,1,TRUE
+"Adult_smallintestine_4d","Adult_smallintestine_4d","Adult","HPA ERP003613 (E-MTAB-1733)","smallintestine_4d",2,"adult","adult small intestine",74472010,1,TRUE

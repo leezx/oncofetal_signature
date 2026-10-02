@@ -24,6 +24,8 @@ CONTRASTS = [
     ("Hnew1", "H-new1 Fawkner Visium fetal vs adult epithelial spots", "Human", "new"),
     ("Hnew1_colon", "H-new1 colon-only sensitivity", "Human", "new"),
     ("Hnew2", "H-new2 Fawkner fetal scRNA vs Burclaff adult", "Human", "new"),
+    ("Hbulk1", "H-bulk1 Roadmap fetal SI vs HPA adult SI+duodenum (Finkbeiner design)", "Human", "addendum v1.1"),
+    ("Hbulk2", "H-bulk2 Roadmap fetal SI vs HPA adult duodenum (Senger primary-tissue subset)", "Human", "addendum v1.1"),
     ("Hnew3", "H-new3 Gao fetal SI+LI vs Wang adult", "Human", "new"),
     ("Hnew3_debug", "H-new3-debug Gao fetal LI vs Wang colon+rectum", "Human", "new"),
     ("Pikkupeura_LN", "Pikkupeura fetal vs adult culture, laminin (GSE160449)", "Mouse", "existing benchmark"),
@@ -62,6 +64,8 @@ def main():
         "Hnew1": by_symbol(pd.read_csv(de / "Hnew1_Fawkner_spatial_units.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
         "Hnew1_colon": by_symbol(pd.read_csv(de / "Hnew1_Fawkner_spatial_units_colon_only.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
         "Hnew2": by_symbol(pd.read_csv(de / "Hnew2_Fawkner_Burclaff.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
+        "Hbulk1": by_symbol(pd.read_csv(de / "Hbulk1_Roadmap_vs_HPA_SI.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
+        "Hbulk2": by_symbol(pd.read_csv(de / "Hbulk2_Roadmap_vs_HPA_duodenum.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
         "Hnew3": by_symbol(pd.read_csv(de / "Hnew3_GaoSILI_vs_Wang.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
         "Hnew3_debug": by_symbol(pd.read_csv(de / "Hnew3debug_GaoLI_vs_WangColonRectum.csv"), "symbol", "log2FC", "PValue", "FDR", keys),
         "Pikkupeura_LN": by_symbol(bm, "gene", "Mouse_Pikkupeura_LN_log2FC", None, "Mouse_Pikkupeura_LN_FDR", bm_keys),
@@ -96,6 +100,23 @@ def main():
                          **{f"{g}_log2FC": vals[k][g][0] for g in ["TACSTD2", "CLU", "ANXA1"]},
                          qualifies=r1 and r2))
     q = pd.DataFrame(rows)
+    olfm4 = {}
+    srcs = {"HGCA": (hgca, "gene", "HGCA_log2FC"), "Senger": None, "Pikkupeura_LN": None, "Pikkupeura_collagen": None}
+    for k, *_ in CONTRASTS:
+        f = {"GaoOriginal": "GaoOriginal_GaoLI_vs_GSE103154.csv", "Hnew1": "Hnew1_Fawkner_spatial_units.csv",
+             "Hnew1_colon": "Hnew1_Fawkner_spatial_units_colon_only.csv", "Hnew2": "Hnew2_Fawkner_Burclaff.csv",
+             "Hbulk1": "Hbulk1_Roadmap_vs_HPA_SI.csv", "Hbulk2": "Hbulk2_Roadmap_vs_HPA_duodenum.csv",
+             "Hnew3": "Hnew3_GaoSILI_vs_Wang.csv", "Hnew3_debug": "Hnew3debug_GaoLI_vs_WangColonRectum.csv"}.get(k)
+        if f:
+            d = pd.read_csv(de / f).drop_duplicates("symbol").set_index("symbol")
+            olfm4[k] = d.loc["OLFM4", "log2FC"] if "OLFM4" in d.index else np.nan
+        elif k == "HGCA":
+            d = hgca.drop_duplicates("gene").set_index("gene")
+            olfm4[k] = d.loc["OLFM4", "HGCA_log2FC"] if "OLFM4" in d.index else np.nan
+        else:
+            olfm4[k] = np.nan
+    q["OLFM4_log2FC_sanity"] = q.contrast.map(olfm4)
+    q["OLFM4_fetal_lt_adult"] = q.OLFM4_log2FC_sanity < 0
     # Review decisions recorded after the frozen verdicts (never change them).
     dec = repo / "step2_benchmark_v2/config/review_decisions.tsv"
     if dec.exists():

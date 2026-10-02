@@ -62,6 +62,7 @@ the Joanito metadata is accessible. See `step3_cancer/docs/RUNBOOK.md`.
 | `step2_benchmark_v2/scripts/02_fawkner_scrna_pseudobulk.py` | H-new2 fetal: hashtag demultiplexing, per-sample pseudobulk | counts + unit table |
 | `step2_benchmark_v2/scripts/03_burclaff_adult_pseudobulk.py` | H-new2 adult: Burclaff donor pseudobulks, joined to fetal | merged counts |
 | `step2_benchmark_v2/scripts/04_gao_cross_platform_effect.py` | H-new3, H-new3-debug, Gao-original recomputed (effect-only) | DE + per-unit marker tables |
+| `step2_benchmark_v2/scripts/07_bulk_primary_tissue.R` | H-bulk1/H-bulk2: recount3 Roadmap fetal SI vs HPA adult SI/duodenum, edgeR | DE tables + unit table |
 | `step2_benchmark_v2/scripts/05_benchmark_matrix.py` | 31-marker × contrast matrix and frozen verdicts | matrix + qualification |
 | `step2_benchmark_v2/scripts/06_plot_benchmark_heatmap.R` | heatmap | PDF/PNG + source data |
 | `step2_benchmark_v2/scripts/run_benchmark_v2.sh` | run all | complete package |
