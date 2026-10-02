@@ -60,3 +60,22 @@ volcano classification. Visual QA and source-data assertions passed.
 **Review**: Repository visibility was changed from private to public at the
 user's request. This checkpoint corrects stale README status and DATA checksum
 pointers while preserving unrelated user files.
+
+## 2026-10-02 — Step 2 reviewer sanity checks (PR #1)
+
+**What**: Implemented only the three requested checks: mouse symbol duplication,
+raw per-sample CPM for mouse genes with log2FC > 5, and a 706-gene human–mouse
+effect-size scatter.
+
+**How**: The mouse module now stops if a duplicated non-empty symbol is detected,
+exports raw CPM without TMM-adjusted library sizes for the six biological
+samples, and flags fetal mean CPM below 1 descriptively. The scatter uses the
+frozen 706-gene universe and does not add a correlation gate.
+
+**Real findings**: There were zero duplicate symbols. All 425 genes with mouse
+log2FC > 5 had fetal mean raw CPM ≥ 1.522; none met the low-count flag. The
+706-gene effect sizes showed descriptive Spearman rho = 0.485. Only GJA1 and CLU
+of the seven requested labels belong to the final 706.
+
+**Review**: The sanity checks support the existing mouse volcano and do not
+justify changing thresholds or re-running Step 2 with a more complex model.

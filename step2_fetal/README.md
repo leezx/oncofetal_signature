@@ -8,7 +8,7 @@ expression matrices remain outside GitHub under the managed `DATA` hierarchy.
 ```text
 config/              frozen paths, thresholds, and Ensembl BioMart query
 docs/                analysis plan, runbook, execution report, QA, HTML report
-scripts/             00–06 ordered workflow
+scripts/             00–07 ordered workflow
 results/tables/      DEG and final cross-species tables
 results/source_data/ exact volcano plotting data
 results/figures/     PDF and 600-dpi PNG plots
@@ -22,6 +22,10 @@ results/figures/     PDF and 600-dpi PNG plots
 - `results/tables/mouse_in_vivo_fetal_vs_adult_DEG.csv`: mouse in-vivo fetal epithelium versus
   adult crypt epithelium edgeR results. `Mouse_pass` uses `Mouse_log2FC >= 0.5`
   and `Mouse_FDR < 0.05`.
+- `results/tables/Mouse_symbol_duplicate_check.csv`: explicit audit of non-empty
+  mouse gene symbols; the frozen input contains zero duplicate symbol rows.
+- `results/tables/Mouse_log2FC_gt5_raw_CPM.csv`: all 425 extreme fetal-high
+  mouse genes with the six per-sample raw CPM values.
 
 Positive log2 fold change means higher expression in fetal epithelium. The full
 tested-gene tables are included, not only the threshold-passing subset.
@@ -31,6 +35,7 @@ tested-gene tables are included, not only the threshold-passing subset.
 - `results/figures/human_HGCA_fetal_vs_adult_volcano.{pdf,png}`
 - `results/figures/mouse_in_vivo_fetal_vs_adult_volcano.{pdf,png}`
 - `results/figures/human_mouse_fetal_vs_adult_volcano.{pdf,png}`
+- `results/figures/human_mouse_706_effect_size_scatter.{pdf,png}`
 
 Red marks fetal-high genes, blue marks adult-high genes, and grey marks genes
 that do not meet both `|log2FC| >= 0.5` and `FDR < 0.05`. Labels show the ten

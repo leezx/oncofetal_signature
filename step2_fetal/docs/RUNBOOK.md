@@ -41,6 +41,7 @@ The wrapper reads `config/step2.env` and runs:
 4. Mouse in-vivo edgeR fetal/adult contrast.
 5. Ensembl one-to-one mapping and strict H1 ∩ H2 ∩ M1 intersection.
 6. Human and mouse volcano plots.
+7. Human HGCA versus mouse effect-size scatter for the final 706 genes.
 
 Large intermediates are written to DATA. Stable DEG tables and figures are
 copied into `step2_fetal/results/`.
@@ -69,3 +70,17 @@ Rscript step2_fetal/scripts/06_plot_volcano.R \
 | Final | H1 ∩ H2 ∩ M1 |
 
 Do not optimize these thresholds using CRC or TWEAKR results.
+
+## Reviewer sanity checks
+
+The mouse module now performs two non-gating checks on every run:
+
+1. It counts duplicated non-empty gene symbols and stops before symbol-based
+   cross-species merging if any exist. The current dataset has zero duplicates.
+2. It exports every gene with `Mouse_log2FC > 5` together with raw CPM for all
+   three fetal and three adult samples. `low_fetal_count_flag` is descriptive
+   only and marks fetal mean raw CPM below 1.
+
+The cross-species scatter is descriptive and does not add a correlation gate.
+Requested markers absent from the final 706 are recorded in
+`results/source_data/human_mouse_requested_marker_status.csv` rather than plotted.

@@ -83,6 +83,21 @@ or additional validation cohorts.
 5. `scripts/04_mouse_fetal_high.R`
 6. `scripts/05_cross_species_intersection.py`
 7. `scripts/06_plot_volcano.R`
+8. `scripts/07_plot_human_mouse_effect_scatter.R`
 
 The complete command sequence is encoded in `scripts/run_step2.sh` and explained
 in `docs/RUNBOOK.md`.
+
+## Reviewer sanity checks
+
+- Mouse duplicated non-empty symbols: 0 of 24,587 symbol-bearing rows. No
+  stable-ID refactor was required.
+- Mouse genes with log2FC > 5: 425. Their minimum fetal mean raw CPM was 1.52,
+  median fetal mean raw CPM was 9.63, and none had fetal mean raw CPM below 1.
+  The extreme-right volcano points therefore do not show the proposed
+  near-zero-expression artifact pattern.
+- Across the final 706 genes, HGCA and mouse log2FC values had descriptive
+  Spearman rho = 0.485. Correlation was not used as a gate.
+- Of the seven reviewer-requested labels, GJA1 and CLU are members of the final
+  706 and are labelled; TACSTD2, ANXA1, TNFRSF12A, EMP1, and LAMC2 are recorded
+  as absent rather than plotted outside the requested gene universe.

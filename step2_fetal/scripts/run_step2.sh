@@ -33,10 +33,15 @@ cp "$DATA_RESULTS/HGCA_DE.csv" "$tables_dir/human_HGCA_fetal_vs_adult_DEG.csv"
 cp "$DATA_RESULTS/HGCA_proliferative_control.csv" "$tables_dir/human_HGCA_proliferative_control_DEG.csv"
 cp "$DATA_RESULTS/Gao_validation.csv" "$tables_dir/human_Gao_validation.csv"
 cp "$DATA_RESULTS/Mouse_DE.csv" "$tables_dir/mouse_in_vivo_fetal_vs_adult_DEG.csv"
+cp "$DATA_RESULTS/Mouse_symbol_duplicate_check.csv" "$tables_dir/Mouse_symbol_duplicate_check.csv"
+cp "$DATA_RESULTS/Mouse_log2FC_gt5_raw_CPM.csv" "$tables_dir/Mouse_log2FC_gt5_raw_CPM.csv"
 cp "$DATA_RESULTS/Cross_species_evidence.csv" "$tables_dir/Cross_species_evidence.csv"
 cp "$DATA_RESULTS/Conserved_Fetal_High.csv" "$tables_dir/Conserved_Fetal_High.csv"
 
 Rscript "$script_dir/06_plot_volcano.R" \
   "$tables_dir" "$figures_dir" "$source_data_dir"
+
+Rscript "$script_dir/07_plot_human_mouse_effect_scatter.R" \
+  "$tables_dir/Conserved_Fetal_High.csv" "$figures_dir" "$source_data_dir"
 
 printf 'Step 2 complete. Version-controlled outputs: %s/results\n' "$step_dir"

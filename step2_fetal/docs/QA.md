@@ -15,6 +15,7 @@ Checkpoint date: 2026-10-02.
 - Gao: 849 author-labelled fetal large-intestinal epithelial cells aggregated
   into 12 embryo identifiers; adult donors P1 and P2 retained separately.
 - Mouse: 3 fetal and 3 adult in-vivo biological replicates.
+- Mouse non-empty gene symbols: 24,587; duplicated rows: 0.
 
 ## Result assertions
 
@@ -33,6 +34,19 @@ Checkpoint date: 2026-10-02.
 - PDF is vector output; PNG is 600 dpi.
 - Direction, thresholds, labels, clipping, and combined-panel readability were
   visually inspected at final size.
+
+## Reviewer sanity checks
+
+- `Mouse_log2FC > 5`: 425 genes.
+- Minimum fetal mean raw CPM among these genes: 1.522.
+- Median fetal mean raw CPM among these genes: 9.630.
+- Genes with fetal mean raw CPM < 1: 0.
+- Conclusion: the extreme-right mouse volcano cluster is supported by measurable
+  fetal expression and near-zero adult expression, not a retained near-zero/near-zero artifact.
+- The 706-gene HGCA–mouse effect-size scatter has descriptive Spearman rho =
+  0.485; this value is not a gate.
+- Requested marker labels present in the 706: GJA1 and CLU. Requested but absent:
+  TACSTD2, ANXA1, TNFRSF12A, EMP1, and LAMC2.
 
 ## Known limitation
 

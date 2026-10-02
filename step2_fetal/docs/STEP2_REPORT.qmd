@@ -65,6 +65,24 @@ The full DEG tables are:
 human discovery, adult-proliferative control, Gao adult-donor values, mouse
 evidence, and Ensembl release 116 one-to-one orthology fields.
 
+## Reviewer sanity checks
+
+The mouse count table contains 24,587 non-empty gene symbols and **zero duplicate
+symbol rows**, so the symbol-based join does not collapse duplicated genes.
+
+There are 425 mouse genes with `Mouse_log2FC > 5`. The audit table retains raw
+CPM for each of the three fetal and three adult samples. Their minimum fetal mean
+raw CPM is 1.522 and none has fetal mean raw CPM below 1. The extreme-right
+volcano points are therefore consistent with fetal expression plus very low or
+absent adult expression, rather than a near-zero/near-zero artifact.
+
+![HGCA versus mouse log2 fold changes for the final 706 genes. GJA1 and CLU are the reviewer-requested markers present in the final set.](../results/figures/human_mouse_706_effect_size_scatter.png){fig-alt="Scatter plot comparing human HGCA and mouse fetal versus adult effect sizes for 706 conserved genes" width=75%}
+
+The descriptive Spearman correlation is 0.485 and is not used as a gate.
+Of the requested labels, GJA1 and CLU are in the final 706; TACSTD2, ANXA1,
+TNFRSF12A, EMP1, and LAMC2 are not in this gene universe and are documented in
+`results/source_data/human_mouse_requested_marker_status.csv`.
+
 ## Reproduction and QA
 
 - Run the complete workflow with `bash step2_fetal/scripts/run_step2.sh`.
