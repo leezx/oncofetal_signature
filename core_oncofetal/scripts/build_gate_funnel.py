@@ -3,10 +3,9 @@
 
 All 31 literature candidates (Literature candidate = YES; evidence class and
 primary studies are annotation) pass through the three data gates:
-Gate H human development and Gate C CRC (Joanito + Pelka) are shown; mouse
-evidence is not displayed. Columns: Core = "YES" for CIOC members (method v4.0,
-H & M & C; the mouse gate is part of this definition but not displayed);
-Core human = "YES" if Gates H and C pass, ignoring mouse data. Blank otherwise.
+Gate H human development, Gate M mouse in vivo, Gate C CRC (Joanito + Pelka).
+Columns: Core = "YES" for CIOC members (method v4.0, H & M & C); Core human =
+"YES" if Gates H and C pass, ignoring the mouse gate. Blank otherwise.
 Reads the restricted full table written by build_core_gates.py; output is
 git-ignored and mirrored to DATA restricted_joanito/core_oncofetal/.
 Usage (repo root): python3 core_oncofetal/scripts/build_gate_funnel.py
@@ -25,7 +24,7 @@ OUT = ROOT / "core_oncofetal/results/CIOC_gate_funnel_31.xlsx"
 RESTRICTED = pathlib.Path("/Volumes/Stelligen_SSD/Stelligen/DATA/2.PROJECTS/1.TWEAKR-oncoFetal/results/"
                           "2026-10-02_step3_cancer_axis_v0.1/restricted_joanito/core_oncofetal")
 CALL = {"pass": "PASS", "fail": "FAIL", "NE": "NOT EVALUABLE"}
-NAMES = {"H": "Human development", "C": "CRC"}
+NAMES = {"H": "Human development", "M": "Mouse in vivo", "C": "CRC"}
 
 
 def col(m, key):
@@ -36,11 +35,9 @@ def main():
     m = pd.read_csv(SRC)
     rows = []
     for _, r in m.iterrows():
-        calls = {"H": r["H human developmental"], "C": r["C CRC replicated"]}
-        failed = [NAMES[a] for a in "HC" if calls[a] == "fail"]
-        ne = [NAMES[a] for a in "HC" if calls[a] == "NE"]
-        flags = "; ".join(f for f in str(r["DISCORDANCE flags (reported, not selecting)"]).split("; ")
-                          if not f.startswith("GSE44433") and f != "none") or "none"
+        calls = {"H": r["H human developmental"], "M": r["M mouse in vivo"], "C": r["C CRC replicated"]}
+        failed = [NAMES[a] for a in "HMC" if calls[a] == "fail"]
+        ne = [NAMES[a] for a in "HMC" if calls[a] == "NE"]
         filt = "; ".join((["failed: " + ", ".join(failed)] if failed else []) +
                          (["not evaluable: " + ", ".join(ne)] if ne else []))
         rows.append({
@@ -52,10 +49,12 @@ def main():
             "Gate H Human development": CALL[calls["H"]],
             "Human evidence (log2FC, FDR)": f"HGCA≥9PCW {r[col(m, 'HGCA >=9')]} | H-new2 {r[col(m, 'H-new2')]} | "
                                             f"Gao {r[col(m, 'Gao LI')]}; support from: {r['H statistical support from']}",
+            "Gate M Mouse in vivo": CALL[calls["M"]],
+            "Mouse evidence (log2FC, FDR)": f"GSE230581 {r[col(m, 'GSE230581')]}",
             "Gate C CRC (Joanito + Pelka)": CALL[calls["C"]],
             "CRC evidence (log2FC, FDR)": f"Joanito {r[col(m, 'Joanito malignant')]} | Pelka {r[col(m, 'Pelka tumour')]}",
-            "Filtered at (human + CRC)": filt,
-            "Discordance flags, human/CRC (not selecting)": flags,
+            "Filtered at": filt,
+            "Discordance flags (not selecting)": r["DISCORDANCE flags (reported, not selecting)"],
             "Core": "YES" if r["Core label (v4.0)"] == "CIOC" else "",
             "Core human": "YES" if calls["H"] == "pass" and calls["C"] == "pass" else "",
         })
@@ -69,9 +68,9 @@ def main():
         ("Literature evidence class", "Annotation from full-text audit: A fetal intestine; B regeneration/revival; C CRC oncofetal; 'provenance unresolved' = no primary source identified"),
         ("Gate H Human development", "HGCA ≥9 PCW, H-new2 ≥9 PCW, Gao ≥9 W: ≥2 fetal-positive and ≥1 with log2FC≥0.5 & FDR<0.05; <2 measured = not evaluable"),
         ("Gate C CRC", "Joanito malignant vs normal AND Pelka tumour vs normal epithelium: each log2FC≥0.5 & FDR<0.05"),
-        ("Core", "YES = CIOC member (method v4.0: Gates H, M and C; the mouse gate GSE230581 is part of this definition but its evidence is not displayed here); blank = not Core"),
-        ("Core human", "YES = passes Gates H and C, ignoring mouse data (human-only view; not the CIOC definition); blank = not"),
-        ("Mouse data", "Not displayed in this workbook (GSE230581, GSE44433 removed from view; mouse discordance flags removed)"),
+        ("Gate M Mouse in vivo", "GSE230581 E16.5 epithelium vs adult crypt: log2FC≥0.5 & FDR<0.05 (one-to-one orthologue)"),
+        ("Core", "YES = passes Gates H, M and C (CIOC, method v4.0); blank = not Core"),
+        ("Core human", "YES = passes Gates H and C, ignoring Gate M (human-only view; not the CIOC definition); blank = not"),
         ("NOT EVALUABLE", "not measured / no orthologue in the required dataset; not a biological fail"),
         ("Cells", "log2FC (FDR); ** log2FC≥0.5 & FDR<0.05; * FDR<0.05 below effect threshold; NA not measured"),
         ("Restriction", "Contains Joanito-derived results (Synapse data-use terms): do not share or commit"),
@@ -102,7 +101,7 @@ def main():
                     x.font = Font(name="Arial", size=9, color="9C0006")
                 if v == "provenance unresolved":
                     x.font = Font(name="Arial", size=9, italic=True, color="9C5700")
-        widths = {"Gene": 11, "Literature label": 20, "Literature candidate": 11, "Filtered at (human + CRC)": 28,
+        widths = {"Gene": 11, "Literature label": 20, "Literature candidate": 11, "Filtered at": 28,
                   "Core": 8, "Core human": 9}
         for j, c in enumerate(df.columns, 1):
             w = widths.get(c, 15 if c.startswith("Gate") else 38)
