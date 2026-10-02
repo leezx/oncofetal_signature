@@ -43,10 +43,17 @@ Checkpoint date: 2026-10-02.
 - Genes with fetal mean raw CPM < 1: 0.
 - Conclusion: the extreme-right mouse volcano cluster is supported by measurable
   fetal expression and near-zero adult expression, not a retained near-zero/near-zero artifact.
-- The 706-gene HGCA–mouse effect-size scatter has descriptive Spearman rho =
-  0.485; this value is not a gate.
-- Requested marker labels present in the 706: GJA1 and CLU. Requested but absent:
-  TACSTD2, ANXA1, TNFRSF12A, EMP1, and LAMC2.
+- The 706-gene HGCA–mouse Spearman rho = 0.485 is explicitly treated as
+  selection-conditioned and is not used to assess genome-wide conservation.
+- All 11,049 one-to-one genes tested in both datasets were included in the
+  unbiased diagnostic: Spearman rho = 0.222 (P = 2.56e-123).
+- Frozen H1/M1 quadrant counts were both = 998, human-only = 1,686,
+  mouse-only = 1,580, and neither = 6,785. One-sided Fisher enrichment gave
+  odds ratio 2.542 and P = 2.40e-79.
+- The 31-row literature audit is complete. First-failure counts are HGCA primary
+  15, HGCA not tested 8, Gao effect size 2, mouse M1 1, and final pass 5.
+- TACSTD2, ANXA1, and TNFRSF12A first fail HGCA primary; none is excluded first
+  by Gao. Their full evidence values remain in the audit table.
 
 ## Known limitation
 

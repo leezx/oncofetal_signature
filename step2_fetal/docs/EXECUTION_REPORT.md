@@ -84,6 +84,7 @@ or additional validation cohorts.
 6. `scripts/05_cross_species_intersection.py`
 7. `scripts/06_plot_volcano.R`
 8. `scripts/07_plot_human_mouse_effect_scatter.R`
+9. `scripts/08_conservation_and_candidate_audit.R`
 
 The complete command sequence is encoded in `scripts/run_step2.sh` and explained
 in `docs/RUNBOOK.md`.
@@ -96,8 +97,15 @@ in `docs/RUNBOOK.md`.
   median fetal mean raw CPM was 9.63, and none had fetal mean raw CPM below 1.
   The extreme-right volcano points therefore do not show the proposed
   near-zero-expression artifact pattern.
-- Across the final 706 genes, HGCA and mouse log2FC values had descriptive
-  Spearman rho = 0.485. Correlation was not used as a gate.
-- Of the seven reviewer-requested labels, GJA1 and CLU are members of the final
-  706 and are labelled; TACSTD2, ANXA1, TNFRSF12A, EMP1, and LAMC2 are recorded
-  as absent rather than plotted outside the requested gene universe.
+- The earlier rho = 0.485 was calculated only after H1, H2, and M1 selection and
+  is therefore a selected-set description, not an estimate of transcriptome-wide
+  human–mouse conservation.
+- Across all 11,049 one-to-one genes tested in both HGCA and mouse, Spearman rho
+  was 0.222. H1 and M1 overlapped at 998 genes (Fisher odds ratio 2.54,
+  one-sided P = 2.4e-79); 37.2% of human H1 genes passed M1 and 38.7% of mouse
+  M1 genes passed H1. These statistics are diagnostic and do not alter a gate.
+- A gate-by-gate table was generated for all 31 literature candidates. TACSTD2,
+  ANXA1, and TNFRSF12A all first failed HGCA primary rather than Gao: respective
+  HGCA log2FC values were 0.368, -2.045, and -0.460. TACSTD2 nevertheless passed
+  Gao H2 and mouse M1; ANXA1 passed mouse M1 but not Gao H2; TNFRSF12A passed
+  neither Gao H2 nor mouse M1.

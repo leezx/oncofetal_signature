@@ -42,6 +42,8 @@ The wrapper reads `config/step2.env` and runs:
 5. Ensembl one-to-one mapping and strict H1 ∩ H2 ∩ M1 intersection.
 6. Human and mouse volcano plots.
 7. Human HGCA versus mouse effect-size scatter for the final 706 genes.
+8. Thirty-one-candidate gate audit and all-tested one-to-one HGCA–mouse
+   conservation scatter, Spearman statistic, H1×M1 table, and Fisher test.
 
 Large intermediates are written to DATA. Stable DEG tables and figures are
 copied into `step2_fetal/results/`.
@@ -81,6 +83,8 @@ The mouse module now performs two non-gating checks on every run:
    three fetal and three adult samples. `low_fetal_count_flag` is descriptive
    only and marks fetal mean raw CPM below 1.
 
-The cross-species scatter is descriptive and does not add a correlation gate.
-Requested markers absent from the final 706 are recorded in
-`results/source_data/human_mouse_requested_marker_status.csv` rather than plotted.
+Both cross-species scatters are descriptive and do not add a correlation gate.
+The selected 706-gene correlation must not be interpreted as genome-wide
+conservation. Module 08 uses all one-to-one genes tested in both HGCA and mouse,
+and writes `Literature_31_gate_failure_audit.csv` so each candidate can be
+traced through H1, H2, M1, and the final intersection.

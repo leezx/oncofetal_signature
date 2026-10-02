@@ -1,0 +1,2 @@
+"n_tested_one_to_one","spearman_rho","spearman_p_value","fisher_odds_ratio","fisher_p_value","human_H1_count","mouse_M1_count","both_H1_M1_count","fraction_human_H1_also_mouse_M1","fraction_mouse_M1_also_human_H1"
+11049,0.221900716857851,2.5597764627092e-123,2.54173655498395,2.40429014874641e-79,2684,2578,998,0.371833084947839,0.387121799844841

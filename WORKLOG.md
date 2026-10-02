@@ -79,3 +79,23 @@ of the seven requested labels belong to the final 706.
 
 **Review**: The sanity checks support the existing mouse volcano and do not
 justify changing thresholds or re-running Step 2 with a more complex model.
+
+## 2026-10-02 — Cross-species conservation and candidate gate audit (PR #1)
+
+**What**: Added the two requested non-gating diagnostics: a complete 31-candidate
+gate-failure table and a genome-wide human–mouse comparison across every
+one-to-one gene tested in both datasets.
+
+**How**: Module 08 joins frozen H1 and M1 calls without using Gao to define the
+tested universe, computes Spearman correlation, constructs the H1×M1 quadrant
+table, runs a one-sided Fisher enrichment test, and exports exact figure source
+data. No threshold or model was changed.
+
+**Real findings**: Among 11,049 tested one-to-one genes, rho = 0.222. H1 and M1
+overlapped at 998 genes (OR = 2.54, P = 2.4e-79); 37.2% of H1 genes passed M1
+and 38.7% of M1 genes passed H1. TACSTD2, ANXA1, and TNFRSF12A all first failed
+HGCA primary, not Gao. TACSTD2 still passed Gao and mouse, ANXA1 passed mouse,
+and TNFRSF12A passed neither downstream gate.
+
+**Review**: The former rho = 0.485 is now explicitly documented as conditioned
+on the final 706-gene selection and is not presented as genome-wide conservation.

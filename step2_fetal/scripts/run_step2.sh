@@ -44,4 +44,8 @@ Rscript "$script_dir/06_plot_volcano.R" \
 Rscript "$script_dir/07_plot_human_mouse_effect_scatter.R" \
   "$tables_dir/Conserved_Fetal_High.csv" "$figures_dir" "$source_data_dir"
 
+Rscript "$script_dir/08_conservation_and_candidate_audit.R" \
+  "$tables_dir" "$step_dir/config/literature_candidates_31.tsv" \
+  "$figures_dir" "$source_data_dir"
+
 printf 'Step 2 complete. Version-controlled outputs: %s/results\n' "$step_dir"
