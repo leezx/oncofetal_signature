@@ -95,3 +95,20 @@ A unit failing either check is excluded from the age/region layers and reported.
 - **State program**: a state that is TNFRSF12A-high in both datasets would
   define a candidate fetal epithelial state program. Comparison with adult is
   not part of this plan.
+
+## Addendum v1.1 — hashtag QC (2026-10-02, after sex/region checks, before any analysed gene was read)
+
+The unit-level checks (`results/tables/Fawkner_hashtag_sample_checks.csv`)
+showed sex agreement for every unit with ≥ 50 cells. Two refinements follow.
+
+1. **The region check is applied only among units with ≥ 50 cells.** SATB2
+   means of 10–20-cell units are too noisy to arbitrate.
+2. **Per-cell sex discordance is added** (cell typed XX if XIST > 0 and Y
+   genes = 0, XY if the reverse; discordant if the type contradicts the key).
+   - Background is 2–4%.
+   - Units above 10% are excluded: ABF1 (25.6%) and AAU2 (16.4%).
+   - AAU2 holds 98% of pool 4's called cells, so pool 4's hashtagging is
+     unreliable and the pool is not used.
+   - ABZ2 (8.4%, about 3× background; the only large ≤ 9-PCW unit) is kept
+     and flagged. Every Fawkner result is repeated without it.
+   - Sex-discordant cells are removed from all units.
