@@ -8,7 +8,7 @@ Chronological append-only record; newest entries are at the bottom.
 |---|---|---|---|
 | 1. Literature candidate collection | completed | — | Curated evidence tables under `docs/step1_literature_candidates/` |
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
-| 3. CRC-high axis | **in progress — T1 + S2 done; S1 (Joanito) blocked on Synapse terms acceptance** | branch `plan/step3-cancer-axis` | Run genome-wide and independently of Step 2 at user instruction; fetal ∩ CRC intersection deferred |
+| 3. CRC-high axis | **executed (plan v3); in review** | branch `plan/step3-cancer-axis` | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
 
@@ -223,3 +223,66 @@ stem/TA) is reported as-is.
 **Gate before S1**: the Joanito label mapping must be shown to the user and
 frozen before any Joanito DE. Interim labels: 6,296 `S2_pass_S1_pending`,
 22,147 `S2_fail_S1_pending`.
+
+## 2026-10-02 — Joanito downloaded; label map frozen (plan v3)
+
+**Data**: Synapse terms accepted by the account owner; epithelial count matrix,
+epithelial metadata, and clinical table downloaded with MD5 verification.
+Terms: non-commercial use; no transfer or disclosure of data or derived
+material. Because this repository is public, **no Joanito-derived numbers,
+tables, figures, or labels are committed**; they are kept in the git-ignored
+`step3_cancer/restricted/` record and under `DATA` (see below).
+
+**Label map** (`step3_cancer/config/joanito_label_map.tsv`, rules only): Malignant =
+iCMS2/iCMS3 cells in `Tumor`/`Tumor-2` samples (pooled per patient); Normal =
+iCMS `Normal` cells in `Normal` samples; excluded = normal-like cells in tumour
+samples, iCMS2/3-labelled cells in normal samples, and lymph-node samples.
+Joanito has no normal stem/TA labels and none were constructed. The map was
+reviewed and frozen before any Joanito pseudobulk or DE (plan v3).
+
+## 2026-10-02 — Step 3 plan v3 executed (S1 Joanito)
+
+**Review (v3)**: S1 is Joanito malignant vs normal epithelium only; the Pelka
+tumour vs normal stem/TA comparison is an independent progenitor-specificity
+check (P), not a substitute Joanito gate. A cohort-confounding check
+(cohort × group patient table) and a sensitivity S1 restricted to cohorts with
+both groups were added.
+
+**Outcome (qualitative; numbers restricted)**: the full and sensitivity S1
+models were highly concordant, so Joanito is retained; S1 passed the dataset
+admission QA; `CRC_high` (S1 ∩ S2 passing P) and all other labels were
+produced. Detailed counts, statistics, and gene-level observations are in the
+restricted record.
+
+**Open review items (no rule changed)**: whether to add an ambient
+plasma-cell (immunoglobulin) flag; the progenitor check P removes few genes,
+so separation of stem/WNT programmes from oncofetal genes is left to the fetal
+intersection rather than to retuning P.
+
+**Data-terms remediation**: commit `59e345a` had pushed Joanito-derived label
+counts and per-patient cell counts. The branch was rebuilt from `c9916f8`
+without any restricted file and force-pushed; restricted outputs are
+git-ignored and mirrored to
+`DATA/2.PROJECTS/1.TWEAKR-oncoFetal/results/2026-10-02_step3_cancer_axis_v0.1/restricted_joanito/`.
+
+## 2026-10-02 — Cross-step 31-marker summary statistics; symbol-lookup corrections
+
+**What**: `marker_summary/` tabulates log2FC, P value and FDR for the 31 Step 1
+positive markers across 16 dataset contrasts (Step 2 primary, Step 2
+benchmarks, Step 3), with a per-dataset measurement-status grid. Descriptive
+only; no gate computed.
+
+**Corrections found while building it**:
+1. Step 2 audit (`Literature_31_gate_failure_audit.csv`, MAJOR_REVISION_LOG)
+   reported CCN1/CCN2 as "not tested in HGCA". HGCA and Gao did test them under
+   `CYR61`/`CTGF` (HGCA log2FC CCN1 0.73, CCN2 1.66). The other six "absent"
+   genes are a mix: SPRR1A, SOX17, MMP7 and L1CAM are in the HGCA annotation but
+   were removed by `filterByExpr`; LY6A and REG3B have no human one-to-one
+   orthologue. The invalidated Step 2 outputs are left frozen; this note
+   corrects the record.
+2. Step 2 benchmark: Senger and Fawkner lookups now resolve CYR61/CTGF, and
+   Fawkner absent genes are NA instead of 0 (see BENCHMARK_REPORT correction).
+   Senger 14/29 (was 14/27); Fawkner 28/29 detected (was 26/31). No decision
+   changes.
+
+**Data terms**: the full summary contains Joanito-derived values and is git-ignored; a public version without Joanito columns or Step 3 labels is committed.

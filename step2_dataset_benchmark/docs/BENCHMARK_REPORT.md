@@ -16,7 +16,7 @@ the invalidated Step 2 design.
   priority markers; `Tacstd2` is slightly negative. It is useful independent
   in-vivo evidence, not a sole discovery dataset.
 - **Senger GSE101531 fails the proposed positive-marker direction benchmark.**
-  Only 14 of 27 measured candidates and one of five priority markers are
+  Only 14 of 29 measured candidates and one of five priority markers are
   fetal-positive. Culture matching reduces composition confounding but does not
   make the contrast a faithful positive-control dataset for this marker panel.
 - **Fawkner-Corbett GSE158702 is not eligible for fetal/adult FC.** It has no
@@ -43,8 +43,8 @@ fetal EpCAM-positive cells with non-zero expression and are not fold changes.
 
 | Dataset | Measured | Positive/detected | Priority measured | Priority positive/detected |
 |---|---:|---:|---:|---:|
-| Human Senger | 27 | 14 | 5 | 1 |
-| Human Fawkner | 31 | 26 with median pool detection > 0 | 5 | 5 with median pool detection > 0 |
+| Human Senger | 29 | 14 | 5 | 1 |
+| Human Fawkner | 29 | 28 with median pool detection > 0 | 5 | 5 with median pool detection > 0 |
 | Mouse Pikkupeura | 27 | 25 | 5 | 5 |
 | Mouse GSE44433 | 23 | 10 | 5 | 4 |
 
@@ -82,3 +82,14 @@ culture benchmark and retain GSE44433 as independent in-vivo replication. Human
 discovery still requires a dataset with a genuine, metadata-compatible adult
 epithelial reference. Fawkner should remain fetal-state annotation evidence
 unless such an adult reference is prospectively specified and justified.
+
+## Correction (2026-10-02)
+
+The human symbol lookup did not resolve the pre-2019 symbols used by the
+Senger RPKM files and the Fawkner 10x features (`CYR61` for CCN1, `CTGF` for
+CCN2), and Fawkner scored genes absent from the feature list as zero
+detection. After the fix (`step3_cancer/config/symbol_aliases.tsv`; absent =
+NA): Senger measures 29 candidates (CCN1 −0.63, CCN2 −0.87; still 14
+positive); Fawkner measures 29 (LY6A and REG3B have no human feature) with 28
+detected (CCN1 0.28, CCN2 0.24; previously reported as 0). The mouse datasets
+were unaffected (Entrez mapping). No qualification decision changes.

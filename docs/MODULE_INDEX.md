@@ -46,3 +46,9 @@ See `step2_dataset_benchmark/docs/BENCHMARK_REPORT.md` for the review decision.
 
 `07_joanito_pseudobulk.py` and `config/joanito_label_map.tsv` are written once
 the Joanito metadata is accessible. See `step3_cancer/docs/RUNBOOK.md`.
+
+## Cross-step marker summary
+
+| Module | Purpose | Primary outputs |
+|---|---|---|
+| `marker_summary/scripts/build_marker_summary.py` | log2FC / P / FDR of the 31 Step 1 markers in every Step 2 and Step 3 dataset (descriptive) | `marker_summary/results/Literature_31_marker_summary_statistics.{csv,xlsx}`, measurement-status table |

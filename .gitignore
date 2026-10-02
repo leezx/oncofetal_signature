@@ -38,3 +38,5 @@ step3_cancer/results/source_data/TCGA_vs_epithelial_effect_scatter_source_data.c
 step3_cancer/results/source_data/Dataset_admission_QA_source_data.csv
 marker_summary/results/Literature_31_marker_summary_statistics.*
 marker_summary/results/Literature_31_marker_measurement_status.csv
+marker_summary/results.zip
+*.zip

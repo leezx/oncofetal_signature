@@ -1,5 +1,5 @@
 "dataset","comparison","n_candidates_with_measure","n_positive_direction","qualification_role"
-"Human_Senger","fetal_vs_adult",27,14,"direct_human_culture_benchmark"
-"Human_Fawkner","fetal_expression_only",31,NA,"fetal_expression_validation_only"
+"Human_Senger","fetal_vs_adult",29,14,"direct_human_culture_benchmark"
+"Human_Fawkner","fetal_expression_only",29,NA,"fetal_expression_validation_only"
 "Mouse_Pikkupeura","fetal_vs_adult_two_culture_arms",27,25,"mouse_culture_benchmark"
 "Mouse_GSE44433","WT_fetal_vs_WT_adult",23,10,"mouse_in_vivo_replication"
