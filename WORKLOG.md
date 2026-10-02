@@ -10,6 +10,7 @@ Chronological append-only record; newest entries are at the bottom.
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
 | 2b. Human benchmark v2 | **closed (review round 3); stage-resolved addendum v1.2 run** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A (cross-study, not used alone for discovery); bulk H-bulk1/2 = 1 dataset, fail; Visium dropped; no more datasets |
 | 2c. Fetal epithelial state (manual) | **executed; in review** | (this PR) | Gao early-embryo effect; TNFRSF12A pan-fetal-epithelial, stem/TA-enriched detection; no adult arm |
+| Core. Conserved Intestinal Oncofetal Core | **method v1.0 frozen; gates evaluated; in review** | (this PR) | Literature 31 → HGCA ≥9 PCW → GSE230581 → Joanito → Pelka; final membership restricted (Joanito) |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
@@ -426,3 +427,16 @@ Ineligible H-new2 ≥ 9 PCW 16/22, 14 FDR-supported. HGCA ∩ Pikkupeura in vivo
 FDR-supported fetal-high: GJA1, CLU, ANXA6, SPP1, RBP1.
 **Outputs**: `Core_gate_dataset_recovery.csv`, `Core_gate_marker_by_dataset.csv`
 (step2_benchmark_v2/results/tables and marker_summary/results).
+
+## 2026-10-02 — Core oncofetal method v1.0 and gate workbook (`core_oncofetal/`)
+
+**Method**: frozen (`9e150dd`) before CRC-gate values of the developmental
+genes were read. Gates: G1 HGCA ≥ 9 PCW fetal vs adult epithelium; G2
+GSE230581 E16.5 vs adult crypt (mouse in vivo); G3 Joanito malignant vs normal;
+G4 Pelka tumour vs normal; pass = measured, log2FC ≥ 0.5, FDR < 0.05.
+Supportive evidence (H-new2, Gao ≥ 9 W, GSE44433, Pikkupeura cultures, TCGA,
+Joanito sensitivity, Pelka P) reported only.
+**Results**: Developmental Core (G1 ∧ G2) = GJA1, CLU, ANXA6, SPP1, RBP1.
+TNFRSF12A fails G1 and G2. Final Core membership (needs G3) is recorded only
+in the restricted workbook (DATA restricted_joanito/core_oncofetal/).
+**Outputs**: public `core_oncofetal/results/Core_oncofetal_gate_statistics_public.{xlsx,csv}`.
