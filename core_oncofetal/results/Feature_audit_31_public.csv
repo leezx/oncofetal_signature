@@ -1,0 +1,156 @@
+gene,dataset,canonical_symbol,source_symbol,ensembl_id,present_in_raw_features,present_in_raw_counts,total_count,n_samples_nonzero,n_samples,passed_expression_filter,present_in_DE_table,present_in_marker_summary,NA_reason,note
+TACSTD2,HGCA >=9 PCW vs adult,TACSTD2,TACSTD2,ENSG00000184292,True,True,4827.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+GJA1,HGCA >=9 PCW vs adult,GJA1,GJA1,ENSG00000152661,True,True,16789.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+ANXA1,HGCA >=9 PCW vs adult,ANXA1,ANXA1,ENSG00000135046,True,True,3883.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+CLU,HGCA >=9 PCW vs adult,CLU,CLU,ENSG00000120885,True,True,253621.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+ANXA3,HGCA >=9 PCW vs adult,ANXA3,ANXA3,ENSG00000138772,True,True,81592.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+ANXA6,HGCA >=9 PCW vs adult,ANXA6,ANXA6,ENSG00000197043,True,True,6227.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+LY6A,HGCA >=9 PCW vs adult,LY6A,,,False,False,,,,,False,False,no_1to1_orthologue,
+SPP1,HGCA >=9 PCW vs adult,SPP1,SPP1,ENSG00000118785,True,True,1108.0,14.0,17.0,True,True,True,,edgeR filterByExpr
+SPRR1A,HGCA >=9 PCW vs adult,SPRR1A,SPRR1A,ENSG00000169474,True,True,4.0,3.0,17.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+IL33,HGCA >=9 PCW vs adult,IL33,IL33,ENSG00000137033,True,True,733.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+MIF,HGCA >=9 PCW vs adult,MIF,MIF,ENSG00000240972,True,True,947581.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+CCN2,HGCA >=9 PCW vs adult,CCN2,CTGF,ENSG00000118523,True,True,18976.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+CCN1,HGCA >=9 PCW vs adult,CCN1,CYR61,ENSG00000142871,True,True,27667.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+ANKRD1,HGCA >=9 PCW vs adult,ANKRD1,ANKRD1,ENSG00000148677,True,True,161.0,10.0,17.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+TNFRSF12A,HGCA >=9 PCW vs adult,TNFRSF12A,TNFRSF12A,ENSG00000006327,True,True,54512.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+SOX17,HGCA >=9 PCW vs adult,SOX17,SOX17,ENSG00000164736,True,True,154.0,12.0,17.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+RBP1,HGCA >=9 PCW vs adult,RBP1,RBP1,ENSG00000114115,True,True,124625.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+AREG,HGCA >=9 PCW vs adult,AREG,AREG,ENSG00000109321,True,True,58175.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+EREG,HGCA >=9 PCW vs adult,EREG,EREG,ENSG00000124882,True,True,28092.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+CD44,HGCA >=9 PCW vs adult,CD44,CD44,ENSG00000026508,True,True,14705.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+CXADR,HGCA >=9 PCW vs adult,CXADR,CXADR,ENSG00000154639,True,True,86986.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+BASP1,HGCA >=9 PCW vs adult,BASP1,BASP1,ENSG00000176788,True,True,4051.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+EDN1,HGCA >=9 PCW vs adult,EDN1,EDN1,ENSG00000078401,True,True,55564.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+IL1RN,HGCA >=9 PCW vs adult,IL1RN,IL1RN,ENSG00000136689,True,True,1885.0,12.0,17.0,True,True,True,,edgeR filterByExpr
+MSLN,HGCA >=9 PCW vs adult,MSLN,MSLN,ENSG00000102854,True,True,31680.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+REG3B,HGCA >=9 PCW vs adult,REG3B,,,False,False,,,,,False,False,no_1to1_orthologue,
+EMP1,HGCA >=9 PCW vs adult,EMP1,EMP1,ENSG00000134531,True,True,38785.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+LAMC2,HGCA >=9 PCW vs adult,LAMC2,LAMC2,ENSG00000058085,True,True,19529.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+MMP7,HGCA >=9 PCW vs adult,MMP7,MMP7,ENSG00000137673,True,True,214.0,11.0,17.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+L1CAM,HGCA >=9 PCW vs adult,L1CAM,L1CAM,ENSG00000198910,True,True,151.0,14.0,17.0,True,True,True,,edgeR filterByExpr
+EPS8L1,HGCA >=9 PCW vs adult,EPS8L1,EPS8L1,ENSG00000131037,True,True,8690.0,17.0,17.0,True,True,True,,edgeR filterByExpr
+TACSTD2,H-new2 >=9 PCW vs adult,TACSTD2,TACSTD2,ENSG00000184292,True,True,4043.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+GJA1,H-new2 >=9 PCW vs adult,GJA1,GJA1,ENSG00000152661,True,True,2360.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+ANXA1,H-new2 >=9 PCW vs adult,ANXA1,ANXA1,ENSG00000135046,True,True,8962.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+CLU,H-new2 >=9 PCW vs adult,CLU,CLU,ENSG00000120885,True,True,76124.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+ANXA3,H-new2 >=9 PCW vs adult,ANXA3,ANXA3,ENSG00000138772,True,True,28597.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+ANXA6,H-new2 >=9 PCW vs adult,ANXA6,ANXA6,ENSG00000197043,True,True,1350.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+LY6A,H-new2 >=9 PCW vs adult,LY6A,,,False,False,,,,,False,False,no_1to1_orthologue,
+SPP1,H-new2 >=9 PCW vs adult,SPP1,SPP1,ENSG00000118785,True,True,244.0,10.0,23.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+SPRR1A,H-new2 >=9 PCW vs adult,SPRR1A,SPRR1A,ENSG00000169474,True,True,0.0,0.0,23.0,False,False,False,zero_expression,edgeR filterByExpr
+IL33,H-new2 >=9 PCW vs adult,IL33,IL33,ENSG00000137033,True,True,143.0,14.0,23.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+MIF,H-new2 >=9 PCW vs adult,MIF,MIF,ENSG00000240972,True,True,172522.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+CCN2,H-new2 >=9 PCW vs adult,CCN2,CTGF,ENSG00000118523,True,True,32704.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+CCN1,H-new2 >=9 PCW vs adult,CCN1,CYR61,ENSG00000142871,True,True,18532.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+ANKRD1,H-new2 >=9 PCW vs adult,ANKRD1,ANKRD1,ENSG00000148677,True,True,63.0,12.0,23.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+TNFRSF12A,H-new2 >=9 PCW vs adult,TNFRSF12A,TNFRSF12A,ENSG00000006327,True,True,21680.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+SOX17,H-new2 >=9 PCW vs adult,SOX17,SOX17,ENSG00000164736,True,True,42.0,7.0,23.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+RBP1,H-new2 >=9 PCW vs adult,RBP1,RBP1,ENSG00000114115,True,True,11004.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+AREG,H-new2 >=9 PCW vs adult,AREG,AREG,ENSG00000109321,True,True,26577.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+EREG,H-new2 >=9 PCW vs adult,EREG,EREG,ENSG00000124882,True,True,17902.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+CD44,H-new2 >=9 PCW vs adult,CD44,CD44,ENSG00000026508,True,True,10954.0,22.0,23.0,True,True,True,,edgeR filterByExpr
+CXADR,H-new2 >=9 PCW vs adult,CXADR,CXADR,ENSG00000154639,True,True,44741.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+BASP1,H-new2 >=9 PCW vs adult,BASP1,BASP1,ENSG00000176788,True,True,8335.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+EDN1,H-new2 >=9 PCW vs adult,EDN1,EDN1,ENSG00000078401,True,True,138268.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+IL1RN,H-new2 >=9 PCW vs adult,IL1RN,IL1RN,ENSG00000136689,True,True,717.0,16.0,23.0,True,True,True,,edgeR filterByExpr
+MSLN,H-new2 >=9 PCW vs adult,MSLN,MSLN,ENSG00000102854,True,True,11690.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+REG3B,H-new2 >=9 PCW vs adult,REG3B,,,False,False,,,,,False,False,no_1to1_orthologue,
+EMP1,H-new2 >=9 PCW vs adult,EMP1,EMP1,ENSG00000134531,True,True,9520.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+LAMC2,H-new2 >=9 PCW vs adult,LAMC2,LAMC2,ENSG00000058085,True,True,5127.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+MMP7,H-new2 >=9 PCW vs adult,MMP7,MMP7,ENSG00000137673,True,True,9.0,6.0,23.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+L1CAM,H-new2 >=9 PCW vs adult,L1CAM,L1CAM,ENSG00000198910,True,True,101.0,10.0,23.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+EPS8L1,H-new2 >=9 PCW vs adult,EPS8L1,EPS8L1,ENSG00000131037,True,True,2444.0,23.0,23.0,True,True,True,,edgeR filterByExpr
+TACSTD2,Gao LI >=9 W vs GSE103154,TACSTD2,TACSTD2,ENSG00000184292,True,True,,,,True,True,True,,
+GJA1,Gao LI >=9 W vs GSE103154,GJA1,GJA1,ENSG00000152661,True,True,,,,True,True,True,,
+ANXA1,Gao LI >=9 W vs GSE103154,ANXA1,ANXA1,ENSG00000135046,True,True,,,,True,True,True,,
+CLU,Gao LI >=9 W vs GSE103154,CLU,CLU,ENSG00000120885,True,True,,,,True,True,True,,
+ANXA3,Gao LI >=9 W vs GSE103154,ANXA3,ANXA3,ENSG00000138772,True,True,,,,True,True,True,,
+ANXA6,Gao LI >=9 W vs GSE103154,ANXA6,ANXA6,ENSG00000197043,True,True,,,,True,True,True,,
+LY6A,Gao LI >=9 W vs GSE103154,LY6A,,,False,False,,,,,False,False,no_1to1_orthologue,
+SPP1,Gao LI >=9 W vs GSE103154,SPP1,SPP1,ENSG00000118785,True,True,,,,True,True,True,,
+SPRR1A,Gao LI >=9 W vs GSE103154,SPRR1A,SPRR1A,ENSG00000169474,True,True,,,,True,True,True,,
+IL33,Gao LI >=9 W vs GSE103154,IL33,IL33,ENSG00000137033,True,True,,,,True,True,True,,
+MIF,Gao LI >=9 W vs GSE103154,MIF,MIF,ENSG00000240972,True,True,,,,False,False,False,filtered_low_expression,
+CCN2,Gao LI >=9 W vs GSE103154,CCN2,CTGF,ENSG00000118523,True,True,,,,True,True,True,,
+CCN1,Gao LI >=9 W vs GSE103154,CCN1,CYR61,ENSG00000142871,True,True,,,,True,True,True,,
+ANKRD1,Gao LI >=9 W vs GSE103154,ANKRD1,ANKRD1,ENSG00000148677,True,True,,,,True,True,True,,
+TNFRSF12A,Gao LI >=9 W vs GSE103154,TNFRSF12A,TNFRSF12A,ENSG00000006327,True,True,,,,True,True,True,,
+SOX17,Gao LI >=9 W vs GSE103154,SOX17,SOX17,ENSG00000164736,True,True,,,,True,True,True,,
+RBP1,Gao LI >=9 W vs GSE103154,RBP1,RBP1,ENSG00000114115,True,True,,,,True,True,True,,
+AREG,Gao LI >=9 W vs GSE103154,AREG,AREG,ENSG00000109321,True,True,,,,True,True,True,,
+EREG,Gao LI >=9 W vs GSE103154,EREG,EREG,ENSG00000124882,True,True,,,,True,True,True,,
+CD44,Gao LI >=9 W vs GSE103154,CD44,CD44,ENSG00000026508,True,True,,,,True,True,True,,
+CXADR,Gao LI >=9 W vs GSE103154,CXADR,CXADR,ENSG00000154639,True,True,,,,True,True,True,,
+BASP1,Gao LI >=9 W vs GSE103154,BASP1,BASP1,ENSG00000176788,True,True,,,,True,True,True,,
+EDN1,Gao LI >=9 W vs GSE103154,EDN1,EDN1,ENSG00000078401,True,True,,,,True,True,True,,
+IL1RN,Gao LI >=9 W vs GSE103154,IL1RN,IL1RN,ENSG00000136689,True,True,,,,True,True,True,,
+MSLN,Gao LI >=9 W vs GSE103154,MSLN,MSLN,ENSG00000102854,True,True,,,,True,True,True,,
+REG3B,Gao LI >=9 W vs GSE103154,REG3B,,,False,False,,,,,False,False,no_1to1_orthologue,
+EMP1,Gao LI >=9 W vs GSE103154,EMP1,EMP1,ENSG00000134531,True,True,,,,True,True,True,,
+LAMC2,Gao LI >=9 W vs GSE103154,LAMC2,LAMC2,ENSG00000058085,True,True,,,,True,True,True,,
+MMP7,Gao LI >=9 W vs GSE103154,MMP7,MMP7,ENSG00000137673,True,True,,,,True,True,True,,
+L1CAM,Gao LI >=9 W vs GSE103154,L1CAM,L1CAM,ENSG00000198910,True,True,,,,True,True,True,,
+EPS8L1,Gao LI >=9 W vs GSE103154,EPS8L1,EPS8L1,ENSG00000131037,True,True,,,,True,True,True,,
+TACSTD2,GSE230581 mouse in vivo,TACSTD2,Tacstd2,,True,True,101.0,3.0,6.0,True,True,True,,edgeR filterByExpr
+GJA1,GSE230581 mouse in vivo,GJA1,Gja1,,True,True,630.0,4.0,6.0,True,True,True,,edgeR filterByExpr
+ANXA1,GSE230581 mouse in vivo,ANXA1,Anxa1,,True,True,383.0,3.0,6.0,True,True,True,,edgeR filterByExpr
+CLU,GSE230581 mouse in vivo,CLU,Clu,,True,True,2975.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+ANXA3,GSE230581 mouse in vivo,ANXA3,Anxa3,,True,True,156.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+ANXA6,GSE230581 mouse in vivo,ANXA6,Anxa6,,True,True,465.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+LY6A,GSE230581 mouse in vivo,LY6A,Ly6a,,True,True,34.0,6.0,6.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+SPP1,GSE230581 mouse in vivo,SPP1,Spp1,,True,True,2109.0,4.0,6.0,True,True,True,,edgeR filterByExpr
+SPRR1A,GSE230581 mouse in vivo,SPRR1A,,,False,False,,,,,False,False,no_1to1_orthologue,
+IL33,GSE230581 mouse in vivo,IL33,Il33,,True,True,90.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+MIF,GSE230581 mouse in vivo,MIF,Mif,,True,True,2542.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+CCN2,GSE230581 mouse in vivo,CCN2,Ccn2,,True,True,429.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+CCN1,GSE230581 mouse in vivo,CCN1,Ccn1,,True,True,9421.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+ANKRD1,GSE230581 mouse in vivo,ANKRD1,Ankrd1,,True,True,12.0,3.0,6.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+TNFRSF12A,GSE230581 mouse in vivo,TNFRSF12A,Tnfrsf12a,,True,True,370.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+SOX17,GSE230581 mouse in vivo,SOX17,Sox17,,True,True,0.0,0.0,6.0,False,False,False,zero_expression,edgeR filterByExpr
+RBP1,GSE230581 mouse in vivo,RBP1,Rbp1,,True,True,225.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+AREG,GSE230581 mouse in vivo,AREG,Areg,,True,True,1353.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+EREG,GSE230581 mouse in vivo,EREG,Ereg,,True,True,238.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+CD44,GSE230581 mouse in vivo,CD44,Cd44,,True,True,2882.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+CXADR,GSE230581 mouse in vivo,CXADR,Cxadr,,True,True,8674.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+BASP1,GSE230581 mouse in vivo,BASP1,Basp1,,True,True,156.0,4.0,6.0,True,True,True,,edgeR filterByExpr
+EDN1,GSE230581 mouse in vivo,EDN1,Edn1,,True,True,1592.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+IL1RN,GSE230581 mouse in vivo,IL1RN,Il1rn,,True,True,8.0,3.0,6.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+MSLN,GSE230581 mouse in vivo,MSLN,Msln,,True,True,66.0,3.0,6.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+REG3B,GSE230581 mouse in vivo,REG3B,Reg3b,,True,True,4415.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+EMP1,GSE230581 mouse in vivo,EMP1,Emp1,,True,True,3589.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+LAMC2,GSE230581 mouse in vivo,LAMC2,Lamc2,,True,True,1180.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+MMP7,GSE230581 mouse in vivo,MMP7,Mmp7,,True,True,209.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+L1CAM,GSE230581 mouse in vivo,L1CAM,L1cam,,True,True,1990.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+EPS8L1,GSE230581 mouse in vivo,EPS8L1,Eps8l1,,True,True,197.0,6.0,6.0,True,True,True,,edgeR filterByExpr
+TACSTD2,Pelka tumour vs normal,TACSTD2,TACSTD2,ENSG00000184292,True,True,135534.0,94.0,97.0,True,True,True,,edgeR filterByExpr
+GJA1,Pelka tumour vs normal,GJA1,GJA1,ENSG00000152661,True,True,3017.0,58.0,97.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+ANXA1,Pelka tumour vs normal,ANXA1,ANXA1,ENSG00000135046,True,True,250111.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+CLU,Pelka tumour vs normal,CLU,CLU,ENSG00000120885,True,True,34282.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+ANXA3,Pelka tumour vs normal,ANXA3,ANXA3,ENSG00000138772,True,True,223702.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+ANXA6,Pelka tumour vs normal,ANXA6,ANXA6,ENSG00000197043,True,True,31160.0,96.0,97.0,True,True,True,,edgeR filterByExpr
+LY6A,Pelka tumour vs normal,LY6A,,,False,False,,,,,False,False,no_1to1_orthologue,
+SPP1,Pelka tumour vs normal,SPP1,SPP1,ENSG00000118785,True,True,56356.0,78.0,97.0,True,True,True,,edgeR filterByExpr
+SPRR1A,Pelka tumour vs normal,SPRR1A,SPRR1A,ENSG00000169474,True,True,265.0,25.0,97.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+IL33,Pelka tumour vs normal,IL33,IL33,ENSG00000137033,True,True,43893.0,90.0,97.0,True,True,True,,edgeR filterByExpr
+MIF,Pelka tumour vs normal,MIF,MIF,ENSG00000240972,True,True,1091236.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+CCN2,Pelka tumour vs normal,CCN2,CTGF,ENSG00000118523,True,True,103647.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+CCN1,Pelka tumour vs normal,CCN1,CYR61,ENSG00000142871,True,True,30059.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+ANKRD1,Pelka tumour vs normal,ANKRD1,ANKRD1,ENSG00000148677,True,True,170.0,14.0,97.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+TNFRSF12A,Pelka tumour vs normal,TNFRSF12A,TNFRSF12A,ENSG00000006327,True,True,185120.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+SOX17,Pelka tumour vs normal,SOX17,SOX17,ENSG00000164736,True,True,127.0,43.0,97.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+RBP1,Pelka tumour vs normal,RBP1,RBP1,ENSG00000114115,True,True,27403.0,76.0,97.0,True,True,True,,edgeR filterByExpr
+AREG,Pelka tumour vs normal,AREG,AREG,ENSG00000109321,True,True,39942.0,95.0,97.0,True,True,True,,edgeR filterByExpr
+EREG,Pelka tumour vs normal,EREG,EREG,ENSG00000124882,True,True,220476.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+CD44,Pelka tumour vs normal,CD44,CD44,ENSG00000026508,True,True,385447.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+CXADR,Pelka tumour vs normal,CXADR,CXADR,ENSG00000154639,True,True,355581.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+BASP1,Pelka tumour vs normal,BASP1,BASP1,ENSG00000176788,True,True,10729.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+EDN1,Pelka tumour vs normal,EDN1,EDN1,ENSG00000078401,True,True,107390.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+IL1RN,Pelka tumour vs normal,IL1RN,IL1RN,ENSG00000136689,True,True,19816.0,92.0,97.0,True,True,True,,edgeR filterByExpr
+MSLN,Pelka tumour vs normal,MSLN,MSLN,ENSG00000102854,True,True,73893.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+REG3B,Pelka tumour vs normal,REG3B,,,False,False,,,,,False,False,no_1to1_orthologue,
+EMP1,Pelka tumour vs normal,EMP1,EMP1,ENSG00000134531,True,True,240992.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+LAMC2,Pelka tumour vs normal,LAMC2,LAMC2,ENSG00000058085,True,True,109110.0,97.0,97.0,True,True,True,,edgeR filterByExpr
+MMP7,Pelka tumour vs normal,MMP7,MMP7,ENSG00000137673,True,True,104698.0,63.0,97.0,True,True,True,,edgeR filterByExpr
+L1CAM,Pelka tumour vs normal,L1CAM,L1CAM,ENSG00000198910,True,True,4230.0,46.0,97.0,False,False,False,filtered_low_expression,edgeR filterByExpr
+EPS8L1,Pelka tumour vs normal,EPS8L1,EPS8L1,ENSG00000131037,True,True,63780.0,97.0,97.0,True,True,True,,edgeR filterByExpr

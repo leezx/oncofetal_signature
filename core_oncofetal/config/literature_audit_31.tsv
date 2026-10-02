@@ -1,0 +1,89 @@
+gene	study	evidence_class	setting	species	locator	note
+TACSTD2	Mustata et al., Cell Reports, 2013	A	fetal in vivo (E14 epithelium) + fetal spheroids vs adult organoids	mouse	abstract; Fig 3A; lineage tracing	
+GJA1	Mustata et al., Cell Reports, 2013	A	fetal in vivo (E14 epithelium) + fetal spheroids vs adult organoids	mouse	abstract; Fig 3A; in utero lineage tracing (Cnx43)	
+CLU	Mustata et al., Cell Reports, 2013	A	fetal spheroids vs adult organoids	mouse	Fig 3A	
+SPP1	Mustata et al., Cell Reports, 2013	A	fetal spheroids vs adult organoids	mouse	Fig 3A	
+LY6A	Mustata et al., Cell Reports, 2013	A	fetal spheroids vs adult organoids	mouse	Fig 3A	authors note Sca1 barely detected in E15 epithelium
+SOX17	Pikkupeura et al., Science Advances, 2023	A	fetal enterospheres (FEnS) vs adult organoids, fetal-specific genes	mouse	Fig 1B	
+CLU	Pikkupeura et al., Science Advances, 2023	A	fetal enterospheres (FEnS) vs adult organoids, fetal-specific genes	mouse	Fig 1B	
+TACSTD2	Pikkupeura et al., Science Advances, 2023	A	fetal enterospheres (FEnS) vs adult organoids, fetal-specific genes	mouse	Fig 1B	
+GJA1	Pikkupeura et al., Science Advances, 2023	A	fetal enterospheres (FEnS) vs adult organoids, fetal-specific genes	mouse	Fig 1B	
+ANXA1	Pikkupeura et al., Science Advances, 2023	A	fetal enterospheres (FEnS) vs adult organoids, fetal-specific genes	mouse	Fig 1B	
+ANXA3	Pikkupeura et al., Science Advances, 2023	A	fetal enterospheres (FEnS) vs adult organoids, fetal-specific genes	mouse	Fig 1B	
+ANXA6	Pikkupeura et al., Science Advances, 2023	A	fetal enterospheres (FEnS) vs adult organoids, fetal-specific genes	mouse	Fig 1B	
+ANKRD1	Pikkupeura et al., Science Advances, 2023	A	FEnS vs adult organoids, direct YAP targets high in FEnS	mouse	Fig 4B	
+CCN2	Pikkupeura et al., Science Advances, 2023	A	FEnS vs adult organoids, direct YAP targets high in FEnS	mouse	Fig 4B	
+CCN1	Pikkupeura et al., Science Advances, 2023	A	FEnS vs adult organoids, direct YAP targets high in FEnS	mouse	Fig 4B	
+CLU	Pikkupeura et al., Science Advances, 2023	A	FEnS vs adult organoids, direct YAP targets high in FEnS	mouse	Fig 4B	
+TNFRSF12A	Pikkupeura et al., Science Advances, 2023	A	FEnS vs adult organoids, direct YAP targets high in FEnS	mouse	Fig 4B	
+ANXA1	Yui et al., Cell Stem Cell, 2018	A	fetal organoids vs adult organoids; fetal epithelium	mouse	Fig 2B, 2E, 2F	
+LY6A	Yui et al., Cell Stem Cell, 2018	A	fetal colonic epithelium E16.5 in vivo; fetal organoids	mouse	Fig 2A-C	
+LY6A	Nusse et al., Nature, 2018	A	fetal intestinal epithelium E15.5 in vivo	mouse	Extended Data Fig 8c	
+TACSTD2	Yui et al., Cell Stem Cell, 2018	B	elevated in repairing epithelium (DSS colitis)	mouse	Fig 2, S2	
+ANXA1	Yui et al., Cell Stem Cell, 2018	B	upregulated in repairing epithelium (DSS)	mouse	Fig 2F, 4E	
+LY6A	Yui et al., Cell Stem Cell, 2018	B	marker of repairing epithelium (DSS)	mouse	Fig 1, 4D	
+REG3B	Yui et al., Cell Stem Cell, 2018	B	up in Sca1-high repairing epithelium (DSS)	mouse	Fig 1G, S1A	
+CCN2	Yui et al., Cell Stem Cell, 2018	B	YAP/TAZ targets induced in repair-like reprogramming (collagen)	mouse	Fig 4D	
+CCN1	Yui et al., Cell Stem Cell, 2018	B	YAP/TAZ targets induced in repair-like reprogramming (collagen)	mouse	Fig 4D	
+ANKRD1	Yui et al., Cell Stem Cell, 2018	B	YAP/TAZ targets induced in repair-like reprogramming (collagen)	mouse	Fig 4D	
+EREG	Yui et al., Cell Stem Cell, 2018	B	YAP/TAZ targets induced in repair-like reprogramming (collagen)	mouse	Fig 4D	
+GJA1	Nusse et al., Nature, 2018	B	up in granuloma-associated crypts (helminth)	mouse	Extended Data Fig 8b	
+SPP1	Nusse et al., Nature, 2018	B	up in granuloma-associated crypts (helminth)	mouse	Extended Data Fig 8b	
+LY6A	Nusse et al., Nature, 2018	B	Sca-1 marks helminth-induced fetal-like crypt cells	mouse	Fig 1-4	
+TNFRSF12A	Gregorieff et al., Nature, 2015	B	Yap-induced regenerative program after irradiation	mouse	Fig 2d; Extended Data Fig 3d-f, 5, 6	
+AREG	Gregorieff et al., Nature, 2015	B	Yap-induced regenerative program after irradiation	mouse	Fig 2d; Extended Data Fig 3d-f, 5, 6	
+EDN1	Gregorieff et al., Nature, 2015	B	Yap-induced regenerative program after irradiation	mouse	Fig 2d; Extended Data Fig 3d-f, 5, 6	
+CLU	Gregorieff et al., Nature, 2015	B	Yap-induced regenerative program after irradiation	mouse	Fig 2d; Extended Data Fig 3d-f, 5, 6	
+IL1RN	Gregorieff et al., Nature, 2015	B	Yap-induced regenerative program after irradiation	mouse	Fig 2d; Extended Data Fig 3d-f, 5, 6	
+EREG	Gregorieff et al., Nature, 2015	B	induced in Lats1/2-deficient (YAP-active) regenerating epithelium	mouse	Extended Data Fig 6a	
+MSLN	Gregorieff et al., Nature, 2015	B	induced in Lats1/2-deficient (YAP-active) regenerating epithelium	mouse	Extended Data Fig 6a	
+IL33	Gregorieff et al., Nature, 2015	B	induced in Lats1/2-deficient (YAP-active) regenerating epithelium	mouse	Extended Data Fig 6a	
+CLU	Ayyaz et al., Nature, 2019	B	revival stem cell (SSC2c) signature after irradiation	mouse	Fig 1b, 1d	
+ANXA1	Ayyaz et al., Nature, 2019	B	revival stem cell (SSC2c) signature after irradiation	mouse	Fig 1b, 1d	
+CXADR	Ayyaz et al., Nature, 2019	B	revival stem cell (SSC2c) signature after irradiation	mouse	Fig 1b, 1d	
+BASP1	Ayyaz et al., Nature, 2019	B	revival stem cell (SSC2c) signature after irradiation	mouse	Fig 1b, 1d	
+MIF	Ayyaz et al., Nature, 2019	B	revival stem cell (SSC2c) signature after irradiation	mouse	Fig 1b, 1d	
+CLU	Karo-Atar et al., Journal of Experimental Medicine, 2022	B	fetal-associated genes induced in helminth (Hpb) infection	mouse	Fig 1F-H, S1A-B	
+IL1RN	Karo-Atar et al., Journal of Experimental Medicine, 2022	B	fetal-associated genes induced in helminth (Hpb) infection	mouse	Fig 1F-H, S1A-B	
+MSLN	Karo-Atar et al., Journal of Experimental Medicine, 2022	B	fetal-associated genes induced in helminth (Hpb) infection	mouse	Fig 1F-H, S1A-B	
+IL33	Karo-Atar et al., Journal of Experimental Medicine, 2022	B	fetal-associated genes induced in helminth (Hpb) infection	mouse	Fig 1F-H, S1A-B	
+LY6A	Karo-Atar et al., Journal of Experimental Medicine, 2022	B	induced in granuloma crypts (Hpb)	mouse	Fig 1A, 1G	
+AREG	Chen et al., Cell Stem Cell, 2023	B	upregulated in intestinal epithelium during regeneration after irradiation	mouse	text, Results (TGFB1 study)	
+EDN1	Chen et al., Cell Stem Cell, 2023	B	upregulated in intestinal epithelium during regeneration after irradiation	mouse	text, Results (TGFB1 study)	
+CLU	Chen et al., Cell Stem Cell, 2023	B	regenerative cluster marker after irradiation	mouse	Fig 1F-G	
+LY6A	Chen et al., Cell Stem Cell, 2023	B	regenerative cluster marker after irradiation	mouse	Fig 1F-G	
+ANXA1	Hartl et al., Sci Adv, 2024	B	regenerative marker after DSS in Trp53 cKO; YAP target	mouse	Fig 4	
+ANKRD1	Hartl et al., Sci Adv, 2024	B	YAP target up in regenerative-state organoids	mouse	Fig 4E	
+CD44	Hartl et al., Sci Adv, 2024	B	Wnt target up early after injury	mouse	fig S1G-I	
+LY6A	Cheung et al., Cell Stem Cell, 2020	B	fetal marker up in YAP-reprogrammed (Lats) epithelium	mouse	Fig 1D	
+L1CAM	Ganesh et al., Nature Cancer, 2020	B	induced in regenerating epithelium after injury; not in homeostasis	mouse/human	abstract; Fig 1-2	
+TACSTD2	Vaquero-Siguero et al., Nature, 2026	C	TROP2 marks WNT-low fetal-like poor-prognosis CRC states	human/mouse	Fig 1	
+SPP1	Vaquero-Siguero et al., Nature, 2026	C	fetal gene high in CRC, rises with stage	human	Fig 1a-b, ED Fig 1	
+TACSTD2	Canellas-Socias et al., Nature, 2022	C	upregulated in high-relapse cells (HRC)	human	Extended Data Fig 9b	
+ANXA1	Canellas-Socias et al., Nature, 2022	C	upregulated in HRCs	human	Extended Data Fig 9b	
+EMP1	Canellas-Socias et al., Nature, 2022	C	HRC / partial-EMT program in residual CRC	human/mouse	Fig 1-3; ED Fig 7	
+LAMC2	Canellas-Socias et al., Nature, 2022	C	HRC / partial-EMT program in residual CRC	human/mouse	Fig 1-3; ED Fig 7	
+EMP1	Centonze et al., Cancer Discov, 2026	C	oncofetal-like high-relapse cells (KRAS)	mouse	Fig 1, 3	
+MSLN	Centonze et al., Cancer Discov, 2026	C	oncofetal-like high-relapse cells (KRAS)	mouse	Fig 1, 3	
+LAMC2	Centonze et al., Cancer Discov, 2026	C	oncofetal-like high-relapse cells (KRAS)	mouse	Fig 1, 3	
+MMP7	Buissant des Amorie et al., Nature, 2026	C	oncofetal markers at invasive front of early CRC	human	Fig 1f, 4	
+LAMC2	Buissant des Amorie et al., Nature, 2026	C	oncofetal markers at invasive front of early CRC	human	Fig 1f, 4	
+ANXA1	Buissant des Amorie et al., Nature, 2026	C	oncofetal markers at invasive front of early CRC	human	Fig 1f, 4	
+EMP1	Buissant des Amorie et al., Nature, 2026	C	oncofetal markers at invasive front of early CRC	human	Fig 1f, 4	
+L1CAM	Moorman et al., Nature, 2025	C	injured/regenerative state of metastasis-initiating CRC cells	human	Fig 1	
+EMP1	Moorman et al., Nature, 2025	C	injured/regenerative state of metastasis-initiating CRC cells	human	Fig 1	
+L1CAM	Ganesh et al., Nature Cancer, 2020	C	L1CAM+ metastasis-initiating CRC cells	human/mouse	Fig 3-6	
+BASP1	Alvarez-Varela et al., Nat Cancer, 2022	C	fetal progenitor/revSC marker in chemotherapy-persister CRC cells	mouse	Extended Data Fig 9j	
+ANXA3	Alvarez-Varela et al., Nat Cancer, 2022	C	fetal progenitor/revSC marker in chemotherapy-persister CRC cells	mouse	Extended Data Fig 9j	
+CCN2	Alvarez-Varela et al., Nat Cancer, 2022	C	fetal progenitor/YAP target in chemo-resistant residual CRC cells	mouse	Fig 7f-g	
+TACSTD2	Ogden et al., Cell Genom, 2025	C	fetal intestinal signature in regenerative CRC cells	human	Fig 1E, S1G	
+ANXA1	Ogden et al., Cell Genom, 2025	C	fetal intestinal signature in regenerative CRC cells	human	Fig 1E, S1G	
+CLU	Elmentaite et al., Nature, 2021	not_found	cited; no gene-specific CLU statement in main text	human	full text searched	may be figure/supplement only
+SPRR1A	Nusse et al., Nature, 2018	not_found	cited; no Sprr1a statement in main text	mouse	full text searched	attributed by review (Viragova 2024)
+EPS8L1	Xiong et al., Cell Research, 2025	not_found	cited; no EPS8L1 statement in main text	human	full text searched	may be figure/supplement only
+MMP7	Nusse et al., Nature, 2018	mention	MMP7 used as Paneth-cell stain	mouse	Extended Data Fig 1c-d	not a fetal/revival claim
+ANXA1	Fumagalli et al., Cell Stem Cell, 2025	not_read	full text not located			
+TACSTD2	Fernandez-Vallone et al., Development, 2016	other_tissue	Trop2 marks fetal gastric epithelium and regenerating gastric cells	mouse	whole paper	stomach, not intestine; not counted
+RBP1	(none)	not_found	provenance is a generic phrase; no mention in 60 full texts; Europe PMC search found no intestinal fetal/revival source			
+TACSTD2	Yui et al., Cell Stem Cell, 2018	A	fetal organoids vs adult organoids	mouse	Fig S2A-C	
+CCN2	Hartl et al., Sci Adv, 2024	B	regenerative marker up in Trp53 cKO colon after DSS	mouse	Fig 4; bulk RNA	
