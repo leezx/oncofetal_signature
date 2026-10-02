@@ -4,7 +4,7 @@
 
 - Repository: https://github.com/leezx/oncofetal_signature
 - Step 2 PR: https://github.com/leezx/oncofetal_signature/pull/1
-- Step 3 branch: `plan/step3-cancer-axis`
+- Step 3 PR: https://github.com/leezx/oncofetal_signature/pull/2 (branch `plan/step3-cancer-axis`)
 
 ## Local analysis package
 
