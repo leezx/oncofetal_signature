@@ -9,6 +9,7 @@ Chronological append-only record; newest entries are at the bottom.
 | 1. Literature candidate collection | completed | — | Curated evidence tables under `docs/step1_literature_candidates/` |
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
 | 2b. Human benchmark v2 | **closed (review round 3)** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A (cross-study, not used alone for discovery); bulk H-bulk1/2 = 1 dataset, fail; Visium dropped; no more datasets |
+| 2c. Fetal epithelial state (manual) | **executed; in review** | (this PR) | Gao early-embryo effect; TNFRSF12A pan-fetal-epithelial, stem/TA-enriched detection; no adult arm |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
@@ -364,3 +365,20 @@ established". Human evidence read as compartment-dependent. H-new2 is not to be
 used alone for genome-wide discovery (dataset-selection concern).
 **Next**: manual developmental-state analysis of Gao + Fawkner
 (`step2_fetal_state/`).
+
+## 2026-10-02 — Fetal epithelial state analysis (Gao + Fawkner), `step2_fetal_state/`
+
+**Plan**: frozen (`4747efe`) before expression was read; addenda v1.1 (hashtag
+QC: per-cell sex discordance; ABF1/AAU2 excluded, ABZ2 flagged) and v1.2
+(state-label confidence; Gao states exploratory) committed before test genes
+were tabulated. Fawkner hashtags mapped to samples via the authors' Mendeley
+supplement (new file in DATA raw).
+**Results**: Gao TNFRSF12A instability is driven by ≤ 8 W embryos (median
+log2 2.0 vs 4.5 at ≥ 9 W; 91-fold range overall, 8-fold within ≥ 9 W, no age
+trend after 9 W). Fawkner TNFRSF12A is flat across 8–20 PCW while LGR5/ASCL2/
+MKI67/ANKRD1 track age. TNFRSF12A is expressed across all fetal epithelial
+states (highest detection Stem 61%, TA 50%); no discrete TNFRSF12A-high
+progenitor sub-state; variance mostly within state. ANXA1 marks the Fawkner
+Fetal-progenitor state. No consistent region effect in Fawkner; Gao LI > SI.
+**Open**: state-matched fetal vs adult comparison, or Gao ≥ 9 W vs adult (new
+frozen contrast either way); final human discovery contrast still undecided.

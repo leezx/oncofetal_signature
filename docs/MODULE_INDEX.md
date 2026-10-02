@@ -69,3 +69,14 @@ the Joanito metadata is accessible. See `step3_cancer/docs/RUNBOOK.md`.
 
 edgeR contrasts reuse `step3_cancer/scripts/04_pseudobulk_edger.R` (now with an
 optional minimum-units argument; default 3, H-new1 uses 2).
+
+## Step 2 fetal epithelial state (manual)
+
+| Module | Purpose | Primary outputs |
+|---|---|---|
+| `step2_fetal_state/scripts/01_build_cells.py` | Fawkner hashtag → sample (Mendeley key), sex/region/discordance QC; Gao SI/LI epithelial cells | cell h5ad (DATA) + hashtag check table |
+| `step2_fetal_state/scripts/02_assign_states.py` | Leiden + author-marker state labels (analysed genes excluded), confidence rule | frozen labels + label checks |
+| `step2_fetal_state/scripts/03_tabulate_genes.py` | unit and unit × state values, age correlations, composition decomposition, region differences | tables |
+| `step2_fetal_state/scripts/04_plot_fetal_state.R` | unit heatmap; gene by state × age | PDF/PNG + source data |
+| `step2_fetal_state/scripts/run_fetal_state.sh` | run all | complete package |
+

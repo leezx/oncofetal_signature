@@ -1,0 +1,1169 @@
+"dataset","dataset_label","unit","donor","pcw","region","region_group","state","n_cells_state","gene","measure","value"
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Mature enterocyte",94,"TNFRSF12A","level (unit x state pseudobulk)",5.2681
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Unresolved",142,"TNFRSF12A","level (unit x state pseudobulk)",6.2514
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","BEST4/OTOP2",17,"TNFRSF12A","level (unit x state pseudobulk)",6.2995
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","EEC/secretory progenitor",29,"TNFRSF12A","level (unit x state pseudobulk)",5.0182
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Goblet",10,"TNFRSF12A","level (unit x state pseudobulk)",3.7499
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Mature enterocyte",306,"TNFRSF12A","level (unit x state pseudobulk)",5.4995
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","TA",34,"TNFRSF12A","level (unit x state pseudobulk)",5.8068
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Unresolved",472,"TNFRSF12A","level (unit x state pseudobulk)",5.7206
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",88,"TNFRSF12A","level (unit x state pseudobulk)",5.99
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",46,"TNFRSF12A","level (unit x state pseudobulk)",5.2414
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Fetal progenitor",92,"TNFRSF12A","level (unit x state pseudobulk)",5.844
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Goblet",50,"TNFRSF12A","level (unit x state pseudobulk)",6.0495
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",1290,"TNFRSF12A","level (unit x state pseudobulk)",6.7089
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Stem",42,"TNFRSF12A","level (unit x state pseudobulk)",6.0964
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","TA",244,"TNFRSF12A","level (unit x state pseudobulk)",5.5824
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Unresolved",1586,"TNFRSF12A","level (unit x state pseudobulk)",6.0401
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",10,"TNFRSF12A","level (unit x state pseudobulk)",7.1114
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Mature enterocyte",107,"TNFRSF12A","level (unit x state pseudobulk)",6.1339
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","TA",26,"TNFRSF12A","level (unit x state pseudobulk)",6.1797
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Unresolved",282,"TNFRSF12A","level (unit x state pseudobulk)",6.5269
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",21,"TNFRSF12A","level (unit x state pseudobulk)",5.493
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",166,"TNFRSF12A","level (unit x state pseudobulk)",5.4563
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Stem",107,"TNFRSF12A","level (unit x state pseudobulk)",6.0902
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","TA",20,"TNFRSF12A","level (unit x state pseudobulk)",4.7859
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Unresolved",124,"TNFRSF12A","level (unit x state pseudobulk)",5.1174
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",15,"TNFRSF12A","level (unit x state pseudobulk)",6.2398
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",44,"TNFRSF12A","level (unit x state pseudobulk)",6.1275
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Goblet",35,"TNFRSF12A","level (unit x state pseudobulk)",5.1357
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Mature enterocyte",336,"TNFRSF12A","level (unit x state pseudobulk)",6.2149
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Stem",483,"TNFRSF12A","level (unit x state pseudobulk)",6.2802
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","TA",69,"TNFRSF12A","level (unit x state pseudobulk)",5.4345
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Unresolved",187,"TNFRSF12A","level (unit x state pseudobulk)",5.0737
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Mature enterocyte",25,"TNFRSF12A","level (unit x state pseudobulk)",5.4754
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","TA",10,"TNFRSF12A","level (unit x state pseudobulk)",6.0862
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Unresolved",92,"TNFRSF12A","level (unit x state pseudobulk)",6.2914
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Mature enterocyte",46,"TNFRSF12A","level (unit x state pseudobulk)",7.1299
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Stem",22,"TNFRSF12A","level (unit x state pseudobulk)",5.9003
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","TA",12,"TNFRSF12A","level (unit x state pseudobulk)",5.8701
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Unresolved",14,"TNFRSF12A","level (unit x state pseudobulk)",6.9512
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","BEST4/OTOP2",165,"TNFRSF12A","level (unit x state pseudobulk)",6.07
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",125,"TNFRSF12A","level (unit x state pseudobulk)",4.9442
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Fetal progenitor",29,"TNFRSF12A","level (unit x state pseudobulk)",6.011
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Goblet",62,"TNFRSF12A","level (unit x state pseudobulk)",5.4223
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Mature enterocyte",1947,"TNFRSF12A","level (unit x state pseudobulk)",6.0796
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Stem",28,"TNFRSF12A","level (unit x state pseudobulk)",6.6608
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","TA",202,"TNFRSF12A","level (unit x state pseudobulk)",6.2327
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Unresolved",2333,"TNFRSF12A","level (unit x state pseudobulk)",6.1844
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",26,"TNFRSF12A","level (unit x state pseudobulk)",5.6668
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Goblet",15,"TNFRSF12A","level (unit x state pseudobulk)",5.8852
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",260,"TNFRSF12A","level (unit x state pseudobulk)",6.0725
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Stem",35,"TNFRSF12A","level (unit x state pseudobulk)",6.5915
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","TA",44,"TNFRSF12A","level (unit x state pseudobulk)",5.8945
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Unresolved",342,"TNFRSF12A","level (unit x state pseudobulk)",6.0458
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",27,"TNFRSF12A","level (unit x state pseudobulk)",7.2537
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",25,"TNFRSF12A","level (unit x state pseudobulk)",5.7695
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Goblet",13,"TNFRSF12A","level (unit x state pseudobulk)",6.418
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",208,"TNFRSF12A","level (unit x state pseudobulk)",6.9482
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Stem",42,"TNFRSF12A","level (unit x state pseudobulk)",7.4161
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","TA",37,"TNFRSF12A","level (unit x state pseudobulk)",6.5602
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Unresolved",206,"TNFRSF12A","level (unit x state pseudobulk)",7.0871
+"Fawkner2021","Fawkner 2021","ABM1","ABM",8,"TI","small intestine (TI/SI)","Fetal progenitor",36,"TNFRSF12A","level (unit x state pseudobulk)",5.4522
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",10,"TNFRSF12A","level (unit x state pseudobulk)",6.5305
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Fetal progenitor",13,"TNFRSF12A","level (unit x state pseudobulk)",4.7454
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Mature enterocyte",36,"TNFRSF12A","level (unit x state pseudobulk)",5.8441
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","TA",23,"TNFRSF12A","level (unit x state pseudobulk)",5.9809
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Unresolved",180,"TNFRSF12A","level (unit x state pseudobulk)",6.2957
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",25,"TNFRSF12A","level (unit x state pseudobulk)",6.3105
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",40,"TNFRSF12A","level (unit x state pseudobulk)",5.6607
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Fetal progenitor",19,"TNFRSF12A","level (unit x state pseudobulk)",6.3412
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Goblet",10,"TNFRSF12A","level (unit x state pseudobulk)",6.4104
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",467,"TNFRSF12A","level (unit x state pseudobulk)",6.6221
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Stem",157,"TNFRSF12A","level (unit x state pseudobulk)",6.7896
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","TA",18,"TNFRSF12A","level (unit x state pseudobulk)",5.7813
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Unresolved",227,"TNFRSF12A","level (unit x state pseudobulk)",6.0582
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Mature enterocyte",52,"TNFRSF12A","level (unit x state pseudobulk)",6.1317
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Unresolved",176,"TNFRSF12A","level (unit x state pseudobulk)",6.5694
+"Fawkner2021","Fawkner 2021","ABV2","ABV",17,"proximal colon","colon (prox/dist/LI)","Unresolved",18,"TNFRSF12A","level (unit x state pseudobulk)",5.8154
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",11,"TNFRSF12A","level (unit x state pseudobulk)",4.8466
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Mature enterocyte",85,"TNFRSF12A","level (unit x state pseudobulk)",5.6198
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Stem",25,"TNFRSF12A","level (unit x state pseudobulk)",5.3116
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Unresolved",78,"TNFRSF12A","level (unit x state pseudobulk)",5.7739
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","BEST4/OTOP2",25,"TNFRSF12A","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","EEC/secretory progenitor",192,"TNFRSF12A","level (unit x state pseudobulk)",3.9472
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Fetal progenitor",1956,"TNFRSF12A","level (unit x state pseudobulk)",4.6964
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Goblet",23,"TNFRSF12A","level (unit x state pseudobulk)",4.3775
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Mature enterocyte",151,"TNFRSF12A","level (unit x state pseudobulk)",5.7501
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Stem",182,"TNFRSF12A","level (unit x state pseudobulk)",6.7658
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","TA",34,"TNFRSF12A","level (unit x state pseudobulk)",5.2591
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Unresolved",1458,"TNFRSF12A","level (unit x state pseudobulk)",5.0687
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Mature enterocyte",19,"TNFRSF12A","level (unit x state pseudobulk)",4.688
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","TA",16,"TNFRSF12A","level (unit x state pseudobulk)",6.3021
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Unresolved",44,"TNFRSF12A","level (unit x state pseudobulk)",6.8013
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",11,"TNFRSF12A","level (unit x state pseudobulk)",5.2882
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",20,"TNFRSF12A","level (unit x state pseudobulk)",5.4281
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Goblet",13,"TNFRSF12A","level (unit x state pseudobulk)",4.835
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",94,"TNFRSF12A","level (unit x state pseudobulk)",4.9794
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Stem",36,"TNFRSF12A","level (unit x state pseudobulk)",6.1615
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Unresolved",98,"TNFRSF12A","level (unit x state pseudobulk)",4.2515
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","TA",5,"TNFRSF12A","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","Unresolved",67,"TNFRSF12A","level (unit x state pseudobulk)",1.938
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_SI","6W_embryo1",6,"SI","small intestine (TI/SI)","TA",43,"TNFRSF12A","level (unit x state pseudobulk)",0.762
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_LI","6W_embryo2",6,"LI","colon (prox/dist/LI)","Unresolved",65,"TNFRSF12A","level (unit x state pseudobulk)",6.4741
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_SI","6W_embryo2",6,"SI","small intestine (TI/SI)","TA",60,"TNFRSF12A","level (unit x state pseudobulk)",1.7744
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","TA",31,"TNFRSF12A","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","Unresolved",34,"TNFRSF12A","level (unit x state pseudobulk)",2.7882
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","TA",41,"TNFRSF12A","level (unit x state pseudobulk)",2.2849
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","Unresolved",77,"TNFRSF12A","level (unit x state pseudobulk)",3.4014
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","TA",104,"TNFRSF12A","level (unit x state pseudobulk)",3.1555
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","Unresolved",36,"TNFRSF12A","level (unit x state pseudobulk)",3.2729
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","Early enterocyte",35,"TNFRSF12A","level (unit x state pseudobulk)",5.005
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","TA",6,"TNFRSF12A","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","TA",12,"TNFRSF12A","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","Unresolved",20,"TNFRSF12A","level (unit x state pseudobulk)",2.6207
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_LI","8W_embryo2",8,"LI","colon (prox/dist/LI)","TA",43,"TNFRSF12A","level (unit x state pseudobulk)",1.9857
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_SI","8W_embryo2",8,"SI","small intestine (TI/SI)","TA",34,"TNFRSF12A","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Early enterocyte",20,"TNFRSF12A","level (unit x state pseudobulk)",4.1827
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Unresolved",54,"TNFRSF12A","level (unit x state pseudobulk)",3.3575
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_SI","9W_embryo1",9,"SI","small intestine (TI/SI)","Mature enterocyte",86,"TNFRSF12A","level (unit x state pseudobulk)",4.7532
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Goblet",17,"TNFRSF12A","level (unit x state pseudobulk)",3.5757
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Unresolved",34,"TNFRSF12A","level (unit x state pseudobulk)",4.6724
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Mature enterocyte",20,"TNFRSF12A","level (unit x state pseudobulk)",5.2446
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","TA",8,"TNFRSF12A","level (unit x state pseudobulk)",2.7361
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Unresolved",21,"TNFRSF12A","level (unit x state pseudobulk)",0.3432
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Goblet",43,"TNFRSF12A","level (unit x state pseudobulk)",2.5653
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Unresolved",14,"TNFRSF12A","level (unit x state pseudobulk)",6.2509
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Mature enterocyte",45,"TNFRSF12A","level (unit x state pseudobulk)",4.7055
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Unresolved",7,"TNFRSF12A","level (unit x state pseudobulk)",1.6402
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Goblet",8,"TNFRSF12A","level (unit x state pseudobulk)",0.6781
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Unresolved",30,"TNFRSF12A","level (unit x state pseudobulk)",5.053
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Mature enterocyte",10,"TNFRSF12A","level (unit x state pseudobulk)",5.4615
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Unresolved",10,"TNFRSF12A","level (unit x state pseudobulk)",2.5288
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_LI","19W_embryo1",19,"LI","colon (prox/dist/LI)","Unresolved",48,"TNFRSF12A","level (unit x state pseudobulk)",4.5302
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Mature enterocyte",5,"TNFRSF12A","level (unit x state pseudobulk)",2.1164
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Unresolved",36,"TNFRSF12A","level (unit x state pseudobulk)",2.4983
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Mature enterocyte",8,"TNFRSF12A","level (unit x state pseudobulk)",7.2417
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Unresolved",28,"TNFRSF12A","level (unit x state pseudobulk)",2.6202
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Mature enterocyte",13,"TNFRSF12A","level (unit x state pseudobulk)",5.011
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Unresolved",28,"TNFRSF12A","level (unit x state pseudobulk)",4.6814
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","BEST4/OTOP2",28,"TNFRSF12A","level (unit x state pseudobulk)",0.0923
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","Unresolved",157,"TNFRSF12A","level (unit x state pseudobulk)",5.7615
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Mature enterocyte",25,"TNFRSF12A","level (unit x state pseudobulk)",4.8199
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Unresolved",86,"TNFRSF12A","level (unit x state pseudobulk)",3.3793
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Goblet",8,"TNFRSF12A","level (unit x state pseudobulk)",5.4811
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Unresolved",22,"TNFRSF12A","level (unit x state pseudobulk)",4.3258
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Mature enterocyte",6,"TNFRSF12A","level (unit x state pseudobulk)",4.4623
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Unresolved",37,"TNFRSF12A","level (unit x state pseudobulk)",3.1286
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Mature enterocyte",94,"TNFRSF12A","% positive cells",26.5957
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Unresolved",142,"TNFRSF12A","% positive cells",50.7042
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","BEST4/OTOP2",17,"TNFRSF12A","% positive cells",29.4118
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","EEC/secretory progenitor",29,"TNFRSF12A","% positive cells",17.2414
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Goblet",10,"TNFRSF12A","% positive cells",20
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Mature enterocyte",306,"TNFRSF12A","% positive cells",14.0523
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","TA",34,"TNFRSF12A","% positive cells",35.2941
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Unresolved",472,"TNFRSF12A","% positive cells",22.6695
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",88,"TNFRSF12A","% positive cells",17.0455
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",46,"TNFRSF12A","% positive cells",28.2609
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Fetal progenitor",92,"TNFRSF12A","% positive cells",26.087
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Goblet",50,"TNFRSF12A","% positive cells",42
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",1290,"TNFRSF12A","% positive cells",35.8915
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Stem",42,"TNFRSF12A","% positive cells",42.8571
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","TA",244,"TNFRSF12A","% positive cells",43.8525
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Unresolved",1586,"TNFRSF12A","% positive cells",28.4363
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",10,"TNFRSF12A","% positive cells",40
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Mature enterocyte",107,"TNFRSF12A","% positive cells",20.5607
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","TA",26,"TNFRSF12A","% positive cells",50
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Unresolved",282,"TNFRSF12A","% positive cells",25.1773
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",21,"TNFRSF12A","% positive cells",38.0952
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",166,"TNFRSF12A","% positive cells",16.8675
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Stem",107,"TNFRSF12A","% positive cells",64.486
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","TA",20,"TNFRSF12A","% positive cells",40
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Unresolved",124,"TNFRSF12A","% positive cells",7.2581
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",15,"TNFRSF12A","% positive cells",40
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",44,"TNFRSF12A","% positive cells",59.0909
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Goblet",35,"TNFRSF12A","% positive cells",54.2857
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Mature enterocyte",336,"TNFRSF12A","% positive cells",17.2619
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Stem",483,"TNFRSF12A","% positive cells",64.3892
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","TA",69,"TNFRSF12A","% positive cells",49.2754
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Unresolved",187,"TNFRSF12A","% positive cells",9.6257
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Mature enterocyte",25,"TNFRSF12A","% positive cells",32
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","TA",10,"TNFRSF12A","% positive cells",50
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Unresolved",92,"TNFRSF12A","% positive cells",53.2609
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Mature enterocyte",46,"TNFRSF12A","% positive cells",34.7826
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Stem",22,"TNFRSF12A","% positive cells",77.2727
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","TA",12,"TNFRSF12A","% positive cells",91.6667
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Unresolved",14,"TNFRSF12A","% positive cells",14.2857
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","BEST4/OTOP2",165,"TNFRSF12A","% positive cells",28.4848
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",125,"TNFRSF12A","% positive cells",14.4
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Fetal progenitor",29,"TNFRSF12A","% positive cells",27.5862
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Goblet",62,"TNFRSF12A","% positive cells",37.0968
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Mature enterocyte",1947,"TNFRSF12A","% positive cells",18.5413
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Stem",28,"TNFRSF12A","% positive cells",60.7143
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","TA",202,"TNFRSF12A","% positive cells",41.0891
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Unresolved",2333,"TNFRSF12A","% positive cells",22.3746
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",26,"TNFRSF12A","% positive cells",42.3077
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Goblet",15,"TNFRSF12A","% positive cells",60
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",260,"TNFRSF12A","% positive cells",25.7692
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Stem",35,"TNFRSF12A","% positive cells",60
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","TA",44,"TNFRSF12A","% positive cells",54.5455
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Unresolved",342,"TNFRSF12A","% positive cells",34.2105
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",27,"TNFRSF12A","% positive cells",37.037
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",25,"TNFRSF12A","% positive cells",24
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Goblet",13,"TNFRSF12A","% positive cells",46.1538
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",208,"TNFRSF12A","% positive cells",39.4231
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Stem",42,"TNFRSF12A","% positive cells",76.1905
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","TA",37,"TNFRSF12A","% positive cells",67.5676
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Unresolved",206,"TNFRSF12A","% positive cells",40.2913
+"Fawkner2021","Fawkner 2021","ABM1","ABM",8,"TI","small intestine (TI/SI)","Fetal progenitor",36,"TNFRSF12A","% positive cells",69.4444
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",10,"TNFRSF12A","% positive cells",60
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Fetal progenitor",13,"TNFRSF12A","% positive cells",23.0769
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Mature enterocyte",36,"TNFRSF12A","% positive cells",16.6667
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","TA",23,"TNFRSF12A","% positive cells",52.1739
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Unresolved",180,"TNFRSF12A","% positive cells",40.5556
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",25,"TNFRSF12A","% positive cells",40
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",40,"TNFRSF12A","% positive cells",25
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Fetal progenitor",19,"TNFRSF12A","% positive cells",26.3158
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Goblet",10,"TNFRSF12A","% positive cells",40
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",467,"TNFRSF12A","% positive cells",24.4111
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Stem",157,"TNFRSF12A","% positive cells",64.3312
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","TA",18,"TNFRSF12A","% positive cells",38.8889
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Unresolved",227,"TNFRSF12A","% positive cells",15.859
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Mature enterocyte",52,"TNFRSF12A","% positive cells",30.7692
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Unresolved",176,"TNFRSF12A","% positive cells",35.2273
+"Fawkner2021","Fawkner 2021","ABV2","ABV",17,"proximal colon","colon (prox/dist/LI)","Unresolved",18,"TNFRSF12A","% positive cells",44.4444
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",11,"TNFRSF12A","% positive cells",27.2727
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Mature enterocyte",85,"TNFRSF12A","% positive cells",16.4706
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Stem",25,"TNFRSF12A","% positive cells",48
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Unresolved",78,"TNFRSF12A","% positive cells",21.7949
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","BEST4/OTOP2",25,"TNFRSF12A","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","EEC/secretory progenitor",192,"TNFRSF12A","% positive cells",5.2083
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Fetal progenitor",1956,"TNFRSF12A","% positive cells",11.0429
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Goblet",23,"TNFRSF12A","% positive cells",8.6957
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Mature enterocyte",151,"TNFRSF12A","% positive cells",19.2053
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Stem",182,"TNFRSF12A","% positive cells",41.7582
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","TA",34,"TNFRSF12A","% positive cells",17.6471
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Unresolved",1458,"TNFRSF12A","% positive cells",6.5158
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Mature enterocyte",19,"TNFRSF12A","% positive cells",10.5263
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","TA",16,"TNFRSF12A","% positive cells",56.25
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Unresolved",44,"TNFRSF12A","% positive cells",43.1818
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",11,"TNFRSF12A","% positive cells",18.1818
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",20,"TNFRSF12A","% positive cells",35
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Goblet",13,"TNFRSF12A","% positive cells",23.0769
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",94,"TNFRSF12A","% positive cells",10.6383
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Stem",36,"TNFRSF12A","% positive cells",50
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Unresolved",98,"TNFRSF12A","% positive cells",8.1633
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","TA",5,"TNFRSF12A","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","Unresolved",67,"TNFRSF12A","% positive cells",4.4776
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_SI","6W_embryo1",6,"SI","small intestine (TI/SI)","TA",43,"TNFRSF12A","% positive cells",6.9767
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_LI","6W_embryo2",6,"LI","colon (prox/dist/LI)","Unresolved",65,"TNFRSF12A","% positive cells",75.3846
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_SI","6W_embryo2",6,"SI","small intestine (TI/SI)","TA",60,"TNFRSF12A","% positive cells",8.3333
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","TA",31,"TNFRSF12A","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","Unresolved",34,"TNFRSF12A","% positive cells",11.7647
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","TA",41,"TNFRSF12A","% positive cells",7.3171
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","Unresolved",77,"TNFRSF12A","% positive cells",5.1948
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","TA",104,"TNFRSF12A","% positive cells",7.6923
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","Unresolved",36,"TNFRSF12A","% positive cells",19.4444
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","Early enterocyte",35,"TNFRSF12A","% positive cells",28.5714
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","TA",6,"TNFRSF12A","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","TA",12,"TNFRSF12A","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","Unresolved",20,"TNFRSF12A","% positive cells",25
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_LI","8W_embryo2",8,"LI","colon (prox/dist/LI)","TA",43,"TNFRSF12A","% positive cells",16.2791
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_SI","8W_embryo2",8,"SI","small intestine (TI/SI)","TA",34,"TNFRSF12A","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Early enterocyte",20,"TNFRSF12A","% positive cells",25
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Unresolved",54,"TNFRSF12A","% positive cells",31.4815
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_SI","9W_embryo1",9,"SI","small intestine (TI/SI)","Mature enterocyte",86,"TNFRSF12A","% positive cells",59.3023
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Goblet",17,"TNFRSF12A","% positive cells",17.6471
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Unresolved",34,"TNFRSF12A","% positive cells",23.5294
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Mature enterocyte",20,"TNFRSF12A","% positive cells",50
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","TA",8,"TNFRSF12A","% positive cells",12.5
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Unresolved",21,"TNFRSF12A","% positive cells",4.7619
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Goblet",43,"TNFRSF12A","% positive cells",20.9302
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Unresolved",14,"TNFRSF12A","% positive cells",50
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Mature enterocyte",45,"TNFRSF12A","% positive cells",33.3333
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Unresolved",7,"TNFRSF12A","% positive cells",28.5714
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Goblet",8,"TNFRSF12A","% positive cells",12.5
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Unresolved",30,"TNFRSF12A","% positive cells",46.6667
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Mature enterocyte",10,"TNFRSF12A","% positive cells",40
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Unresolved",10,"TNFRSF12A","% positive cells",20
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_LI","19W_embryo1",19,"LI","colon (prox/dist/LI)","Unresolved",48,"TNFRSF12A","% positive cells",25
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Mature enterocyte",5,"TNFRSF12A","% positive cells",20
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Unresolved",36,"TNFRSF12A","% positive cells",11.1111
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Mature enterocyte",8,"TNFRSF12A","% positive cells",62.5
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Unresolved",28,"TNFRSF12A","% positive cells",17.8571
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Mature enterocyte",13,"TNFRSF12A","% positive cells",38.4615
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Unresolved",28,"TNFRSF12A","% positive cells",42.8571
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","BEST4/OTOP2",28,"TNFRSF12A","% positive cells",3.5714
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","Unresolved",157,"TNFRSF12A","% positive cells",60.5096
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Mature enterocyte",25,"TNFRSF12A","% positive cells",44
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Unresolved",86,"TNFRSF12A","% positive cells",12.7907
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Goblet",8,"TNFRSF12A","% positive cells",12.5
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Unresolved",22,"TNFRSF12A","% positive cells",22.7273
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Mature enterocyte",6,"TNFRSF12A","% positive cells",33.3333
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Unresolved",37,"TNFRSF12A","% positive cells",27.027
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Mature enterocyte",94,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Unresolved",142,"TACSTD2","level (unit x state pseudobulk)",3.1948
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","BEST4/OTOP2",17,"TACSTD2","level (unit x state pseudobulk)",7.2903
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","EEC/secretory progenitor",29,"TACSTD2","level (unit x state pseudobulk)",2.0498
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Goblet",10,"TACSTD2","level (unit x state pseudobulk)",2.8534
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Mature enterocyte",306,"TACSTD2","level (unit x state pseudobulk)",2.0884
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","TA",34,"TACSTD2","level (unit x state pseudobulk)",3.7244
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Unresolved",472,"TACSTD2","level (unit x state pseudobulk)",3.7004
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",88,"TACSTD2","level (unit x state pseudobulk)",4.0566
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",46,"TACSTD2","level (unit x state pseudobulk)",2.9441
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Fetal progenitor",92,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Goblet",50,"TACSTD2","level (unit x state pseudobulk)",5.1483
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",1290,"TACSTD2","level (unit x state pseudobulk)",1.3836
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Stem",42,"TACSTD2","level (unit x state pseudobulk)",3.7289
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","TA",244,"TACSTD2","level (unit x state pseudobulk)",2.9453
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Unresolved",1586,"TACSTD2","level (unit x state pseudobulk)",3.649
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",10,"TACSTD2","level (unit x state pseudobulk)",6.3119
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Mature enterocyte",107,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","TA",26,"TACSTD2","level (unit x state pseudobulk)",3.783
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Unresolved",282,"TACSTD2","level (unit x state pseudobulk)",4.4678
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",21,"TACSTD2","level (unit x state pseudobulk)",4.5247
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",166,"TACSTD2","level (unit x state pseudobulk)",1.0705
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Stem",107,"TACSTD2","level (unit x state pseudobulk)",3.3227
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","TA",20,"TACSTD2","level (unit x state pseudobulk)",3.0161
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Unresolved",124,"TACSTD2","level (unit x state pseudobulk)",1.769
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",15,"TACSTD2","level (unit x state pseudobulk)",4.1658
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",44,"TACSTD2","level (unit x state pseudobulk)",4.4982
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Goblet",35,"TACSTD2","level (unit x state pseudobulk)",4.0162
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Mature enterocyte",336,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Stem",483,"TACSTD2","level (unit x state pseudobulk)",3.9456
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","TA",69,"TACSTD2","level (unit x state pseudobulk)",4.3227
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Unresolved",187,"TACSTD2","level (unit x state pseudobulk)",3.8393
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Mature enterocyte",25,"TACSTD2","level (unit x state pseudobulk)",2.3085
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","TA",10,"TACSTD2","level (unit x state pseudobulk)",2.6679
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Unresolved",92,"TACSTD2","level (unit x state pseudobulk)",2.8485
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Mature enterocyte",46,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Stem",22,"TACSTD2","level (unit x state pseudobulk)",3.0405
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","TA",12,"TACSTD2","level (unit x state pseudobulk)",3.4404
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Unresolved",14,"TACSTD2","level (unit x state pseudobulk)",4.0306
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","BEST4/OTOP2",165,"TACSTD2","level (unit x state pseudobulk)",5.6334
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",125,"TACSTD2","level (unit x state pseudobulk)",2.8953
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Fetal progenitor",29,"TACSTD2","level (unit x state pseudobulk)",2.3876
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Goblet",62,"TACSTD2","level (unit x state pseudobulk)",5.1088
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Mature enterocyte",1947,"TACSTD2","level (unit x state pseudobulk)",1.4399
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Stem",28,"TACSTD2","level (unit x state pseudobulk)",4.0367
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","TA",202,"TACSTD2","level (unit x state pseudobulk)",3.6048
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Unresolved",2333,"TACSTD2","level (unit x state pseudobulk)",3.3615
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",26,"TACSTD2","level (unit x state pseudobulk)",2.5409
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Goblet",15,"TACSTD2","level (unit x state pseudobulk)",4.7454
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",260,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Stem",35,"TACSTD2","level (unit x state pseudobulk)",3.4655
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","TA",44,"TACSTD2","level (unit x state pseudobulk)",2.93
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Unresolved",342,"TACSTD2","level (unit x state pseudobulk)",2.6208
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",27,"TACSTD2","level (unit x state pseudobulk)",6.4828
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",25,"TACSTD2","level (unit x state pseudobulk)",3.0535
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Goblet",13,"TACSTD2","level (unit x state pseudobulk)",6.1224
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",208,"TACSTD2","level (unit x state pseudobulk)",0.6248
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Stem",42,"TACSTD2","level (unit x state pseudobulk)",4.1578
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","TA",37,"TACSTD2","level (unit x state pseudobulk)",3.8717
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Unresolved",206,"TACSTD2","level (unit x state pseudobulk)",3.5781
+"Fawkner2021","Fawkner 2021","ABM1","ABM",8,"TI","small intestine (TI/SI)","Fetal progenitor",36,"TACSTD2","level (unit x state pseudobulk)",3.4259
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",10,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Fetal progenitor",13,"TACSTD2","level (unit x state pseudobulk)",3.2642
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Mature enterocyte",36,"TACSTD2","level (unit x state pseudobulk)",2.7321
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","TA",23,"TACSTD2","level (unit x state pseudobulk)",2.7907
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Unresolved",180,"TACSTD2","level (unit x state pseudobulk)",3.5212
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",25,"TACSTD2","level (unit x state pseudobulk)",4.5879
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",40,"TACSTD2","level (unit x state pseudobulk)",1.852
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Fetal progenitor",19,"TACSTD2","level (unit x state pseudobulk)",2.9398
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Goblet",10,"TACSTD2","level (unit x state pseudobulk)",5.9031
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",467,"TACSTD2","level (unit x state pseudobulk)",0.9713
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Stem",157,"TACSTD2","level (unit x state pseudobulk)",3.0603
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","TA",18,"TACSTD2","level (unit x state pseudobulk)",3.3963
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Unresolved",227,"TACSTD2","level (unit x state pseudobulk)",3.463
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Mature enterocyte",52,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Unresolved",176,"TACSTD2","level (unit x state pseudobulk)",3.575
+"Fawkner2021","Fawkner 2021","ABV2","ABV",17,"proximal colon","colon (prox/dist/LI)","Unresolved",18,"TACSTD2","level (unit x state pseudobulk)",1.7245
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",11,"TACSTD2","level (unit x state pseudobulk)",3.5128
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Mature enterocyte",85,"TACSTD2","level (unit x state pseudobulk)",1.7199
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Stem",25,"TACSTD2","level (unit x state pseudobulk)",2.1761
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Unresolved",78,"TACSTD2","level (unit x state pseudobulk)",3.1537
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","BEST4/OTOP2",25,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","EEC/secretory progenitor",192,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Fetal progenitor",1956,"TACSTD2","level (unit x state pseudobulk)",3.2139
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Goblet",23,"TACSTD2","level (unit x state pseudobulk)",4.9391
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Mature enterocyte",151,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Stem",182,"TACSTD2","level (unit x state pseudobulk)",2.4908
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","TA",34,"TACSTD2","level (unit x state pseudobulk)",3.2153
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Unresolved",1458,"TACSTD2","level (unit x state pseudobulk)",2.1744
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Mature enterocyte",19,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","TA",16,"TACSTD2","level (unit x state pseudobulk)",2.2357
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Unresolved",44,"TACSTD2","level (unit x state pseudobulk)",2.883
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",11,"TACSTD2","level (unit x state pseudobulk)",5.2882
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",20,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Goblet",13,"TACSTD2","level (unit x state pseudobulk)",3.7269
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",94,"TACSTD2","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Stem",36,"TACSTD2","level (unit x state pseudobulk)",2.8907
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Unresolved",98,"TACSTD2","level (unit x state pseudobulk)",2.2046
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","TA",5,"TACSTD2","level (unit x state pseudobulk)",0.9486
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","Unresolved",67,"TACSTD2","level (unit x state pseudobulk)",1.2103
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_SI","6W_embryo1",6,"SI","small intestine (TI/SI)","TA",43,"TACSTD2","level (unit x state pseudobulk)",2.3408
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_LI","6W_embryo2",6,"LI","colon (prox/dist/LI)","Unresolved",65,"TACSTD2","level (unit x state pseudobulk)",4.4369
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_SI","6W_embryo2",6,"SI","small intestine (TI/SI)","TA",60,"TACSTD2","level (unit x state pseudobulk)",1.5525
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","TA",31,"TACSTD2","level (unit x state pseudobulk)",0.1324
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","Unresolved",34,"TACSTD2","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","TA",41,"TACSTD2","level (unit x state pseudobulk)",1.5558
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","Unresolved",77,"TACSTD2","level (unit x state pseudobulk)",2.3478
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","TA",104,"TACSTD2","level (unit x state pseudobulk)",0.1317
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","Unresolved",36,"TACSTD2","level (unit x state pseudobulk)",3.4505
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","Early enterocyte",35,"TACSTD2","level (unit x state pseudobulk)",1.7068
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","TA",6,"TACSTD2","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","TA",12,"TACSTD2","level (unit x state pseudobulk)",0.2347
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","Unresolved",20,"TACSTD2","level (unit x state pseudobulk)",6.4481
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_LI","8W_embryo2",8,"LI","colon (prox/dist/LI)","TA",43,"TACSTD2","level (unit x state pseudobulk)",0.0394
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_SI","8W_embryo2",8,"SI","small intestine (TI/SI)","TA",34,"TACSTD2","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Early enterocyte",20,"TACSTD2","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Unresolved",54,"TACSTD2","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_SI","9W_embryo1",9,"SI","small intestine (TI/SI)","Mature enterocyte",86,"TACSTD2","level (unit x state pseudobulk)",3.6638
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Goblet",17,"TACSTD2","level (unit x state pseudobulk)",4.759
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Unresolved",34,"TACSTD2","level (unit x state pseudobulk)",0.1259
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Mature enterocyte",20,"TACSTD2","level (unit x state pseudobulk)",0.3923
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","TA",8,"TACSTD2","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Unresolved",21,"TACSTD2","level (unit x state pseudobulk)",4.2961
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Goblet",43,"TACSTD2","level (unit x state pseudobulk)",7.6835
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Unresolved",14,"TACSTD2","level (unit x state pseudobulk)",4.4238
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Mature enterocyte",45,"TACSTD2","level (unit x state pseudobulk)",1.1772
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Unresolved",7,"TACSTD2","level (unit x state pseudobulk)",6.4292
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Goblet",8,"TACSTD2","level (unit x state pseudobulk)",3.2672
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Unresolved",30,"TACSTD2","level (unit x state pseudobulk)",3.9339
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Mature enterocyte",10,"TACSTD2","level (unit x state pseudobulk)",0.3629
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Unresolved",10,"TACSTD2","level (unit x state pseudobulk)",5.2735
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_LI","19W_embryo1",19,"LI","colon (prox/dist/LI)","Unresolved",48,"TACSTD2","level (unit x state pseudobulk)",1.742
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Mature enterocyte",5,"TACSTD2","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Unresolved",36,"TACSTD2","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Mature enterocyte",8,"TACSTD2","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Unresolved",28,"TACSTD2","level (unit x state pseudobulk)",1.2379
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Mature enterocyte",13,"TACSTD2","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Unresolved",28,"TACSTD2","level (unit x state pseudobulk)",4.211
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","BEST4/OTOP2",28,"TACSTD2","level (unit x state pseudobulk)",5.0954
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","Unresolved",157,"TACSTD2","level (unit x state pseudobulk)",4.2753
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Mature enterocyte",25,"TACSTD2","level (unit x state pseudobulk)",0.3001
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Unresolved",86,"TACSTD2","level (unit x state pseudobulk)",3.8677
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Goblet",8,"TACSTD2","level (unit x state pseudobulk)",6.804
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Unresolved",22,"TACSTD2","level (unit x state pseudobulk)",0.4723
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Mature enterocyte",6,"TACSTD2","level (unit x state pseudobulk)",2.6633
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Unresolved",37,"TACSTD2","level (unit x state pseudobulk)",5.6338
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Mature enterocyte",94,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Unresolved",142,"TACSTD2","% positive cells",9.8592
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","BEST4/OTOP2",17,"TACSTD2","% positive cells",47.0588
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","EEC/secretory progenitor",29,"TACSTD2","% positive cells",3.4483
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Goblet",10,"TACSTD2","% positive cells",10
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Mature enterocyte",306,"TACSTD2","% positive cells",1.3072
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","TA",34,"TACSTD2","% positive cells",8.8235
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Unresolved",472,"TACSTD2","% positive cells",5.5085
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",88,"TACSTD2","% positive cells",5.6818
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",46,"TACSTD2","% positive cells",6.5217
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Fetal progenitor",92,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Goblet",50,"TACSTD2","% positive cells",26
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",1290,"TACSTD2","% positive cells",0.8527
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Stem",42,"TACSTD2","% positive cells",14.2857
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","TA",244,"TACSTD2","% positive cells",9.4262
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Unresolved",1586,"TACSTD2","% positive cells",6.3682
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",10,"TACSTD2","% positive cells",20
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Mature enterocyte",107,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","TA",26,"TACSTD2","% positive cells",15.3846
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Unresolved",282,"TACSTD2","% positive cells",6.7376
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",21,"TACSTD2","% positive cells",23.8095
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",166,"TACSTD2","% positive cells",0.6024
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Stem",107,"TACSTD2","% positive cells",10.2804
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","TA",20,"TACSTD2","% positive cells",15
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Unresolved",124,"TACSTD2","% positive cells",0.8065
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",15,"TACSTD2","% positive cells",26.6667
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",44,"TACSTD2","% positive cells",22.7273
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Goblet",35,"TACSTD2","% positive cells",25.7143
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Mature enterocyte",336,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Stem",483,"TACSTD2","% positive cells",17.1843
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","TA",69,"TACSTD2","% positive cells",14.4928
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Unresolved",187,"TACSTD2","% positive cells",3.2086
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Mature enterocyte",25,"TACSTD2","% positive cells",4
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","TA",10,"TACSTD2","% positive cells",10
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Unresolved",92,"TACSTD2","% positive cells",9.7826
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Mature enterocyte",46,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Stem",22,"TACSTD2","% positive cells",22.7273
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","TA",12,"TACSTD2","% positive cells",33.3333
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Unresolved",14,"TACSTD2","% positive cells",7.1429
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","BEST4/OTOP2",165,"TACSTD2","% positive cells",15.7576
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",125,"TACSTD2","% positive cells",4
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Fetal progenitor",29,"TACSTD2","% positive cells",3.4483
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Goblet",62,"TACSTD2","% positive cells",20.9677
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Mature enterocyte",1947,"TACSTD2","% positive cells",0.6163
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Stem",28,"TACSTD2","% positive cells",14.2857
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","TA",202,"TACSTD2","% positive cells",9.901
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Unresolved",2333,"TACSTD2","% positive cells",4.3292
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",26,"TACSTD2","% positive cells",7.6923
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Goblet",15,"TACSTD2","% positive cells",26.6667
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",260,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Stem",35,"TACSTD2","% positive cells",5.7143
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","TA",44,"TACSTD2","% positive cells",9.0909
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Unresolved",342,"TACSTD2","% positive cells",3.8012
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",27,"TACSTD2","% positive cells",29.6296
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",25,"TACSTD2","% positive cells",8
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Goblet",13,"TACSTD2","% positive cells",53.8462
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",208,"TACSTD2","% positive cells",0.4808
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Stem",42,"TACSTD2","% positive cells",19.0476
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","TA",37,"TACSTD2","% positive cells",24.3243
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Unresolved",206,"TACSTD2","% positive cells",8.2524
+"Fawkner2021","Fawkner 2021","ABM1","ABM",8,"TI","small intestine (TI/SI)","Fetal progenitor",36,"TACSTD2","% positive cells",30.5556
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",10,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Fetal progenitor",13,"TACSTD2","% positive cells",7.6923
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Mature enterocyte",36,"TACSTD2","% positive cells",2.7778
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","TA",23,"TACSTD2","% positive cells",4.3478
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Unresolved",180,"TACSTD2","% positive cells",9.4444
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",25,"TACSTD2","% positive cells",20
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",40,"TACSTD2","% positive cells",2.5
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Fetal progenitor",19,"TACSTD2","% positive cells",5.2632
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Goblet",10,"TACSTD2","% positive cells",40
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",467,"TACSTD2","% positive cells",0.4283
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Stem",157,"TACSTD2","% positive cells",7.0064
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","TA",18,"TACSTD2","% positive cells",5.5556
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Unresolved",227,"TACSTD2","% positive cells",3.5242
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Mature enterocyte",52,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Unresolved",176,"TACSTD2","% positive cells",9.6591
+"Fawkner2021","Fawkner 2021","ABV2","ABV",17,"proximal colon","colon (prox/dist/LI)","Unresolved",18,"TACSTD2","% positive cells",5.5556
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",11,"TACSTD2","% positive cells",18.1818
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Mature enterocyte",85,"TACSTD2","% positive cells",1.1765
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Stem",25,"TACSTD2","% positive cells",8
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Unresolved",78,"TACSTD2","% positive cells",3.8462
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","BEST4/OTOP2",25,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","EEC/secretory progenitor",192,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Fetal progenitor",1956,"TACSTD2","% positive cells",4.09
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Goblet",23,"TACSTD2","% positive cells",8.6957
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Mature enterocyte",151,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Stem",182,"TACSTD2","% positive cells",3.2967
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","TA",34,"TACSTD2","% positive cells",5.8824
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Unresolved",1458,"TACSTD2","% positive cells",0.7545
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Mature enterocyte",19,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","TA",16,"TACSTD2","% positive cells",6.25
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Unresolved",44,"TACSTD2","% positive cells",4.5455
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",11,"TACSTD2","% positive cells",18.1818
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",20,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Goblet",13,"TACSTD2","% positive cells",30.7692
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",94,"TACSTD2","% positive cells",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Stem",36,"TACSTD2","% positive cells",5.5556
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Unresolved",98,"TACSTD2","% positive cells",2.0408
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","TA",5,"TACSTD2","% positive cells",20
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","Unresolved",67,"TACSTD2","% positive cells",14.9254
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_SI","6W_embryo1",6,"SI","small intestine (TI/SI)","TA",43,"TACSTD2","% positive cells",51.1628
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_LI","6W_embryo2",6,"LI","colon (prox/dist/LI)","Unresolved",65,"TACSTD2","% positive cells",32.3077
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_SI","6W_embryo2",6,"SI","small intestine (TI/SI)","TA",60,"TACSTD2","% positive cells",6.6667
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","TA",31,"TACSTD2","% positive cells",3.2258
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","Unresolved",34,"TACSTD2","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","TA",41,"TACSTD2","% positive cells",9.7561
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","Unresolved",77,"TACSTD2","% positive cells",11.6883
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","TA",104,"TACSTD2","% positive cells",1.9231
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","Unresolved",36,"TACSTD2","% positive cells",16.6667
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","Early enterocyte",35,"TACSTD2","% positive cells",11.4286
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","TA",6,"TACSTD2","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","TA",12,"TACSTD2","% positive cells",8.3333
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","Unresolved",20,"TACSTD2","% positive cells",25
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_LI","8W_embryo2",8,"LI","colon (prox/dist/LI)","TA",43,"TACSTD2","% positive cells",2.3256
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_SI","8W_embryo2",8,"SI","small intestine (TI/SI)","TA",34,"TACSTD2","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Early enterocyte",20,"TACSTD2","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Unresolved",54,"TACSTD2","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_SI","9W_embryo1",9,"SI","small intestine (TI/SI)","Mature enterocyte",86,"TACSTD2","% positive cells",39.5349
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Goblet",17,"TACSTD2","% positive cells",29.4118
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Unresolved",34,"TACSTD2","% positive cells",5.8824
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Mature enterocyte",20,"TACSTD2","% positive cells",10
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","TA",8,"TACSTD2","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Unresolved",21,"TACSTD2","% positive cells",4.7619
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Goblet",43,"TACSTD2","% positive cells",79.0698
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Unresolved",14,"TACSTD2","% positive cells",42.8571
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Mature enterocyte",45,"TACSTD2","% positive cells",6.6667
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Unresolved",7,"TACSTD2","% positive cells",42.8571
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Goblet",8,"TACSTD2","% positive cells",37.5
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Unresolved",30,"TACSTD2","% positive cells",23.3333
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Mature enterocyte",10,"TACSTD2","% positive cells",20
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Unresolved",10,"TACSTD2","% positive cells",20
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_LI","19W_embryo1",19,"LI","colon (prox/dist/LI)","Unresolved",48,"TACSTD2","% positive cells",14.5833
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Mature enterocyte",5,"TACSTD2","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Unresolved",36,"TACSTD2","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Mature enterocyte",8,"TACSTD2","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Unresolved",28,"TACSTD2","% positive cells",10.7143
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Mature enterocyte",13,"TACSTD2","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Unresolved",28,"TACSTD2","% positive cells",10.7143
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","BEST4/OTOP2",28,"TACSTD2","% positive cells",32.1429
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","Unresolved",157,"TACSTD2","% positive cells",23.5669
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Mature enterocyte",25,"TACSTD2","% positive cells",4
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Unresolved",86,"TACSTD2","% positive cells",6.9767
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Goblet",8,"TACSTD2","% positive cells",62.5
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Unresolved",22,"TACSTD2","% positive cells",9.0909
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Mature enterocyte",6,"TACSTD2","% positive cells",16.6667
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Unresolved",37,"TACSTD2","% positive cells",64.8649
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Mature enterocyte",94,"CLU","level (unit x state pseudobulk)",9.0468
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Unresolved",142,"CLU","level (unit x state pseudobulk)",9.4006
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","BEST4/OTOP2",17,"CLU","level (unit x state pseudobulk)",7.0989
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","EEC/secretory progenitor",29,"CLU","level (unit x state pseudobulk)",8.3968
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Goblet",10,"CLU","level (unit x state pseudobulk)",7.6457
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Mature enterocyte",306,"CLU","level (unit x state pseudobulk)",6.7065
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","TA",34,"CLU","level (unit x state pseudobulk)",8.108
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Unresolved",472,"CLU","level (unit x state pseudobulk)",8.0885
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",88,"CLU","level (unit x state pseudobulk)",6.8999
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",46,"CLU","level (unit x state pseudobulk)",7.858
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Fetal progenitor",92,"CLU","level (unit x state pseudobulk)",7.3171
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Goblet",50,"CLU","level (unit x state pseudobulk)",7.9421
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",1290,"CLU","level (unit x state pseudobulk)",7.3953
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Stem",42,"CLU","level (unit x state pseudobulk)",8.8022
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","TA",244,"CLU","level (unit x state pseudobulk)",8.9075
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Unresolved",1586,"CLU","level (unit x state pseudobulk)",8.8402
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",10,"CLU","level (unit x state pseudobulk)",8.2982
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Mature enterocyte",107,"CLU","level (unit x state pseudobulk)",6.9406
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","TA",26,"CLU","level (unit x state pseudobulk)",8.815
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Unresolved",282,"CLU","level (unit x state pseudobulk)",8.8589
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",21,"CLU","level (unit x state pseudobulk)",8.5519
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",166,"CLU","level (unit x state pseudobulk)",8.0197
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Stem",107,"CLU","level (unit x state pseudobulk)",9.0065
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","TA",20,"CLU","level (unit x state pseudobulk)",8.9215
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Unresolved",124,"CLU","level (unit x state pseudobulk)",9.0189
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",15,"CLU","level (unit x state pseudobulk)",8.1413
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",44,"CLU","level (unit x state pseudobulk)",8.5122
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Goblet",35,"CLU","level (unit x state pseudobulk)",7.77
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Mature enterocyte",336,"CLU","level (unit x state pseudobulk)",8.3964
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Stem",483,"CLU","level (unit x state pseudobulk)",8.9783
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","TA",69,"CLU","level (unit x state pseudobulk)",8.7368
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Unresolved",187,"CLU","level (unit x state pseudobulk)",8.7745
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Mature enterocyte",25,"CLU","level (unit x state pseudobulk)",6.1732
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","TA",10,"CLU","level (unit x state pseudobulk)",5.5397
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Unresolved",92,"CLU","level (unit x state pseudobulk)",6.3438
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Mature enterocyte",46,"CLU","level (unit x state pseudobulk)",6.988
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Stem",22,"CLU","level (unit x state pseudobulk)",7.491
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","TA",12,"CLU","level (unit x state pseudobulk)",7.9216
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Unresolved",14,"CLU","level (unit x state pseudobulk)",7.8527
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","BEST4/OTOP2",165,"CLU","level (unit x state pseudobulk)",6.5833
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",125,"CLU","level (unit x state pseudobulk)",8.2077
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Fetal progenitor",29,"CLU","level (unit x state pseudobulk)",7.7607
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Goblet",62,"CLU","level (unit x state pseudobulk)",7.5552
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Mature enterocyte",1947,"CLU","level (unit x state pseudobulk)",6.379
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Stem",28,"CLU","level (unit x state pseudobulk)",8.584
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","TA",202,"CLU","level (unit x state pseudobulk)",8.2077
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Unresolved",2333,"CLU","level (unit x state pseudobulk)",7.9327
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",26,"CLU","level (unit x state pseudobulk)",7.8799
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Goblet",15,"CLU","level (unit x state pseudobulk)",7.8667
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",260,"CLU","level (unit x state pseudobulk)",6.5438
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Stem",35,"CLU","level (unit x state pseudobulk)",8.1151
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","TA",44,"CLU","level (unit x state pseudobulk)",8.3015
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Unresolved",342,"CLU","level (unit x state pseudobulk)",8.3466
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",27,"CLU","level (unit x state pseudobulk)",7.5496
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",25,"CLU","level (unit x state pseudobulk)",7.5579
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Goblet",13,"CLU","level (unit x state pseudobulk)",6.7366
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",208,"CLU","level (unit x state pseudobulk)",6.6926
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Stem",42,"CLU","level (unit x state pseudobulk)",8.5825
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","TA",37,"CLU","level (unit x state pseudobulk)",8.2929
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Unresolved",206,"CLU","level (unit x state pseudobulk)",8.3592
+"Fawkner2021","Fawkner 2021","ABM1","ABM",8,"TI","small intestine (TI/SI)","Fetal progenitor",36,"CLU","level (unit x state pseudobulk)",6.915
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",10,"CLU","level (unit x state pseudobulk)",8.2565
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Fetal progenitor",13,"CLU","level (unit x state pseudobulk)",6.7045
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Mature enterocyte",36,"CLU","level (unit x state pseudobulk)",7.5048
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","TA",23,"CLU","level (unit x state pseudobulk)",8.9348
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Unresolved",180,"CLU","level (unit x state pseudobulk)",8.686
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",25,"CLU","level (unit x state pseudobulk)",8.6178
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",40,"CLU","level (unit x state pseudobulk)",8.4965
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Fetal progenitor",19,"CLU","level (unit x state pseudobulk)",7.6995
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Goblet",10,"CLU","level (unit x state pseudobulk)",8.8559
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",467,"CLU","level (unit x state pseudobulk)",8.4139
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Stem",157,"CLU","level (unit x state pseudobulk)",9.243
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","TA",18,"CLU","level (unit x state pseudobulk)",9.3769
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Unresolved",227,"CLU","level (unit x state pseudobulk)",9.5894
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Mature enterocyte",52,"CLU","level (unit x state pseudobulk)",6.9115
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Unresolved",176,"CLU","level (unit x state pseudobulk)",7.9554
+"Fawkner2021","Fawkner 2021","ABV2","ABV",17,"proximal colon","colon (prox/dist/LI)","Unresolved",18,"CLU","level (unit x state pseudobulk)",8.328
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",11,"CLU","level (unit x state pseudobulk)",7.7094
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Mature enterocyte",85,"CLU","level (unit x state pseudobulk)",7.7283
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Stem",25,"CLU","level (unit x state pseudobulk)",7.7528
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Unresolved",78,"CLU","level (unit x state pseudobulk)",7.9694
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","BEST4/OTOP2",25,"CLU","level (unit x state pseudobulk)",7.2375
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","EEC/secretory progenitor",192,"CLU","level (unit x state pseudobulk)",7.5821
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Fetal progenitor",1956,"CLU","level (unit x state pseudobulk)",7.9301
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Goblet",23,"CLU","level (unit x state pseudobulk)",8.3981
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Mature enterocyte",151,"CLU","level (unit x state pseudobulk)",8.3555
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Stem",182,"CLU","level (unit x state pseudobulk)",8.7939
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","TA",34,"CLU","level (unit x state pseudobulk)",9.393
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Unresolved",1458,"CLU","level (unit x state pseudobulk)",8.4231
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Mature enterocyte",19,"CLU","level (unit x state pseudobulk)",8.1595
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","TA",16,"CLU","level (unit x state pseudobulk)",9.0131
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Unresolved",44,"CLU","level (unit x state pseudobulk)",9.3615
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",11,"CLU","level (unit x state pseudobulk)",8.6237
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",20,"CLU","level (unit x state pseudobulk)",8.8767
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Goblet",13,"CLU","level (unit x state pseudobulk)",9.2742
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",94,"CLU","level (unit x state pseudobulk)",8.3021
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Stem",36,"CLU","level (unit x state pseudobulk)",9.1438
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Unresolved",98,"CLU","level (unit x state pseudobulk)",9.519
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","TA",5,"CLU","level (unit x state pseudobulk)",1.2774
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","Unresolved",67,"CLU","level (unit x state pseudobulk)",6.035
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_SI","6W_embryo1",6,"SI","small intestine (TI/SI)","TA",43,"CLU","level (unit x state pseudobulk)",4.9051
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_LI","6W_embryo2",6,"LI","colon (prox/dist/LI)","Unresolved",65,"CLU","level (unit x state pseudobulk)",6.6527
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_SI","6W_embryo2",6,"SI","small intestine (TI/SI)","TA",60,"CLU","level (unit x state pseudobulk)",4.9147
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","TA",31,"CLU","level (unit x state pseudobulk)",3.6399
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","Unresolved",34,"CLU","level (unit x state pseudobulk)",8.1422
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","TA",41,"CLU","level (unit x state pseudobulk)",5.5475
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","Unresolved",77,"CLU","level (unit x state pseudobulk)",6.063
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","TA",104,"CLU","level (unit x state pseudobulk)",5.1134
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","Unresolved",36,"CLU","level (unit x state pseudobulk)",8.2582
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","Early enterocyte",35,"CLU","level (unit x state pseudobulk)",9.3085
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","TA",6,"CLU","level (unit x state pseudobulk)",5.8487
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","TA",12,"CLU","level (unit x state pseudobulk)",5.0093
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","Unresolved",20,"CLU","level (unit x state pseudobulk)",7.832
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_LI","8W_embryo2",8,"LI","colon (prox/dist/LI)","TA",43,"CLU","level (unit x state pseudobulk)",4.9037
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_SI","8W_embryo2",8,"SI","small intestine (TI/SI)","TA",34,"CLU","level (unit x state pseudobulk)",4.2244
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Early enterocyte",20,"CLU","level (unit x state pseudobulk)",8.5154
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Unresolved",54,"CLU","level (unit x state pseudobulk)",6.8237
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_SI","9W_embryo1",9,"SI","small intestine (TI/SI)","Mature enterocyte",86,"CLU","level (unit x state pseudobulk)",8.9037
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Goblet",17,"CLU","level (unit x state pseudobulk)",6.488
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Unresolved",34,"CLU","level (unit x state pseudobulk)",6.4657
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Mature enterocyte",20,"CLU","level (unit x state pseudobulk)",9.0635
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","TA",8,"CLU","level (unit x state pseudobulk)",7.9976
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Unresolved",21,"CLU","level (unit x state pseudobulk)",5.3525
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Goblet",43,"CLU","level (unit x state pseudobulk)",5.6605
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Unresolved",14,"CLU","level (unit x state pseudobulk)",8.6112
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Mature enterocyte",45,"CLU","level (unit x state pseudobulk)",8.6579
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Unresolved",7,"CLU","level (unit x state pseudobulk)",7.4149
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Goblet",8,"CLU","level (unit x state pseudobulk)",4.0506
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Unresolved",30,"CLU","level (unit x state pseudobulk)",6.6774
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Mature enterocyte",10,"CLU","level (unit x state pseudobulk)",9.0144
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Unresolved",10,"CLU","level (unit x state pseudobulk)",4.9369
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_LI","19W_embryo1",19,"LI","colon (prox/dist/LI)","Unresolved",48,"CLU","level (unit x state pseudobulk)",5.6636
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Mature enterocyte",5,"CLU","level (unit x state pseudobulk)",10.2367
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Unresolved",36,"CLU","level (unit x state pseudobulk)",7.6932
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Mature enterocyte",8,"CLU","level (unit x state pseudobulk)",9.1078
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Unresolved",28,"CLU","level (unit x state pseudobulk)",7.9339
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Mature enterocyte",13,"CLU","level (unit x state pseudobulk)",9.6944
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Unresolved",28,"CLU","level (unit x state pseudobulk)",8.1584
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","BEST4/OTOP2",28,"CLU","level (unit x state pseudobulk)",4.689
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","Unresolved",157,"CLU","level (unit x state pseudobulk)",8.3329
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Mature enterocyte",25,"CLU","level (unit x state pseudobulk)",8.9583
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Unresolved",86,"CLU","level (unit x state pseudobulk)",6.9079
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Goblet",8,"CLU","level (unit x state pseudobulk)",0.5472
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Unresolved",22,"CLU","level (unit x state pseudobulk)",6.054
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Mature enterocyte",6,"CLU","level (unit x state pseudobulk)",9.4018
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Unresolved",37,"CLU","level (unit x state pseudobulk)",7.293
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Mature enterocyte",94,"CLU","% positive cells",81.9149
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Unresolved",142,"CLU","% positive cells",89.4366
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","BEST4/OTOP2",17,"CLU","% positive cells",41.1765
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","EEC/secretory progenitor",29,"CLU","% positive cells",62.069
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Goblet",10,"CLU","% positive cells",70
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Mature enterocyte",306,"CLU","% positive cells",32.3529
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","TA",34,"CLU","% positive cells",76.4706
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Unresolved",472,"CLU","% positive cells",59.322
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",88,"CLU","% positive cells",21.5909
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",46,"CLU","% positive cells",67.3913
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Fetal progenitor",92,"CLU","% positive cells",46.7391
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Goblet",50,"CLU","% positive cells",64
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",1290,"CLU","% positive cells",49.4574
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Stem",42,"CLU","% positive cells",88.0952
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","TA",244,"CLU","% positive cells",89.3443
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Unresolved",1586,"CLU","% positive cells",65.0694
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",10,"CLU","% positive cells",50
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Mature enterocyte",107,"CLU","% positive cells",30.8411
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","TA",26,"CLU","% positive cells",84.6154
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Unresolved",282,"CLU","% positive cells",48.227
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",21,"CLU","% positive cells",76.1905
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",166,"CLU","% positive cells",48.1928
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Stem",107,"CLU","% positive cells",95.3271
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","TA",20,"CLU","% positive cells",100
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Unresolved",124,"CLU","% positive cells",44.3548
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",15,"CLU","% positive cells",33.3333
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",44,"CLU","% positive cells",81.8182
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Goblet",35,"CLU","% positive cells",91.4286
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Mature enterocyte",336,"CLU","% positive cells",58.0357
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Stem",483,"CLU","% positive cells",97.7226
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","TA",69,"CLU","% positive cells",100
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Unresolved",187,"CLU","% positive cells",39.0374
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Mature enterocyte",25,"CLU","% positive cells",48
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","TA",10,"CLU","% positive cells",50
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Unresolved",92,"CLU","% positive cells",64.1304
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Mature enterocyte",46,"CLU","% positive cells",50
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Stem",22,"CLU","% positive cells",90.9091
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","TA",12,"CLU","% positive cells",100
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Unresolved",14,"CLU","% positive cells",35.7143
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","BEST4/OTOP2",165,"CLU","% positive cells",28.4848
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",125,"CLU","% positive cells",48
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Fetal progenitor",29,"CLU","% positive cells",44.8276
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Goblet",62,"CLU","% positive cells",64.5161
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Mature enterocyte",1947,"CLU","% positive cells",25.2183
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Stem",28,"CLU","% positive cells",82.1429
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","TA",202,"CLU","% positive cells",76.2376
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Unresolved",2333,"CLU","% positive cells",48.0926
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",26,"CLU","% positive cells",69.2308
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Goblet",15,"CLU","% positive cells",80
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",260,"CLU","% positive cells",34.2308
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Stem",35,"CLU","% positive cells",88.5714
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","TA",44,"CLU","% positive cells",95.4545
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Unresolved",342,"CLU","% positive cells",67.5439
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",27,"CLU","% positive cells",33.3333
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",25,"CLU","% positive cells",52
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Goblet",13,"CLU","% positive cells",46.1538
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",208,"CLU","% positive cells",33.6538
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Stem",42,"CLU","% positive cells",95.2381
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","TA",37,"CLU","% positive cells",94.5946
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Unresolved",206,"CLU","% positive cells",58.2524
+"Fawkner2021","Fawkner 2021","ABM1","ABM",8,"TI","small intestine (TI/SI)","Fetal progenitor",36,"CLU","% positive cells",91.6667
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",10,"CLU","% positive cells",60
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Fetal progenitor",13,"CLU","% positive cells",53.8462
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Mature enterocyte",36,"CLU","% positive cells",38.8889
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","TA",23,"CLU","% positive cells",95.6522
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Unresolved",180,"CLU","% positive cells",74.4444
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",25,"CLU","% positive cells",56
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",40,"CLU","% positive cells",75
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Fetal progenitor",19,"CLU","% positive cells",42.1053
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Goblet",10,"CLU","% positive cells",80
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",467,"CLU","% positive cells",55.2463
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Stem",157,"CLU","% positive cells",96.8153
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","TA",18,"CLU","% positive cells",100
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Unresolved",227,"CLU","% positive cells",59.0308
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Mature enterocyte",52,"CLU","% positive cells",36.5385
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Unresolved",176,"CLU","% positive cells",47.1591
+"Fawkner2021","Fawkner 2021","ABV2","ABV",17,"proximal colon","colon (prox/dist/LI)","Unresolved",18,"CLU","% positive cells",77.7778
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",11,"CLU","% positive cells",72.7273
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Mature enterocyte",85,"CLU","% positive cells",45.8824
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Stem",25,"CLU","% positive cells",84
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Unresolved",78,"CLU","% positive cells",47.4359
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","BEST4/OTOP2",25,"CLU","% positive cells",20
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","EEC/secretory progenitor",192,"CLU","% positive cells",37.5
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Fetal progenitor",1956,"CLU","% positive cells",54.908
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Goblet",23,"CLU","% positive cells",43.4783
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Mature enterocyte",151,"CLU","% positive cells",53.6424
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Stem",182,"CLU","% positive cells",71.4286
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","TA",34,"CLU","% positive cells",73.5294
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Unresolved",1458,"CLU","% positive cells",32.0302
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Mature enterocyte",19,"CLU","% positive cells",47.3684
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","TA",16,"CLU","% positive cells",93.75
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Unresolved",44,"CLU","% positive cells",75
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",11,"CLU","% positive cells",36.3636
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",20,"CLU","% positive cells",70
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Goblet",13,"CLU","% positive cells",84.6154
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",94,"CLU","% positive cells",44.6809
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Stem",36,"CLU","% positive cells",97.2222
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Unresolved",98,"CLU","% positive cells",56.1224
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","TA",5,"CLU","% positive cells",40
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","Unresolved",67,"CLU","% positive cells",31.3433
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_SI","6W_embryo1",6,"SI","small intestine (TI/SI)","TA",43,"CLU","% positive cells",44.186
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_LI","6W_embryo2",6,"LI","colon (prox/dist/LI)","Unresolved",65,"CLU","% positive cells",73.8462
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_SI","6W_embryo2",6,"SI","small intestine (TI/SI)","TA",60,"CLU","% positive cells",68.3333
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","TA",31,"CLU","% positive cells",61.2903
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","Unresolved",34,"CLU","% positive cells",85.2941
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","TA",41,"CLU","% positive cells",51.2195
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","Unresolved",77,"CLU","% positive cells",64.9351
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","TA",104,"CLU","% positive cells",57.6923
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","Unresolved",36,"CLU","% positive cells",77.7778
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","Early enterocyte",35,"CLU","% positive cells",100
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","TA",6,"CLU","% positive cells",83.3333
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","TA",12,"CLU","% positive cells",75
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","Unresolved",20,"CLU","% positive cells",70
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_LI","8W_embryo2",8,"LI","colon (prox/dist/LI)","TA",43,"CLU","% positive cells",67.4419
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_SI","8W_embryo2",8,"SI","small intestine (TI/SI)","TA",34,"CLU","% positive cells",38.2353
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Early enterocyte",20,"CLU","% positive cells",95
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Unresolved",54,"CLU","% positive cells",98.1481
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_SI","9W_embryo1",9,"SI","small intestine (TI/SI)","Mature enterocyte",86,"CLU","% positive cells",100
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Goblet",17,"CLU","% positive cells",82.3529
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Unresolved",34,"CLU","% positive cells",73.5294
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Mature enterocyte",20,"CLU","% positive cells",100
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","TA",8,"CLU","% positive cells",100
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Unresolved",21,"CLU","% positive cells",61.9048
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Goblet",43,"CLU","% positive cells",34.8837
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Unresolved",14,"CLU","% positive cells",78.5714
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Mature enterocyte",45,"CLU","% positive cells",84.4444
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Unresolved",7,"CLU","% positive cells",71.4286
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Goblet",8,"CLU","% positive cells",50
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Unresolved",30,"CLU","% positive cells",76.6667
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Mature enterocyte",10,"CLU","% positive cells",90
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Unresolved",10,"CLU","% positive cells",40
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_LI","19W_embryo1",19,"LI","colon (prox/dist/LI)","Unresolved",48,"CLU","% positive cells",58.3333
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Mature enterocyte",5,"CLU","% positive cells",100
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Unresolved",36,"CLU","% positive cells",55.5556
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Mature enterocyte",8,"CLU","% positive cells",100
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Unresolved",28,"CLU","% positive cells",85.7143
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Mature enterocyte",13,"CLU","% positive cells",92.3077
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Unresolved",28,"CLU","% positive cells",78.5714
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","BEST4/OTOP2",28,"CLU","% positive cells",28.5714
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","Unresolved",157,"CLU","% positive cells",96.8153
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Mature enterocyte",25,"CLU","% positive cells",96
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Unresolved",86,"CLU","% positive cells",59.3023
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Goblet",8,"CLU","% positive cells",12.5
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Unresolved",22,"CLU","% positive cells",50
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Mature enterocyte",6,"CLU","% positive cells",100
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Unresolved",37,"CLU","% positive cells",86.4865
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Mature enterocyte",94,"ANXA1","level (unit x state pseudobulk)",0.8469
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Unresolved",142,"ANXA1","level (unit x state pseudobulk)",1.6452
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","BEST4/OTOP2",17,"ANXA1","level (unit x state pseudobulk)",3.4223
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","EEC/secretory progenitor",29,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Goblet",10,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Mature enterocyte",306,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","TA",34,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Unresolved",472,"ANXA1","level (unit x state pseudobulk)",3.2927
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",88,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",46,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Fetal progenitor",92,"ANXA1","level (unit x state pseudobulk)",8.0778
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Goblet",50,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",1290,"ANXA1","level (unit x state pseudobulk)",1.9819
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Stem",42,"ANXA1","level (unit x state pseudobulk)",2.8338
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","TA",244,"ANXA1","level (unit x state pseudobulk)",1.4198
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Unresolved",1586,"ANXA1","level (unit x state pseudobulk)",3.2309
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",10,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Mature enterocyte",107,"ANXA1","level (unit x state pseudobulk)",4.3493
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","TA",26,"ANXA1","level (unit x state pseudobulk)",3.1143
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Unresolved",282,"ANXA1","level (unit x state pseudobulk)",5.4688
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",21,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",166,"ANXA1","level (unit x state pseudobulk)",1.0705
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Stem",107,"ANXA1","level (unit x state pseudobulk)",0.495
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","TA",20,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Unresolved",124,"ANXA1","level (unit x state pseudobulk)",7.3429
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",15,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",44,"ANXA1","level (unit x state pseudobulk)",1.0204
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Goblet",35,"ANXA1","level (unit x state pseudobulk)",0.9626
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Mature enterocyte",336,"ANXA1","level (unit x state pseudobulk)",1.3494
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Stem",483,"ANXA1","level (unit x state pseudobulk)",0.2431
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","TA",69,"ANXA1","level (unit x state pseudobulk)",1.0399
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Unresolved",187,"ANXA1","level (unit x state pseudobulk)",5.971
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Mature enterocyte",25,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","TA",10,"ANXA1","level (unit x state pseudobulk)",2.6679
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Unresolved",92,"ANXA1","level (unit x state pseudobulk)",3.0778
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Mature enterocyte",46,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Stem",22,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","TA",12,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Unresolved",14,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","BEST4/OTOP2",165,"ANXA1","level (unit x state pseudobulk)",1.3756
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",125,"ANXA1","level (unit x state pseudobulk)",0.852
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Fetal progenitor",29,"ANXA1","level (unit x state pseudobulk)",7.97
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Goblet",62,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Mature enterocyte",1947,"ANXA1","level (unit x state pseudobulk)",2.8341
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Stem",28,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","TA",202,"ANXA1","level (unit x state pseudobulk)",1.8162
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Unresolved",2333,"ANXA1","level (unit x state pseudobulk)",4.356
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",26,"ANXA1","level (unit x state pseudobulk)",2.0749
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Goblet",15,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",260,"ANXA1","level (unit x state pseudobulk)",1.2016
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Stem",35,"ANXA1","level (unit x state pseudobulk)",1.4192
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","TA",44,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Unresolved",342,"ANXA1","level (unit x state pseudobulk)",2.5558
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",27,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",25,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Goblet",13,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",208,"ANXA1","level (unit x state pseudobulk)",1.6635
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Stem",42,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","TA",37,"ANXA1","level (unit x state pseudobulk)",1.035
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Unresolved",206,"ANXA1","level (unit x state pseudobulk)",2.6941
+"Fawkner2021","Fawkner 2021","ABM1","ABM",8,"TI","small intestine (TI/SI)","Fetal progenitor",36,"ANXA1","level (unit x state pseudobulk)",5.134
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",10,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Fetal progenitor",13,"ANXA1","level (unit x state pseudobulk)",8.5019
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Mature enterocyte",36,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","TA",23,"ANXA1","level (unit x state pseudobulk)",2.7907
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Unresolved",180,"ANXA1","level (unit x state pseudobulk)",1.6305
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",25,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",40,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Fetal progenitor",19,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Goblet",10,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",467,"ANXA1","level (unit x state pseudobulk)",3.1185
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Stem",157,"ANXA1","level (unit x state pseudobulk)",1.5645
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","TA",18,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Unresolved",227,"ANXA1","level (unit x state pseudobulk)",3.2023
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Mature enterocyte",52,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Unresolved",176,"ANXA1","level (unit x state pseudobulk)",5.9772
+"Fawkner2021","Fawkner 2021","ABV2","ABV",17,"proximal colon","colon (prox/dist/LI)","Unresolved",18,"ANXA1","level (unit x state pseudobulk)",2.4878
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",11,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Mature enterocyte",85,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Stem",25,"ANXA1","level (unit x state pseudobulk)",1.4645
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Unresolved",78,"ANXA1","level (unit x state pseudobulk)",3.3895
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","BEST4/OTOP2",25,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","EEC/secretory progenitor",192,"ANXA1","level (unit x state pseudobulk)",1.0217
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Fetal progenitor",1956,"ANXA1","level (unit x state pseudobulk)",4.0729
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Goblet",23,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Mature enterocyte",151,"ANXA1","level (unit x state pseudobulk)",1.766
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Stem",182,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","TA",34,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Unresolved",1458,"ANXA1","level (unit x state pseudobulk)",4.1208
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Mature enterocyte",19,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","TA",16,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Unresolved",44,"ANXA1","level (unit x state pseudobulk)",2.883
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",11,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",20,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Goblet",13,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",94,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Stem",36,"ANXA1","level (unit x state pseudobulk)",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Unresolved",98,"ANXA1","level (unit x state pseudobulk)",5.2131
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","TA",5,"ANXA1","level (unit x state pseudobulk)",0.542
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","Unresolved",67,"ANXA1","level (unit x state pseudobulk)",4.1431
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_SI","6W_embryo1",6,"SI","small intestine (TI/SI)","TA",43,"ANXA1","level (unit x state pseudobulk)",3.3546
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_LI","6W_embryo2",6,"LI","colon (prox/dist/LI)","Unresolved",65,"ANXA1","level (unit x state pseudobulk)",3.9903
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_SI","6W_embryo2",6,"SI","small intestine (TI/SI)","TA",60,"ANXA1","level (unit x state pseudobulk)",3.3444
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","TA",31,"ANXA1","level (unit x state pseudobulk)",1.434
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","Unresolved",34,"ANXA1","level (unit x state pseudobulk)",0.4037
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","TA",41,"ANXA1","level (unit x state pseudobulk)",0.0844
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","Unresolved",77,"ANXA1","level (unit x state pseudobulk)",1.1068
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","TA",104,"ANXA1","level (unit x state pseudobulk)",2.3058
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","Unresolved",36,"ANXA1","level (unit x state pseudobulk)",1.7119
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","Early enterocyte",35,"ANXA1","level (unit x state pseudobulk)",0.2689
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","TA",6,"ANXA1","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","TA",12,"ANXA1","level (unit x state pseudobulk)",0.28
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","Unresolved",20,"ANXA1","level (unit x state pseudobulk)",1.9069
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_LI","8W_embryo2",8,"LI","colon (prox/dist/LI)","TA",43,"ANXA1","level (unit x state pseudobulk)",3.355
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_SI","8W_embryo2",8,"SI","small intestine (TI/SI)","TA",34,"ANXA1","level (unit x state pseudobulk)",4.2964
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Early enterocyte",20,"ANXA1","level (unit x state pseudobulk)",3.2318
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Unresolved",54,"ANXA1","level (unit x state pseudobulk)",4.6503
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_SI","9W_embryo1",9,"SI","small intestine (TI/SI)","Mature enterocyte",86,"ANXA1","level (unit x state pseudobulk)",1.6945
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Goblet",17,"ANXA1","level (unit x state pseudobulk)",2.9731
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Unresolved",34,"ANXA1","level (unit x state pseudobulk)",2.3934
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Mature enterocyte",20,"ANXA1","level (unit x state pseudobulk)",1.3141
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","TA",8,"ANXA1","level (unit x state pseudobulk)",1.4162
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Unresolved",21,"ANXA1","level (unit x state pseudobulk)",6.1906
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Goblet",43,"ANXA1","level (unit x state pseudobulk)",4.859
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Unresolved",14,"ANXA1","level (unit x state pseudobulk)",2.7471
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Mature enterocyte",45,"ANXA1","level (unit x state pseudobulk)",5.9772
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Unresolved",7,"ANXA1","level (unit x state pseudobulk)",1.0133
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Goblet",8,"ANXA1","level (unit x state pseudobulk)",0.4594
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Unresolved",30,"ANXA1","level (unit x state pseudobulk)",4.0116
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Mature enterocyte",10,"ANXA1","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Unresolved",10,"ANXA1","level (unit x state pseudobulk)",4.7701
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_LI","19W_embryo1",19,"LI","colon (prox/dist/LI)","Unresolved",48,"ANXA1","level (unit x state pseudobulk)",4.7764
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Mature enterocyte",5,"ANXA1","level (unit x state pseudobulk)",4.7326
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Unresolved",36,"ANXA1","level (unit x state pseudobulk)",3.6512
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Mature enterocyte",8,"ANXA1","level (unit x state pseudobulk)",2.3107
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Unresolved",28,"ANXA1","level (unit x state pseudobulk)",3.032
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Mature enterocyte",13,"ANXA1","level (unit x state pseudobulk)",0
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Unresolved",28,"ANXA1","level (unit x state pseudobulk)",5.1432
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","BEST4/OTOP2",28,"ANXA1","level (unit x state pseudobulk)",3.3433
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","Unresolved",157,"ANXA1","level (unit x state pseudobulk)",7.6705
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Mature enterocyte",25,"ANXA1","level (unit x state pseudobulk)",4.3207
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Unresolved",86,"ANXA1","level (unit x state pseudobulk)",6.1786
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Goblet",8,"ANXA1","level (unit x state pseudobulk)",1.2165
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Unresolved",22,"ANXA1","level (unit x state pseudobulk)",7.4965
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Mature enterocyte",6,"ANXA1","level (unit x state pseudobulk)",2.2224
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Unresolved",37,"ANXA1","level (unit x state pseudobulk)",6.1433
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Mature enterocyte",94,"ANXA1","% positive cells",1.0638
+"Fawkner2021","Fawkner 2021","AAC1","AAC",9,"TI","small intestine (TI/SI)","Unresolved",142,"ANXA1","% positive cells",3.5211
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","BEST4/OTOP2",17,"ANXA1","% positive cells",5.8824
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","EEC/secretory progenitor",29,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Goblet",10,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Mature enterocyte",306,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","TA",34,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","AAT1","AAT",12,"TI","small intestine (TI/SI)","Unresolved",472,"ANXA1","% positive cells",2.1186
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",88,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",46,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Fetal progenitor",92,"ANXA1","% positive cells",51.087
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Goblet",50,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",1290,"ANXA1","% positive cells",1.3178
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Stem",42,"ANXA1","% positive cells",2.381
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","TA",244,"ANXA1","% positive cells",2.459
+"Fawkner2021","Fawkner 2021","AAT2","AAT",12,"proximal colon","colon (prox/dist/LI)","Unresolved",1586,"ANXA1","% positive cells",2.9634
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",10,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Mature enterocyte",107,"ANXA1","% positive cells",2.8037
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","TA",26,"ANXA1","% positive cells",7.6923
+"Fawkner2021","Fawkner 2021","AAT3","AAT",12,"distal colon","colon (prox/dist/LI)","Unresolved",282,"ANXA1","% positive cells",3.1915
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",21,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",166,"ANXA1","% positive cells",0.6024
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Stem",107,"ANXA1","% positive cells",0.9346
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","TA",20,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABD2","ABD",16,"proximal colon","colon (prox/dist/LI)","Unresolved",124,"ANXA1","% positive cells",8.871
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",15,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",44,"ANXA1","% positive cells",2.2727
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Goblet",35,"ANXA1","% positive cells",2.8571
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Mature enterocyte",336,"ANXA1","% positive cells",0.5952
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Stem",483,"ANXA1","% positive cells",0.4141
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","TA",69,"ANXA1","% positive cells",1.4493
+"Fawkner2021","Fawkner 2021","ABD3","ABD",16,"distal colon","colon (prox/dist/LI)","Unresolved",187,"ANXA1","% positive cells",4.2781
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Mature enterocyte",25,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","TA",10,"ANXA1","% positive cells",10
+"Fawkner2021","Fawkner 2021","ABF3","ABF",10,"TI","small intestine (TI/SI)","Unresolved",92,"ANXA1","% positive cells",6.5217
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Mature enterocyte",46,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Stem",22,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","TA",12,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABI3","ABI",18,"distal colon","colon (prox/dist/LI)","Unresolved",14,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","BEST4/OTOP2",165,"ANXA1","% positive cells",1.2121
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",125,"ANXA1","% positive cells",0.8
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Fetal progenitor",29,"ANXA1","% positive cells",55.1724
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Goblet",62,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Mature enterocyte",1947,"ANXA1","% positive cells",0.9245
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Stem",28,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","TA",202,"ANXA1","% positive cells",1.9802
+"Fawkner2021","Fawkner 2021","ABK1","ABK",13,"TI","small intestine (TI/SI)","Unresolved",2333,"ANXA1","% positive cells",3.7291
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",26,"ANXA1","% positive cells",7.6923
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Goblet",15,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",260,"ANXA1","% positive cells",0.3846
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Stem",35,"ANXA1","% positive cells",2.8571
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","TA",44,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABK2","ABK",13,"proximal colon","colon (prox/dist/LI)","Unresolved",342,"ANXA1","% positive cells",2.0468
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",27,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",25,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Goblet",13,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",208,"ANXA1","% positive cells",1.4423
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Stem",42,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","TA",37,"ANXA1","% positive cells",2.7027
+"Fawkner2021","Fawkner 2021","ABK3","ABK",13,"distal colon","colon (prox/dist/LI)","Unresolved",206,"ANXA1","% positive cells",1.4563
+"Fawkner2021","Fawkner 2021","ABM1","ABM",8,"TI","small intestine (TI/SI)","Fetal progenitor",36,"ANXA1","% positive cells",16.6667
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","EEC/secretory progenitor",10,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Fetal progenitor",13,"ANXA1","% positive cells",30.7692
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Mature enterocyte",36,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","TA",23,"ANXA1","% positive cells",4.3478
+"Fawkner2021","Fawkner 2021","ABN1","ABN",13,"TI","small intestine (TI/SI)","Unresolved",180,"ANXA1","% positive cells",1.6667
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","BEST4/OTOP2",25,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",40,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Fetal progenitor",19,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Goblet",10,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Mature enterocyte",467,"ANXA1","% positive cells",1.0707
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Stem",157,"ANXA1","% positive cells",2.5478
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","TA",18,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABN3","ABN",13,"distal colon","colon (prox/dist/LI)","Unresolved",227,"ANXA1","% positive cells",2.2026
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Mature enterocyte",52,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABV1","ABV",17,"TI","small intestine (TI/SI)","Unresolved",176,"ANXA1","% positive cells",18.75
+"Fawkner2021","Fawkner 2021","ABV2","ABV",17,"proximal colon","colon (prox/dist/LI)","Unresolved",18,"ANXA1","% positive cells",11.1111
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","EEC/secretory progenitor",11,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Mature enterocyte",85,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Stem",25,"ANXA1","% positive cells",4
+"Fawkner2021","Fawkner 2021","ABV3","ABV",17,"distal colon","colon (prox/dist/LI)","Unresolved",78,"ANXA1","% positive cells",2.5641
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","BEST4/OTOP2",25,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","EEC/secretory progenitor",192,"ANXA1","% positive cells",0.5208
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Fetal progenitor",1956,"ANXA1","% positive cells",4.8569
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Goblet",23,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Mature enterocyte",151,"ANXA1","% positive cells",1.3245
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Stem",182,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","TA",34,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ABZ2","ABZ",8,"TI","small intestine (TI/SI)","Unresolved",1458,"ANXA1","% positive cells",2.5377
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Mature enterocyte",19,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","TA",16,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ACB1","ACB",20,"TI","small intestine (TI/SI)","Unresolved",44,"ANXA1","% positive cells",2.2727
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","BEST4/OTOP2",11,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","EEC/secretory progenitor",20,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Goblet",13,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Mature enterocyte",94,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Stem",36,"ANXA1","% positive cells",0
+"Fawkner2021","Fawkner 2021","ACB2","ACB",20,"proximal colon","colon (prox/dist/LI)","Unresolved",98,"ANXA1","% positive cells",3.0612
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","TA",5,"ANXA1","% positive cells",20
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_LI","6W_embryo1",6,"LI","colon (prox/dist/LI)","Unresolved",67,"ANXA1","% positive cells",31.3433
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo1_SI","6W_embryo1",6,"SI","small intestine (TI/SI)","TA",43,"ANXA1","% positive cells",53.4884
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_LI","6W_embryo2",6,"LI","colon (prox/dist/LI)","Unresolved",65,"ANXA1","% positive cells",26.1538
+"Gao2018","Gao 2018 (states exploratory)","6W_embryo2_SI","6W_embryo2",6,"SI","small intestine (TI/SI)","TA",60,"ANXA1","% positive cells",21.6667
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","TA",31,"ANXA1","% positive cells",19.3548
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo1_SI","7W_embryo1",7,"SI","small intestine (TI/SI)","Unresolved",34,"ANXA1","% positive cells",11.7647
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","TA",41,"ANXA1","% positive cells",4.878
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_LI","7W_embryo2",7,"LI","colon (prox/dist/LI)","Unresolved",77,"ANXA1","% positive cells",10.3896
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","TA",104,"ANXA1","% positive cells",25.9615
+"Gao2018","Gao 2018 (states exploratory)","7W_embryo2_SI","7W_embryo2",7,"SI","small intestine (TI/SI)","Unresolved",36,"ANXA1","% positive cells",36.1111
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","Early enterocyte",35,"ANXA1","% positive cells",11.4286
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_LI","8W_embryo1",8,"LI","colon (prox/dist/LI)","TA",6,"ANXA1","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","TA",12,"ANXA1","% positive cells",16.6667
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo1_SI","8W_embryo1",8,"SI","small intestine (TI/SI)","Unresolved",20,"ANXA1","% positive cells",5
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_LI","8W_embryo2",8,"LI","colon (prox/dist/LI)","TA",43,"ANXA1","% positive cells",32.5581
+"Gao2018","Gao 2018 (states exploratory)","8W_embryo2_SI","8W_embryo2",8,"SI","small intestine (TI/SI)","TA",34,"ANXA1","% positive cells",23.5294
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Early enterocyte",20,"ANXA1","% positive cells",65
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_LI","9W_embryo1",9,"LI","colon (prox/dist/LI)","Unresolved",54,"ANXA1","% positive cells",72.2222
+"Gao2018","Gao 2018 (states exploratory)","9W_embryo1_SI","9W_embryo1",9,"SI","small intestine (TI/SI)","Mature enterocyte",86,"ANXA1","% positive cells",22.093
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Goblet",17,"ANXA1","% positive cells",11.7647
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_LI","11W_embryo1",11,"LI","colon (prox/dist/LI)","Unresolved",34,"ANXA1","% positive cells",20.5882
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Mature enterocyte",20,"ANXA1","% positive cells",20
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","TA",8,"ANXA1","% positive cells",37.5
+"Gao2018","Gao 2018 (states exploratory)","11W_embryo1_SI","11W_embryo1",11,"SI","small intestine (TI/SI)","Unresolved",21,"ANXA1","% positive cells",38.0952
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Goblet",43,"ANXA1","% positive cells",27.907
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_LI","14W_embryo1",14,"LI","colon (prox/dist/LI)","Unresolved",14,"ANXA1","% positive cells",7.1429
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Mature enterocyte",45,"ANXA1","% positive cells",37.7778
+"Gao2018","Gao 2018 (states exploratory)","14W_embryo1_SI","14W_embryo1",14,"SI","small intestine (TI/SI)","Unresolved",7,"ANXA1","% positive cells",14.2857
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Goblet",8,"ANXA1","% positive cells",12.5
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_LI","16W_embryo1",16,"LI","colon (prox/dist/LI)","Unresolved",30,"ANXA1","% positive cells",26.6667
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Mature enterocyte",10,"ANXA1","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","16W_embryo1_SI","16W_embryo1",16,"SI","small intestine (TI/SI)","Unresolved",10,"ANXA1","% positive cells",30
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_LI","19W_embryo1",19,"LI","colon (prox/dist/LI)","Unresolved",48,"ANXA1","% positive cells",45.8333
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Mature enterocyte",5,"ANXA1","% positive cells",40
+"Gao2018","Gao 2018 (states exploratory)","19W_embryo1_SI","19W_embryo1",19,"SI","small intestine (TI/SI)","Unresolved",36,"ANXA1","% positive cells",27.7778
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Mature enterocyte",8,"ANXA1","% positive cells",12.5
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo1_SI","21W_embryo1",21,"SI","small intestine (TI/SI)","Unresolved",28,"ANXA1","% positive cells",21.4286
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Mature enterocyte",13,"ANXA1","% positive cells",0
+"Gao2018","Gao 2018 (states exploratory)","21W_embryo2_SI","21W_embryo2",21,"SI","small intestine (TI/SI)","Unresolved",28,"ANXA1","% positive cells",32.1429
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","BEST4/OTOP2",28,"ANXA1","% positive cells",21.4286
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_LI","24W_embryo1",24,"LI","colon (prox/dist/LI)","Unresolved",157,"ANXA1","% positive cells",92.3567
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Mature enterocyte",25,"ANXA1","% positive cells",28
+"Gao2018","Gao 2018 (states exploratory)","24W_embryo1_SI","24W_embryo1",24,"SI","small intestine (TI/SI)","Unresolved",86,"ANXA1","% positive cells",53.4884
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Goblet",8,"ANXA1","% positive cells",12.5
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_LI","25W_embryo1",25,"LI","colon (prox/dist/LI)","Unresolved",22,"ANXA1","% positive cells",36.3636
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Mature enterocyte",6,"ANXA1","% positive cells",50
+"Gao2018","Gao 2018 (states exploratory)","25W_embryo1_SI","25W_embryo1",25,"SI","small intestine (TI/SI)","Unresolved",37,"ANXA1","% positive cells",56.7568
