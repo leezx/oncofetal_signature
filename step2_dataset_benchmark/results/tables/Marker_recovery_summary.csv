@@ -1,0 +1,5 @@
+"dataset","rule","measured_all_31","positive_all_31","measured_priority_5","positive_priority_5"
+"Human_Senger","log2FC_gt_0",27,14,5,1
+"Human_Fawkner","detection_fraction_gt_0",31,26,5,5
+"Mouse_Pikkupeura","mean_log2FC_gt_0",27,25,5,5
+"Mouse_GSE44433","log2FC_gt_0",23,10,5,4

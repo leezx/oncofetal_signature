@@ -21,3 +21,12 @@ Configuration is centralized in `step2_fetal/config/step2.env`. See
 **Validity status:** the modules remain reproducible, but the current Step 2
 dataset/contrast failed literature-marker biological QA. Do not use the 706-gene
 output downstream; see `docs/MAJOR_REVISION_LOG.md`.
+
+## Replacement dataset qualification
+
+| Module | Purpose | Primary outputs |
+|---|---|---|
+| `step2_dataset_benchmark/scripts/00_download_benchmark_inputs.sh` | Download four benchmark datasets and NCBI mapping into DATA | raw inputs and checksums |
+| `step2_dataset_benchmark/scripts/01_benchmark_31_markers.R` | Evaluate 31 prespecified markers without constructing a signature | four-dataset benchmark, metadata audit, priority-five table |
+
+See `step2_dataset_benchmark/docs/BENCHMARK_REPORT.md` for the review decision.

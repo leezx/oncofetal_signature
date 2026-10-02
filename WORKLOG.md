@@ -124,3 +124,30 @@ developmental contrasts. Any replacement analysis must use a new versioned
 directory and preserve the current failed-analysis checkpoint.
 
 **Full record**: See `docs/MAJOR_REVISION_LOG.md`.
+
+## 2026-10-02 — Replacement dataset qualification benchmark
+
+**Scope**: Evaluated the 31 prespecified literature markers in four proposed
+replacement resources before permitting any new hard developmental gate.
+No genome-wide signature was constructed.
+
+**Contrasts**: GSE101531 used six fetal versus three adult human epithelial
+enterospheres. GSE158702 was restricted to fetal EpCAM-positive expression
+validation because it has no adult arm. GSE160449 evaluated fetal versus adult
+mouse cultures separately in LN and collagen arms. GSE44433 used only five WT
+E17.5 and five WT eight-week laser-microdissected ileal epithelial samples.
+
+**Findings**: Pikkupeura recovered positive fetal direction for 25/27 measured
+candidates and all five priority markers. GSE44433 recovered 10/23 and four of
+five priority markers, with Tacstd2 slightly negative. Senger recovered only
+14/27 and one of five priority markers. Fawkner confirmed fetal expression but
+cannot provide a fetal/adult fold change.
+
+**Decision for review**: Pikkupeura qualifies as a strong mouse culture
+benchmark; GSE44433 is useful independent in-vivo replication but not a sole
+discovery dataset; Senger fails this marker-direction qualification; Fawkner is
+fetal-state annotation evidence only. A suitable human discovery dataset with a
+matched adult epithelial reference remains unresolved. Step 3 remains blocked.
+
+**Audit**: See `step2_dataset_benchmark/docs/BENCHMARK_REPORT.md` and
+`step2_dataset_benchmark/results/tables/`.
