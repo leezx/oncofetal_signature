@@ -47,7 +47,8 @@ fi
 # Integration, QA, audit, figures.
 python3 "$script_dir/05_crc_high_integration.py" --de-dir "$de_dir" \
   --candidates "$step_dir/config/literature_candidates_31.tsv" \
-  --aliases "$step_dir/config/symbol_aliases.tsv" --out-dir "$tables_dir" \
+  --aliases "$step_dir/config/symbol_aliases.tsv" \
+  --orthology "$step_dir/config/nonhuman_candidate_orthology.tsv" --out-dir "$tables_dir" \
   --min-log2fc "$MIN_LOG2FC" --max-fdr "$MAX_FDR"
 cp "$de_dir/TCGA_tumor_vs_normal_DEG.csv" "$de_dir/TCGA_sample_inclusion.csv" \
    "$de_dir/TCGA_contrast_summary.csv" "$tables_dir/"

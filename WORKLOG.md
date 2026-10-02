@@ -198,3 +198,28 @@ by Pelka expression filtering.
 (9606933) that the account owner must accept in the Synapse web UI. No
 `CRC_high` call is made until S1 runs; current labels are
 `T1_pass_S1_pending` / `Not_T1`.
+
+## 2026-10-02 — Step 3 plan v2 after user review
+
+**Review verdict**: "Approve with one conceptual modification: do not let TCGA
+bulk veto a malignant-epithelial CRC-high gene."
+
+**Change**: `CRC_high` = S1 ∩ S2 (Joanito primary + Pelka replication). TCGA T1
+is reported per gene as `bulk_support` and no longer gates the label. No
+threshold, model, dataset, or QA rule changed; Joanito had not been examined.
+
+**Also applied**: final tables now carry `hgnc_symbol` (current HGNC, e.g.
+CCN1/CCN2) plus `source_symbol` (CYR61/CTGF in GENCODE v26/Pelka). LY6A and
+REG3B are recorded as having no direct human one-to-one orthologue (Ensembl
+116: Ly6a → LY6S and Reg3b → REG1B, both `ortholog_one2many`, confidence 0) in
+`config/nonhuman_candidate_orthology.tsv`, replacing the earlier "no human
+gene" wording.
+
+**Confirmed unchanged**: Pelka log2FC > 0 + FDR < 0.05; direction-only stem/TA
+control; patient-level pseudobulk only; admission-QA markers never used to tune
+thresholds; EMP1's pattern (normal-high in whole epithelium, higher than normal
+stem/TA) is reported as-is.
+
+**Gate before S1**: the Joanito label mapping must be shown to the user and
+frozen before any Joanito DE. Interim labels: 6,296 `S2_pass_S1_pending`,
+22,147 `S2_fail_S1_pending`.

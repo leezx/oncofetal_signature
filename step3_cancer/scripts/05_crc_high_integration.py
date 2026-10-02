@@ -48,6 +48,7 @@ def main():
     ap.add_argument("--de-dir", required=True)
     ap.add_argument("--candidates", required=True)
     ap.add_argument("--aliases", required=True, help="current HGNC -> source annotation symbol map")
+    ap.add_argument("--orthology", required=True, help="non-human candidate orthology notes")
     ap.add_argument("--out-dir", required=True)
     ap.add_argument("--min-log2fc", type=float, default=0.5)
     ap.add_argument("--max-fdr", type=float, default=0.05)
@@ -104,33 +105,52 @@ def main():
             ev[c] = np.nan
         ev["ProlifCtrl_source"] = "pending"
 
-    t1 = ev.T1_pass.fillna(False).astype(bool)
+    # Review decision 2026-10-02 (plan v2): malignant-epithelial evidence
+    # defines CRC-high; TCGA bulk is orthogonal population-level support and
+    # has no veto, because stromal/immune composition can dilute or invert
+    # epithelial re-expression in bulk tumour RNA.
+    ev["bulk_support"] = ev.T1_pass.fillna(False).astype(bool)
+    t1 = ev.bulk_support
     s2p = ev.S2_pass.fillna(False).astype(bool)
     if have_s1:
         s1d = ev.S1_discovery.fillna(False).astype(bool)
         s1p = ev.S1_pass.fillna(False).astype(bool)
         lab = np.select(
-            [t1 & s1p & s2p, t1 & s1p, t1 & s1d & ~s1p, t1 & ~s1d, ~t1 & s1p & s2p],
-            ["CRC_high", "CRC_high_epithelial_unreplicated", "Proliferation_associated_reject",
-             "Tumour_level_only", "Epithelial_only"],
+            [s1p & s2p, s1p & ~s2p, s1d & ~s1p, t1 & ~s1d],
+            ["CRC_high", "CRC_high_unreplicated", "Proliferation_associated_reject",
+             "Tumour_level_only"],
             default="Not_CRC_high")
     else:
-        lab = np.where(t1, "T1_pass_S1_pending", "Not_T1")
+        lab = np.where(s2p, "S2_pass_S1_pending", "S2_fail_S1_pending")
     ev["final_label"] = lab
     ev["CRC_high"] = ev.final_label == "CRC_high"
-    ev = ev.sort_values(["CRC_high", "T1_log2FC"], ascending=[False, False])
-    lead = ["gene_id", "symbol", "match_key", "final_label", "CRC_high"]
+
+    # Report current HGNC symbols; keep the annotation's own symbol.
+    alias = pd.read_csv(a.aliases, sep="\t")
+    to_current = dict(zip(alias.source_symbol, alias.current_hgnc_symbol))
+    ev = ev.rename(columns={"symbol": "source_symbol"})
+    ev["hgnc_symbol"] = ev.source_symbol.map(to_current).fillna(ev.source_symbol)
+    ev = ev.sort_values(["CRC_high", "S1_pass" if have_s1 else "S2_pass", "T1_log2FC"],
+                        ascending=[False, False, False])
+    lead = ["gene_id", "hgnc_symbol", "source_symbol", "match_key", "final_label", "CRC_high",
+            "bulk_support"]
     ev = ev[lead + [c for c in ev.columns if c not in lead]]
     ev.to_csv(out / "CRC_high_evidence.csv", index=False)
 
     cand = pd.read_csv(a.candidates, sep="\t")
-    alias = pd.read_csv(a.aliases, sep="\t").set_index("current_hgnc_symbol").source_symbol
-    cand["lookup_symbol"] = cand.gene.map(alias).fillna(cand.gene)
-    audit = cand.merge(ev, left_on="lookup_symbol", right_on="symbol", how="left")
-    audit["T1_status"] = np.where(audit.symbol.isna(), "symbol_absent_from_annotation",
+    orth = pd.read_csv(a.orthology, sep="\t").set_index("candidate")
+    audit = cand.merge(ev, left_on="gene", right_on="hgnc_symbol", how="left")
+    absent = audit.hgnc_symbol.isna()
+    audit["annotation_status"] = np.where(
+        audit.gene.isin(orth.index), audit.gene.map(orth.audit_status),
+        np.where(absent, "symbol_absent_from_annotation", "present"))
+    audit["T1_status"] = np.where(absent, audit.annotation_status,
                                   np.where(audit.T1_log2FC.isna(), "not_tested", "tested"))
-    audit["Pelka_status"] = np.where(audit.symbol.isna(), "symbol_absent_from_annotation",
+    audit["Pelka_status"] = np.where(absent, audit.annotation_status,
                                      np.where(audit.Pelka_log2FC.isna(), "filtered_low_expression", "tested"))
+    if have_s1:
+        audit["Joanito_status"] = np.where(absent, audit.annotation_status,
+                                           np.where(audit.Joanito_log2FC.isna(), "filtered_low_expression", "tested"))
     audit.to_csv(out / "Literature_31_CRC_axis_audit.csv", index=False)
 
     print(qa[["contrast", "panel", "n_measured", "n_expected_direction", "fraction", "contrast_admitted"]]

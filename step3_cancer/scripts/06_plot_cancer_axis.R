@@ -19,6 +19,7 @@ dir.create(fig, showWarnings = FALSE, recursive = TRUE)
 dir.create(src, showWarnings = FALSE, recursive = TRUE)
 
 ev <- read.csv(file.path(tab, "CRC_high_evidence.csv"), check.names = FALSE)
+ev$symbol <- ev$hgnc_symbol  # current HGNC symbols in figures
 qa <- read.csv(file.path(tab, "Dataset_admission_QA.csv"))
 panel <- c("CDH3", "CLDN1", "FOXQ1", "KRT23", "LGR5", "ASCL2", "MYC", "TESC",
            "CA1", "CA2", "CA4", "GUCA2A", "GUCA2B", "CLCA4", "AQP8", "SLC26A3", "MS4A12", "CEACAM7")

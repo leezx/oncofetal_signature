@@ -46,4 +46,4 @@ source data, and figures are copied into `step3_cancer/results/`.
 | S1 Joanito discovery | log2FC ≥ 0.5, FDR < 0.05, `~ group + cohort` |
 | S1 proliferation control | malignant / normal stem-TA-cycling log2FC > 0 |
 | S2 Pelka | log2FC > 0, FDR < 0.05, `~ group` |
-| Final | `CRC_high` = T1 ∩ S1 ∩ S2 |
+| Final | `CRC_high` = S1 ∩ S2; `bulk_support` = T1 (no veto) |

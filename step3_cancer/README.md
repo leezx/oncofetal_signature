@@ -2,7 +2,7 @@
 
 Genome-wide tumour re-expression at two resolutions: TCGA COAD+READ bulk (T1,
 population level) and CRC malignant epithelial scRNA (S1 Joanito, S2 Pelka,
-epithelial-intrinsic). `CRC_high = T1 ∩ S1 ∩ S2`. Rules:
+epithelial-intrinsic). `CRC_high = S1 ∩ S2`; TCGA is reported as `bulk_support`. Rules:
 [`docs/ANALYSIS_PLAN.md`](docs/ANALYSIS_PLAN.md); commands:
 [`docs/RUNBOOK.md`](docs/RUNBOOK.md).
 

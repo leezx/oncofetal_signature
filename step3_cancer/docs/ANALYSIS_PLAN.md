@@ -3,10 +3,11 @@
 ## Material Passport
 
 - Origin: user task brief "Step 3 — Cancer axis: TCGA + malignant epithelial scRNA" (2026-10-02)
-- Version label: step3_plan_v1
-- Status: frozen before any tumour/normal expression result was examined.
-  Only sample-level metadata (specimen types, cluster labels, patient counts)
-  was inspected while writing this plan.
+- Version label: step3_plan_v2 (v1 committed `a2db19f`)
+- Status: v1 was frozen before any tumour/normal expression result was
+  examined. v2 changes only the final-label rule, after user review on
+  2026-10-02 (see "Revision v2"); no threshold, model, dataset, or QA rule
+  changed, and Joanito (S1) had not been examined.
 
 ## Objective
 
@@ -14,15 +15,19 @@ Define, genome-wide and independently of the developmental axis, which genes
 are re-expressed in colorectal cancer at two levels of resolution:
 
 ```text
-Level 1  TCGA COAD+READ primary tumour vs normal colon      → population-level tumour re-expression (T1)
-Level 2  CRC malignant epithelium vs normal epithelium (sc) → epithelial-intrinsic re-expression     (S1, S2)
+S1  Joanito malignant vs normal epithelium (+ stem/TA control)  → primary malignant-epithelial evidence
+S2  Pelka tumour vs normal epithelium                          → independent epithelial replication
+T1  TCGA COAD+READ primary tumour vs normal colon              → population-level support
 
-CRC-High = T1 ∩ S1 ∩ S2
+CRC-High     = S1 ∩ S2
+bulk_support = T1 (reported per gene; no veto)
 ```
 
-A gene is called **CRC-high** only when both levels pass. TCGA alone cannot
-distinguish epithelial re-expression from fibroblast, myeloid, or endothelial
-contributions to bulk tumour RNA; scRNA alone has fewer patients.
+The construct is malignant **epithelial** re-expression, so the epithelial
+contrasts define CRC-high. TCGA cannot distinguish epithelial re-expression
+from fibroblast, myeloid, or endothelial contributions, and stromal/immune
+composition can dilute or invert an epithelial signal in bulk; it is retained
+as orthogonal population-level support.
 
 ## Relationship to Step 2 (decision recorded 2026-10-02)
 
@@ -156,16 +161,40 @@ the discovery effect-size threshold is applied once, in S1).
 
 | Label | Rule |
 |---|---|
-| `CRC_high` | T1 ∩ S1 ∩ S2 |
-| `CRC_high_epithelial_unreplicated` | T1 ∩ S1, fails S2 |
+| `CRC_high` | S1 ∩ S2 (S1 = discovery ∩ proliferation control) |
+| `CRC_high_unreplicated` | S1, fails S2 |
+| `Proliferation_associated_reject` | passes S1 discovery but malignant/normal-proliferative log2FC ≤ 0 |
 | `Tumour_level_only` | T1 but fails S1 discovery — possible microenvironment-driven bulk signal |
-| `Epithelial_only` | S1 ∩ S2 but fails T1 — epithelial re-expression diluted in bulk |
-| `Proliferation_associated_reject` | passes S1 discovery and T1 but malignant/normal-proliferative log2FC ≤ 0 |
 | `Not_CRC_high` | everything else tested |
+
+`bulk_support` (= T1 pass) is reported for every gene and does not change
+the label. Before S1 is available, genes are labelled `S2_pass_S1_pending`
+or `S2_fail_S1_pending` and no `CRC_high` call is made.
+
+Final tables report the current HGNC symbol (`hgnc_symbol`) and keep the
+annotation's own symbol (`source_symbol`); renames are listed in
+`config/symbol_aliases.tsv` (CCN1/CYR61, CCN2/CTGF). Literature candidates
+without a human one-to-one orthologue are documented in
+`config/nonhuman_candidate_orthology.tsv` (LY6A, REG3B; Ensembl 116).
 
 Gene matching across datasets uses Ensembl gene ID (version stripped) where
 both sources provide it, otherwise the HGNC symbol; the matching key is
 recorded per row.
+
+## Revision v2 (2026-10-02, user review)
+
+Decision: "Approve with one conceptual modification: do not let TCGA bulk veto
+a malignant-epithelial CRC-high gene." Changes:
+
+1. `CRC_high` = S1 ∩ S2; T1 becomes `bulk_support` (was T1 ∩ S1 ∩ S2). The
+   v1 labels `CRC_high_epithelial_unreplicated` and `Epithelial_only` are
+   replaced by `CRC_high_unreplicated` and by `CRC_high` itself.
+2. Unchanged and explicitly confirmed: Pelka log2FC > 0 + FDR < 0.05;
+   direction-only stem/TA control; patient-level pseudobulk only (no
+   cell-level tests); admission-QA markers are never used to tune thresholds;
+   literature candidates (e.g. EMP1) are not used to adjust any rule.
+3. The Joanito label mapping (`config/joanito_label_map.tsv`) must be shown to
+   the user and frozen before any Joanito differential expression is run.
 
 ## Hard stops
 
