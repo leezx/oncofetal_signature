@@ -128,3 +128,55 @@ dataset. Both are independent of Fawkner/Burclaff (H-new2).
   binomial P < 0.05). Tier labels for reporting: Tier A epithelial scRNA
   (H-new2); Tier B primary-tissue bulk (H-bulk1, H-bulk2); Tier C problematic
   references (HGCA, Gao, Senger enterospheres); Visium dropped.
+
+## Addendum v1.2 — stage-resolved re-analysis (frozen 2026-10-02, before any stage-split contrast was computed)
+
+**Breakpoint.** 9 weeks. It comes from the fetal-only manual analysis in
+`step2_fetal_state/` (Gao TNFRSF12A: ≤ 8 W low and erratic, plateau from
+9 W). No adult data were used to choose it. The breakpoint is applied to the
+age as each source reports it:
+
+- **HGCA:** post-conception weeks (e.g. "8.4Wk").
+- **Gao:** "W", convention not stated (possibly gestational).
+- **Senger:** "weeks gestational age".
+
+| Stage | Definition |
+|---|---|
+| Early fetal | reported age < 9 weeks |
+| Mid/late fetal | reported age ≥ 9 weeks |
+| Adult | unchanged |
+
+**Contrasts, per dataset.** These use the same units, filters and statistics
+as the original contrast; only the fetal arm is subset.
+
+1. All fetal vs adult (the original, recomputed).
+2. Early fetal vs adult.
+3. Mid/late fetal vs adult.
+4. Mid/late fetal vs early fetal (within-fetal, same platform).
+
+**Datasets.**
+
+| Dataset | Fetal age distribution | Early / late units | Statistic |
+|---|---|---|---|
+| HGCA (H1) | 6.1–17 PCW | 6 donors (6.1–8.4) / 10 donors (9.2–17); adult 7 | edgeR QL `~ stage`, donor pseudobulk |
+| Gao-original (Gao fetal LI vs GSE103154) | 6–25 W | 5 / 7 embryos; adult 2 | effect-only (module 04) |
+| H-new3 (Gao fetal SI + LI vs Wang) | 6–25 W | 6 / 9 embryos; adult Wang samples | effect-only (module 04) |
+| Senger enterospheres | 11–22.5 W GA | 0 / 6 | **not splittable**: no early stratum, so mid/late vs adult is identical to the original |
+| H-bulk1/2 (Roadmap) | 13–17 W | 0 / 6 | not splittable (already all ≥ 9 W) |
+
+H-new3-debug is not split (it is a debug contrast only). For the within-fetal
+contrast 4, Gao uses the same effect-only statistic (no platform
+confounding); HGCA uses edgeR.
+
+**Readouts.** Every stage contrast receives the unchanged frozen rule (rule 1
+TNFRSF12A; rule 2 panel binomial). Two questions are reported:
+
+1. Does TNFRSF12A become fetal-positive with statistical support?
+2. Does the fetal-positive fraction of the whole 31-marker panel rise at the
+   same time?
+
+**Promotion criterion.** A dataset is a candidate for promotion back into
+primary human developmental evidence only if its mid/late-vs-adult contrast
+qualifies under the frozen rule **and** its panel fraction rises compared with
+all-fetal. A TNFRSF12A-only reversal is not enough. Promotion remains a
+review decision.
