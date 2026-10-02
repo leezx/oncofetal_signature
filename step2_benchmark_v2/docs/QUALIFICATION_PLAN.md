@@ -92,3 +92,39 @@ donor × gestational age × region × epithelial subtype.
   (donor-level consistency).
 - Raw and intermediate data stay under `DATA`; this directory holds code,
   tables, and figures only.
+
+## Addendum v1.1 — primary-tissue bulk contrasts (frozen 2026-10-02, before data opened)
+
+Requested after the v2 review. Source tracing (done before any expression value
+was read) established that both proposed bulk contrasts draw on the **same
+public samples**:
+
+- Finkbeiner et al. 2015 (Stem Cell Reports) reprocessed 6 Roadmap
+  Epigenomics fetal small-intestine total-RNA RNA-seq samples (GEO GSE18927 /
+  SRA SRP001371: GSM1059486, GSM1059507, GSM1059508, GSM1059517, GSM1059519,
+  GSM1059521; 91–120 days) and 6 adult small-intestine samples from the Human
+  Protein Atlas (ArrayExpress E-MTAB-1733 / ENA ERP003613: 2 duodenum + 4 small
+  intestine). Their repository shares Cufflinks FPKM only.
+- Senger et al. 2018 Table 2 ("scraped mucosae") lists the same Roadmap fetal
+  samples and the two E-MTAB-1733 duodenum samples (and repeats GSM1059508 for
+  two ages — an accession inconsistency in the paper).
+
+Therefore H-bulk2 is a **duodenum-only subset of H-bulk1**, not an independent
+dataset. Both are independent of Fawkner/Burclaff (H-new2).
+
+| ID | Fetal | Adult | Model |
+|---|---|---|---|
+| H-bulk1 | 6 Roadmap fetal SI (SRP001371) | all HPA duodenum + small-intestine samples (ERP003613) | edgeR QL, `~ stage`, recount3 raw counts |
+| H-bulk2 | the same 6 fetal SI | HPA duodenum samples only | same; minimum group size 2 |
+
+- Data: recount3 (Monorail, GENCODE v26) gene counts for both SRA projects,
+  i.e. the same uniform pipeline as Step 3 TCGA/GTEx. Authors' FPKMs are not
+  used for statistics.
+- Known confounds, reported not corrected: different laboratories; fetal
+  libraries are total RNA (ribo-depleted), HPA libraries are poly(A); whole
+  tissue (not epithelium-only) in both arms.
+- Author sanity control (reported only): OLFM4 fetal < adult.
+- Same frozen qualification rule (TNFRSF12A fetal-high P < 0.05; panel
+  binomial P < 0.05). Tier labels for reporting: Tier A epithelial scRNA
+  (H-new2); Tier B primary-tissue bulk (H-bulk1, H-bulk2); Tier C problematic
+  references (HGCA, Gao, Senger enterospheres); Visium dropped.
