@@ -1,16 +1,35 @@
-# Conserved Intestinal Oncofetal Core — Methods
+# Conserved Intestinal Oncofetal Core (CIOC) — Methods
 
 - **Version:** Core method v3.0, 2026-10-02, the **final framework
   revision**. It supersedes v2.0 and v1.0. v1.0 is retained as the
   stringent intersection sensitivity analysis (§7).
-- **Status: frozen** before the v3.0 Core labels were computed. The change
-  log is in §12.
+- **Status: permanently frozen.** v3.0 was frozen before its labels were
+  computed (`05f8812`). After review of the labels, membership will **not** be
+  optimised further: no v3.x revision may add or remove a gene. The
+  presentation-only changes made after freezing (naming, claim wording,
+  discordance display) are listed in §12.
   - **Disclosure:** the per-gene human and mouse developmental values (and the
     v1.0 result) were visible when the review that set these rules was
     written. The rules were specified by review, not tuned on the outcome.
     TACSTD2 is a pre-declared sanity check (§8), not a target.
 - **Inputs** are existing, version-controlled contrasts. No statistic is
   recomputed for gene selection.
+
+## 0. Nomenclature and claim
+
+- **Name:** *Conserved Intestinal Oncofetal Core (CIOC)*. It is not called
+  "the intestinal oncofetal signature".
+- **Operational definition:** the CIOC is defined by integrating prior
+  intestinal fetal/regenerative literature with replicated human
+  developmental evidence, in-vivo mouse developmental evidence, and malignant
+  epithelial reactivation across two independent CRC cohorts.
+- **Claim scope:** the CIOC is a set of literature-anchored genes that show
+  **developmental evidence** together with **malignant epithelial
+  reacquisition**. It is **not** a set of universally fetal-specific
+  markers. Statements about members use "developmental evidence" or
+  "developmental enrichment", never "fetal-specific".
+- **Disclosure:** membership is recorded in the restricted workbook (Joanito
+  data-use terms, §10).
 
 ## 1. Principle
 
@@ -107,6 +126,17 @@ Three human fetal (≥ 9 weeks) vs adult epithelial contrasts:
   1. at least 2 of the 3 contrasts are measured and fetal-positive
      (log2FC > 0);
   2. at least 1 contrast shows support.
+- **Wording for reporting:** human developmental evidence required
+  concordant fetal enrichment across at least two independent comparisons,
+  with statistical support in at least one dataset.
+- **Role of H-new2:** H-new2 (Fawkner fetal × Burclaff adult) is
+  cross-study, so stage is collinear with study/platform.
+  - It serves as a **statistical-support dataset**, not a discovery dataset.
+  - Direction is evaluated independently in the within-study (HGCA) and
+    reference (Gao) datasets.
+  - For every gene the matrix shows all three log2FC values and names the
+    dataset(s) supplying statistical support. The H call is never shown
+    alone.
 - **Missing data:** NA neither lowers the denominator nor provides
   support.
   - With 2 evaluable contrasts, both must be fetal-positive (2/2).
@@ -175,6 +205,17 @@ The matrix has one row per literature candidate (31). Its columns are:
 
 Each cell gives log2FC with significance, or NA.
 
+### Discordance display (reported, never selecting)
+
+Each gene carries a discordance flag listing:
+- any human developmental contrast in the opposite direction;
+- a significantly adult-high GSE44433 result;
+- a significantly tumour-low TCGA bulk result.
+
+Flags are displayed prominently (red) next to the calls, so heterogeneity is
+visible rather than summarised away. Bulk discrepancies are described only as
+*consistent with* compartment differences; no cause is claimed.
+
 ## 6. Supportive evidence (reported, never selecting)
 
 - GSE44433 (mouse in-vivo replication).
@@ -184,17 +225,20 @@ Each cell gives log2FC with significance, or NA.
 - Pelka progenitor check P.
 - TCGA T1 / paired / vs GTEx.
 
-## 7. Stringent intersection set (sensitivity analysis; former method v1.0)
+## 7. Sensitivity analysis using single-dataset hard intersections (former method v1.0)
 
 - **Rule:** Literature 31 ∩ G1 HGCA ≥ 9 PCW ∩ G2 GSE230581 ∩ G3 Joanito ∩ G4
   Pelka.
 - **Pass in each gate:** log2FC ≥ 0.5 and FDR < 0.05.
 - **Not measured** means not evaluable, never "fail".
 - **Developmental intersection (G1 ∧ G2):** GJA1, CLU, ANXA6, SPP1, RBP1.
-- **The four-gene stringent intersection set** is reported as a Tier-1 /
-  sensitivity subset, **not** as the Core definition.
-- **GJA1** is not evaluable for the CRC gates because it is below the
-  expression filter in both the Joanito and Pelka epithelial contrasts.
+- **Purpose:** the hard-intersection result is a **sensitivity analysis**,
+  not an alternative Core. It shows that the conclusions do not depend on the
+  evidence-integration framework. Its membership is in the restricted
+  workbook.
+- **GJA1** is not measured in the public Pelka contrast (below the
+  expression filter), so it is not evaluable rather than a CRC fail. Its full
+  CRC status is in the restricted workbook.
 
 ## 8. Pre-declared sanity checks
 
@@ -213,9 +257,12 @@ Each cell gives log2FC with significance, or NA.
 - **H-new2:** stage is collinear with study/platform.
 - **Gao:** cross-platform, with adult n = 2.
 - **GSE230581:** fetal whole epithelium vs adult crypt-only epithelium.
-- **Literature provenance:** this is curator-coded. RBP1's provenance in the
-  curated list is a generic phrase with no named study. AREG and CD44 each
-  cite one named study plus generic phrases.
+- **Literature provenance:** this comes from the full-text audit.
+  - Fumagalli 2025 could not be located.
+  - Gene-specific statements may also exist only in figures or supplements
+    that were not text-searchable.
+  - RBP1 has no identified primary source; its exclusion is for missing
+    provenance, not negative evidence.
 
 ## 10. Outputs and data-use restriction
 
@@ -226,10 +273,12 @@ Each cell gives log2FC with significance, or NA.
 - **Public workbook** keeps L, H, M, Pelka, TCGA and the supportive
   evidence.
 
-## 11. Change control (renamed §11; change log in §12)
+## 11. Change control
 
-Any change to an axis, dataset, threshold or rule is a new method version,
-recorded here before it is applied.
+v3.0 is permanently frozen. Any future change to an axis, dataset, threshold
+or rule defines a different gene set with a new name; it is not a revision of
+the CIOC.
+
 
 ## 12. Change log
 
@@ -238,3 +287,4 @@ recorded here before it is applied.
 | v1.0 | Four-dataset intersection (now the stringent sensitivity set). |
 | v2.0 | Evidence framework (L, H replicated, M, C replicated); NE introduced. |
 | v3.0 (final) | L evidence from the full-text audit (rule unchanged); explicit H missing-data rule; mouse replication evaluated and not adopted (GSE44433 supportive, decision disclosed). No further framework revisions. |
+| v3.0, presentation only (after freeze) | CIOC name and claim scope (§0); H reporting wording and H-new2 role; per-gene H support source; discordance flags; v1.0 renamed "sensitivity analysis using single-dataset hard intersections". **Membership unchanged.** |

@@ -43,3 +43,4 @@ marker_summary/results.zip
 # Core workbook with Joanito gate (G3) and final Core membership: restricted.
 core_oncofetal/results/Core_oncofetal_gate_statistics.*
 core_oncofetal/results/Core_oncofetal_gate_long.csv
+core_oncofetal/results/CIOC_manuscript_text.md

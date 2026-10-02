@@ -148,9 +148,21 @@ def build(s, prov, restricted):
                               PValue=s.loc[g, f"{key}__PValue"], FDR=s.loc[g, f"{key}__FDR"],
                               applicable=applicable(g, sp), supported=supported(s.loc[g, f"{key}__log2FC"],
                                                                                 s.loc[g, f"{key}__FDR"])))
+        hs = {"HGCA_late": "HGCA", "Hnew2_late": "H-new2", "GaoOriginal_late": "Gao"}
+        row["H statistical support from"] = ", ".join(n for k, n in hs.items()
+                                                      if supported(s.loc[g, f"{k}__log2FC"], s.loc[g, f"{k}__FDR"])) or "none"
+        flags = [f"{n} opposite ({s.loc[g, f'{k}__log2FC']:+.2f})" for k, n in hs.items()
+                 if g not in NA_HUMAN and pd.notna(s.loc[g, f"{k}__log2FC"]) and s.loc[g, f"{k}__log2FC"] < 0]
+        v, q = s.loc[g, "GSE44433__log2FC"], s.loc[g, "GSE44433__FDR"]
+        if pd.notna(v) and v < 0 and pd.notna(q) and q < FDR:
+            flags.append(f"GSE44433 significantly adult-high ({v:+.2f})")
+        v, q = s.loc[g, "TCGA__log2FC"], s.loc[g, "TCGA__FDR"]
+        if g not in NA_HUMAN and pd.notna(v) and v < 0 and pd.notna(q) and q < FDR:
+            flags.append(f"TCGA bulk significantly tumour-low ({v:+.2f})")
+        row["DISCORDANCE flags (reported, not selecting)"] = "; ".join(flags) if flags else "none"
         if restricted:
-            row["Core label (v3.0)"] = label(c)
-            row["Stringent intersection set (v1.0 sensitivity)"] = "yes" if c["stringent_all"] else "no"
+            row["Core label (v3.0)"] = label(c).replace("CORE", "CIOC")
+            row["Sensitivity: single-dataset hard intersection"] = "yes" if c["stringent_all"] else "no"
         row["Developmental intersection (HGCA & GSE230581)"] = "yes" if c["stringent_dev"] else "no"
         mat.append(row)
         srow = {"marker": g}
@@ -172,8 +184,11 @@ def rules(restricted):
         ("M mouse in vivo", "mandatory", "GSE230581 log2FC >= 0.5 & FDR < 0.05; NE if no orthologue / not measured"),
         ("C CRC replicated", "mandatory" + ("" if restricted else " (Joanito: restricted)"),
          "Joanito and Pelka both log2FC >= 0.5 & FDR < 0.05; fail if a measured contrast lacks support; NE if otherwise unmeasured"),
-        ("Core (v3.0)", "", "L & H & M & C all pass"),
-        ("Stringent intersection set (v1.0)", "sensitivity",
+        ("Conserved Intestinal Oncofetal Core (CIOC), v3.0, permanently frozen", "",
+         "L & H & M & C all pass. Operational definition: literature-anchored genes with replicated developmental evidence and malignant epithelial reactivation; not a fetal-specific marker set"),
+        ("H wording", "", "concordant fetal enrichment across >= 2 independent comparisons, statistical support in >= 1; H-new2 (cross-study) serves as a statistical-support dataset, direction is evaluated with HGCA and Gao; all three log2FC shown"),
+        ("Discordance flags", "reported, never selecting", "human contrast in opposite direction; GSE44433 significantly adult-high; TCGA bulk significantly tumour-low"),
+        ("Sensitivity analysis using single-dataset hard intersections (former v1.0)", "sensitivity only; not an alternative Core",
          "HGCA >=9 PCW & GSE230581 & Joanito & Pelka each log2FC >= 0.5 & FDR < 0.05 (not measured = NE)"),
         ("Cell notation", "", "log2FC (FDR); ** log2FC >= 0.5 & FDR < 0.05; * FDR < 0.05 below effect threshold; NA = not measured / no orthologue"),
         ("Supportive evidence", "never selecting", "GSE44433, TCGA, Pikkupeura cultures, HGCA all fetal, Joanito sensitivity, Pelka P"),
@@ -185,7 +200,7 @@ def write_xlsx(path, sheets):
     wb = Workbook()
     wb.remove(wb.active)
     thin = Side(style="thin", color="BFBFBF")
-    colours = {"pass": "C6EFCE", "fail": "F8CBAD", "NE": "D9D9D9", "CORE": "00B050", "yes": "C6EFCE",
+    colours = {"pass": "C6EFCE", "fail": "F8CBAD", "NE": "D9D9D9", "CIOC": "00B050", "yes": "C6EFCE",
                "not Core": "F2F2F2"}
     for name, df in sheets.items():
         ws = wb.create_sheet(name)
@@ -202,13 +217,16 @@ def write_xlsx(path, sheets):
                 x.font = Font(name="Arial", size=9, bold=(j == 1))
                 x.border = Border(top=thin, bottom=thin, left=thin, right=thin)
                 x.alignment = Alignment(wrap_text=True, vertical="top")
-                if isinstance(v, str):
+                if isinstance(v, str) and df.columns[j - 1].startswith("DISCORDANCE") and v != "none":
+                    x.fill = PatternFill("solid", start_color="FF7C80")
+                    x.font = Font(name="Arial", size=9, bold=True, color="9C0006")
+                elif isinstance(v, str):
                     if v.endswith("**"):
                         x.fill = PatternFill("solid", start_color="E2F0D9")
                     elif v.startswith("NA"):
                         x.fill = PatternFill("solid", start_color="EDEDED")
                     for k, col in colours.items():
-                        if v == k or (k in ("CORE", "not Core") and v.startswith(k)):
+                        if v == k or (k in ("CIOC", "not Core") and v.startswith(k)):
                             x.fill = PatternFill("solid", start_color=col)
         for j in range(1, len(df.columns) + 1):
             ws.column_dimensions[get_column_letter(j)].width = 12 if j == 1 else (60 if name == "Rules" else 20)
@@ -225,9 +243,9 @@ def main():
         mat, sup, longr = build(s, prov, restricted)
         sheets = {"Evidence_matrix_31": mat, "Supportive_31": sup}
         if restricted:
-            core = mat[mat["Core label (v3.0)"] == "CORE"]
-            sheets["Core_genes_v3"] = core
-            sheets["Stringent_set_v1"] = mat[mat["Stringent intersection set (v1.0 sensitivity)"] == "yes"]
+            core = mat[mat["Core label (v3.0)"] == "CIOC"]
+            sheets["CIOC_members"] = core
+            sheets["Sensitivity_hard_intersect"] = mat[mat["Sensitivity: single-dataset hard intersection"] == "yes"]
         sheets["Developmental_intersection"] = mat[mat["Developmental intersection (HGCA & GSE230581)"] == "yes"]
         sheets["Literature_provenance"] = prov.reset_index()
         sheets["Literature_audit"] = pd.read_csv(ROOT / "core_oncofetal/config/literature_audit_31.tsv", sep="\t")
