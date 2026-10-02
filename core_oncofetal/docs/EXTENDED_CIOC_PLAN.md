@@ -1,4 +1,4 @@
-# Extended CIOC — plan (draft; rules NOT yet frozen)
+# Extended CIOC — plan (rules v0.1 PROPOSED; not frozen, not applied)
 
 ## Architecture
 
@@ -98,9 +98,113 @@ systematically high?
 - **Rule:** to be frozen before computation. The final set size is not
   predetermined.
 
-## Next decisions (owner: user)
+## Reference data (decided)
 
-1. Which independent CRC atlas (all compartments, non-overlapping patients)
-   to download for Gate E and coherence.
-2. Whether a fetal all-compartment reference is required for Gate E, or
-   whether malignant plus Tabula Sapiens is sufficient.
+- **Primary:** Khaliq 2022 (GSE200997). 16 CRC + 7 adjacent normal, 10x,
+  every compartment.
+- **Replication:** Che 2021 (GSE178318). 6 patients, primary CRC + liver
+  metastasis; PBMC excluded.
+- **Independence:** neither dataset is used by any gate, and neither
+  overlaps Joanito (SMC, KUL3, SG cohorts) or Pelka.
+- **Secondary check only:** Tabula Sapiens Large Intestine (adult normal).
+  It is reported as an annotation, never as a selection criterion.
+- **Processing:**
+  - `scripts/ext_01_prepare_atlases.py` builds raw-count AnnData objects.
+  - `scripts/ext_02_annotate_compartments.py` annotates compartments.
+    Neither deposit has cell types, so each Leiden cluster is assigned by
+    canonical marker modules, scored as mean marker detection. No module
+    contains a Level 2 candidate gene.
+  - Khaliq: 1,236 ambiguous cells are excluded.
+  - Tumour-tissue epithelium is treated as malignant. No CNV inference was
+    run.
+
+## Gate E — blinded descriptive profile (done)
+
+Produced by `scripts/ext_03_gate_e_profile.py`.
+- **Units:** patient × compartment pseudobulks from tumour-tissue cells.
+  - Compartments: epithelial, stromal (fibroblast + SMC/pericyte),
+    endothelial, myeloid, T/NK, B/plasma, mast.
+  - A unit needs ≥ 20 cells, and a compartment needs ≥ 3 patients. Khaliq
+    mast cells (2 patients) are dropped.
+- **Ratio:** log2((epithelial CPM + 1) / (top non-epithelial compartment
+  CPM + 1)), using patient medians.
+- **Detectability:** the fraction of tumour epithelial cells with ≥ 1 UMI,
+  as the patient median.
+- **Blinding:** candidates are plotted unlabelled, and only quantiles and
+  threshold counts were inspected.
+
+**Calibrators (log2 ratio, Khaliq / Che):**
+
+| Class | Genes | log2 ratio | Epithelial detection |
+|---|---|---|---|
+| Epithelial | EPCAM, KRT8, CDH1, KRT20, CEACAM5, CDX2 | +4.9 to +6.4 | 0.22–0.95 |
+| Ubiquitous | GAPDH, ACTB, B2M | +0.3 to −2.5 | 0.73–0.99 |
+| Non-epithelial, ambient-prone | LYZ, CD68 | −4.2 to −5.3 | 0.07–0.35 |
+| Non-epithelial | PTPRC, CD3E, VIM, PECAM1, ACTA2, VWF, COL1A2, DCN | −5.1 to −11.8 | 0.00–0.30 |
+
+Ubiquitous genes sit at −2.5 to +0.3. A max over six non-epithelial
+compartments biases the ratio downward, and immune cells have different
+library composition, so a truly shared gene is not expected at 0.
+
+**Level 2 candidates (no gene identities inspected):**
+- **Median log2 ratio:** −1.9 (Khaliq), −1.4 (Che). The background of
+  expressed genes is centred near −0.5.
+- **The candidates are shifted towards non-epithelial attribution.** For
+  the candidates below 0, the top non-epithelial compartment is most often
+  stromal, then endothelial.
+- **Epithelial detectability is low in Khaliq.** Its epithelial cells have
+  a median of 789 detected genes, against about 1,000 in other compartments.
+  Che is more sensitive.
+
+## Gate E — proposed rule v0.1 (for approval; not applied)
+
+**E1 — non-epithelial attribution.**
+- In an atlas, E1 fails if log2 ratio < −3.
+- The threshold is calibrated between the ubiquitous calibrators (≥ −2.5)
+  and the ambient-prone non-epithelial markers (≤ −4.2).
+- The gene **fails E1 only if it fails in both atlases** (replicated
+  non-epithelial attribution). If it is measured in only one atlas, that
+  atlas decides.
+
+**E2 — technical detectability.**
+- The epithelial detection fraction must be ≥ 0.05 in at least one atlas.
+- **Rationale:**
+  - Ambient-free non-epithelial markers sit at ≤ 0.03 in epithelium.
+  - In each atlas, 5% of tumour epithelial cells is several hundred cells,
+    the minimum needed for the coherence step to have signal.
+  - "At least one atlas" allows for the shallower Khaliq epithelium.
+
+**Gate E pass = E2 AND NOT E1-fail.**
+- Tabula Sapiens adult-normal attribution is reported beside each gene and
+  never selects.
+
+## CIOC program coherence — proposed rule v0.1 (for approval; not applied)
+
+- **Cells:** tumour-tissue epithelial cells in Khaliq and Che. A patient
+  needs ≥ 200 epithelial cells.
+- **Units:** metacells within each patient: k-means on the patient's
+  epithelial PCA, k = n_cells / 20, aggregated counts, log-CPM. A patient
+  needs ≥ 10 metacells.
+- **CIOC score:** the mean within-patient z-score of the eight CIOC genes.
+  When the candidate is itself a CIOC gene, it is left out of the score.
+- **Statistic:**
+  - Within-patient Spearman ρ between the candidate and the CIOC score,
+    after regressing out S and G2M cell-cycle scores.
+  - Patients are combined by their Fisher-z mean per atlas.
+- **Null:**
+  - 1,000 random 8-gene sets, matched to the CIOC genes by expression bin.
+  - The candidate's mean ρ with each random-set score gives an empirical
+    P per gene and atlas.
+  - BH is applied across Gate-E-passing candidates within each atlas.
+- **Pass:** mean ρ > 0 in both atlases, and BH FDR < 0.05 in at least one.
+  This mirrors Gate H: concordant in ≥ 2, supported in ≥ 1.
+
+## Extended CIOC
+
+**Extended CIOC = Level 2a ∩ Gate E ∩ coherence.**
+- The set size is not predetermined.
+- **Order of work:**
+  1. Approve the rules.
+  2. Freeze them (commit).
+  3. Apply them once.
+  4. Report without revision.
