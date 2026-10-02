@@ -1,32 +1,32 @@
-marker,literature_label,curator code,named studies (n),L literature,"HGCA >=9 PCW vs adult (human, primary)",H-new2 Fawkner >=9 PCW vs Burclaff adult (human),Gao LI >=9 W vs GSE103154 adult (human),H human developmental,GSE230581 E16.5 vs adult crypt (mouse in vivo),M mouse in vivo,GSE44433 E17.5 vs 8-week LCM (mouse replication),Pelka tumour vs normal epithelium (CRC replication),"TCGA tumour vs normal, bulk (support)",Developmental intersection (HGCA & GSE230581)
-TACSTD2,TACSTD2 (TROP2),A+B+C,6,pass,+0.20 (FDR 0.8),+4.09 (FDR 1.8e-05)**,+1.34 (FDR 0.61),pass,+7.78 (FDR 0.0017)**,pass,-0.17 (FDR 0.18),+4.26 (FDR 3.8e-11)**,+5.05 (FDR 4e-24)**,no
-GJA1,GJA1 (CX43),A+B,3,pass,+6.05 (FDR 6.5e-08)**,+2.77 (FDR 0.012)**,-0.16 (FDR 1),pass,+8.29 (FDR 7.2e-09)**,pass,+0.69 (FDR 0.017)**,NA (not measured),-0.00 (FDR 0.99),yes
-ANXA1,ANXA1,A+B+C,5,pass,-2.38 (FDR 1.7e-05)*,-0.93 (FDR 0.24),-0.10 (FDR 0.86),fail,+9.69 (FDR 1.1e-05)**,pass,+2.40 (FDR 3.5e-05)**,+2.84 (FDR 6.8e-12)**,+0.21 (FDR 0.29),no
-CLU,CLU,A+B,5,pass,+2.39 (FDR 0.0033)**,+2.35 (FDR 7.1e-05)**,+1.41 (FDR 0.32),pass,+5.24 (FDR 3.8e-09)**,pass,+0.48 (FDR 0.0054)*,+1.50 (FDR 5e-06)**,-2.31 (FDR 1e-36)*,yes
-ANXA3,ANXA3,A+B candidate,2,pass,+1.99 (FDR 2.2e-07)**,+1.77 (FDR 0.0031)**,+1.05 (FDR 0.28),pass,-1.22 (FDR 0.014)*,fail,-2.63 (FDR 1.7e-07)*,+1.65 (FDR 4.5e-17)**,+1.68 (FDR 1.9e-27)**,no
-ANXA6,ANXA6,A candidate,1,pass,+2.41 (FDR 4.5e-05)**,+2.50 (FDR 0.00033)**,+3.64 (FDR 0.21),pass,+2.95 (FDR 6.2e-07)**,pass,+0.59 (FDR 8.4e-05)**,+2.96 (FDR 7.5e-14)**,-0.33 (FDR 0.0056)*,yes
-LY6A,LY6A (SCA1),"A/B, predominantly B",3,pass,NA (no one2one orthologue),NA (no one2one orthologue),NA (no one2one orthologue),NE,NA (not measured),NE,NA (not measured),NA (no one2one orthologue),NA (no one2one orthologue),no
-SPP1,SPP1,A/B candidate,2,pass,+2.52 (FDR 0.029)**,NA (not measured),-0.01 (FDR 0.83),fail,+10.05 (FDR 2.6e-11)**,pass,-0.33 (FDR 0.057),+6.13 (FDR 5.5e-17)**,+3.88 (FDR 6.3e-18)**,yes
-SPRR1A,SPRR1A,B,1,fail,NA (not measured),NA (not measured),-0.01 (FDR 0.77),NE,NA (no one2one orthologue),NE,NA (no one2one orthologue),NA (not measured),+7.36 (FDR 8.2e-12)**,no
-IL33,IL33,B,3,pass,-2.49 (FDR 0.0038)*,NA (not measured),-0.58 (FDR 0.93),fail,-0.94 (FDR 0.06),fail,-0.43 (FDR 0.23),+4.55 (FDR 3.9e-16)**,+0.75 (FDR 0.0066)**,no
-MIF,MIF,B,1,fail,+0.95 (FDR 0.073),-1.08 (FDR 0.017)*,NA (not measured),fail,+1.03 (FDR 0.00068)**,pass,NA (not measured),+1.35 (FDR 9.8e-07)**,+2.03 (FDR 2.8e-26)**,no
-CCN2,CCN2 (CTGF),A/B candidate,1,pass,+0.38 (FDR 0.55),+6.37 (FDR 5.6e-06)**,+1.05 (FDR 0.097),pass,+4.72 (FDR 2e-07)**,pass,+0.66 (FDR 0.00081)**,+0.63 (FDR 0.027)**,+0.22 (FDR 0.2),no
-CCN1,CCN1 (CYR61),A candidate,1,pass,-0.36 (FDR 0.68),+7.35 (FDR 9.9e-13)**,+2.82 (FDR 0.031)**,pass,+1.51 (FDR 0.029)**,pass,NA (not measured),+1.02 (FDR 0.00089)**,-0.07 (FDR 0.73),no
-ANKRD1,ANKRD1,A candidate,1,pass,NA (not measured),NA (not measured),-1.08 (FDR 0.3),NE,NA (not measured),NE,-0.02 (FDR 0.83),NA (not measured),+2.49 (FDR 9.9e-08)**,no
-TNFRSF12A,TNFRSF12A (FN14/TWEAKR),A+B candidate,2,pass,-0.01 (FDR 0.99),+1.94 (FDR 9.7e-06)**,-0.01 (FDR 0.98),fail,+0.46 (FDR 0.094),fail,+0.31 (FDR 0.049)*,+2.69 (FDR 4.7e-21)**,+2.29 (FDR 1.4e-45)**,no
-SOX17,SOX17,A candidate,1,pass,NA (not measured),NA (not measured),-0.41 (FDR 0.97),NE,NA (not measured),NE,+0.02 (FDR 0.84),NA (not measured),-1.03 (FDR 2.5e-14)*,no
-RBP1,RBP1,B candidate,0,fail,+5.54 (FDR 1.8e-05)**,+1.43 (FDR 0.13),+4.24 (FDR 0.024)**,pass,+2.88 (FDR 8.5e-06)**,pass,+2.84 (FDR 6.9e-09)**,+6.31 (FDR 3e-11)**,+1.57 (FDR 7e-07)**,yes
-AREG,AREG,B,1,fail,-3.60 (FDR 2.6e-05)*,+3.87 (FDR 2e-09)**,-2.99 (FDR 0.0093)*,fail,+1.52 (FDR 0.0075)**,pass,-4.17 (FDR 1.4e-05)*,+0.89 (FDR 0.028)**,+1.89 (FDR 2.7e-13)**,no
-EREG,EREG,B,1,fail,+1.02 (FDR 0.08),+7.34 (FDR 8.1e-06)**,-1.04 (FDR 0.59),pass,+3.70 (FDR 2.6e-06)**,pass,-3.02 (FDR 1.5e-07)*,+1.51 (FDR 0.0024)**,+3.00 (FDR 9.1e-15)**,no
-CD44,CD44,B candidate,1,fail,-3.87 (FDR 1.5e-06)*,-3.92 (FDR 1.4e-09)*,-0.84 (FDR 0.61),fail,-3.26 (FDR 2.6e-09)*,fail,-0.63 (FDR 0.0083)*,+2.11 (FDR 1.7e-23)**,+1.37 (FDR 3.5e-40)**,no
-CXADR,CXADR,B,1,fail,+0.15 (FDR 0.43),-0.24 (FDR 0.22),+0.91 (FDR 0.54),fail,+0.83 (FDR 4.3e-06)**,pass,NA (not measured),-0.20 (FDR 0.08),+0.16 (FDR 0.2),no
-BASP1,BASP1,B,1,fail,+1.11 (FDR 0.11),+3.31 (FDR 0.00099)**,+1.66 (FDR 0.19),pass,+6.29 (FDR 1.6e-06)**,pass,NA (not measured),-1.80 (FDR 5.3e-07)*,-0.46 (FDR 0.0049)*,no
-EDN1,EDN1,B,1,fail,+0.20 (FDR 0.68),+5.80 (FDR 1.3e-10)**,-1.54 (FDR 0.73),pass,+0.01 (FDR 0.98),fail,+0.21 (FDR 0.49),+0.31 (FDR 0.29),+0.13 (FDR 0.51),no
-IL1RN,IL1RN,B,1,fail,-5.82 (FDR 3.5e-07)*,-4.26 (FDR 2.1e-13)*,-0.80 (FDR 0.87),fail,NA (not measured),NE,-0.21 (FDR 0.073),+2.79 (FDR 1.2e-09)**,+1.87 (FDR 7e-12)**,no
-MSLN,MSLN,B+C candidate,2,pass,+0.46 (FDR 0.66),+3.83 (FDR 5.5e-05)**,+1.20 (FDR 0.46),pass,NA (not measured),NE,+0.51 (FDR 0.0095)**,+1.07 (FDR 0.012)**,+3.09 (FDR 4.1e-14)**,no
-REG3B,REG3B,B,1,fail,NA (no one2one orthologue),NA (no one2one orthologue),NA (no one2one orthologue),NE,-6.51 (FDR 5.6e-06)*,fail,NA (not measured),NA (no one2one orthologue),NA (no one2one orthologue),no
-EMP1,EMP1,C,2,fail,-5.05 (FDR 2.4e-05)*,+0.17 (FDR 0.85),+0.13 (FDR 0.77),fail,+2.79 (FDR 5.2e-10)**,pass,-2.37 (FDR 1.1e-09)*,-2.36 (FDR 2.8e-15)*,-1.75 (FDR 9.4e-37)*,no
-LAMC2,LAMC2,C,2,fail,-1.07 (FDR 0.065),+0.88 (FDR 0.033)**,+0.30 (FDR 0.77),pass,-0.07 (FDR 0.63),fail,-0.51 (FDR 0.27),+0.49 (FDR 0.0072)*,+0.86 (FDR 3e-09)**,no
-MMP7,MMP7,C,1,fail,NA (not measured),NA (not measured),+0.12 (FDR 0.97),NE,-2.83 (FDR 1.6e-05)*,fail,-1.09 (FDR 0.0079)*,+12.33 (FDR 3.3e-14)**,+7.50 (FDR 3.6e-40)**,no
-L1CAM,L1CAM,B+C,1,fail,+1.98 (FDR 0.0036)**,NA (not measured),+0.80 (FDR 0.66),pass,-4.97 (FDR 8.1e-10)*,fail,-3.76 (FDR 4.5e-08)*,NA (not measured),-1.27 (FDR 7.5e-08)*,no
-EPS8L1,EPS8L1,C,1,fail,-2.68 (FDR 1.9e-06)*,-0.30 (FDR 0.36),-1.75 (FDR 0.26),fail,+0.05 (FDR 0.89),fail,NA (not measured),-0.24 (FDR 0.23),+0.63 (FDR 3.3e-07)**,no
+marker,literature_label,audited classes,A studies (n),B studies (n),C studies (n),L literature,"HGCA >=9 PCW vs adult (human, primary)",H-new2 Fawkner >=9 PCW vs Burclaff adult (human),Gao LI >=9 W vs GSE103154 adult (human),H human developmental,GSE230581 E16.5 vs adult crypt (mouse in vivo),M mouse in vivo,GSE44433 E17.5 vs 8-week LCM (mouse replication),"GSE44433 flag (support, not selecting)",Pelka tumour vs normal epithelium (CRC replication),"TCGA tumour vs normal, bulk (support)",Developmental intersection (HGCA & GSE230581)
+TACSTD2,TACSTD2 (TROP2),ABC,3,1,3,pass,+0.20 (FDR 0.8),+4.09 (FDR 1.8e-05)**,+1.34 (FDR 0.61),pass,+7.78 (FDR 0.0017)**,pass,-0.17 (FDR 0.18),"opposite, n.s.",+4.26 (FDR 3.8e-11)**,+5.05 (FDR 4e-24)**,no
+GJA1,GJA1 (CX43),AB,2,1,0,pass,+6.05 (FDR 6.5e-08)**,+2.77 (FDR 0.012)**,-0.16 (FDR 1),pass,+8.29 (FDR 7.2e-09)**,pass,+0.69 (FDR 0.017)**,concordant,NA (not measured),-0.00 (FDR 0.99),yes
+ANXA1,ANXA1,ABC,2,3,3,pass,-2.38 (FDR 1.7e-05)*,-0.93 (FDR 0.24),-0.10 (FDR 0.86),fail,+9.69 (FDR 1.1e-05)**,pass,+2.40 (FDR 3.5e-05)**,concordant,+2.84 (FDR 6.8e-12)**,+0.21 (FDR 0.29),no
+CLU,CLU,AB,2,4,0,pass,+2.39 (FDR 0.0033)**,+2.35 (FDR 7.1e-05)**,+1.41 (FDR 0.32),pass,+5.24 (FDR 3.8e-09)**,pass,+0.48 (FDR 0.0054)*,concordant,+1.50 (FDR 5e-06)**,-2.31 (FDR 1e-36)*,yes
+ANXA3,ANXA3,AC,1,0,1,pass,+1.99 (FDR 2.2e-07)**,+1.77 (FDR 0.0031)**,+1.05 (FDR 0.28),pass,-1.22 (FDR 0.014)*,fail,-2.63 (FDR 1.7e-07)*,significant contradiction,+1.65 (FDR 4.5e-17)**,+1.68 (FDR 1.9e-27)**,no
+ANXA6,ANXA6,A,1,0,0,pass,+2.41 (FDR 4.5e-05)**,+2.50 (FDR 0.00033)**,+3.64 (FDR 0.21),pass,+2.95 (FDR 6.2e-07)**,pass,+0.59 (FDR 8.4e-05)**,concordant,+2.96 (FDR 7.5e-14)**,-0.33 (FDR 0.0056)*,yes
+LY6A,LY6A (SCA1),AB,3,5,0,pass,NA (no one2one orthologue),NA (no one2one orthologue),NA (no one2one orthologue),NE,NA (not measured),NE,NA (not measured),NA,NA (no one2one orthologue),NA (no one2one orthologue),no
+SPP1,SPP1,ABC,1,1,1,pass,+2.52 (FDR 0.029)**,NA (not measured),-0.01 (FDR 0.83),fail,+10.05 (FDR 2.6e-11)**,pass,-0.33 (FDR 0.057),"opposite, n.s.",+6.13 (FDR 5.5e-17)**,+3.88 (FDR 6.3e-18)**,yes
+SPRR1A,SPRR1A,,0,0,0,fail,NA (not measured),NA (not measured),-0.01 (FDR 0.77),NE,NA (no one2one orthologue),NE,NA (no one2one orthologue),NA,NA (not measured),+7.36 (FDR 8.2e-12)**,no
+IL33,IL33,B,0,2,0,pass,-2.49 (FDR 0.0038)*,NA (not measured),-0.58 (FDR 0.93),fail,-0.94 (FDR 0.06),fail,-0.43 (FDR 0.23),"opposite, n.s.",+4.55 (FDR 3.9e-16)**,+0.75 (FDR 0.0066)**,no
+MIF,MIF,B,0,1,0,fail,+0.95 (FDR 0.073),-1.08 (FDR 0.017)*,NA (not measured),fail,+1.03 (FDR 0.00068)**,pass,NA (not measured),NA,+1.35 (FDR 9.8e-07)**,+2.03 (FDR 2.8e-26)**,no
+CCN2,CCN2 (CTGF),ABC,1,2,1,pass,+0.38 (FDR 0.55),+6.37 (FDR 5.6e-06)**,+1.05 (FDR 0.097),pass,+4.72 (FDR 2e-07)**,pass,+0.66 (FDR 0.00081)**,concordant,+0.63 (FDR 0.027)**,+0.22 (FDR 0.2),no
+CCN1,CCN1 (CYR61),AB,1,1,0,pass,-0.36 (FDR 0.68),+7.35 (FDR 9.9e-13)**,+2.82 (FDR 0.031)**,pass,+1.51 (FDR 0.029)**,pass,NA (not measured),NA,+1.02 (FDR 0.00089)**,-0.07 (FDR 0.73),no
+ANKRD1,ANKRD1,AB,1,2,0,pass,NA (not measured),NA (not measured),-1.08 (FDR 0.3),NE,NA (not measured),NE,-0.02 (FDR 0.83),"opposite, n.s.",NA (not measured),+2.49 (FDR 9.9e-08)**,no
+TNFRSF12A,TNFRSF12A (FN14/TWEAKR),AB,1,1,0,pass,-0.01 (FDR 0.99),+1.94 (FDR 9.7e-06)**,-0.01 (FDR 0.98),fail,+0.46 (FDR 0.094),fail,+0.31 (FDR 0.049)*,concordant,+2.69 (FDR 4.7e-21)**,+2.29 (FDR 1.4e-45)**,no
+SOX17,SOX17,A,1,0,0,pass,NA (not measured),NA (not measured),-0.41 (FDR 0.97),NE,NA (not measured),NE,+0.02 (FDR 0.84),concordant,NA (not measured),-1.03 (FDR 2.5e-14)*,no
+RBP1,RBP1,,0,0,0,fail,+5.54 (FDR 1.8e-05)**,+1.43 (FDR 0.13),+4.24 (FDR 0.024)**,pass,+2.88 (FDR 8.5e-06)**,pass,+2.84 (FDR 6.9e-09)**,concordant,+6.31 (FDR 3e-11)**,+1.57 (FDR 7e-07)**,yes
+AREG,AREG,B,0,2,0,pass,-3.60 (FDR 2.6e-05)*,+3.87 (FDR 2e-09)**,-2.99 (FDR 0.0093)*,fail,+1.52 (FDR 0.0075)**,pass,-4.17 (FDR 1.4e-05)*,significant contradiction,+0.89 (FDR 0.028)**,+1.89 (FDR 2.7e-13)**,no
+EREG,EREG,B,0,2,0,pass,+1.02 (FDR 0.08),+7.34 (FDR 8.1e-06)**,-1.04 (FDR 0.59),pass,+3.70 (FDR 2.6e-06)**,pass,-3.02 (FDR 1.5e-07)*,significant contradiction,+1.51 (FDR 0.0024)**,+3.00 (FDR 9.1e-15)**,no
+CD44,CD44,B,0,1,0,fail,-3.87 (FDR 1.5e-06)*,-3.92 (FDR 1.4e-09)*,-0.84 (FDR 0.61),fail,-3.26 (FDR 2.6e-09)*,fail,-0.63 (FDR 0.0083)*,significant contradiction,+2.11 (FDR 1.7e-23)**,+1.37 (FDR 3.5e-40)**,no
+CXADR,CXADR,B,0,1,0,fail,+0.15 (FDR 0.43),-0.24 (FDR 0.22),+0.91 (FDR 0.54),fail,+0.83 (FDR 4.3e-06)**,pass,NA (not measured),NA,-0.20 (FDR 0.08),+0.16 (FDR 0.2),no
+BASP1,BASP1,BC,0,1,1,fail,+1.11 (FDR 0.11),+3.31 (FDR 0.00099)**,+1.66 (FDR 0.19),pass,+6.29 (FDR 1.6e-06)**,pass,NA (not measured),NA,-1.80 (FDR 5.3e-07)*,-0.46 (FDR 0.0049)*,no
+EDN1,EDN1,B,0,2,0,pass,+0.20 (FDR 0.68),+5.80 (FDR 1.3e-10)**,-1.54 (FDR 0.73),pass,+0.01 (FDR 0.98),fail,+0.21 (FDR 0.49),concordant,+0.31 (FDR 0.29),+0.13 (FDR 0.51),no
+IL1RN,IL1RN,B,0,2,0,pass,-5.82 (FDR 3.5e-07)*,-4.26 (FDR 2.1e-13)*,-0.80 (FDR 0.87),fail,NA (not measured),NE,-0.21 (FDR 0.073),"opposite, n.s.",+2.79 (FDR 1.2e-09)**,+1.87 (FDR 7e-12)**,no
+MSLN,MSLN,BC,0,2,1,pass,+0.46 (FDR 0.66),+3.83 (FDR 5.5e-05)**,+1.20 (FDR 0.46),pass,NA (not measured),NE,+0.51 (FDR 0.0095)**,concordant,+1.07 (FDR 0.012)**,+3.09 (FDR 4.1e-14)**,no
+REG3B,REG3B,B,0,1,0,fail,NA (no one2one orthologue),NA (no one2one orthologue),NA (no one2one orthologue),NE,-6.51 (FDR 5.6e-06)*,fail,NA (not measured),NA,NA (no one2one orthologue),NA (no one2one orthologue),no
+EMP1,EMP1,C,0,0,4,fail,-5.05 (FDR 2.4e-05)*,+0.17 (FDR 0.85),+0.13 (FDR 0.77),fail,+2.79 (FDR 5.2e-10)**,pass,-2.37 (FDR 1.1e-09)*,significant contradiction,-2.36 (FDR 2.8e-15)*,-1.75 (FDR 9.4e-37)*,no
+LAMC2,LAMC2,C,0,0,3,fail,-1.07 (FDR 0.065),+0.88 (FDR 0.033)**,+0.30 (FDR 0.77),pass,-0.07 (FDR 0.63),fail,-0.51 (FDR 0.27),"opposite, n.s.",+0.49 (FDR 0.0072)*,+0.86 (FDR 3e-09)**,no
+MMP7,MMP7,C,0,0,1,fail,NA (not measured),NA (not measured),+0.12 (FDR 0.97),NE,-2.83 (FDR 1.6e-05)*,fail,-1.09 (FDR 0.0079)*,significant contradiction,+12.33 (FDR 3.3e-14)**,+7.50 (FDR 3.6e-40)**,no
+L1CAM,L1CAM,BC,0,1,2,fail,+1.98 (FDR 0.0036)**,NA (not measured),+0.80 (FDR 0.66),pass,-4.97 (FDR 8.1e-10)*,fail,-3.76 (FDR 4.5e-08)*,significant contradiction,NA (not measured),-1.27 (FDR 7.5e-08)*,no
+EPS8L1,EPS8L1,,0,0,0,fail,-2.68 (FDR 1.9e-06)*,-0.30 (FDR 0.36),-1.75 (FDR 0.26),fail,+0.05 (FDR 0.89),fail,NA (not measured),NA,-0.24 (FDR 0.23),+0.63 (FDR 3.3e-07)**,no

@@ -1,10 +1,10 @@
 # core_oncofetal — Conserved Intestinal Oncofetal Core
 
-- **Method (frozen v2.0):** [`docs/Method_core_oncofetal_validated.md`](docs/Method_core_oncofetal_validated.md).
+- **Method (frozen v3.0, final framework):** [`docs/Method_core_oncofetal_validated.md`](docs/Method_core_oncofetal_validated.md).
 - **Rule:** a literature-anchored evidence framework; a Core gene must pass
   all four axes:
-  - **L** literature provenance (`config/literature_provenance_31.tsv`, from
-    `scripts/literature_provenance.py`);
+  - **L** literature provenance from a full-text audit of all 31 genes
+    (`config/literature_audit_31.tsv` → `config/literature_provenance_31.tsv`);
   - **H** human developmental, replicated: HGCA ≥ 9 PCW, H-new2 ≥ 9 PCW and
     Gao ≥ 9 W, with ≥ 2/3 fetal-positive and ≥ 1 at log2FC ≥ 0.5 and
     FDR < 0.05;

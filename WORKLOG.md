@@ -10,7 +10,7 @@ Chronological append-only record; newest entries are at the bottom.
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
 | 2b. Human benchmark v2 | **closed (review round 3); stage-resolved addendum v1.2 run** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A (cross-study, not used alone for discovery); bulk H-bulk1/2 = 1 dataset, fail; Visium dropped; no more datasets |
 | 2c. Fetal epithelial state (manual) | **executed; in review** | (this PR) | Gao early-embryo effect; TNFRSF12A pan-fetal-epithelial, stem/TA-enriched detection; no adult arm |
-| Core. Conserved Intestinal Oncofetal Core | **method v2.0 frozen; evaluated; in review** | [#6](https://github.com/leezx/oncofetal_signature/pull/6) | L ∧ H(replicated) ∧ M ∧ C(replicated); v1.0 intersection = stringent sensitivity set; membership restricted (Joanito) |
+| Core. Conserved Intestinal Oncofetal Core | **method v3.0 (final) frozen; evaluated; in review** | [#6](https://github.com/leezx/oncofetal_signature/pull/6) | L ∧ H(replicated) ∧ M ∧ C(replicated); v1.0 intersection = stringent sensitivity set; membership restricted (Joanito) |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
@@ -455,3 +455,21 @@ intersection sensitivity set.
 named study). H passes TACSTD2 (via H-new2/Gao), not SPP1 (Gao −0.01, H-new2 not
 measured). TNFRSF12A fails H and M. Final Core labels are restricted (Joanito).
 **Outputs**: 31-gene evidence matrix workbook (public / restricted).
+
+## 2026-10-02 — Core method v3.0 (final framework): literature audit, missing-data rule
+
+**Literature audit**: all 31 genes searched (symbols, mouse symbols, aliases)
+in 60 full texts (55 Step 1 papers + Mustata 2013, Pikkupeura 2023, Elmentaite
+2021, Fernandez-Vallone 2016, Karo-Atar 2022, Vaquero-Siguero 2026); A/B/C
+classified from each study's own data (`config/literature_audit_31.tsv`).
+L passes 20/31 (v2.0: 16): AREG, EREG, EDN1, IL1RN gained a second primary B
+study. RBP1 has no source in the corpus or a Europe PMC search (fails L as
+unsourced). Fumagalli 2025 not located.
+**Mouse axis**: GSE44433 replication rules evaluated (coverage 23/30); both
+direction-based rules would exclude TACSTD2/SPP1 on n.s. differences; review
+kept GSE230581 alone (decision disclosed in Methods); GSE44433 contradiction
+flag added to the matrix.
+**H missing data**: NA neither lowers the denominator nor supports; 2
+evaluable → 2/2 required; < 2 → not evaluable.
+**Frozen**: `05f8812` (before labels). Final Core labels are restricted
+(Joanito); public workbook updated.

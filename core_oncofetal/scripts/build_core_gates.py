@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Core oncofetal workbook (method v2.0, docs/Method_core_oncofetal_validated.md).
+"""Core oncofetal workbook (method v3.0, docs/Method_core_oncofetal_validated.md).
 
 Axes: L literature (config/literature_provenance_31.tsv); H human developmental
 replicated (HGCA >=9 PCW, H-new2 >=9 PCW, Gao >=9 W: >=2/3 fetal-positive and
@@ -128,14 +128,20 @@ def build(s, prov, restricted):
     for g in s.index:
         c = calls(g, s, prov)
         p = prov.loc[g]
-        row = {"marker": g, "literature_label": p.literature_label, "curator code": p.curator_code,
-               "named studies (n)": int(p.n_named_studies), "L literature": c["L"]}
+        row = {"marker": g, "literature_label": p.literature_label, "audited classes": p.audited_classes,
+               "A studies (n)": int(p.n_A_studies), "B studies (n)": int(p.n_B_studies),
+               "C studies (n)": int(p.n_C_studies), "L literature": c["L"]}
         for key, lab, sp, axis, _ in ev:
             row[lab] = cell(g, sp, s.loc[g, f"{key}__log2FC"], s.loc[g, f"{key}__FDR"])
             if key == "GaoOriginal_late":
                 row["H human developmental"] = c["H"]
             if key == "Mouse_GSE230581":
                 row["M mouse in vivo"] = c["M"]
+            if key == "GSE44433":
+                v, q = s.loc[g, "GSE44433__log2FC"], s.loc[g, "GSE44433__FDR"]
+                row["GSE44433 flag (support, not selecting)"] = (
+                    "significant contradiction" if pd.notna(v) and v < 0 and pd.notna(q) and q < FDR else
+                    ("concordant" if pd.notna(v) and v > 0 else ("NA" if pd.isna(v) else "opposite, n.s.")))
             if key == "Pelka" and restricted:
                 row["C CRC replicated"] = c["C"]
             longr.append(dict(marker=g, evidence=lab, axis=axis, log2FC=s.loc[g, f"{key}__log2FC"],
@@ -143,7 +149,7 @@ def build(s, prov, restricted):
                               applicable=applicable(g, sp), supported=supported(s.loc[g, f"{key}__log2FC"],
                                                                                 s.loc[g, f"{key}__FDR"])))
         if restricted:
-            row["Core label (v2.0)"] = label(c)
+            row["Core label (v3.0)"] = label(c)
             row["Stringent intersection set (v1.0 sensitivity)"] = "yes" if c["stringent_all"] else "no"
         row["Developmental intersection (HGCA & GSE230581)"] = "yes" if c["stringent_dev"] else "no"
         mat.append(row)
@@ -160,13 +166,13 @@ def build(s, prov, restricted):
 
 def rules(restricted):
     r = [
-        ("L literature", "mandatory", "curator code contains A (L-A), or contains B with >= 2 named studies (L-B)"),
+        ("L literature", "mandatory", "full-text audit: >= 1 primary study with A evidence (L-A), or >= 2 primary studies with B evidence (L-B)"),
         ("H human developmental", "mandatory, replicated",
          "HGCA >=9 PCW, H-new2 >=9 PCW, Gao >=9 W: >= 2 measured & fetal-positive AND >= 1 with log2FC >= 0.5 & FDR < 0.05; NE if < 2 measured"),
         ("M mouse in vivo", "mandatory", "GSE230581 log2FC >= 0.5 & FDR < 0.05; NE if no orthologue / not measured"),
         ("C CRC replicated", "mandatory" + ("" if restricted else " (Joanito: restricted)"),
          "Joanito and Pelka both log2FC >= 0.5 & FDR < 0.05; fail if a measured contrast lacks support; NE if otherwise unmeasured"),
-        ("Core (v2.0)", "", "L & H & M & C all pass"),
+        ("Core (v3.0)", "", "L & H & M & C all pass"),
         ("Stringent intersection set (v1.0)", "sensitivity",
          "HGCA >=9 PCW & GSE230581 & Joanito & Pelka each log2FC >= 0.5 & FDR < 0.05 (not measured = NE)"),
         ("Cell notation", "", "log2FC (FDR); ** log2FC >= 0.5 & FDR < 0.05; * FDR < 0.05 below effect threshold; NA = not measured / no orthologue"),
@@ -219,11 +225,12 @@ def main():
         mat, sup, longr = build(s, prov, restricted)
         sheets = {"Evidence_matrix_31": mat, "Supportive_31": sup}
         if restricted:
-            core = mat[mat["Core label (v2.0)"] == "CORE"]
-            sheets["Core_genes_v2"] = core
+            core = mat[mat["Core label (v3.0)"] == "CORE"]
+            sheets["Core_genes_v3"] = core
             sheets["Stringent_set_v1"] = mat[mat["Stringent intersection set (v1.0 sensitivity)"] == "yes"]
         sheets["Developmental_intersection"] = mat[mat["Developmental intersection (HGCA & GSE230581)"] == "yes"]
         sheets["Literature_provenance"] = prov.reset_index()
+        sheets["Literature_audit"] = pd.read_csv(ROOT / "core_oncofetal/config/literature_audit_31.tsv", sep="\t")
         sheets["Long_numeric"] = longr
         sheets["Rules"] = rules(restricted)
         sfx = "" if restricted else "_public"
@@ -238,7 +245,7 @@ def main():
                 shutil.copy2(OUT / f, RESTRICTED / f)
             pd.set_option("display.width", 250)
             print(mat[["marker", "L literature", "H human developmental", "M mouse in vivo", "C CRC replicated",
-                       "Core label (v2.0)"]].to_string(index=False))
+                       "Core label (v3.0)"]].to_string(index=False))
 
 
 if __name__ == "__main__":
