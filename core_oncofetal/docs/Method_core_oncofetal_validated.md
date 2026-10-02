@@ -1,17 +1,29 @@
 # Conserved Intestinal Oncofetal Core (CIOC) — Methods
 
-- **Version:** Core method v3.0, 2026-10-02, the **final framework
-  revision**. It supersedes v2.0 and v1.0. v1.0 is retained as the
-  stringent intersection sensitivity analysis (§7).
-- **Status: permanently frozen.** v3.0 was frozen before its labels were
-  computed (`05f8812`). After review of the labels, membership will **not** be
-  optimised further: no v3.x revision may add or remove a gene. The
-  presentation-only changes made after freezing (naming, claim wording,
-  discordance display) are listed in §12.
-  - **Disclosure:** the per-gene human and mouse developmental values (and the
-    v1.0 result) were visible when the review that set these rules was
-    written. The rules were specified by review, not tuned on the outcome.
-    TACSTD2 is a pre-declared sanity check (§8), not a target.
+- **Version:** Core method v4.0, 2026-10-02. It supersedes v3.0, v2.0 and
+  v1.0. v1.0 is retained as a sensitivity analysis (§7).
+- **What v4.0 changes.** It is a logic correction, not a threshold change:
+  **candidate nomination is separated from validation.**
+  - The 31 literature-curated genes *define* the candidate universe.
+  - Literature provenance becomes an annotation (§2) and is no longer a gate.
+  - In v2.0–v3.0 a second literature filter ("A, or B with ≥ 2 studies") was
+    applied to genes that were already literature candidates. That filtered
+    the same source twice, with a threshold that was never part of the
+    candidate definition.
+- **Status: frozen.**
+  - The v3.0 statement "permanently frozen" is superseded by this correction,
+    which review approved as the last framework revision.
+  - Disclosure: when v4.0 was approved, it was already known that RBP1 was
+    the gene blocked only by the literature gate (it passed H, M and C under
+    v3.0).
+  - The correction applies identically to all 31 genes.
+  - RBP1 was confirmed as an original member of the frozen candidate list
+    (present since `3b08761`; the file is unchanged).
+  - No further framework revisions will be made.
+- **Earlier disclosure (v2.0–v3.0):** the per-gene human and mouse
+  developmental values were visible when the rules were set. The rules were
+  specified by review, not tuned on the outcome. TACSTD2 is a pre-declared
+  sanity check (§8), not a target.
 - **Inputs** are existing, version-controlled contrasts. No statistic is
   recomputed for gene selection.
 
@@ -19,11 +31,13 @@
 
 - **Name:** *Conserved Intestinal Oncofetal Core (CIOC)*. It is not called
   "the intestinal oncofetal signature".
-- **Operational definition:** the CIOC is defined by integrating prior
-  intestinal fetal/regenerative literature with replicated human
-  developmental evidence, in-vivo mouse developmental evidence, and malignant
-  epithelial reactivation across two independent CRC cohorts.
-- **Claim scope:** the CIOC is a set of literature-anchored genes that show
+- **Operational definition:** we first assembled 31 candidate genes
+  implicated in intestinal fetal, regenerative/revival or oncofetal biology
+  from the literature. We then defined the CIOC by sequentially requiring:
+  - replicated human developmental evidence;
+  - in-vivo mouse fetal enrichment;
+  - malignant epithelial reactivation in two independent CRC cohorts.
+- **Claim scope:** the CIOC is a set of literature-nominated genes that show
   **developmental evidence** together with **malignant epithelial
   reacquisition**. It is **not** a set of universally fetal-specific
   markers. Statements about members use "developmental evidence" or
@@ -33,13 +47,13 @@
 
 ## 1. Principle
 
-The Core is a **literature-anchored evidence framework**, not an
-intersection of single-dataset significance calls. A Core gene must show:
+**Literature nominates; data validate.** The CIOC is not an intersection of
+single-dataset significance calls. Starting from the 31 literature
+candidates, a Core gene must show:
 
-- literature-supported fetal/revival intestinal identity;
-- reproducible human fetal-associated expression;
-- in-vivo mouse fetal-high expression;
-- independently replicated CRC malignant-epithelial gain.
+- reproducible human fetal-associated expression (Gate H);
+- in-vivo mouse fetal-high expression (Gate M);
+- independently replicated CRC malignant-epithelial gain (Gate C).
 
 **No single imperfect human developmental dataset holds a veto.** The rule is
 fully deterministic: no gene is added or removed by judgement.
@@ -48,8 +62,16 @@ fully deterministic: no gene is added or removed by judgement.
 
 - **Source:** the 31 Step 1 literature-curated candidates
   (`step2_fetal/config/literature_candidates_31.tsv`).
-- **Provenance:** the merged v1+v2 curated list
+- **Provenance source:** the merged v1+v2 curated list
   (`step1_Literature_curated_intestinal_oncofetal_marker_candidates_merged_v1_v2.csv`).
+- **Every one of the 31 is a literature candidate** ("Literature candidate =
+  YES"). This means membership of the curated candidate universe. It does
+  **not** mean equally strong published evidence that the gene is a bona fide
+  fetal intestinal marker; the strength and nature of the evidence differ by
+  gene and are given by the provenance annotation below.
+- **Curation errors:** a gene found to have been added to the 31 in error
+  would be removed from the candidate universe as a curation correction, not
+  failed at a gate. None was found.
 - **Symbols:** current HGNC, with legacy aliases resolved (CCN1 = CYR61,
   CCN2 = CTGF).
 - **Orthology:**
@@ -58,22 +80,22 @@ fully deterministic: no gene is added or removed by judgement.
   - SPRR1A has no mouse orthologue, so the mouse axis is not evaluable for
     it.
 
-## 3. Axis rules
+## 3. Gate rules
 
-Each axis returns **pass**, **fail** or **not evaluable (NE)**. NE means the
+Each gate returns **pass**, **fail** or **not evaluable (NE)**. NE means the
 evidence needed was not measured (no orthologue, or below the contrast's
 expression filter). **NE is never reported as a biological fail.**
 
-| Axis | Status | Datasets |
+| Gate | Status | Datasets |
 |---|---|---|
-| L | mandatory | curated literature |
+| (candidate definition) | not a gate | 31 literature candidates; provenance = annotation |
 | H | mandatory, replicated | HGCA ≥ 9 PCW, H-new2 ≥ 9 PCW, Gao ≥ 9 W |
 | M | mandatory | GSE230581 |
 | C | mandatory, replicated | Joanito, Pelka |
 
 Unless stated otherwise, **support** below means log2FC ≥ 0.5 and FDR < 0.05.
 
-### L — Literature provenance (mandatory; full-text audit)
+### Literature provenance (annotation; full-text audit; not a gate)
 
 Evidence comes from a full-text audit of all 31 candidates
 (`config/literature_audit_31.tsv`).
@@ -99,18 +121,20 @@ study's own data**:
 | **C** | CRC oncofetal / fetal-like tumour state |
 | not counted | a mention (e.g. a gene used as a staining or proliferation marker), restating another paper, review statements, other tissues, or not found in the text |
 
-**Rule** (unchanged from v2.0):
-- **L-A:** at least 1 audited primary study with A evidence.
-- **L-B:** at least 2 distinct audited primary studies with B evidence.
-- **Pass** if L-A or L-B; otherwise **fail**.
+**Annotation output** (`config/literature_provenance_31.tsv`, generated by
+`scripts/literature_provenance.py`), per gene:
+- the audited evidence classes (A/B/C);
+- the supporting primary studies;
+- a provenance status: *resolved*, or *unresolved* when no primary source was
+  identified.
 
-The derived table is `config/literature_provenance_31.tsv`, generated by
-`scripts/literature_provenance.py`.
-- **Audit outcome:** 20/31 pass. Under the v2.0 curator codes, 16/31 passed.
-- **Data corrections:** AREG, EREG, EDN1 and IL1RN each gained a second
-  primary B study.
-- **No primary source found:** RBP1, in either the corpus or a Europe PMC
-  search. It fails L as unsourced, which is not biological negative evidence.
+Unresolved provenance (RBP1, SPRR1A, EPS8L1) is reported as a curation gap,
+not as biological evidence. Under v2.0–v3.0 these classes fed a literature
+gate (20/31 passed after the audit); v4.0 uses them only as annotation.
+
+**Data corrections from the audit:** AREG, EREG, EDN1 and IL1RN each gained a
+second primary B study. RBP1 has no source in the corpus or in a Europe PMC
+search.
 
 ### H — Human developmental, replicated (mandatory)
 
@@ -188,7 +212,7 @@ Two contrasts:
 
 ## 4. Core definition
 
-**Conserved Intestinal Oncofetal Core = genes with L, H, M and C all pass.**
+**Conserved Intestinal Oncofetal Core (CIOC) = literature candidates passing Gates H, M and C.**
 Every other gene is labelled "not Core" and lists, for each axis, whether it
 failed or was not evaluable.
 
@@ -196,7 +220,7 @@ failed or was not evaluable.
 
 The matrix has one row per literature candidate (31). Its columns are:
 
-- literature provenance (audited classes, numbers of A/B studies, L call);
+- Literature candidate (YES for all 31), evidence class annotation (or "provenance unresolved") and primary studies;
 - HGCA ≥ 9 PCW, H-new2 ≥ 9 PCW, Gao ≥ 9 W, then the H call;
 - mouse in vivo GSE230581 (M call) and mouse replication GSE44433;
 - Joanito and Pelka, then the C call;
@@ -227,7 +251,7 @@ visible rather than summarised away. Bulk discrepancies are described only as
 
 ## 7. Sensitivity analysis using single-dataset hard intersections (former method v1.0)
 
-- **Rule:** Literature 31 ∩ G1 HGCA ≥ 9 PCW ∩ G2 GSE230581 ∩ G3 Joanito ∩ G4
+- **Rule:** literature candidates ∩ G1 HGCA ≥ 9 PCW ∩ G2 GSE230581 ∩ G3 Joanito ∩ G4
   Pelka.
 - **Pass in each gate:** log2FC ≥ 0.5 and FDR < 0.05.
 - **Not measured** means not evaluable, never "fail".
@@ -244,7 +268,7 @@ visible rather than summarised away. Bulk discrepancies are described only as
 
 - **TACSTD2 (TROP2):** if v2.0 excludes it, the axis that excludes it and the
   cross-dataset evidence for that exclusion are reported explicitly.
-- **TNFRSF12A:** literature-nominated (L-A). Its status is reported whatever
+- **TNFRSF12A:** a literature candidate (audited classes A and B). Its status is reported whatever
   it is. Statement if excluded: *TNFRSF12A is mechanistically linked to the
   oncofetal program but is not itself a member of the stringent conserved
   oncofetal Core.*
@@ -261,8 +285,10 @@ visible rather than summarised away. Bulk discrepancies are described only as
   - Fumagalli 2025 could not be located.
   - Gene-specific statements may also exist only in figures or supplements
     that were not text-searchable.
-  - RBP1 has no identified primary source; its exclusion is for missing
-    provenance, not negative evidence.
+  - RBP1, SPRR1A and EPS8L1 have no identified primary source (provenance
+    unresolved). They remain candidates because they are in the frozen
+    candidate list. If a later check shows a curation error, the gene is
+    removed from the universe, not failed at a gate.
 
 ## 10. Outputs and data-use restriction
 
@@ -270,15 +296,18 @@ visible rather than summarised away. Bulk discrepancies are described only as
   Joanito columns, the C call and the Core labels are written only to the
   full workbook (git-ignored, mirrored to
   `DATA/.../restricted_joanito/core_oncofetal/`).
-- **Public workbook** keeps L, H, M, Pelka, TCGA and the supportive
-  evidence.
+- **Public workbook** keeps the literature annotation, H, M, Pelka, TCGA and
+  the supportive evidence.
+- **Gate funnel workbook** (`results/CIOC_gate_funnel_31.xlsx`, restricted;
+  `scripts/build_gate_funnel.py`): one row per candidate, with Literature
+  candidate = YES, then Gates H, M and C, the reasons for filtering, and a
+  final Core column (YES or blank).
 
 ## 11. Change control
 
-v3.0 is permanently frozen. Any future change to an axis, dataset, threshold
-or rule defines a different gene set with a new name; it is not a revision of
-the CIOC.
-
+v4.0 is frozen and is the last framework revision. Any future change to a
+gate, dataset, threshold or rule defines a different gene set with a new
+name; it is not a revision of the CIOC.
 
 ## 12. Change log
 
@@ -288,3 +317,4 @@ the CIOC.
 | v2.0 | Evidence framework (L, H replicated, M, C replicated); NE introduced. |
 | v3.0 (final) | L evidence from the full-text audit (rule unchanged); explicit H missing-data rule; mouse replication evaluated and not adopted (GSE44433 supportive, decision disclosed). No further framework revisions. |
 | v3.0, presentation only (after freeze) | CIOC name and claim scope (§0); H reporting wording and H-new2 role; per-gene H support source; discordance flags; v1.0 renamed "sensitivity analysis using single-dataset hard intersections". **Membership unchanged.** |
+| v4.0 | Logic correction: literature defines the candidate universe (all 31 = YES); provenance (A/B/C, studies, resolved/unresolved) is annotation, not a gate. Core = H ∧ M ∧ C. Applied identically to all 31 genes. Last framework revision. |

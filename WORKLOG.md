@@ -10,7 +10,7 @@ Chronological append-only record; newest entries are at the bottom.
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
 | 2b. Human benchmark v2 | **closed (review round 3); stage-resolved addendum v1.2 run** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A (cross-study, not used alone for discovery); bulk H-bulk1/2 = 1 dataset, fail; Visium dropped; no more datasets |
 | 2c. Fetal epithelial state (manual) | **executed; in review** | (this PR) | Gao early-embryo effect; TNFRSF12A pan-fetal-epithelial, stem/TA-enriched detection; no adult arm |
-| Core. Conserved Intestinal Oncofetal Core | **CIOC v3.0 permanently frozen; presentation finalised** | [#6](https://github.com/leezx/oncofetal_signature/pull/6) | L ∧ H(replicated) ∧ M ∧ C(replicated); v1.0 intersection = stringent sensitivity set; membership restricted (Joanito) |
+| Core. Conserved Intestinal Oncofetal Core | **CIOC method v4.0 frozen (last revision)** | [#6](https://github.com/leezx/oncofetal_signature/pull/6) | Literature31 (candidate definition) → H(replicated) ∧ M ∧ C(replicated); v1.0 intersection = stringent sensitivity set; membership restricted (Joanito) |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
@@ -491,3 +491,19 @@ Results, legends, reviewer answers) in `results/CIOC_manuscript_text.md`
 (git-ignored, mirrored to DATA restricted).
 **Next (not started)**: program coherence of the CIOC in independent scRNA/spatial
 data; relation to revCSC/proCSC, TWEAKR and YAP.
+
+## 2026-10-02 — CIOC method v4.0: literature nominates, data validate
+
+**Why (review)**: the v2.0–v3.0 literature gate re-filtered the same literature
+source that defined the 31 candidates, with a threshold ("A, or B with ≥ 2
+studies") that was never part of the candidate definition.
+**Change**: all 31 = Literature candidate YES; A/B/C classes, primary studies
+and resolved/unresolved status are annotation; Core = H ∧ M ∧ C. Applied to all 31.
+RBP1 confirmed in the original frozen candidate list (`3b08761`, unchanged).
+**Disclosed**: RBP1 was known to be the only gene blocked solely by the
+literature gate before v4.0 was approved; no other gene changes (BASP1 fails C,
+MIF fails H).
+**Outputs**: Methods v4.0; provenance as annotation; public evidence matrix;
+restricted gate funnel workbook (`build_gate_funnel.py`) and manuscript text.
+Final membership restricted (Joanito). Open curation item: RBP1 nomination
+source unresolved.

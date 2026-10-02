@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Core oncofetal workbook (method v3.0, docs/Method_core_oncofetal_validated.md).
+"""Core oncofetal workbook (method v4.0, docs/Method_core_oncofetal_validated.md).
 
-Axes: L literature (config/literature_provenance_31.tsv); H human developmental
+Candidate universe: the 31 literature candidates (all eligible; provenance from
+config/literature_provenance_31.tsv is annotation only). Gates: H human developmental
 replicated (HGCA >=9 PCW, H-new2 >=9 PCW, Gao >=9 W: >=2/3 fetal-positive and
 >=1 with log2FC >= 0.5 & FDR < 0.05); M mouse in vivo GSE230581 (log2FC >= 0.5
 & FDR < 0.05); C CRC replicated (Joanito and Pelka both log2FC >= 0.5 &
-FDR < 0.05). Core = L & H & M & C pass. Calls: pass / fail / not evaluable (NE).
+FDR < 0.05). Core = H & M & C pass. Calls: pass / fail / not evaluable (NE).
 Stringent intersection set (former v1.0) is reported as a sensitivity subset.
 Values come from the marker summary (no recomputation). The full workbook
 (Joanito, C call, Core labels) is restricted and git-ignored; the public one
@@ -72,7 +73,7 @@ def cell(g, sp, v, q):
 
 def calls(g, s, prov):
     get = lambda k: (s.loc[g, f"{k}__log2FC"], s.loc[g, f"{k}__FDR"])
-    out = {"L": prov.loc[g, "L_call"]}
+    out = {}
     # H
     if g in NA_HUMAN:
         out["H"] = "NE"
@@ -109,10 +110,10 @@ def calls(g, s, prov):
 
 
 def label(c):
-    if all(c[a] == "pass" for a in "LHMC"):
+    if all(c[a] == "pass" for a in "HMC"):
         return "CORE"
-    failed = [a for a in "LHMC" if c[a] == "fail"]
-    ne = [a for a in "LHMC" if c[a] == "NE"]
+    failed = [a for a in "HMC" if c[a] == "fail"]
+    ne = [a for a in "HMC" if c[a] == "NE"]
     parts = []
     if failed:
         parts.append("fails " + "+".join(failed))
@@ -128,9 +129,13 @@ def build(s, prov, restricted):
     for g in s.index:
         c = calls(g, s, prov)
         p = prov.loc[g]
-        row = {"marker": g, "literature_label": p.literature_label, "audited classes": p.audited_classes,
+        row = {"marker": g, "literature_label": p.literature_label, "Literature candidate": "YES",
+               "Literature evidence class (annotation)": p.audited_classes if p.provenance_status == "resolved"
+               else "provenance unresolved",
                "A studies (n)": int(p.n_A_studies), "B studies (n)": int(p.n_B_studies),
-               "C studies (n)": int(p.n_C_studies), "L literature": c["L"]}
+               "C studies (n)": int(p.n_C_studies),
+               "Primary studies (A; B; C)": " | ".join(x for x in (p.A_studies, p.B_studies, p.C_studies)
+                                                       if isinstance(x, str) and x) or "none identified"}
         for key, lab, sp, axis, _ in ev:
             row[lab] = cell(g, sp, s.loc[g, f"{key}__log2FC"], s.loc[g, f"{key}__FDR"])
             if key == "GaoOriginal_late":
@@ -161,7 +166,7 @@ def build(s, prov, restricted):
             flags.append(f"TCGA bulk significantly tumour-low ({v:+.2f})")
         row["DISCORDANCE flags (reported, not selecting)"] = "; ".join(flags) if flags else "none"
         if restricted:
-            row["Core label (v3.0)"] = label(c).replace("CORE", "CIOC")
+            row["Core label (v4.0)"] = label(c).replace("CORE", "CIOC")
             row["Sensitivity: single-dataset hard intersection"] = "yes" if c["stringent_all"] else "no"
         row["Developmental intersection (HGCA & GSE230581)"] = "yes" if c["stringent_dev"] else "no"
         mat.append(row)
@@ -178,14 +183,14 @@ def build(s, prov, restricted):
 
 def rules(restricted):
     r = [
-        ("L literature", "mandatory", "full-text audit: >= 1 primary study with A evidence (L-A), or >= 2 primary studies with B evidence (L-B)"),
+        ("Candidate universe", "definition, not a gate", "31 literature-curated candidates; all = Literature candidate YES. Audited evidence class (A fetal intestine, B regeneration/revival, C CRC oncofetal) and primary studies are annotation"),
         ("H human developmental", "mandatory, replicated",
          "HGCA >=9 PCW, H-new2 >=9 PCW, Gao >=9 W: >= 2 measured & fetal-positive AND >= 1 with log2FC >= 0.5 & FDR < 0.05; NE if < 2 measured"),
         ("M mouse in vivo", "mandatory", "GSE230581 log2FC >= 0.5 & FDR < 0.05; NE if no orthologue / not measured"),
         ("C CRC replicated", "mandatory" + ("" if restricted else " (Joanito: restricted)"),
          "Joanito and Pelka both log2FC >= 0.5 & FDR < 0.05; fail if a measured contrast lacks support; NE if otherwise unmeasured"),
-        ("Conserved Intestinal Oncofetal Core (CIOC), v3.0, permanently frozen", "",
-         "L & H & M & C all pass. Operational definition: literature-anchored genes with replicated developmental evidence and malignant epithelial reactivation; not a fetal-specific marker set"),
+        ("Conserved Intestinal Oncofetal Core (CIOC), method v4.0", "",
+         "H & M & C all pass. Operational definition: literature-anchored genes with replicated developmental evidence and malignant epithelial reactivation; not a fetal-specific marker set"),
         ("H wording", "", "concordant fetal enrichment across >= 2 independent comparisons, statistical support in >= 1; H-new2 (cross-study) serves as a statistical-support dataset, direction is evaluated with HGCA and Gao; all three log2FC shown"),
         ("Discordance flags", "reported, never selecting", "human contrast in opposite direction; GSE44433 significantly adult-high; TCGA bulk significantly tumour-low"),
         ("Sensitivity analysis using single-dataset hard intersections (former v1.0)", "sensitivity only; not an alternative Core",
@@ -243,7 +248,7 @@ def main():
         mat, sup, longr = build(s, prov, restricted)
         sheets = {"Evidence_matrix_31": mat, "Supportive_31": sup}
         if restricted:
-            core = mat[mat["Core label (v3.0)"] == "CIOC"]
+            core = mat[mat["Core label (v4.0)"] == "CIOC"]
             sheets["CIOC_members"] = core
             sheets["Sensitivity_hard_intersect"] = mat[mat["Sensitivity: single-dataset hard intersection"] == "yes"]
         sheets["Developmental_intersection"] = mat[mat["Developmental intersection (HGCA & GSE230581)"] == "yes"]
@@ -262,8 +267,8 @@ def main():
                       "Core_oncofetal_gate_long.csv"):
                 shutil.copy2(OUT / f, RESTRICTED / f)
             pd.set_option("display.width", 250)
-            print(mat[["marker", "L literature", "H human developmental", "M mouse in vivo", "C CRC replicated",
-                       "Core label (v3.0)"]].to_string(index=False))
+            print(mat[["marker", "Literature evidence class (annotation)", "H human developmental", "M mouse in vivo", "C CRC replicated",
+                       "Core label (v4.0)"]].to_string(index=False))
 
 
 if __name__ == "__main__":

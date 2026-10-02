@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Axis L (Core method v3.0): literature provenance from the full-text audit.
+"""Literature provenance annotation (Core method v4.0): from the full-text audit.
+
+v4.0: literature defines the candidate universe (all 31 = literature candidates);
+provenance is an annotation, not a gate.
 
 Input: config/literature_audit_31.tsv, one record per gene x study, classified
 from the study's own data after reading the full text (audit corpus: the 55
@@ -9,10 +12,9 @@ Fernandez-Vallone 2016, Karo-Atar 2022, Vaquero-Siguero 2026).
   B  injury/infection/YAP-driven regenerative fetal-like or revival state
   C  CRC oncofetal / fetal-like tumour state
   mention / not_found / not_read / other_tissue: recorded, never counted
-Rule (unchanged from v2.0, now applied to audited evidence):
-  L-A: >= 1 audited primary study with A evidence
-  L-B: >= 2 distinct audited primary studies with B evidence
-  pass = L-A or L-B
+Output per gene: audited evidence classes and supporting primary studies;
+provenance_status = "resolved" if any audited A/B/C primary study, else
+"unresolved" (e.g. RBP1). No pass/fail call is made.
 Usage (repo root): python3 core_oncofetal/scripts/literature_provenance.py
 """
 import pathlib
@@ -39,20 +41,19 @@ def main():
         A, B, C = studies("A"), studies("B"), studies("C")
         other = a[~a.evidence_class.isin(["A", "B", "C"])]
         code = re.findall(r"\(([^()]*)\)\.?\s*$", cur.loc[g, "Annotation"].strip())[0]
-        la, lb = len(A) >= 1, len(B) >= 2
         rows.append(dict(gene=g, literature_label=label, step1_curator_code=code,
                          audited_classes="".join(c for c, s in (("A", A), ("B", B), ("C", C)) if s),
                          n_A_studies=len(A), A_studies="; ".join(A), n_B_studies=len(B), B_studies="; ".join(B),
                          n_C_studies=len(C), C_studies="; ".join(C),
                          unsupported_or_unread="; ".join(f"{r.study} [{r.evidence_class}]" for r in other.itertuples()),
                          step1_references=cur.loc[g, "References"],
-                         L_A_direct_fetal=la, L_B_replicated_revival=lb,
-                         L_call="pass" if (la or lb) else "fail", L_route="L-A" if la else ("L-B" if lb else "none")))
+                         literature_candidate="YES",
+                         provenance_status="resolved" if (A or B or C) else "unresolved"))
     out = pd.DataFrame(rows)
     out.to_csv(OUT, sep="\t", index=False)
     pd.set_option("display.width", 220)
     print(out[["gene", "step1_curator_code", "audited_classes", "n_A_studies", "n_B_studies", "n_C_studies",
-               "L_call", "L_route"]].to_string(index=False))
+               "provenance_status"]].to_string(index=False))
 
 
 if __name__ == "__main__":
