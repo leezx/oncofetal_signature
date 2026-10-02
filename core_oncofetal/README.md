@@ -36,13 +36,20 @@
   (`results/CIOC_manuscript_text.md`) are git-ignored and
   mirrored to `DATA/.../restricted_joanito/core_oncofetal/`.
 
-## CIOC-extended (exploratory)
+## Genome-wide fetal–CRC candidates (Level 2) and Extended CIOC (Level 3)
 
-`scripts/build_extended_core.py` applies the frozen gates H, M and C
-genome-wide, removing only the Literature-31 candidate restriction. It is
-data-driven, exploratory and not the CIOC; the CIOC is reproduced inside it
-(assertion). Genome-wide genes keep the standard `filterByExpr` (absent =
-not evaluable); only the 31 prespecified candidates are filter-exempt.
-Outputs are restricted (Joanito; git-ignored, mirrored to DATA):
-`CIOC_extended_gate_calls.csv`, `CIOC_extended_gate_funnel.xlsx`,
-`CIOC_extended.gmt`.
+`scripts/build_genomewide_candidates.py` applies the frozen gates H, M and C
+genome-wide, removing only the Literature-31 restriction.
+- **Outputs:**
+  - cross-species fetal–CRC candidates (H ∧ M ∧ C);
+  - human conserved fetal–CRC candidates (H ∧ C).
+- **Status:** a discovery universe, **not a signature and not for scoring**.
+- **Internal validation:** the CIOC is recovered in full, and no other
+  Literature-31 gene passes (assertion in the script).
+- **Restricted outputs** (Joanito; git-ignored, mirrored to DATA):
+  - `Genomewide_fetal_CRC_candidates_calls.csv`
+  - `Genomewide_fetal_CRC_candidates.xlsx`
+  - `Genomewide_fetal_CRC_candidates.gmt`
+- **Extended CIOC (Level 3):** Level 2 plus Gate E (epithelial
+  compatibility) plus CIOC program coherence in independent data. The rules
+  will be frozen before computation; see `docs/EXTENDED_CIOC_PLAN.md`.

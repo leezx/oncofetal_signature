@@ -539,3 +539,16 @@ restriction (`core_oncofetal/scripts/build_extended_core.py`). Universe and
 counts are in the restricted funnel workbook; the CIOC is fully recovered
 inside the extended set. Outputs restricted (Joanito), git-ignored, mirrored
 to DATA.
+
+### 2026-10-02 — Level 2 renaming; Extended CIOC plan
+Review: the genome-wide H∧M∧C set includes strong, concordant non-epithelial
+programs (collagen, smooth-muscle, endothelial, lymphoid genes), so it is
+not an epithelial oncofetal signature. Renamed: H∧M∧C = cross-species
+fetal–CRC candidates; H∧C = human conserved fetal–CRC candidates (Level 2,
+discovery universe, not for scoring). Script renamed to
+`build_genomewide_candidates.py`; old CIOC_extended outputs removed.
+Internal validation: genome-wide search recovers all CIOC genes and no other
+Literature-31 gene. Extended CIOC (Level 3) = Level 2 ∩ Gate E (epithelial
+compatibility) ∩ CIOC coherence, rules to be frozen before computation
+(`core_oncofetal/docs/EXTENDED_CIOC_PLAN.md`). Open decision: independent
+all-compartment CRC atlas (Tabula Sapiens LI is adult-normal only).

@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-"""CIOC-extended: the frozen CIOC gates (H, M, C; method v4.0 + data-QC
+"""Genome-wide fetal–CRC candidates (Level 2): the frozen CIOC gates (H, M, C; method v4.0 + data-QC
 amendment) applied genome-wide, i.e. without the Literature-31 candidate
 restriction. RESTRICTED output (Gate C uses Joanito).
+This is a discovery universe, NOT a signature and NOT the Extended CIOC: the
+Extended CIOC (Level 3) additionally requires epithelial specificity (Gate E)
+and CIOC program coherence, frozen before computation (docs/EXTENDED_CIOC_PLAN.md).
 
 Universe: every human gene tested in at least one gate contrast.
 Values: genome-wide gate contrasts from the panel-aware runs
@@ -20,9 +23,9 @@ Genome-wide genes absent from a contrast (filterByExpr or absent from the
 source) are "not tested" (NE contribution), as in the original rules; only
 the 31 prespecified candidates were exempt from the filter.
 Outputs (git-ignored, mirrored to DATA restricted_joanito/core_oncofetal/):
-  results/CIOC_extended_gate_calls.csv, results/CIOC_extended_gate_funnel.xlsx,
-  results/CIOC_extended.gmt
-Usage (repo root): python3 core_oncofetal/scripts/build_extended_core.py
+  results/Genomewide_fetal_CRC_candidates_calls.csv, results/Genomewide_fetal_CRC_candidates.xlsx,
+  results/Genomewide_fetal_CRC_candidates.gmt
+Usage (repo root): python3 core_oncofetal/scripts/build_genomewide_candidates.py
 """
 import pathlib
 import shutil
@@ -151,8 +154,8 @@ def main():
             "Mouse evidence (log2FC, FDR)": f"GSE230581 {txt('Mouse')}",
             "Gate C CRC (Joanito + Pelka)": CALL[c],
             "CRC evidence (log2FC, FDR)": " | ".join(f"{CRC[k]} {txt(k)}" for k in CRC),
-            "Extended core": "YES" if (h, m, c) == ("pass", "pass", "pass") else "",
-            "Extended core human": "YES" if (h, c) == ("pass", "pass") else "",
+            "Cross-species fetal–CRC candidate": "YES" if (h, m, c) == ("pass", "pass", "pass") else "",
+            "Human conserved fetal–CRC candidate": "YES" if (h, c) == ("pass", "pass") else "",
             "CIOC (Literature-31)": "YES" if g in cioc else "",
         })
         for k in list(HUMAN) + list(CRC) + ["Mouse"]:
@@ -163,25 +166,28 @@ def main():
     d["_n"] = d[gates].eq("PASS").sum(axis=1)
     # within members: order by the weakest supported CRC effect (descending), then name
     d["_crc"] = d[["Joanito__log2FC", "Pelka__log2FC"]].min(axis=1)
-    d = d.sort_values(["Extended core", "Extended core human", "_n", "_crc"], ascending=False).drop(columns=["_n", "_crc"])
+    d = d.sort_values(["Cross-species fetal–CRC candidate", "Human conserved fetal–CRC candidate", "_n", "_crc"], ascending=False).drop(columns=["_n", "_crc"])
 
-    ext = d[d["Extended core"] == "YES"]
+    ext = d[d["Cross-species fetal–CRC candidate"] == "YES"]
     assert cioc <= set(ext.Gene), f"CIOC not reproduced: {cioc - set(ext.Gene)}"
     hp, mp, cp = (d[g].eq("PASS") for g in gates)
     funnel = pd.DataFrame([
         ("Genes tested in ≥1 gate contrast (universe)", len(d)),
         ("Gate H pass", int(hp.sum())),
         ("Gate H and M pass", int((hp & mp).sum())),
-        ("Gate H, M and C pass = Extended core", int((hp & mp & cp).sum())),
-        ("Extended core human (H and C, ignoring M)", int((hp & cp).sum())),
-        ("Extended core ∩ Literature-31", int((hp & mp & cp & d["Literature candidate"].eq("YES")).sum())),
-        ("CIOC (Literature-31) recovered in Extended core", f"{len(cioc & set(ext.Gene))}/{len(cioc)}"),
+        ("Gate H, M and C pass = cross-species fetal–CRC candidates", int((hp & mp & cp).sum())),
+        ("Human conserved fetal–CRC candidates (H and C, ignoring M)", int((hp & cp).sum())),
+        ("Cross-species candidates ∩ Literature-31", int((hp & mp & cp & d["Literature candidate"].eq("YES")).sum())),
+        ("CIOC (Literature-31) recovered by the genome-wide search", f"{len(cioc & set(ext.Gene))}/{len(cioc)}"),
+        ("Literature-31 candidates in the genome-wide set that are not CIOC", len(set(ext.Gene) & set(lit) - cioc)),
     ], columns=["Step", "Genes"])
 
     show = [c for c in d.columns if "__" not in c]
-    d.to_csv(OUT / "CIOC_extended_gate_calls.csv", index=False)
+    d.to_csv(OUT / "Genomewide_fetal_CRC_candidates_calls.csv", index=False)
     legend = pd.DataFrame([
-        ("Scope", "Frozen CIOC gates (method v4.0 + data-QC amendment) applied genome-wide; the only change is that the Literature-31 candidate restriction is removed. Data-driven and exploratory; not the CIOC."),
+        ("Scope", "Level 2 discovery universe: frozen CIOC gates (method v4.0 + data-QC amendment) applied genome-wide; the only change is that the Literature-31 restriction is removed. NOT a signature and NOT the Extended CIOC; do not use for scoring. Contains non-epithelial programs (e.g. collagen / smooth-muscle / immune genes) that DE gates cannot exclude."),
+        ("Architecture", "Level 1 CIOC (8; literature + H/M/C) → Level 2 genome-wide candidates (this file) → Level 3 Extended CIOC (+ Gate E epithelial specificity + CIOC coherence; rules frozen before computation)"),
+        ("Internal validation", "The genome-wide search recovers all 8 CIOC genes, and no other Literature-31 candidate passes H, M and C"),
         ("Universe", "All human genes tested in ≥1 gate contrast (HGCA, H-new2, Gao, Joanito, Pelka); symbols harmonised with step3 symbol_aliases.tsv"),
         ("Gate H Human development", "HGCA ≥9 PCW, H-new2 ≥9 PCW, Gao ≥9 W: ≥2 evaluable and fetal-positive and ≥1 with log2FC≥0.5 & FDR<0.05; <2 evaluable = not evaluable"),
         ("Gate M Mouse in vivo", "GSE230581 E16.5 epithelium vs adult crypt: log2FC≥0.5 & FDR<0.05 via Ensembl 116 one-to-one orthologue (Literature-31 genes: frozen mapping)"),
@@ -189,8 +195,8 @@ def main():
         ("FDR", "edgeR QL; BH over all genes tested in each contrast (genome-wide filterByExpr set + rescued Literature-31 genes); Gao: Welch P, BH"),
         ("NA (not_tested)", "Gene not in the contrast after genome-wide filterByExpr or absent from the source; contributes not evaluable, not fail. Only the 31 prespecified candidates were exempt from the filter."),
         ("Cells", "log2FC (FDR); ** log2FC≥0.5 & FDR<0.05; * FDR<0.05 below effect threshold; [low count] mean CPM<1 in both arms"),
-        ("Extended core", "YES = passes H, M and C; Extended core human = passes H and C ignoring M; CIOC (Literature-31) = frozen 8-gene core"),
-        ("Order", "Extended core first, then Extended core human; within groups by number of gates passed, then weaker CRC log2FC (min of Joanito, Pelka) descending"),
+        ("Candidate columns", "Cross-species fetal–CRC candidate = passes H, M and C; Human conserved fetal–CRC candidate = passes H and C ignoring M (no cross-species evidence); CIOC (Literature-31) = frozen 8-gene core"),
+        ("Order", "Cross-species candidates first, then human conserved candidates; within groups by number of gates passed, then weaker CRC log2FC (min of Joanito, Pelka) descending"),
         ("Restriction", "Contains Joanito-derived results (Synapse data-use terms): do not share or commit"),
     ], columns=["Item", "Definition"])
 
@@ -198,15 +204,15 @@ def main():
     wb.remove(wb.active)
     thin = Side(style="thin", color="BFBFBF")
     fill = {"PASS": "C6EFCE", "FAIL": "F8CBAD", "NOT EVALUABLE": "D9D9D9"}
-    yes_cols = ("Extended core", "Extended core human", "CIOC (Literature-31)", "Literature candidate")
-    sheets = [("Extended_core", ext[show]), ("Extended_core_human", d[d["Extended core human"] == "YES"][show]),
+    yes_cols = ("Cross-species fetal–CRC candidate", "Human conserved fetal–CRC candidate", "CIOC (Literature-31)", "Literature candidate")
+    sheets = [("Cross_species_candidates", ext[show]), ("Human_conserved_candidates", d[d["Human conserved fetal–CRC candidate"] == "YES"][show]),
               ("Funnel", funnel), ("All_genes", d[show]), ("Legend", legend)]
     for name, df in sheets:
         ws = wb.create_sheet(name)
         for j, c in enumerate(df.columns, 1):
             x = ws.cell(1, j, c)
             x.font = Font(name="Arial", bold=True, color="FFFFFF", size=10)
-            x.fill = PatternFill("solid", start_color="7030A0" if c.startswith(("Gate", "Extended", "CIOC")) else "1F4E78")
+            x.fill = PatternFill("solid", start_color="7030A0" if c.startswith(("Gate", "Cross-species", "Human conserved", "CIOC")) else "1F4E78")
             x.alignment = Alignment(wrap_text=True, vertical="center")
         big = len(df) > 2000
         for i, row in enumerate(df.itertuples(index=False), 2):
@@ -224,8 +230,8 @@ def main():
                     x.fill = PatternFill("solid", start_color=fill[v])
                 if c in yes_cols[:3] and v == "YES":
                     x.fill = PatternFill("solid", start_color="00B050")
-        widths = {"Gene": 12, "Literature candidate": 11, "Mouse orthologue": 11, "Extended core": 9,
-                  "Extended core human": 10, "CIOC (Literature-31)": 10, "Step": 50, "Genes": 12, "Item": 26}
+        widths = {"Gene": 12, "Literature candidate": 11, "Mouse orthologue": 11, "Cross-species fetal–CRC candidate": 11,
+                  "Human conserved fetal–CRC candidate": 11, "CIOC (Literature-31)": 10, "Step": 50, "Genes": 12, "Item": 26}
         for j, c in enumerate(df.columns, 1):
             w = widths.get(c, 15 if c.startswith("Gate") else 44)
             ws.column_dimensions[get_column_letter(j)].width = 120 if (name == "Legend" and j == 2) else w
@@ -233,19 +239,21 @@ def main():
         ws.row_dimensions[1].height = 40
         if big:
             ws.auto_filter.ref = ws.dimensions
-    xl = OUT / "CIOC_extended_gate_funnel.xlsx"
+    xl = OUT / "Genomewide_fetal_CRC_candidates.xlsx"
     wb.save(xl)
 
-    gmt = OUT / "CIOC_extended.gmt"
-    gmt.write_text("\t".join(["CIOC_EXTENDED_GENOME_WIDE",
-                              "Frozen CIOC gates H, M, C (method v4.0 + data-QC amendment) applied genome-wide "
-                              "without the Literature-31 restriction; exploratory; HGNC symbols; RESTRICTED (Joanito-derived)"]
-                             + ext.Gene.tolist()) + "\n")
+    gmt = OUT / "Genomewide_fetal_CRC_candidates.gmt"
+    desc = ("frozen CIOC gates (method v4.0 + data-QC amendment) applied genome-wide without the Literature-31 "
+            "restriction; Level 2 discovery universe, NOT a signature, not for scoring; HGNC symbols; RESTRICTED (Joanito-derived)")
+    hum = d[d["Human conserved fetal–CRC candidate"] == "YES"].Gene.tolist()
+    gmt.write_text("\t".join(["GENOMEWIDE_CROSS_SPECIES_FETAL_CRC_CANDIDATES", "Gates H+M+C; " + desc] + ext.Gene.tolist()) + "\n"
+                   + "\t".join(["GENOMEWIDE_HUMAN_CONSERVED_FETAL_CRC_CANDIDATES", "Gates H+C (mouse ignored); " + desc] + hum)
+                   + "\n")
     RESTRICTED.mkdir(parents=True, exist_ok=True)
-    for f in (xl, gmt, OUT / "CIOC_extended_gate_calls.csv"):
+    for f in (xl, gmt, OUT / "Genomewide_fetal_CRC_candidates_calls.csv"):
         shutil.copy2(f, RESTRICTED / f.name)
     print(funnel.to_string(index=False))
-    print("Extended core:", ", ".join(ext.Gene))
+    print("Cross-species fetal–CRC candidates:", len(ext))
 
 
 if __name__ == "__main__":
