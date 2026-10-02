@@ -10,7 +10,7 @@ Chronological append-only record; newest entries are at the bottom.
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
 | 2b. Human benchmark v2 | **closed (review round 3); stage-resolved addendum v1.2 run** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A (cross-study, not used alone for discovery); bulk H-bulk1/2 = 1 dataset, fail; Visium dropped; no more datasets |
 | 2c. Fetal epithelial state (manual) | **executed; in review** | (this PR) | Gao early-embryo effect; TNFRSF12A pan-fetal-epithelial, stem/TA-enriched detection; no adult arm |
-| Core. Conserved Intestinal Oncofetal Core | **method v1.0 frozen; gates evaluated; in review** | (this PR) | Literature 31 → HGCA ≥9 PCW → GSE230581 → Joanito → Pelka; final membership restricted (Joanito) |
+| Core. Conserved Intestinal Oncofetal Core | **method v2.0 frozen; evaluated; in review** | [#6](https://github.com/leezx/oncofetal_signature/pull/6) | L ∧ H(replicated) ∧ M ∧ C(replicated); v1.0 intersection = stringent sensitivity set; membership restricted (Joanito) |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
@@ -440,3 +440,18 @@ Joanito sensitivity, Pelka P) reported only.
 TNFRSF12A fails G1 and G2. Final Core membership (needs G3) is recorded only
 in the restricted workbook (DATA restricted_joanito/core_oncofetal/).
 **Outputs**: public `core_oncofetal/results/Core_oncofetal_gate_statistics_public.{xlsx,csv}`.
+
+## 2026-10-02 — Core method v2.0: literature-anchored evidence framework
+
+**Why**: review — a four-dataset intersection makes one imperfect human dataset
+(HGCA, strict literature recovery 7/25) an absolute veto, and treated "not
+measured" as fail.
+**Method**: frozen (`ef58297`) before labels were computed. Axes L (curator code
+contains A, or B with ≥ 2 named studies), H (HGCA/H-new2/Gao ≥ 9 W: ≥ 2/3
+fetal-positive and ≥ 1 with log2FC ≥ 0.5 & FDR < 0.05), M (GSE230581), C (Joanito
+and Pelka). Calls pass/fail/not evaluable. v1.0 retained as stringent
+intersection sensitivity set.
+**Public results**: L passes 16/31 (RBP1 fails: its curated provenance has no
+named study). H passes TACSTD2 (via H-new2/Gao), not SPP1 (Gao −0.01, H-new2 not
+measured). TNFRSF12A fails H and M. Final Core labels are restricted (Joanito).
+**Outputs**: 31-gene evidence matrix workbook (public / restricted).
