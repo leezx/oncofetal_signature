@@ -1,13 +1,13 @@
-contrast	review_decision	note	evidence_tier
-HGCA	failed_qualification	original H1; not used as primary	C
-GaoOriginal	failed_qualification	fetal-arm problem localised by debug pair	C
-Senger	failed_qualification	culture benchmark	C
-Hnew1	dropped_failed_QC_record	Visium composition-confounded; dropped from quantitative Step 2 (review 2026-10-02); kept as QC record only	dropped
-Hnew1_colon	dropped_failed_QC_record	as Hnew1	dropped
-Hnew2	human_primary_cross_study	new human primary developmental contrast (review 2026-10-02); cross-study (study/platform confounded with stage); requires independent validation, not final proof on its own	A
-Hnew3	failed_qualification	panel bias passes, TNFRSF12A unsupported	C (sensitivity)
-Hnew3_debug	failed_qualification	debug contrast only	C (debug)
-Pikkupeura_LN	mouse_culture_benchmark	qualifies; culture, not in-vivo primary	mouse culture
-Pikkupeura_collagen	mouse_culture_benchmark	qualifies; culture, not in-vivo primary	mouse culture
-Hbulk1	tier_B_primary_tissue_bulk	Roadmap fetal SI vs HPA adult SI+duodenum (Finkbeiner 2015 design); independent of H-new2; whole tissue; total RNA vs polyA	B
-Hbulk2	tier_B_supporting_subset	duodenum-only subset of H-bulk1 (Senger 2018 primary-tissue comparison); not independent of H-bulk1	B
+contrast	review_decision	note	evidence_tier	independent_source
+HGCA	failed_qualification	original H1; not used as primary	C	HGCA
+GaoOriginal	failed_qualification	fetal-arm problem localised by debug pair	C	Gao2018+GSE103154
+Senger	failed_qualification	culture benchmark	C	Senger2018_enterospheres
+Hnew1	dropped_failed_QC_record	Visium composition-confounded; dropped from quantitative Step 2 (review 2026-10-02); kept as QC record only	dropped	Fawkner2021_Visium
+Hnew1_colon	dropped_failed_QC_record	as Hnew1	dropped	Fawkner2021_Visium
+Hnew2	human_primary_cross_study	new human primary developmental contrast (review 2026-10-02); cross-study (study/platform confounded with stage); requires independent validation, not final proof on its own; not to be used alone for genome-wide signature discovery before the manual developmental-state analysis (review 2026-10-02)	A	Fawkner2021_scRNA+Burclaff2022
+Hnew3	failed_qualification	panel bias passes, TNFRSF12A unsupported	C (sensitivity)	Gao2018+Wang2020
+Hnew3_debug	failed_qualification	debug contrast only	C (debug)	Gao2018+Wang2020
+Pikkupeura_LN	mouse_culture_benchmark	qualifies; culture, not in-vivo primary	mouse culture	Pikkupeura2023
+Pikkupeura_collagen	mouse_culture_benchmark	qualifies; culture, not in-vivo primary	mouse culture	Pikkupeura2023
+Hbulk1	tier_B_primary_tissue_bulk	Roadmap fetal SI vs HPA adult SI+duodenum (Finkbeiner 2015 design); independent of H-new2; whole tissue; total RNA vs polyA; bulk benchmark closed (review 2026-10-02); H-bulk1 + H-bulk2 count as 1 independent dataset, 2 related contrasts	B	Roadmap_SRP001371+HPA_E-MTAB-1733
+Hbulk2	tier_B_supporting_subset	duodenum-only subset of H-bulk1 (Senger 2018 primary-tissue comparison); not independent of H-bulk1; counts with H-bulk1 as 1 independent dataset	B	Roadmap_SRP001371+HPA_E-MTAB-1733

@@ -8,7 +8,7 @@ Chronological append-only record; newest entries are at the bottom.
 |---|---|---|---|
 | 1. Literature candidate collection | completed | — | Curated evidence tables under `docs/step1_literature_candidates/` |
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
-| 2b. Human benchmark v2 | **completed; in review** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A human primary (cross-study); tier B bulk H-bulk1/2 fail; Visium dropped; no signature built |
+| 2b. Human benchmark v2 | **closed (review round 3)** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A (cross-study, not used alone for discovery); bulk H-bulk1/2 = 1 dataset, fail; Visium dropped; no more datasets |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
@@ -353,3 +353,14 @@ Senger (fail); Visium dropped.
 **Stop condition reached**: bulk contrasts also give TNFRSF12A fetal ≤ adult;
 the manual single-cell TNFRSF12A examination is the proposed next step (not
 started).
+
+## 2026-10-02 — Benchmark v2 review round 3: bulk benchmark closed
+
+**Decisions**: PR #3 kept; bulk benchmark closed; no further human fetal/adult
+datasets. H-bulk1/H-bulk2 count as 1 independent dataset, 2 related contrasts
+(`independent_source` column added to `review_decisions.tsv`). Bulk failure
+worded as "maturation signal recovered, TNFRSF12A not reproduced, cause not
+established". Human evidence read as compartment-dependent. H-new2 is not to be
+used alone for genome-wide discovery (dataset-selection concern).
+**Next**: manual developmental-state analysis of Gao + Fawkner
+(`step2_fetal_state/`).

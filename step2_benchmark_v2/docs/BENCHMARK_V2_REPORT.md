@@ -112,14 +112,19 @@ Priority markers in H-bulk1: TACSTD2 +2.49 (P = 1e-4), CLU +0.14 (n.s.),
 ANXA1 −2.66 (P < 1e-5), TNFRSF12A −0.50 (n.s.); GJA1 +0.55 (n.s.), RBP1 +1.50
 (P < 1e-4), BASP1 +1.10 (P = 0.03).
 
-**Reading.** The data capture fetal-to-adult maturation (the authors' OLFM4
-control is strongly adult-high), yet the panel is not fetal-biased and
-TNFRSF12A is not fetal-high. These are whole-tissue libraries (adult full-wall
-specimens vs fetal intestine with abundant mesenchyme) prepared with different
-chemistries (fetal total RNA vs adult poly(A)), so epithelial-intrinsic signals
-can be diluted or inverted by composition — the same failure mode as HGCA,
-Gao and Visium. Across the human evidence, TNFRSF12A is fetal-high only in the
-epithelium-resolved Tier A contrast (H-new2) and in the mouse cultures.
+**Reading.** Whole-tissue developmental contrasts recover established
+intestinal maturation signals (OLFM4 −6.87 / −6.83; TACSTD2, RBP1, BASP1
+fetal-high) but do not reproduce the epithelial TNFRSF12A fetal-high pattern,
+potentially reflecting tissue-composition and library-preparation differences
+(whole tissue in both arms; fetal total RNA vs adult poly(A)). This is an
+interpretation, not a demonstrated cause: composition, platform, region,
+developmental stage, and TNFRSF12A being a specific epithelial-state marker
+cannot yet be distinguished.
+
+**Evidence counting.** H-bulk1 and H-bulk2 share the same six fetal samples and
+the same HPA source; they count as **1 independent dataset, 2 related
+contrasts**, never as two independent bulk validations
+(`config/review_decisions.tsv`, column `independent_source`).
 
 **Evidence tiers** (`config/review_decisions.tsv`, column `evidence_tier`):
 Tier A epithelial scRNA — H-new2 (qualifies); Tier B primary-tissue bulk —
@@ -127,6 +132,28 @@ H-bulk1, H-bulk2 (both fail); Tier C problematic references — HGCA, Gao,
 Senger enterospheres (fail); Visium dropped.
 
 This matches the stop condition stated in the review: with the bulk contrasts
-also showing TNFRSF12A fetal ≤ adult, the next step proposed is the manual
-single-cell examination of TNFRSF12A by donor × gestational age × region ×
-epithelial subtype, rather than adding further automated datasets. Not started.
+also showing TNFRSF12A fetal ≤ adult, the automated benchmark stops.
+
+## Review decisions — round 3 (2026-10-02)
+
+1. The PR is kept; **the bulk benchmark is closed and no further human
+   fetal/adult datasets are sought.**
+2. H-bulk1/H-bulk2 = 1 independent dataset, 2 related contrasts.
+3. The bulk failure is reported with the wording above (recovered maturation
+   signal, TNFRSF12A not reproduced, cause not established).
+4. The human evidence is read as **compartment-dependent**:
+
+   | Compartment | TNFRSF12A fetal/oncofetal-high? |
+   |---|---|
+   | Whole tissue (H-bulk1/2, Visium) | not supported |
+   | Mixed/heterogeneous epithelial references (HGCA, Gao) | unstable |
+   | Clean epithelial scRNA (H-new2) | fetal-high |
+   | Fetal epithelial culture (Pikkupeura, mouse) | fetal-high |
+   | CRC malignant epithelium (Step 3) | strongly up |
+
+5. **H-new2 is not used on its own for genome-wide signature discovery** yet
+   (dataset-selection concern: it is the only human contrast passing the
+   frozen TNFRSF12A rule). The final human discovery contrast is decided after
+   the manual developmental-state analysis of Gao and Fawkner
+   ([`step2_fetal_state/`](../../step2_fetal_state/)), which asks *when, where
+   and in which epithelial state* TNFRSF12A is high in human fetal intestine.
