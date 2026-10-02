@@ -1,0 +1,13 @@
+dataset,scope,gene,n_units,var_log2_observed,rho_age_observed,var_log2_fixed_composition,rho_age_fixed_composition,var_log2_fixed_expression,rho_age_fixed_expression
+Fawkner2021,all,ANXA1,20,2.7536,0.2739,2.3939,0.5866,1.2013,-0.4588
+Fawkner2021,all,CLU,20,0.42,0.2001,0.386,0.1058,0.0037,0.3576
+Fawkner2021,all,TACSTD2,20,0.4106,-0.3043,0.4854,-0.3751,0.0425,0.633
+Fawkner2021,all,TNFRSF12A,20,0.1515,0.2183,0.1366,0.1042,0.0406,0.1506
+Fawkner2021,sensitivity,ANXA1,19,2.8973,0.3387,2.2718,0.4969,0.9277,-0.368
+Fawkner2021,sensitivity,CLU,19,0.4402,0.2214,0.3923,0.1636,0.0039,0.2791
+Fawkner2021,sensitivity,TACSTD2,19,0.4317,-0.3654,0.4937,-0.496,0.0452,0.6516
+Fawkner2021,sensitivity,TNFRSF12A,19,0.1176,0.0907,0.1181,-0.1476,0.0344,0.344
+Gao2018,all,ANXA1,27,4.396,0.6469,1.6393,0.6739,0.1761,0.215
+Gao2018,all,CLU,27,1.6997,0.4341,0.2904,0.2653,0.9712,0.4837
+Gao2018,all,TACSTD2,27,9.2528,0.3966,0.9809,0.138,2.818,0.511
+Gao2018,all,TNFRSF12A,27,3.6733,0.5107,0.8586,0.4577,0.141,0.4727

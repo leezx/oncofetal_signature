@@ -1,0 +1,27 @@
+author_cluster	source_sheet	state
+Proximal Stem Cells	3. Epithelial Markers	Stem
+Distal Stem Cells	3. Epithelial Markers	Stem
+Proximal TA	3. Epithelial Markers	TA
+Distal TA	3. Epithelial Markers	TA
+Proximal Progenitor	3. Epithelial Markers	Fetal progenitor
+Proximal Early Enterocytes	3. Epithelial Markers	Early enterocyte
+Proximal Enterocytes	3. Epithelial Markers	Early enterocyte
+Distal Enterocytes	3. Epithelial Markers	Early enterocyte
+Distal Absorptive	3. Epithelial Markers	Early enterocyte
+Proximal Mature Enterocytes	3. Epithelial Markers	Mature enterocyte
+Distal Mature Enterocytes	3. Epithelial Markers	Mature enterocyte
+BEST4/OTOP2 Cells	3. Epithelial Markers	BEST4/OTOP2
+Goblets	3. Epithelial Markers	Goblet
+Goblet 1	10. Secretory Epi Markers	Goblet
+Goblet 2	10. Secretory Epi Markers	Goblet
+Goblet 3	10. Secretory Epi Markers	Goblet
+Paneth	10. Secretory Epi Markers	Paneth
+EECs	3. Epithelial Markers	EEC/secretory progenitor
+Secretory Progenitors	3. Epithelial Markers	EEC/secretory progenitor
+NEUROG3+ Progenitor	10. Secretory Epi Markers	EEC/secretory progenitor
+N-Cells	10. Secretory Epi Markers	EEC/secretory progenitor
+Enterochromaffin	10. Secretory Epi Markers	EEC/secretory progenitor
+I-Cells	10. Secretory Epi Markers	EEC/secretory progenitor
+A-Cells/M-Cells	10. Secretory Epi Markers	EEC/secretory progenitor
+L-Cells	10. Secretory Epi Markers	EEC/secretory progenitor
+D-Cells	10. Secretory Epi Markers	EEC/secretory progenitor

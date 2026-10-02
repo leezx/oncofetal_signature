@@ -1,0 +1,14 @@
+symbol	alias	role
+TNFRSF12A		test
+TACSTD2		test
+CLU		test
+ANXA1		test
+EPCAM		control
+OLFM4		control
+LGR5		control
+ASCL2		control
+MKI67		control
+YAP1		YAP context
+CCN2	CTGF	YAP context
+CCN1	CYR61	YAP context
+ANKRD1		YAP context
