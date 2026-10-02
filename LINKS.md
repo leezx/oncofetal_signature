@@ -5,6 +5,7 @@
 - Repository: https://github.com/leezx/oncofetal_signature
 - Step 2 PR: https://github.com/leezx/oncofetal_signature/pull/1
 - Step 3 PR: https://github.com/leezx/oncofetal_signature/pull/2 (branch `plan/step3-cancer-axis`)
+- Step 2 human benchmark v2 PR: https://github.com/leezx/oncofetal_signature/pull/3 (branch `analysis/step2-human-benchmark-v2`)
 
 ## Local analysis package
 
@@ -25,3 +26,8 @@
 - Pelka GSE178341: `/Volumes/Stelligen_SSD/Stelligen/DATA/scRNAseq/GSE178341`
 - Joanito 2022 (pending access): `/Volumes/Stelligen_SSD/Stelligen/DATA/scRNAseq/Joanito2022_syn26844071`
 - Versioned Step 3 working results: `/Volumes/Stelligen_SSD/Stelligen/DATA/2.PROJECTS/1.TWEAKR-oncoFetal/results/2026-10-02_step3_cancer_axis_v0.1`
+- Fawkner Visium GSE158328: `/Volumes/Stelligen_SSD/Stelligen/DATA/SpatialTranscriptomics/GSE158328_FawknerCorbett2021`
+- Fawkner fetal scRNA GSE158702: `/Volumes/Stelligen_SSD/Stelligen/DATA/scRNAseq/GSE158702_FawknerCorbett2021`
+- Burclaff adult GSE185224: `/Volumes/Stelligen_SSD/Stelligen/DATA/scRNAseq/GSE185224_Burclaff2022`
+- Wang adult GSE125970: `/Volumes/Stelligen_SSD/Stelligen/DATA/scRNAseq/GSE125970_Wang2020`
+- Benchmark v2 working results: `/Volumes/Stelligen_SSD/Stelligen/DATA/2.PROJECTS/1.TWEAKR-oncoFetal/results/2026-10-02_step2_human_benchmark_v0.2`

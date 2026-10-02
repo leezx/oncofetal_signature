@@ -1,0 +1,15 @@
+unit,n_cells,tissues,group
+11W_embryo1,57,LI,Fetal
+14W_embryo1,57,LI,Fetal
+16W_embryo1,38,LI,Fetal
+19W_embryo1,53,LI,Fetal
+24W_embryo1,188,LI,Fetal
+25W_embryo1,32,LI,Fetal
+6W_embryo1,72,LI,Fetal
+6W_embryo2,68,LI,Fetal
+7W_embryo2,118,LI,Fetal
+8W_embryo1,43,LI,Fetal
+8W_embryo2,46,LI,Fetal
+9W_embryo1,77,LI,Fetal
+P1,935,,Adult
+P2,956,,Adult

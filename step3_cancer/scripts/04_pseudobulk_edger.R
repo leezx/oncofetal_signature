@@ -4,7 +4,7 @@
 #
 # Usage:
 #   Rscript 04_pseudobulk_edger.R <counts.csv.gz> <samples.csv> <case_group> \
-#     <reference_group> <covariate|none> <out.csv>
+#     <reference_group> <covariate|none> <out.csv> [min_units_per_group=3]
 # counts:  gene_id, symbol, then one column per pseudobulk
 # samples: pseudobulk, patient, group, eligible[, covariate]
 # Output log2FC is case / reference.
@@ -12,7 +12,8 @@
 suppressPackageStartupMessages(library(edgeR))
 
 args <- commandArgs(trailingOnly = TRUE)
-if (length(args) != 6) stop("Usage: 04_pseudobulk_edger.R <counts> <samples> <case> <reference> <covariate|none> <out.csv>")
+if (!length(args) %in% 6:7) stop("Usage: 04_pseudobulk_edger.R <counts> <samples> <case> <reference> <covariate|none> <out.csv> [min_units_per_group]")
+min_units <- if (length(args) == 7) as.integer(args[[7]]) else 3L
 counts_f <- args[[1]]; samples_f <- args[[2]]; case <- args[[3]]; ref <- args[[4]]
 covar <- args[[5]]; out_f <- args[[6]]
 
@@ -21,7 +22,7 @@ smp <- read.csv(samples_f, stringsAsFactors = FALSE)
 smp <- smp[smp$eligible %in% c(TRUE, "True", "TRUE") & smp$group %in% c(case, ref), ]
 smp$group <- factor(smp$group, levels = c(ref, case))
 n_per <- table(smp$group)
-if (any(n_per < 3)) stop(sprintf("Hard stop: fewer than 3 eligible patients in a group (%s)",
+if (any(n_per < min_units)) stop(sprintf("Hard stop: fewer than %d eligible units in a group (%s)", min_units,
                                  paste(names(n_per), n_per, collapse = ", ")))
 
 mat <- as.matrix(cnt[, smp$pseudobulk])

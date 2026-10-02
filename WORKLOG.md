@@ -8,6 +8,7 @@ Chronological append-only record; newest entries are at the bottom.
 |---|---|---|---|
 | 1. Literature candidate collection | completed | — | Curated evidence tables under `docs/step1_literature_candidates/` |
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
+| 2b. Human benchmark v2 | **closed (review round 3)** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A (cross-study, not used alone for discovery); bulk H-bulk1/2 = 1 dataset, fail; Visium dropped; no more datasets |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
@@ -286,3 +287,80 @@ only; no gate computed.
    changes.
 
 **Data terms**: the full summary contains Joanito-derived values and is git-ignored; a public version without Joanito columns or Step 3 labels is committed.
+
+## 2026-10-02 — Step 2 human benchmark v2 (three new human contrasts)
+
+**Plan**: `step2_benchmark_v2/docs/QUALIFICATION_PLAN.md`, frozen (`5c3bcef`)
+before any new dataset was opened. Rule: TNFRSF12A fetal-high with P < 0.05 and
+the 31-marker panel significantly fetal-biased (one-sided binomial P < 0.05).
+No signature is built.
+
+**Data added**: GSE158328 (Fawkner Visium), GSE158702 hashtag libraries
+(Fawkner fetal scRNA), GSE185224 (Burclaff adult epithelium), GSE125970 (Wang
+adult epithelium). DATA `link.md` files and `dataset.index.md` updated.
+
+**Results**: only H-new2 (Fawkner fetal EPCAM+ scRNA, 22 hashtag samples, vs
+Burclaff adult, 3 donors) qualifies among human contrasts: TNFRSF12A +1.83,
+TACSTD2 +3.97, CLU +2.25 (all P < 0.001), ANXA1 −0.95 (n.s.); 18/24 markers
+fetal-positive (binomial P = 0.011). H-new1 Visium fails and is
+composition-confounded (fetal epithelial-rich spots carry ~4× less epithelial
+UMI fraction; EPCAM adult-high). H-new3 passes panel bias (17/24) but not
+TNFRSF12A. The Gao debug pair (Gao-original −0.08 → debug +0.70, n.s.) places
+the Gao failure in the fetal arm (TNFRSF12A varies 34-fold across embryos,
+lowest at 6–9 weeks), not the adult reference. Pikkupeura mouse cultures
+qualify. Details: `step2_benchmark_v2/docs/BENCHMARK_V2_REPORT.md`.
+
+**Technical fixes during the run** (documented in code): GEO mis-pairs the
+Fawkner GEX/HTO libraries (re-paired by ≥ 99% barcode overlap); Burclaff's h5ad
+keeps 23,170 genes, so counts for the same annotated cells come from the
+full-gene per-donor matrices; the shared edgeR script gained an optional
+minimum-units argument (H-new1 adult arm has two sections).
+
+**Not done**: no replacement Step 2 signature; no change to Step 3; the
+proposed manual TNFRSF12A follow-up (donor × gestational age × region ×
+subtype) awaits review.
+
+## 2026-10-02 — Review decisions on benchmark v2
+
+1. **H-new2 = new human primary** developmental contrast, explicitly labelled a
+   cross-study developmental contrast (Fawkner fetal vs Burclaff adult). It
+   needs independent validation and is not final proof on its own.
+2. **Visium dropped** from quantitative Step 2; kept only as a failed
+   dataset/QC record.
+
+Recorded in `step2_benchmark_v2/config/review_decisions.tsv` (surfaced as
+`review_decision` in the qualification table), the v2 report, READMEs, the
+dataset registry, and the 31-marker summary notes. Frozen verdicts unchanged.
+Open: manual TNFRSF12A follow-up; choice of an independent validation source
+for H-new2.
+
+## 2026-10-02 — Benchmark v2 addendum: primary-tissue bulk (H-bulk1, H-bulk2)
+
+**Plan**: addendum v1.1 frozen (`cd39210`) before data were opened.
+**Source tracing**: Finkbeiner 2015 and Senger 2018 "primary tissue" both use 6
+Roadmap fetal SI total-RNA samples (SRP001371, six donors, 91–120 days) and HPA
+E-MTAB-1733 adult SI/duodenum (ERP003613). H-bulk2 (duodenum only) is a subset
+of H-bulk1. Senger Table 2 lists GSM1059508 for two ages (paper inconsistency).
+**Data**: recount3 raw counts for both studies (new DATA dataset
+`bulkRNAseq/recount3_Roadmap_HPA_intestine`); HPA technical runs summed per
+sample (6 adult samples).
+**Results**: H-bulk1 TNFRSF12A −0.50 (P = 0.20), 13/26 markers fetal-positive;
+H-bulk2 −0.90 (P = 0.12), 16/27; both fail. OLFM4 sanity control strongly
+adult-high (−6.9). TACSTD2 +2.49 and RBP1 +1.50 fetal-high; ANXA1 −2.66
+adult-high; CLU flat.
+**Tiers recorded**: A = H-new2 (qualifies); B = H-bulk1/2 (fail); C = HGCA, Gao,
+Senger (fail); Visium dropped.
+**Stop condition reached**: bulk contrasts also give TNFRSF12A fetal ≤ adult;
+the manual single-cell TNFRSF12A examination is the proposed next step (not
+started).
+
+## 2026-10-02 — Benchmark v2 review round 3: bulk benchmark closed
+
+**Decisions**: PR #3 kept; bulk benchmark closed; no further human fetal/adult
+datasets. H-bulk1/H-bulk2 count as 1 independent dataset, 2 related contrasts
+(`independent_source` column added to `review_decisions.tsv`). Bulk failure
+worded as "maturation signal recovered, TNFRSF12A not reproduced, cause not
+established". Human evidence read as compartment-dependent. H-new2 is not to be
+used alone for genome-wide discovery (dataset-selection concern).
+**Next**: manual developmental-state analysis of Gao + Fawkner
+(`step2_fetal_state/`).

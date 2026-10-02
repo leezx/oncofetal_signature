@@ -16,7 +16,7 @@ are restricted by the Synapse data-use terms and are not in this repository.
 - Founding task: [`docs/TASK_BRIEF.md`](docs/TASK_BRIEF.md)
 - Current checkpoint: [`WORKLOG.md`](WORKLOG.md)
 - Major revision record: [`docs/MAJOR_REVISION_LOG.md`](docs/MAJOR_REVISION_LOG.md)
-- Replacement dataset benchmark: [`step2_dataset_benchmark/`](step2_dataset_benchmark/)
+- Replacement dataset benchmark: [`step2_dataset_benchmark/`](step2_dataset_benchmark/) (v1) and [`step2_benchmark_v2/`](step2_benchmark_v2/) (v2: H-new2, Fawkner fetal + Burclaff adult, adopted as the cross-study human primary pending independent validation; primary-tissue bulk H-bulk1/2 fail; Visium dropped)
 - Step 2 analysis package: [`step2_fetal/`](step2_fetal/)
 - Step 3 analysis package: [`step3_cancer/`](step3_cancer/)
 - Module inventory: [`docs/MODULE_INDEX.md`](docs/MODULE_INDEX.md)
