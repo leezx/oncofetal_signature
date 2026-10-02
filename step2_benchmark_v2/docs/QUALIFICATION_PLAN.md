@@ -180,3 +180,35 @@ primary human developmental evidence only if its mid/late-vs-adult contrast
 qualifies under the frozen rule **and** its panel fraction rises compared with
 all-fetal. A TNFRSF12A-only reversal is not enough. Promotion remains a
 review decision.
+
+## Addendum v1.3 — stage-resolved H-new2 (frozen 2026-10-02, before computation)
+
+This applies the v1.2 breakpoint and rules unchanged to the third fetal scRNA
+source, so that all three (HGCA, Gao, Fawkner) have the same stage
+decomposition.
+
+- **Ages:** H-new2 fetal units (pool × hashtag) get their PCW from
+  `step2_fetal_state/config/sample_key_fawkner.tsv`, which comes from the
+  authors' Mendeley sample overview.
+- **Units and model:** the same as H-new2: eligibility ≥ 50 cells, edgeR QL
+  `~ stage`, Burclaff adult donors.
+
+| Group | Eligible units |
+|---|---|
+| Early fetal (< 9 PCW) | 2: ABZ2 and ABM1, both 8 PCW |
+| Mid/late fetal (≥ 9 PCW) | 20 |
+| Adult | 3 Burclaff donors |
+
+**Contrasts.**
+- Hnew2_early (early vs adult).
+- Hnew2_late (mid/late vs adult).
+- Fawkner_late_vs_early (within-fetal).
+
+The minimum group size is 2 because the early arm has only two units.
+
+**Caveats, reported and not corrected.**
+- Both early units are TI from two donors.
+- ABZ2 has elevated sex-discordant cells (8.4%).
+- The parent H-new2 units ABF1 (EPI2 HTO2) and AAU2 (pool 4) failed the later
+  hashtag QC of `step2_fetal_state` but are kept here, so the units stay
+  identical to the parent contrast. They are flagged in the units table.
