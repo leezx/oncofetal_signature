@@ -507,3 +507,18 @@ MIF fails H).
 restricted gate funnel workbook (`build_gate_funnel.py`) and manuscript text.
 Final membership restricted (Joanito). Open curation item: RBP1 nomination
 source unresolved.
+
+## 2026-10-02 — Data-QC fix: panel genes exempt from genome-wide expression filter
+
+**Bug (review)**: "not measured" mixed orthology gaps, expression-filter removal,
+mapping and zero expression. **Audit** (`feature_audit_31.py`): no mapping failures;
+every non-orthology NA in the gate contrasts came from edgeR `filterByExpr` (e.g.
+GJA1 present in both CRC matrices) or true zero (mouse Sox17, SPRR1A in H-new2);
+Gao MIF zero in every unit (implausible; not_available_in_source).
+**Fix** (frozen `ae871ec` before recomputation): 31 panel genes exempt from the
+filter in all edgeR gate contrasts (any counts kept); zero_expression evaluable
+(no enrichment); fixed NA vocabulary; low-count display flag. Original contrasts
+reproduced (|Δlog2FC| ≤ 0.0005). Gate rules unchanged.
+**Effect (public)**: SPP1 now passes H (H-new2 +7.30); MSLN passes M (+7.18);
+GJA1 evaluable in Pelka (+3.89); LY6A and IL1RN now measured mouse fails. Final
+membership restricted (Joanito).

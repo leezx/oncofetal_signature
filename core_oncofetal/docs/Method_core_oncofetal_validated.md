@@ -255,6 +255,27 @@ The gate rules (H, M, C thresholds) are unchanged. CIOC membership is
 recomputed only after this amendment is applied to all 31 genes and all gate
 contrasts.
 
+**Implementation and verification.**
+- **Scripts:** `scripts/panel_edger.R` and `scripts/panel_contrasts.py`.
+  - They reproduce each original contrast exactly: HGCA ≥ 9 PCW and
+    GSE230581 use `filterByExpr(design)`, `calcNormFactors` and robust QL;
+    H-new2, Pelka and Joanito use `filterByExpr(group)`, `normLibSizes` and
+    QL, with Joanito `~ cohort + group`.
+  - The only change is the panel exemption.
+- **Reproduction check:** genes already in the original DE tables reproduce
+  their log2FC to within 0.0005 in every contrast.
+- **Values:** `results/Panel_gate_values_public.csv`; Joanito values are
+  restricted.
+- **Remaining NA in the gate contrasts:**
+  - `no_1to1_orthologue`: LY6A and REG3B in the human contrasts; SPRR1A in
+    mouse.
+  - `zero_expression`: SPRR1A in H-new2; Sox17 in GSE230581.
+  - `not_available_in_source`: Gao MIF, zero in every Gao and GSE103154
+    unit, which is implausible for a ubiquitous gene.
+  - No `mapping_failure`.
+- **Supportive datasets** (GSE44433, TCGA, cultures) were not re-run. Their
+  NAs are labelled "supportive dataset; absent or filtered, not re-audited".
+
 ## 4. Core definition
 
 **Conserved Intestinal Oncofetal Core (CIOC) = literature candidates passing Gates H, M and C.**
@@ -305,9 +326,9 @@ visible rather than summarised away. Bulk discrepancies are described only as
   not an alternative Core. It shows that the conclusions do not depend on the
   evidence-integration framework. Its membership is in the restricted
   workbook.
-- **GJA1** is not measured in the public Pelka contrast (below the
-  expression filter), so it is not evaluable rather than a CRC fail. Its full
-  CRC status is in the restricted workbook.
+- **GJA1** is evaluated in CRC under the panel-gene exemption. In the public
+  Pelka contrast it is +3.89 (FDR < 1e-4, low count). Its Joanito status is
+  in the restricted workbook.
 
 ## 8. Pre-declared sanity checks
 

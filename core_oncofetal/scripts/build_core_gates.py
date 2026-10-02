@@ -30,6 +30,7 @@ RESTRICTED = pathlib.Path("/Volumes/Stelligen_SSD/Stelligen/DATA/2.PROJECTS/1.TW
                           "2026-10-02_step3_cancer_axis_v0.1/restricted_joanito/core_oncofetal")
 LFC, FDR = 0.5, 0.05
 NA_HUMAN, NA_MOUSE = {"LY6A", "REG3B"}, {"SPRR1A"}
+MOUSE_OK = set()
 
 # key, column label, species, axis/role, restricted
 EVIDENCE = [
@@ -61,14 +62,33 @@ def supported(v, q):
     return pd.notna(v) and v >= LFC and pd.notna(q) and q < FDR
 
 
-def cell(g, sp, v, q):
+# Panel-gene values for gate contrasts (data-QC amendment): (contrast, gene) -> row
+PANEL = {}
+GATE_KEYS = ("HGCA_late", "Hnew2_late", "GaoOriginal_late", "Mouse_GSE230581", "Joanito", "Pelka")
+
+
+def na_reason(key, g):
+    r = PANEL.get((key, g))
+    if r is not None and isinstance(r.get("NA_reason"), str) and r["NA_reason"]:
+        return r["NA_reason"]
+    return None
+
+
+def is_zero(key, g):
+    return na_reason(key, g) == "zero_expression"
+
+
+def cell(g, sp, v, q, key=None):
     if not applicable(g, sp):
-        return "NA (no one2one orthologue)"
+        return "NA (no_1to1_orthologue)"
     if pd.isna(v):
-        return "NA (not measured)"
+        if key in GATE_KEYS:
+            return f"NA ({na_reason(key, g) or 'not_available_in_source'})"
+        return "NA (supportive dataset; absent or filtered, not re-audited)"
     star = "**" if supported(v, q) else ("*" if pd.notna(q) and q < FDR else "")
     qs = f"FDR {q:.2g}" if pd.notna(q) else "no FDR"
-    return f"{v:+.2f} ({qs}){star}"
+    low = " [low count]" if PANEL.get((key, g), {}).get("low_count_flag") is True else ""
+    return f"{v:+.2f} ({qs}){star}{low}"
 
 
 def calls(g, s, prov):
@@ -78,8 +98,10 @@ def calls(g, s, prov):
     if g in NA_HUMAN:
         out["H"] = "NE"
     else:
-        hv = [get(k) for k in ("HGCA_late", "Hnew2_late", "GaoOriginal_late")]
-        meas = [x for x in hv if pd.notna(x[0])]
+        hk = ("HGCA_late", "Hnew2_late", "GaoOriginal_late")
+        # zero_expression is evaluated and not fetal-positive
+        meas = [get(k) if not is_zero(k, g) else (0.0, np.nan) for k in hk
+                if pd.notna(get(k)[0]) or is_zero(k, g)]
         if len(meas) < 2:
             out["H"] = "NE"
         else:
@@ -89,20 +111,27 @@ def calls(g, s, prov):
         out["H_n_supported"] = sum(supported(v, q) for v, q in meas)
     # M
     v, q = get("Mouse_GSE230581")
-    out["M"] = "NE" if (g in NA_MOUSE or pd.isna(v)) else ("pass" if supported(v, q) else "fail")
+    if g in NA_MOUSE or g not in MOUSE_OK:
+        out["M"] = "NE"
+    elif is_zero("Mouse_GSE230581", g):
+        out["M"] = "fail"
+    else:
+        out["M"] = "NE" if pd.isna(v) else ("pass" if supported(v, q) else "fail")
     # C
     if g in NA_HUMAN:
         out["C"] = "NE"
     else:
         cv = [get(k) for k in ("Joanito", "Pelka")]
-        failed = any(pd.notna(v) and not supported(v, q) for v, q in cv)
+        failed = any((pd.notna(v) and not supported(v, q)) or is_zero(k, g)
+                     for k, (v, q) in zip(("Joanito", "Pelka"), cv))
         out["C"] = "fail" if failed else ("NE" if any(pd.isna(v) for v, _ in cv) else "pass")
     # stringent intersection (v1.0): G1 HGCA_late, G2 mouse, G3 Joanito, G4 Pelka
     st = []
     for k in ("HGCA_late", "Mouse_GSE230581", "Joanito", "Pelka"):
         v, q = get(k)
         sp = "Mouse" if k == "Mouse_GSE230581" else "Human"
-        st.append("NE" if (not applicable(g, sp) or pd.isna(v)) else ("pass" if supported(v, q) else "fail"))
+        st.append("fail" if is_zero(k, g) else
+                  ("NE" if (not applicable(g, sp) or pd.isna(v)) else ("pass" if supported(v, q) else "fail")))
     out["stringent_dev"] = st[0] == "pass" and st[1] == "pass"
     out["stringent_all"] = all(x == "pass" for x in st)
     out["stringent_calls"] = st
@@ -137,7 +166,7 @@ def build(s, prov, restricted):
                "Primary studies (A; B; C)": " | ".join(x for x in (p.A_studies, p.B_studies, p.C_studies)
                                                        if isinstance(x, str) and x) or "none identified"}
         for key, lab, sp, axis, _ in ev:
-            row[lab] = cell(g, sp, s.loc[g, f"{key}__log2FC"], s.loc[g, f"{key}__FDR"])
+            row[lab] = cell(g, sp, s.loc[g, f"{key}__log2FC"], s.loc[g, f"{key}__FDR"], key)
             if key == "GaoOriginal_late":
                 row["H human developmental"] = c["H"]
             if key == "Mouse_GSE230581":
@@ -172,7 +201,7 @@ def build(s, prov, restricted):
         mat.append(row)
         srow = {"marker": g}
         for key, lab, sp, _ in sup:
-            srow[lab] = cell(g, sp, s.loc[g, f"{key}__log2FC"], s.loc[g, f"{key}__FDR"])
+            srow[lab] = cell(g, sp, s.loc[g, f"{key}__log2FC"], s.loc[g, f"{key}__FDR"], key)
             longr.append(dict(marker=g, evidence=lab, axis="support", log2FC=s.loc[g, f"{key}__log2FC"],
                               PValue=s.loc[g, f"{key}__PValue"], FDR=s.loc[g, f"{key}__FDR"],
                               applicable=applicable(g, sp),
@@ -186,7 +215,7 @@ def rules(restricted):
         ("Candidate universe", "definition, not a gate", "31 literature-curated candidates; all = Literature candidate YES. Audited evidence class (A fetal intestine, B regeneration/revival, C CRC oncofetal) and primary studies are annotation"),
         ("H human developmental", "mandatory, replicated",
          "HGCA >=9 PCW, H-new2 >=9 PCW, Gao >=9 W: >= 2 measured & fetal-positive AND >= 1 with log2FC >= 0.5 & FDR < 0.05; NE if < 2 measured"),
-        ("M mouse in vivo", "mandatory", "GSE230581 log2FC >= 0.5 & FDR < 0.05; NE if no orthologue / not measured"),
+        ("M mouse in vivo", "mandatory", "GSE230581 log2FC >= 0.5 & FDR < 0.05; zero_expression = fail; NE only for no_1to1_orthologue / not_available_in_source"),
         ("C CRC replicated", "mandatory" + ("" if restricted else " (Joanito: restricted)"),
          "Joanito and Pelka both log2FC >= 0.5 & FDR < 0.05; fail if a measured contrast lacks support; NE if otherwise unmeasured"),
         ("Conserved Intestinal Oncofetal Core (CIOC), method v4.0", "",
@@ -194,8 +223,9 @@ def rules(restricted):
         ("H wording", "", "concordant fetal enrichment across >= 2 independent comparisons, statistical support in >= 1; H-new2 (cross-study) serves as a statistical-support dataset, direction is evaluated with HGCA and Gao; all three log2FC shown"),
         ("Discordance flags", "reported, never selecting", "human contrast in opposite direction; GSE44433 significantly adult-high; TCGA bulk significantly tumour-low"),
         ("Sensitivity analysis using single-dataset hard intersections (former v1.0)", "sensitivity only; not an alternative Core",
-         "HGCA >=9 PCW & GSE230581 & Joanito & Pelka each log2FC >= 0.5 & FDR < 0.05 (not measured = NE)"),
-        ("Cell notation", "", "log2FC (FDR); ** log2FC >= 0.5 & FDR < 0.05; * FDR < 0.05 below effect threshold; NA = not measured / no orthologue"),
+         "HGCA >=9 PCW & GSE230581 & Joanito & Pelka each log2FC >= 0.5 & FDR < 0.05 (panel-aware values; NA only with an explicit NA_reason)"),
+        ("Cell notation", "", "log2FC (FDR); ** log2FC >= 0.5 & FDR < 0.05; * FDR < 0.05 below effect threshold; [low count] = mean CPM < 1 in both arms; NA (reason) uses the fixed NA vocabulary"),
+        ("Panel-gene evaluation", "data-QC amendment", "gate contrasts re-run with the 31 panel genes exempt from filterByExpr (any counts kept); zero counts in all samples = zero_expression (evaluable, no enrichment)"),
         ("Supportive evidence", "never selecting", "GSE44433, TCGA, Pikkupeura cultures, HGCA all fetal, Joanito sensitivity, Pelka P"),
     ]
     return pd.DataFrame(r, columns=["item", "status", "rule"])
@@ -243,6 +273,13 @@ def write_xlsx(path, sheets):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     s = pd.read_csv(MS).set_index("marker")
+    # Data-QC amendment: gate contrasts use the panel-aware values (filter exemption)
+    pv = pd.read_csv(ROOT / "core_oncofetal/results/Panel_gate_values_restricted.csv")
+    for r in pv.to_dict("records"):
+        PANEL[(r["contrast"], r["gene"])] = r
+        for stat in ("log2FC", "PValue", "FDR"):
+            s.loc[r["gene"], f"{r['contrast']}__{stat}"] = r.get(stat, np.nan)
+    MOUSE_OK.update(g for g in s.index if isinstance(s.loc[g, "mouse_gene_used"], str))
     prov = pd.read_csv(PROV, sep="\t").set_index("gene")
     for restricted in (True, False):
         mat, sup, longr = build(s, prov, restricted)

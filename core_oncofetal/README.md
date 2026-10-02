@@ -13,6 +13,11 @@
     FDR < 0.05;
   - **M** mouse in vivo (GSE230581);
   - **C** CRC replicated (Joanito and Pelka).
+- **Panel-gene evaluation (data-QC amendment):** gate contrasts are re-run
+  with the 31 panel genes exempt from the genome-wide expression filter
+  (`scripts/feature_audit_31.py`, `scripts/panel_edger.R`,
+  `scripts/panel_contrasts.py`). NA reasons use a fixed vocabulary; "not
+  measured" is no longer used.
 - **Calls** are pass, fail or not evaluable. Not measured is never treated
   as a fail.
 - **Former v1.0** (a four-dataset intersection) is kept as a *sensitivity
@@ -20,7 +25,7 @@
 - **Evidence matrix:** each gene shows all three human log2FC values, the
   dataset(s) giving statistical support, and discordance flags in red.
 - **Build:**
-  `python3 core_oncofetal/scripts/literature_provenance.py && python3 core_oncofetal/scripts/build_core_gates.py && python3 core_oncofetal/scripts/build_gate_funnel.py`.
+  `python3 core_oncofetal/scripts/literature_provenance.py && python3 core_oncofetal/scripts/feature_audit_31.py && python3 core_oncofetal/scripts/panel_contrasts.py && python3 core_oncofetal/scripts/build_core_gates.py && python3 core_oncofetal/scripts/build_gate_funnel.py`.
   Nothing is recomputed.
 - **Public outputs:** `results/Core_oncofetal_gate_statistics_public.{xlsx,csv}`
   (31-gene evidence matrix, supportive evidence, literature provenance, long
