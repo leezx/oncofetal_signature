@@ -532,3 +532,10 @@ changes. Methods now state the exemption rationale and FDR universe, member
 wording, no-ranking and CRC-compartment statements; NE wording no longer says
 "not measured". No numerical or membership change; membership frozen
 (restricted).
+
+### 2026-10-02 — CIOC-extended (exploratory)
+Frozen gates H, M, C applied genome-wide without the Literature-31
+restriction (`core_oncofetal/scripts/build_extended_core.py`). Universe and
+counts are in the restricted funnel workbook; the CIOC is fully recovered
+inside the extended set. Outputs restricted (Joanito), git-ignored, mirrored
+to DATA.

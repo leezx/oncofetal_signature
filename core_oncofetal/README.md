@@ -35,3 +35,14 @@
   (`results/CIOC_gate_funnel_31.xlsx`) and the manuscript text
   (`results/CIOC_manuscript_text.md`) are git-ignored and
   mirrored to `DATA/.../restricted_joanito/core_oncofetal/`.
+
+## CIOC-extended (exploratory)
+
+`scripts/build_extended_core.py` applies the frozen gates H, M and C
+genome-wide, removing only the Literature-31 candidate restriction. It is
+data-driven, exploratory and not the CIOC; the CIOC is reproduced inside it
+(assertion). Genome-wide genes keep the standard `filterByExpr` (absent =
+not evaluable); only the 31 prespecified candidates are filter-exempt.
+Outputs are restricted (Joanito; git-ignored, mirrored to DATA):
+`CIOC_extended_gate_calls.csv`, `CIOC_extended_gate_funnel.xlsx`,
+`CIOC_extended.gmt`.
