@@ -5,6 +5,7 @@
 - Repository: https://github.com/leezx/oncofetal_signature
 - Step 2 PR: https://github.com/leezx/oncofetal_signature/pull/1
 - Step 3 PR: https://github.com/leezx/oncofetal_signature/pull/2 (branch `plan/step3-cancer-axis`)
+- Step 2 human benchmark v2 PR: https://github.com/leezx/oncofetal_signature/pull/3 (branch `analysis/step2-human-benchmark-v2`)
 
 ## Local analysis package
 
