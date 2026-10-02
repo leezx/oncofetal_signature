@@ -40,3 +40,6 @@ marker_summary/results/Literature_31_marker_summary_statistics.*
 marker_summary/results/Literature_31_marker_measurement_status.csv
 marker_summary/results.zip
 *.zip
+# Core workbook with Joanito gate (G3) and final Core membership: restricted.
+core_oncofetal/results/Core_oncofetal_gate_statistics.*
+core_oncofetal/results/Core_oncofetal_gate_long.csv
