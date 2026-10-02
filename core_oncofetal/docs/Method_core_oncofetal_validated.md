@@ -1,143 +1,193 @@
-# Conserved Intestinal Oncofetal Core — Methods (validated gate design)
+# Conserved Intestinal Oncofetal Core — Methods
 
-- Version: Core method v1.0, 2026-10-02.
-- Status: **frozen** before any CRC-gate value of the developmental-gate
-  genes was read. The two developmental gates and their result were reviewed
-  first (benchmark v2 addendum v1.4).
-- Inputs are existing, version-controlled contrasts. **No statistic is
-  recomputed for gene selection.**
+- **Version:** Core method v2.0, 2026-10-02. It supersedes v1.0, which is
+  retained as the stringent intersection sensitivity analysis (§7).
+- **Status: frozen** before the v2.0 Core labels were computed.
+  - **Disclosure:** the per-gene human and mouse developmental values (and the
+    v1.0 result) were visible when the review that set these rules was
+    written. The rules were specified by review, not tuned on the outcome.
+    TACSTD2 is a pre-declared sanity check (§8), not a target.
+- **Inputs** are existing, version-controlled contrasts. No statistic is
+  recomputed for gene selection.
 
 ## 1. Principle
 
-The Core is the subset of literature-nominated intestinal oncofetal genes
-that passes four sequential evidence gates:
+The Core is a **literature-anchored evidence framework**, not an
+intersection of single-dataset significance calls. A Core gene must show:
 
-- a human in-vivo developmental gate;
-- a mouse in-vivo developmental gate;
-- a CRC malignant-epithelium gate;
-- an independent CRC replication gate.
+- literature-supported fetal/revival intestinal identity;
+- reproducible human fetal-associated expression;
+- in-vivo mouse fetal-high expression;
+- independently replicated CRC malignant-epithelial gain.
 
-Every gate is a **same-study, epithelium-resolved, replicate-level**
-contrast. Supportive datasets are reported beside the Core but **never take
-part in selection**. Thresholds are fixed and are not relaxed to enlarge the
-Core: a Core of three to five genes is acceptable, because the Core is not
-a signature.
+**No single imperfect human developmental dataset holds a veto.** The rule is
+fully deterministic: no gene is added or removed by judgement.
 
 ## 2. Candidate universe
 
-- **Source:** the 31 Step 1 literature-curated intestinal oncofetal markers
+- **Source:** the 31 Step 1 literature-curated candidates
   (`step2_fetal/config/literature_candidates_31.tsv`).
-- **Symbols:** current HGNC symbols, with legacy source symbols resolved
-  (CCN1 = CYR61, CCN2 = CTGF; `step3_cancer/config/symbol_aliases.tsv`).
-- **Mouse-defined markers:** LY6A and REG3B have no human one-to-one
-  orthologue, so they cannot pass the human gates.
-- **SPRR1A** has no mouse orthologue (Ensembl 116), so it cannot pass the
-  mouse gate.
-- **The pool is deliberately heterogeneous.** It mixes direct fetal genes,
-  regeneration/revival genes, YAP-responsive genes, injury genes and
-  oncofetal cancer genes. The gates supply the selection pressure.
+- **Provenance:** the merged v1+v2 curated list
+  (`step1_Literature_curated_intestinal_oncofetal_marker_candidates_merged_v1_v2.csv`).
+- **Symbols:** current HGNC, with legacy aliases resolved (CCN1 = CYR61,
+  CCN2 = CTGF).
+- **Orthology:**
+  - LY6A and REG3B have no human one-to-one orthologue, so the human axes
+    are not evaluable for them.
+  - SPRR1A has no mouse orthologue, so the mouse axis is not evaluable for
+    it.
 
-## 3. Gate design rules (applied before gate choice)
+## 3. Axis rules
 
-- **Design eligibility comes first, literature recovery second.** A gate
-  dataset must meet all of E1–E5 (benchmark v2 addendum v1.4):
-  - E1: fetal and adult (or tumour and normal) come from the same study;
-  - E2: primary in-vivo tissue;
-  - E3: epithelium-resolved;
-  - E4: ≥ 3 biological replicates per arm;
-  - E5: a replicate-level model with per-gene FDR.
-- **Among eligible datasets, literature recovery is the comparison metric.**
-  It is measured as % of the 31 markers that are fetal-positive, or
-  fetal-positive with FDR < 0.05 and log2FC ≥ 0.5.
-- **TNFRSF12A is not an admission criterion** for any gate.
-- **Developmental stage.** Human fetal donors < 9 weeks are excluded. The
-  9-week breakpoint was derived from fetal-only data (Gao and Fawkner manual
-  state analysis) before any adult comparison was re-opened. It was
-  independently supported by HGCA: mid/late vs early fetal TNFRSF12A
-  +1.60, P = 0.009.
+Each axis returns **pass**, **fail** or **not evaluable (NE)**. NE means the
+evidence needed was not measured (no orthologue, or below the contrast's
+expression filter). **NE is never reported as a biological fail.**
 
-## 4. Gates
-
-A gene passes a gate only if it is **measured** (it passes the contrast's
-expression filter), **log2FC ≥ 0.5** in the stated direction, and **FDR < 0.05**
-(Benjamini–Hochberg within the contrast). An unmeasured gene fails.
-
-| Gate | Dataset | Contrast | Unit, model | Direction |
-|---|---|---|---|---|
-| G1 Human developmental | Human Gut Cell Atlas (Elmentaite 2021) | fetal epithelium ≥ 9 PCW (10 donors, 9.2–17 PCW) vs healthy adult epithelium (7 donors) | donor raw-count pseudobulk of author-annotated epithelial cells (doublets and lymph node excluded, ≥ 50 cells); edgeR QL `~ stage`, `filterByExpr`, TMM | fetal > adult |
-| G2 Mouse developmental | Pikkupeura 2023, GSE230581 (in-vivo arm; paper Fig 1D–G) | freshly isolated E16.5 proximal SI epithelium (3) vs adult proximal SI crypt epithelium (3) | biological replicate; edgeR QL; Ensembl 116 one-to-one orthologue (CXADR: high-confidence one2many) | fetal > adult |
-| G3 CRC malignant | Joanito 2022 (Synapse syn26844071) | malignant epithelium vs normal epithelium (S1) | patient pseudobulk; edgeR QL `~ cohort + group`; frozen label map | malignant > normal |
-| G4 CRC replication | Pelka 2021 (GSE178341) | tumour epithelium vs normal epithelium (S2) | patient pseudobulk; edgeR QL | tumour > normal |
-
-**Core = genes that pass G1 ∧ G2 ∧ G3 ∧ G4.**
-
-The **Developmental Core** (G1 ∧ G2) is reported as an intermediate set.
-Under the frozen thresholds it is, from benchmark v2 addendum v1.4:
-**GJA1, CLU, ANXA6, SPP1, RBP1.**
-
-## 5. Supportive evidence (reported, never used for selection)
-
-| Evidence | Role | Contrast |
+| Axis | Status | Datasets |
 |---|---|---|
-| H-new2: Fawkner 2021 fetal ≥ 9 PCW vs Burclaff 2022 adult | human independent support (cross-study) | donor/sample pseudobulk, edgeR |
-| Gao 2018 fetal LI ≥ 9 W vs GSE103154 adult LI | human support | effect-only (cross-platform, adult n = 2) |
-| HGCA all fetal vs adult | human, stage-unresolved reference | edgeR |
-| GSE44433: Hemmerling 2014, WT E17.5 vs 8-week LCM ileal epithelium | mouse independent in-vivo support | microarray, limma |
-| Pikkupeura 2021 cultures (GSE160449), laminin and collagen | developmental/culture support | fetal enterospheres vs adult organoids |
-| Joanito sensitivity: cohorts with both groups | CRC robustness | edgeR |
-| Pelka progenitor check P: tumour vs normal stem/TA | CRC biology (not a gate) | edgeR |
-| TCGA COAD/READ: tumour vs normal (T1), paired, vs GTEx | bulk CRC support | edgeR |
+| L | mandatory | curated literature |
+| H | mandatory, replicated | HGCA ≥ 9 PCW, H-new2 ≥ 9 PCW, Gao ≥ 9 W |
+| M | mandatory | GSE230581 |
+| C | mandatory, replicated | Joanito, Pelka |
 
-A supportive dataset that disagrees with a Core gene is reported and
-discussed; it does not remove the gene.
+Unless stated otherwise, **support** below means log2FC ≥ 0.5 and FDR < 0.05.
 
-## 6. Known design caveats (disclosed)
+### L — Literature provenance (mandatory)
 
-- **G1:** HGCA fetal (HDBR) and adult (transplant-donor) cohorts were
-  collected and processed within one atlas framework but as separate
-  cohorts. Residual cohort effects cannot be excluded.
-  - Fetal tissue is small and large intestine; adult tissue spans the
-    duodenum-to-rectum regions sampled.
-- **G2:** the fetal arm is whole proximal SI epithelium and the adult arm is
-  crypt-only epithelium, so the compartments are asymmetric.
-- **G3/G4:** tumour epithelium is malignant cells and normal is
-  normal-adjacent or healthy epithelium; patient pseudobulk.
-  - Joanito is the primary gate; Pelka is the replication gate.
-  - TCGA is bulk and does not veto.
-- **Human-panel recovery in G1 is moderate:** 15/25 measured
-  fetal-positive, 7/25 strict. Several literature candidates that are
-  injury/revival genes are adult-high in G1 (ANXA1, AREG, CD44, EMP1, IL33,
-  IL1RN, EPS8L1). This is treated as selection pressure, not dataset
-  failure.
+The curator evidence code is the parenthetical class at the end of each
+annotation:
+- A: fetal intestine.
+- B: regenerative/fetal-like.
+- C: CRC/oncofetal.
 
-## 7. Expected and reported non-members
+Named studies are the specific citations in `References`. Generic phrases
+(e.g. "intestinal revSC/regeneration literature") are not studies, and no
+listed citation is a review.
 
-TNFRSF12A is literature-nominated but fails both developmental gates:
+- **L-A (direct fetal-intestinal evidence):** the code contains A. This
+  includes curator-hedged forms ("A candidate", "A+B candidate", "A/B").
+- **L-B (replicated fetal/revival evidence):** the code contains B **and**
+  there are ≥ 2 distinct named studies.
+- **Pass** if L-A or L-B. Otherwise **fail** (C-only, a single named B
+  study, or no named study).
 
-| Gate | log2FC | P / FDR |
-|---|---|---|
-| G1 | −0.01 | P = 0.99 |
-| G2 | +0.46 | FDR not significant |
+The derived table is `config/literature_provenance_31.tsv`, generated by
+`scripts/literature_provenance.py`.
 
-It is therefore not a Core member. Statement for the manuscript:
-*TNFRSF12A is mechanistically linked to the oncofetal program but is not
-itself a member of the stringent conserved oncofetal Core.* It was not
-removed manually.
+### H — Human developmental, replicated (mandatory)
 
-## 8. Outputs and data-use restriction
+Three human fetal (≥ 9 weeks) vs adult epithelial contrasts:
 
-- **Gate statistics:** `core_oncofetal/results/` holds the evidence workbook,
-  with one column per gate (log2FC, P, FDR, pass).
-- **Joanito restriction:** the Joanito data-use terms forbid disclosure of
-  derived material. The **full** workbook (G3 values and final Core
-  membership) is written locally and mirrored to
-  `DATA/2.PROJECTS/1.TWEAKR-oncoFetal/results/2026-10-02_step3_cancer_axis_v0.1/restricted_joanito/core_oncofetal/`.
-  It is git-ignored.
-- **Public workbook:** the public version omits the G3 column and the final
-  Core label. It keeps the candidate universe, G1, G2, G4 and the supportive
+| Contrast | Role |
+|---|---|
+| HGCA ≥ 9 PCW vs adult | primary: same atlas, donor pseudobulk edgeR |
+| H-new2 ≥ 9 PCW: Fawkner vs Burclaff | cross-study, donor/sample pseudobulk edgeR |
+| Gao fetal LI ≥ 9 W vs GSE103154 adult LI | effect-only, Welch |
+
+- **Pass** if both hold:
+  1. at least 2 of the 3 contrasts are measured and fetal-positive
+     (log2FC > 0);
+  2. at least 1 contrast shows support.
+- **NE** if fewer than 2 contrasts are measured.
+- **Fail** otherwise.
+- HGCA is the primary evidence but has no veto.
+
+### M — Mouse in-vivo developmental (mandatory)
+
+GSE230581 (Pikkupeura 2023 in vivo): E16.5 proximal SI epithelium vs adult
+crypt epithelium, 3 vs 3, edgeR. The human gene is mapped through its Ensembl
+one-to-one orthologue (CXADR: high-confidence one2many).
+
+- **Pass** if the gene shows support.
+- **NE** if there is no orthologue or the gene is not measured.
+- **Fail** otherwise.
+- GSE44433 is replication evidence only (not selecting).
+
+### C — CRC malignant-epithelial, replicated (mandatory)
+
+Two contrasts:
+
+| Contrast | Model |
+|---|---|
+| Joanito 2022: malignant vs normal epithelium | patient pseudobulk, edgeR `~ cohort + group` |
+| Pelka 2021: tumour vs normal epithelium | patient pseudobulk, edgeR |
+
+- **Pass** if **both** contrasts show support.
+- **Fail** if either measured contrast lacks support.
+- **NE** if neither measured contrast fails but at least one is not measured.
+- TCGA bulk is support only, with no veto.
+
+## 4. Core definition
+
+**Conserved Intestinal Oncofetal Core = genes with L, H, M and C all pass.**
+Every other gene is labelled "not Core" and lists, for each axis, whether it
+failed or was not evaluable.
+
+## 5. Evidence matrix (primary display)
+
+The matrix has one row per literature candidate (31). Its columns are:
+
+- literature provenance (code, named studies, L call);
+- HGCA ≥ 9 PCW, H-new2 ≥ 9 PCW, Gao ≥ 9 W, then the H call;
+- mouse in vivo GSE230581 (M call) and mouse replication GSE44433;
+- Joanito and Pelka, then the C call;
+- TCGA (support);
+- the deterministic Core label.
+
+Each cell gives log2FC with significance, or NA.
+
+## 6. Supportive evidence (reported, never selecting)
+
+- GSE44433 (mouse in-vivo replication).
+- Pikkupeura 2021 cultures (laminin, collagen).
+- HGCA all-fetal (stage-unresolved).
+- Joanito sensitivity (cohorts with both groups).
+- Pelka progenitor check P.
+- TCGA T1 / paired / vs GTEx.
+
+## 7. Stringent intersection set (sensitivity analysis; former method v1.0)
+
+- **Rule:** Literature 31 ∩ G1 HGCA ≥ 9 PCW ∩ G2 GSE230581 ∩ G3 Joanito ∩ G4
+  Pelka.
+- **Pass in each gate:** log2FC ≥ 0.5 and FDR < 0.05.
+- **Not measured** means not evaluable, never "fail".
+- **Developmental intersection (G1 ∧ G2):** GJA1, CLU, ANXA6, SPP1, RBP1.
+- **The four-gene stringent intersection set** is reported as a Tier-1 /
+  sensitivity subset, **not** as the Core definition.
+- **GJA1** is not evaluable for the CRC gates because it is below the
+  expression filter in both the Joanito and Pelka epithelial contrasts.
+
+## 8. Pre-declared sanity checks
+
+- **TACSTD2 (TROP2):** if v2.0 excludes it, the axis that excludes it and the
+  cross-dataset evidence for that exclusion are reported explicitly.
+- **TNFRSF12A:** literature-nominated (L-A). Its status is reported whatever
+  it is. Statement if excluded: *TNFRSF12A is mechanistically linked to the
+  oncofetal program but is not itself a member of the stringent conserved
+  oncofetal Core.*
+- **Neither gene's status may motivate a rule change.**
+
+## 9. Known design caveats (disclosed)
+
+- **HGCA:** fetal (HDBR) and adult (transplant-donor) cohorts were collected
+  separately within one atlas framework.
+- **H-new2:** stage is collinear with study/platform.
+- **Gao:** cross-platform, with adult n = 2.
+- **GSE230581:** fetal whole epithelium vs adult crypt-only epithelium.
+- **Literature provenance:** this is curator-coded. RBP1's provenance in the
+  curated list is a generic phrase with no named study. AREG and CD44 each
+  cite one named study plus generic phrases.
+
+## 10. Outputs and data-use restriction
+
+- **Restricted (Joanito terms forbid disclosing derived material):** the
+  Joanito columns, the C call and the Core labels are written only to the
+  full workbook (git-ignored, mirrored to
+  `DATA/.../restricted_joanito/core_oncofetal/`).
+- **Public workbook** keeps L, H, M, Pelka, TCGA and the supportive
   evidence.
 
-## 9. Change control
+## 11. Change control
 
-Any change to a gate dataset, contrast, threshold or direction is a new
-method version, recorded here before it is applied.
+Any change to an axis, dataset, threshold or rule is a new method version,
+recorded here before it is applied.
