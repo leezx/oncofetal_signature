@@ -20,3 +20,6 @@ GaoLI_late_vs_early	stage_resolved_within_fetal	within-fetal stage contrast (add
 Hnew3_early	stage_resolved_failed_qualification	stage-resolved Hnew3 (addendum v1.2); does not meet promotion criterion (mid/late qualifies AND panel fraction rises)	C (stage-resolved Hnew3)	Gao2018+Wang2020
 Hnew3_late	stage_resolved_failed_qualification	stage-resolved Hnew3 (addendum v1.2); does not meet promotion criterion (mid/late qualifies AND panel fraction rises)	C (stage-resolved Hnew3)	Gao2018+Wang2020
 GaoSILI_late_vs_early	stage_resolved_within_fetal	within-fetal stage contrast (addendum v1.2); tests the 9-week breakpoint, not fetal vs adult	C (stage-resolved Hnew3)	Gao2018
+Hnew2_early	stage_resolved	stage-resolved H-new2 (addendum v1.3); early arm only 2 TI units (8 PCW), ABZ2 flagged	A (stage-resolved Hnew2)	Fawkner2021_scRNA+Burclaff2022
+Hnew2_late	stage_resolved	stage-resolved H-new2 (addendum v1.3); same units as parent incl. ABF1/AAU2 (later hashtag QC failures, flagged)	A (stage-resolved Hnew2)	Fawkner2021_scRNA+Burclaff2022
+Fawkner_late_vs_early	stage_resolved_within_fetal	within-fetal stage contrast (addendum v1.3); tests the 9-week breakpoint	A (stage-resolved Hnew2)	Fawkner2021_scRNA

@@ -398,3 +398,16 @@ promotion criterion not met; panel fraction rises only in H-new3 (71 → 83%).
 **Updated**: qualification + matrix + heatmap (21 contrasts), stage DE tables,
 review_decisions, marker summary (public committed; full mirrored to DATA
 restricted), dataset registry notes.
+
+## 2026-10-02 — Benchmark v2 addendum v1.3: stage-resolved H-new2; results audit
+
+**Audit**: every contrast run so far is present in `marker_summary/results`
+(public: all except Joanito; full: restricted mirror in DATA). Gap found:
+H-new2 (Fawkner) had no stage split. Frozen as v1.3 (`9571e29`), same
+breakpoint and rules.
+**Results**: early (2 units, 8 PCW) vs adult TNFRSF12A +0.86 (P = 0.015);
+mid/late vs adult +1.94; mid/late vs early +1.08 (P = 0.008). Within-fetal
+rise across 9 weeks now seen in HGCA, Fawkner (significant) and Gao (P = 0.07).
+**Added**: `marker_summary/results/Fetal_stage_decomposition_summary.csv`
+(all human fetal-vs-adult parents × stage resolution); marker summary now 36
+contrasts; matrix/qualification/heatmap 24 contrasts.

@@ -1177,6 +1177,192 @@ fails (20/28 +)",0.715231977718215,"*"
 fails (20/28 +)",-1.94597237674052,"*"
 "EPS8L1","GaoSILI_late_vs_early",1.21285318343412,0.0537073588459808,"GaoSILI_late_vs_early
 fails (20/28 +)",1.21285318343412,""
+"TACSTD2","Hnew2_early",2.99456069495154,0.0028503261148274,"Hnew2_early
+QUALIFIES (18/25 +)",2.99456069495154,"*"
+"CLU","Hnew2_early",1.47941744357466,0.0038084404431366,"Hnew2_early
+QUALIFIES (18/25 +)",1.47941744357466,"*"
+"ANXA1","Hnew2_early",-0.837069630855066,0.253469148167601,"Hnew2_early
+QUALIFIES (18/25 +)",-0.837069630855066,""
+"TNFRSF12A","Hnew2_early",0.862516349577405,0.0151237505805366,"Hnew2_early
+QUALIFIES (18/25 +)",0.862516349577405,"*"
+"GJA1","Hnew2_early",4.00610785770629,1.62812715824449e-05,"Hnew2_early
+QUALIFIES (18/25 +)",4,"*"
+"ANXA3","Hnew2_early",1.1300415638916,0.0256854320194517,"Hnew2_early
+QUALIFIES (18/25 +)",1.1300415638916,"*"
+"ANXA6","Hnew2_early",3.88722641396611,5.54977807928861e-05,"Hnew2_early
+QUALIFIES (18/25 +)",3.88722641396611,"*"
+"LY6A","Hnew2_early",NA,NA,"Hnew2_early
+QUALIFIES (18/25 +)",NA,""
+"SPP1","Hnew2_early",8.033077507694,0.0002403481632008,"Hnew2_early
+QUALIFIES (18/25 +)",4,"*"
+"SPRR1A","Hnew2_early",NA,NA,"Hnew2_early
+QUALIFIES (18/25 +)",NA,""
+"IL33","Hnew2_early",NA,NA,"Hnew2_early
+QUALIFIES (18/25 +)",NA,""
+"MIF","Hnew2_early",-1.37200412504424,0.045467583664282,"Hnew2_early
+QUALIFIES (18/25 +)",-1.37200412504424,"*"
+"CCN2","Hnew2_early",6.46064866295748,8.56166556337317e-07,"Hnew2_early
+QUALIFIES (18/25 +)",4,"*"
+"CCN1","Hnew2_early",7.87813890331585,3.69613222250938e-07,"Hnew2_early
+QUALIFIES (18/25 +)",4,"*"
+"ANKRD1","Hnew2_early",9.35220034255593,6.75086798333578e-06,"Hnew2_early
+QUALIFIES (18/25 +)",4,"*"
+"SOX17","Hnew2_early",NA,NA,"Hnew2_early
+QUALIFIES (18/25 +)",NA,""
+"RBP1","Hnew2_early",4.60399826957088,3.64816058735021e-07,"Hnew2_early
+QUALIFIES (18/25 +)",4,"*"
+"AREG","Hnew2_early",2.9650929695661,1.89003981918737e-06,"Hnew2_early
+QUALIFIES (18/25 +)",2.9650929695661,"*"
+"EREG","Hnew2_early",7.41424214877531,3.29721335773238e-08,"Hnew2_early
+QUALIFIES (18/25 +)",4,"*"
+"CD44","Hnew2_early",-4.04071578384915,1.89569371023579e-05,"Hnew2_early
+QUALIFIES (18/25 +)",-4,"*"
+"CXADR","Hnew2_early",-0.495920417345305,0.1024173781896,"Hnew2_early
+QUALIFIES (18/25 +)",-0.495920417345305,""
+"BASP1","Hnew2_early",5.06396739023882,0.001222033117645,"Hnew2_early
+QUALIFIES (18/25 +)",4,"*"
+"EDN1","Hnew2_early",4.72812504310472,1.41156083952981e-05,"Hnew2_early
+QUALIFIES (18/25 +)",4,"*"
+"IL1RN","Hnew2_early",-3.94943962082638,0.0004886828367025,"Hnew2_early
+QUALIFIES (18/25 +)",-3.94943962082638,"*"
+"MSLN","Hnew2_early",2.15940415604181,0.0233123675942263,"Hnew2_early
+QUALIFIES (18/25 +)",2.15940415604181,"*"
+"REG3B","Hnew2_early",NA,NA,"Hnew2_early
+QUALIFIES (18/25 +)",NA,""
+"EMP1","Hnew2_early",-1.40586623064409,0.0359842986672939,"Hnew2_early
+QUALIFIES (18/25 +)",-1.40586623064409,"*"
+"LAMC2","Hnew2_early",-0.587378359649917,0.338965209051259,"Hnew2_early
+QUALIFIES (18/25 +)",-0.587378359649917,""
+"MMP7","Hnew2_early",NA,NA,"Hnew2_early
+QUALIFIES (18/25 +)",NA,""
+"L1CAM","Hnew2_early",11.2900673225898,8.86867686515083e-06,"Hnew2_early
+QUALIFIES (18/25 +)",4,"*"
+"EPS8L1","Hnew2_early",0.351373229940042,0.385393896880533,"Hnew2_early
+QUALIFIES (18/25 +)",0.351373229940042,""
+"TACSTD2","Hnew2_late",4.08526804610829,4.03296851332847e-06,"Hnew2_late
+QUALIFIES (16/22 +)",4,"*"
+"CLU","Hnew2_late",2.34510833736241,1.89352078133194e-05,"Hnew2_late
+QUALIFIES (16/22 +)",2.34510833736241,"*"
+"ANXA1","Hnew2_late",-0.931228468737944,0.180218025785427,"Hnew2_late
+QUALIFIES (16/22 +)",-0.931228468737944,""
+"TNFRSF12A","Hnew2_late",1.93596804565604,1.94296808530943e-06,"Hnew2_late
+QUALIFIES (16/22 +)",1.93596804565604,"*"
+"GJA1","Hnew2_late",2.77075537774903,0.0061981986054554,"Hnew2_late
+QUALIFIES (16/22 +)",2.77075537774903,"*"
+"ANXA3","Hnew2_late",1.76569125688894,0.0013225792046715,"Hnew2_late
+QUALIFIES (16/22 +)",1.76569125688894,"*"
+"ANXA6","Hnew2_late",2.50419699416761,0.0001056220241727,"Hnew2_late
+QUALIFIES (16/22 +)",2.50419699416761,"*"
+"LY6A","Hnew2_late",NA,NA,"Hnew2_late
+QUALIFIES (16/22 +)",NA,""
+"SPP1","Hnew2_late",NA,NA,"Hnew2_late
+QUALIFIES (16/22 +)",NA,""
+"SPRR1A","Hnew2_late",NA,NA,"Hnew2_late
+QUALIFIES (16/22 +)",NA,""
+"IL33","Hnew2_late",NA,NA,"Hnew2_late
+QUALIFIES (16/22 +)",NA,""
+"MIF","Hnew2_late",-1.07750080237949,0.0090316110150304,"Hnew2_late
+QUALIFIES (16/22 +)",-1.07750080237949,"*"
+"CCN2","Hnew2_late",6.36969425628561,1.02849644899664e-06,"Hnew2_late
+QUALIFIES (16/22 +)",4,"*"
+"CCN1","Hnew2_late",7.35140825550013,1.62741979236739e-14,"Hnew2_late
+QUALIFIES (16/22 +)",4,"*"
+"ANKRD1","Hnew2_late",NA,NA,"Hnew2_late
+QUALIFIES (16/22 +)",NA,""
+"SOX17","Hnew2_late",NA,NA,"Hnew2_late
+QUALIFIES (16/22 +)",NA,""
+"RBP1","Hnew2_late",1.43478024952675,0.0881202978323723,"Hnew2_late
+QUALIFIES (16/22 +)",1.43478024952675,""
+"AREG","Hnew2_late",3.87027366453888,1.03913191173216e-10,"Hnew2_late
+QUALIFIES (16/22 +)",3.87027366453888,"*"
+"EREG","Hnew2_late",7.34274811127424,1.57217800387344e-06,"Hnew2_late
+QUALIFIES (16/22 +)",4,"*"
+"CD44","Hnew2_late",-3.92423482458367,6.95489716301306e-11,"Hnew2_late
+QUALIFIES (16/22 +)",-3.92423482458367,"*"
+"CXADR","Hnew2_late",-0.243976421699182,0.162443531840294,"Hnew2_late
+QUALIFIES (16/22 +)",-0.243976421699182,""
+"BASP1","Hnew2_late",3.31231450153575,0.0003725471598336,"Hnew2_late
+QUALIFIES (16/22 +)",3.31231450153575,"*"
+"EDN1","Hnew2_late",5.80090056105349,4.3080920664562e-12,"Hnew2_late
+QUALIFIES (16/22 +)",4,"*"
+"IL1RN","Hnew2_late",-4.25910213294597,3.0169284166701e-15,"Hnew2_late
+QUALIFIES (16/22 +)",-4,"*"
+"MSLN","Hnew2_late",3.83214790364178,1.42362661299867e-05,"Hnew2_late
+QUALIFIES (16/22 +)",3.83214790364178,"*"
+"REG3B","Hnew2_late",NA,NA,"Hnew2_late
+QUALIFIES (16/22 +)",NA,""
+"EMP1","Hnew2_late",0.168028315316068,0.805738855562671,"Hnew2_late
+QUALIFIES (16/22 +)",0.168028315316068,""
+"LAMC2","Hnew2_late",0.879660525837475,0.0189602578139942,"Hnew2_late
+QUALIFIES (16/22 +)",0.879660525837475,"*"
+"MMP7","Hnew2_late",NA,NA,"Hnew2_late
+QUALIFIES (16/22 +)",NA,""
+"L1CAM","Hnew2_late",NA,NA,"Hnew2_late
+QUALIFIES (16/22 +)",NA,""
+"EPS8L1","Hnew2_late",-0.297043596933865,0.290266895723539,"Hnew2_late
+QUALIFIES (16/22 +)",-0.297043596933865,""
+"TACSTD2","Fawkner_late_vs_early",1.10237856445083,0.134090808615037,"Fawkner_late_vs_early
+fails (13/23 +)",1.10237856445083,""
+"CLU","Fawkner_late_vs_early",0.857967972543863,0.10294544189322,"Fawkner_late_vs_early
+fails (13/23 +)",0.857967972543863,""
+"ANXA1","Fawkner_late_vs_early",-0.0761228290537096,0.937185488352694,"Fawkner_late_vs_early
+fails (13/23 +)",-0.0761228290537096,""
+"TNFRSF12A","Fawkner_late_vs_early",1.07566609044384,0.007989982969948,"Fawkner_late_vs_early
+fails (13/23 +)",1.07566609044384,"*"
+"GJA1","Fawkner_late_vs_early",-1.22630141228582,0.169686857684379,"Fawkner_late_vs_early
+fails (13/23 +)",-1.22630141228582,""
+"ANXA3","Fawkner_late_vs_early",0.644209335321822,0.281501222558551,"Fawkner_late_vs_early
+fails (13/23 +)",0.644209335321822,""
+"ANXA6","Fawkner_late_vs_early",-1.39527326008543,0.0107387641972146,"Fawkner_late_vs_early
+fails (13/23 +)",-1.39527326008543,"*"
+"LY6A","Fawkner_late_vs_early",NA,NA,"Fawkner_late_vs_early
+fails (13/23 +)",NA,""
+"SPP1","Fawkner_late_vs_early",0.424416454313631,0.768196840036792,"Fawkner_late_vs_early
+fails (13/23 +)",0.424416454313631,""
+"SPRR1A","Fawkner_late_vs_early",NA,NA,"Fawkner_late_vs_early
+fails (13/23 +)",NA,""
+"IL33","Fawkner_late_vs_early",NA,NA,"Fawkner_late_vs_early
+fails (13/23 +)",NA,""
+"MIF","Fawkner_late_vs_early",0.29990364285937,0.580312956094862,"Fawkner_late_vs_early
+fails (13/23 +)",0.29990364285937,""
+"CCN2","Fawkner_late_vs_early",-0.096087872849531,0.901534946335795,"Fawkner_late_vs_early
+fails (13/23 +)",-0.096087872849531,""
+"CCN1","Fawkner_late_vs_early",-0.523442393383548,0.145327255543219,"Fawkner_late_vs_early
+fails (13/23 +)",-0.523442393383548,""
+"ANKRD1","Fawkner_late_vs_early",NA,NA,"Fawkner_late_vs_early
+fails (13/23 +)",NA,""
+"SOX17","Fawkner_late_vs_early",NA,NA,"Fawkner_late_vs_early
+fails (13/23 +)",NA,""
+"RBP1","Fawkner_late_vs_early",-3.16833223633969,9.23769286740403e-05,"Fawkner_late_vs_early
+fails (13/23 +)",-3.16833223633969,"*"
+"AREG","Fawkner_late_vs_early",0.900954697441033,0.0215556910271509,"Fawkner_late_vs_early
+fails (13/23 +)",0.900954697441033,"*"
+"EREG","Fawkner_late_vs_early",-0.0628151581920966,0.941280045492381,"Fawkner_late_vs_early
+fails (13/23 +)",-0.0628151581920966,""
+"CD44","Fawkner_late_vs_early",0.0874234303878506,0.89809201905529,"Fawkner_late_vs_early
+fails (13/23 +)",0.0874234303878506,""
+"CXADR","Fawkner_late_vs_early",0.25144092000959,0.254520616868706,"Fawkner_late_vs_early
+fails (13/23 +)",0.25144092000959,""
+"BASP1","Fawkner_late_vs_early",-1.75462609408379,0.0038953430581754,"Fawkner_late_vs_early
+fails (13/23 +)",-1.75462609408379,"*"
+"EDN1","Fawkner_late_vs_early",1.07591969354045,0.0090326819332865,"Fawkner_late_vs_early
+fails (13/23 +)",1.07591969354045,"*"
+"IL1RN","Fawkner_late_vs_early",NA,NA,"Fawkner_late_vs_early
+fails (13/23 +)",NA,""
+"MSLN","Fawkner_late_vs_early",1.6490164307099,0.0304629351500527,"Fawkner_late_vs_early
+fails (13/23 +)",1.6490164307099,"*"
+"REG3B","Fawkner_late_vs_early",NA,NA,"Fawkner_late_vs_early
+fails (13/23 +)",NA,""
+"EMP1","Fawkner_late_vs_early",1.57147420681761,0.132522286751124,"Fawkner_late_vs_early
+fails (13/23 +)",1.57147420681761,""
+"LAMC2","Fawkner_late_vs_early",1.44740771806248,0.0034316862480451,"Fawkner_late_vs_early
+fails (13/23 +)",1.44740771806248,"*"
+"MMP7","Fawkner_late_vs_early",NA,NA,"Fawkner_late_vs_early
+fails (13/23 +)",NA,""
+"L1CAM","Fawkner_late_vs_early",-4.35932922379989,2.12221858894844e-10,"Fawkner_late_vs_early
+fails (13/23 +)",-4,"*"
+"EPS8L1","Fawkner_late_vs_early",-0.659777064267156,0.0713455146809282,"Fawkner_late_vs_early
+fails (13/23 +)",-0.659777064267156,""
 "TACSTD2","Pikkupeura_LN",9.44039138235667,7.9109040781903e-11,"Pikkupeura_LN
 QUALIFIES (24/27 +)",4,"*"
 "CLU","Pikkupeura_LN",8.49513950784813,4.45738147141709e-09,"Pikkupeura_LN

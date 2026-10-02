@@ -59,6 +59,12 @@ for f in HGCA_early_fetal_vs_adult HGCA_late_fetal_vs_adult HGCA_late_vs_early_f
   cp "$work/de/$f.csv" "$tables/${f}_DE.csv"
 done
 
+# Addendum v1.3: stage-resolved H-new2.
+python3 "$script_dir/10_hnew2_stage_resolved.py" --repo "$repo" --work-dir "$work/pseudobulk" --de-dir "$work/de" --tables-dir "$tables"
+for f in Hnew2_early_Fawkner_vs_Burclaff Hnew2_late_Fawkner_vs_Burclaff Fawkner_late_vs_early; do
+  cp "$work/de/$f.csv" "$tables/${f}_DE.csv"
+done
+
 # Version-controlled copies.
 cp "$work/de/GaoOriginal_GaoLI_vs_GSE103154.csv" "$tables/GaoOriginal_GaoLI_vs_GSE103154_DE.csv"
 cp "$work/de/Hnew3_GaoSILI_vs_Wang.csv" "$tables/Hnew3_GaoSILI_vs_Wang_DE.csv"

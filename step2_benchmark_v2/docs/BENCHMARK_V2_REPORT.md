@@ -227,3 +227,36 @@ Tables:
   `stage_resolution`, `parent_contrast`), the matrix, and `*_DE.csv` for
   each stage contrast.
 - `HGCA_stage_resolved_units.csv` and `*_units.csv` (Gao).
+
+## Addendum v1.3 — stage-resolved H-new2 (Fawkner fetal vs Burclaff adult)
+
+The plan was frozen in `9571e29`. Units and model are the same as H-new2;
+fetal PCW comes from the authors' sample key.
+
+| Contrast | TNFRSF12A log2FC (P) | Panel fetal-positive | Binomial P | Verdict |
+|---|---|---|---|---|
+| all fetal (22) vs adult (3) | +1.83 (< 0.001) | 18/24 (75%) | 0.011 | qualifies |
+| early, 8 PCW (2) vs adult | +0.86 (0.015) | 18/25 (72%) | 0.022 | qualifies |
+| mid/late ≥ 9 PCW (20) vs adult | +1.94 (< 0.001) | 16/22 (73%) | 0.026 | qualifies |
+| mid/late vs early | **+1.08 (0.008)** | 13/23 | 0.34 | (within-fetal) |
+
+**Reading.**
+- **The rise across the breakpoint replicates.** Mid/late fetal is higher than
+  early fetal in all three fetal scRNA sources:
+
+  | Source | Mid/late vs early, TNFRSF12A log2FC (P) |
+  |---|---|
+  | HGCA | +1.60 (0.009) |
+  | Fawkner | +1.08 (0.008) |
+  | Gao SI+LI | +1.87 (0.07) |
+
+- **What differs is where the adult reference falls.**
+  - Fawkner/Burclaff: adult sits below even the early fetal epithelium.
+  - HGCA and Gao: adult is about level with mid/late fetal.
+- **Caveat:** the early Fawkner arm is 2 TI units (8 PCW). ABZ2 is flagged
+  (8.4% sex-discordant cells), and ABF1 and AAU2 are kept as in the parent
+  contrast. See `results/tables/Hnew2_stage_resolved_units.csv`.
+
+**Combined table.** `marker_summary/results/Fetal_stage_decomposition_summary.csv`
+gives every human fetal-vs-adult parent contrast at every stage resolution,
+including Senger and H-bulk1/2, which are marked not splittable.

@@ -29,15 +29,19 @@ DE_FILES = {
     "GaoOriginal_late": "GaoOriginal_late_GaoLI_vs_GSE103154.csv", "GaoLI_late_vs_early": "GaoLI_late_vs_early.csv",
     "Hnew3_early": "Hnew3_early_GaoSILI_vs_Wang.csv", "Hnew3_late": "Hnew3_late_GaoSILI_vs_Wang.csv",
     "GaoSILI_late_vs_early": "GaoSILI_late_vs_early.csv",
+    "Hnew2_early": "Hnew2_early_Fawkner_vs_Burclaff.csv", "Hnew2_late": "Hnew2_late_Fawkner_vs_Burclaff.csv",
+    "Fawkner_late_vs_early": "Fawkner_late_vs_early.csv",
 }
 STAGE = {"HGCA_early": "early_vs_adult", "GaoOriginal_early": "early_vs_adult", "Hnew3_early": "early_vs_adult",
          "HGCA_late": "midlate_vs_adult", "GaoOriginal_late": "midlate_vs_adult", "Hnew3_late": "midlate_vs_adult",
          "HGCA_late_vs_early": "midlate_vs_early", "GaoLI_late_vs_early": "midlate_vs_early",
-         "GaoSILI_late_vs_early": "midlate_vs_early"}
+         "GaoSILI_late_vs_early": "midlate_vs_early", "Hnew2_early": "early_vs_adult",
+         "Hnew2_late": "midlate_vs_adult", "Fawkner_late_vs_early": "midlate_vs_early"}
 PARENT = {k: k.split("_")[0] if not k.startswith("Gao") else
           {"GaoOriginal_early": "GaoOriginal", "GaoOriginal_late": "GaoOriginal", "GaoLI_late_vs_early": "GaoOriginal",
            "GaoSILI_late_vs_early": "Hnew3"}[k] for k in STAGE}
-PARENT.update({"Hnew3_early": "Hnew3", "Hnew3_late": "Hnew3"})
+PARENT.update({"Hnew3_early": "Hnew3", "Hnew3_late": "Hnew3", "Hnew2_early": "Hnew2", "Hnew2_late": "Hnew2",
+               "Fawkner_late_vs_early": "Hnew2"})
 
 # key, label, species, source description
 CONTRASTS = [
@@ -61,6 +65,10 @@ CONTRASTS = [
     ("Hnew3_early", "Gao early fetal SI+LI (<9 W) vs Wang adult", "Human", "addendum v1.2"),
     ("Hnew3_late", "Gao mid/late fetal SI+LI (>=9 W) vs Wang adult", "Human", "addendum v1.2"),
     ("GaoSILI_late_vs_early", "Gao SI+LI mid/late vs early fetal (within-fetal)", "Human", "addendum v1.2"),
+    # Addendum v1.3: stage-resolved H-new2.
+    ("Hnew2_early", "Fawkner early fetal (<9 PCW, 2 units) vs Burclaff adult", "Human", "addendum v1.3"),
+    ("Hnew2_late", "Fawkner mid/late fetal (>=9 PCW) vs Burclaff adult", "Human", "addendum v1.3"),
+    ("Fawkner_late_vs_early", "Fawkner mid/late vs early fetal (within-fetal)", "Human", "addendum v1.3"),
     ("Pikkupeura_LN", "Pikkupeura fetal vs adult culture, laminin (GSE160449)", "Mouse", "existing benchmark"),
     ("Pikkupeura_collagen", "Pikkupeura fetal vs adult culture, collagen (GSE160449)", "Mouse", "existing benchmark"),
 ]
