@@ -52,3 +52,19 @@ the Joanito metadata is accessible. See `step3_cancer/docs/RUNBOOK.md`.
 | Module | Purpose | Primary outputs |
 |---|---|---|
 | `marker_summary/scripts/build_marker_summary.py` | log2FC / P / FDR of the 31 Step 1 markers in every Step 2 and Step 3 dataset (descriptive) | `marker_summary/results/Literature_31_marker_summary_statistics.{csv,xlsx}`, measurement-status table |
+
+## Step 2 human benchmark v2
+
+| Module | Purpose | Primary outputs |
+|---|---|---|
+| `step2_benchmark_v2/scripts/00_download_inputs.sh` | GSE158328, GSE158702 (+HTO), GSE185224, GSE125970 into DATA | raw files + checksums |
+| `step2_benchmark_v2/scripts/01_fawkner_spatial_pseudobulk.py` | H-new1 Visium epithelial-spot pseudobulk per section | counts + section table |
+| `step2_benchmark_v2/scripts/02_fawkner_scrna_pseudobulk.py` | H-new2 fetal: hashtag demultiplexing, per-sample pseudobulk | counts + unit table |
+| `step2_benchmark_v2/scripts/03_burclaff_adult_pseudobulk.py` | H-new2 adult: Burclaff donor pseudobulks, joined to fetal | merged counts |
+| `step2_benchmark_v2/scripts/04_gao_cross_platform_effect.py` | H-new3, H-new3-debug, Gao-original recomputed (effect-only) | DE + per-unit marker tables |
+| `step2_benchmark_v2/scripts/05_benchmark_matrix.py` | 31-marker × contrast matrix and frozen verdicts | matrix + qualification |
+| `step2_benchmark_v2/scripts/06_plot_benchmark_heatmap.R` | heatmap | PDF/PNG + source data |
+| `step2_benchmark_v2/scripts/run_benchmark_v2.sh` | run all | complete package |
+
+edgeR contrasts reuse `step3_cancer/scripts/04_pseudobulk_edger.R` (now with an
+optional minimum-units argument; default 3, H-new1 uses 2).

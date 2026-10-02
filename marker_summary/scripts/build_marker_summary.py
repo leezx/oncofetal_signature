@@ -25,6 +25,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 DATA = pathlib.Path("/Volumes/Stelligen_SSD/Stelligen/DATA")
 S2 = ROOT / "step2_fetal/results/tables"
 BM = ROOT / "step2_dataset_benchmark/results/tables"
+BM2 = ROOT / "step2_benchmark_v2/results/tables"
 S3 = ROOT / "step3_cancer/results/tables"
 OUT = ROOT / "marker_summary/results"
 
@@ -47,6 +48,12 @@ DATASETS = [
     ("Pikkupeura_LN", "2 (benchmark)", "Pikkupeura cultures LN (GSE160449)", "Mouse", "fetal vs adult culture, laminin arm", "fetal"),
     ("Pikkupeura_collagen", "2 (benchmark)", "Pikkupeura cultures collagen (GSE160449)", "Mouse", "fetal vs adult culture, collagen arm", "fetal"),
     ("GSE44433", "2 (benchmark)", "Hemmerling 2014 (GSE44433)", "Mouse", "WT E17.5 vs WT 8-week LCM ileal epithelium", "fetal"),
+    ("GaoOriginal_v2", "2 (benchmark v2)", "Gao fetal LI vs GSE103154 (recomputed)", "Human", "fetal LI vs adult LI, effect-only, Welch P (cross-platform)", "fetal"),
+    ("Hnew1", "2 (benchmark v2)", "H-new1 Fawkner Visium (GSE158328)", "Human", "fetal vs adult epithelial-spot pseudobulk per section", "fetal"),
+    ("Hnew1_colon", "2 (benchmark v2)", "H-new1 colon only", "Human", "fetal colon vs adult colon sections", "fetal"),
+    ("Hnew2", "2 (benchmark v2)", "H-new2 Fawkner fetal + Burclaff adult", "Human", "fetal hashtag samples vs adult donors (GSE158702 / GSE185224)", "fetal"),
+    ("Hnew3", "2 (benchmark v2)", "H-new3 Gao fetal + Wang adult", "Human", "Gao fetal SI+LI vs Wang ileum/colon/rectum, effect-only (GSE95630 / GSE125970)", "fetal"),
+    ("Hnew3_debug", "2 (benchmark v2)", "H-new3-debug", "Human", "Gao fetal LI vs Wang colon+rectum (adult arm swapped)", "fetal"),
     ("TCGA", "3", "TCGA COAD+READ (T1)", "Human", "primary tumour vs normal, ~ tissue + project", "tumour"),
     ("TCGA_paired", "3", "TCGA paired", "Human", "tumour vs matched normal (50 pairs)", "tumour"),
     ("TCGA_GTEx", "3", "TCGA vs GTEx", "Human", "TCGA tumour vs GTEx transverse colon (direction only)", "tumour"),
@@ -105,6 +112,9 @@ def main():
     joan_u = set(pd.read_csv(DATA / "scRNAseq/Joanito2022_syn26844071/processed/v0.1/step3_epithelial_pseudobulk/"
                              "Joanito_epithelial_pseudobulk_counts.csv.gz", usecols=["symbol"]).symbol)
 
+    pb2 = DATA / "2.PROJECTS/1.TWEAKR-oncoFetal/results/2026-10-02_step2_human_benchmark_v0.2/pseudobulk"
+    spatial_u = set(pd.read_csv(pb2 / "Fawkner_spatial_epithelial_pseudobulk_counts.csv.gz", usecols=["symbol"]).symbol)
+    hnew2_u = set(pd.read_csv(pb2 / "Fawkner_scRNA_fetal_pseudobulk_counts.csv.gz", usecols=["symbol"]).symbol)
     hgca = pd.read_csv(S2 / "human_HGCA_fetal_vs_adult_DEG.csv")
     gao = pd.read_csv(S2 / "human_Gao_validation.csv")
     mouse = pd.read_csv(S2 / "mouse_in_vivo_fetal_vs_adult_DEG.csv")
@@ -139,6 +149,12 @@ def main():
         "Pikkupeura_LN": from_bm(["Mouse_Pikkupeura_LN_log2FC", None, "Mouse_Pikkupeura_LN_FDR"]),
         "Pikkupeura_collagen": from_bm(["Mouse_Pikkupeura_collagen_log2FC", None, "Mouse_Pikkupeura_collagen_FDR"]),
         "GSE44433": from_bm(["Mouse_GSE44433_log2FC", "Mouse_GSE44433_PValue", "Mouse_GSE44433_FDR"]),
+        "GaoOriginal_v2": lookup(pd.read_csv(BM2 / "GaoOriginal_GaoLI_vs_GSE103154_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "Hnew1": lookup(pd.read_csv(BM2 / "Hnew1_Fawkner_spatial_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"], spatial_u),
+        "Hnew1_colon": lookup(pd.read_csv(BM2 / "Hnew1_Fawkner_spatial_colon_only_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"], spatial_u),
+        "Hnew2": lookup(pd.read_csv(BM2 / "Hnew2_Fawkner_Burclaff_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"], hnew2_u),
+        "Hnew3": lookup(pd.read_csv(BM2 / "Hnew3_GaoSILI_vs_Wang_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
+        "Hnew3_debug": lookup(pd.read_csv(BM2 / "Hnew3debug_GaoLI_vs_WangColonRectum_DE.csv"), "symbol", human_keys, ["log2FC", "PValue", "FDR"]),
         "TCGA": lookup(tcga, "symbol", human_keys, ["T1_log2FC", "T1_PValue", "T1_FDR"], tcga_u),
         "TCGA_paired": lookup(tcga, "symbol", human_keys, ["Paired_log2FC", None, "Paired_FDR"], tcga_u),
         "TCGA_GTEx": lookup(tcga, "symbol", human_keys, ["GTEx_log2FC", None, "GTEx_FDR"], tcga_u),
@@ -201,7 +217,7 @@ def write_xlsx(wide, status, base, DATASETS, filename, restricted):
     white = Font(name="Arial", size=10, bold=True, color="FFFFFF")
     thin = Side(style="thin", color="BFBFBF")
     box = Border(left=thin, right=thin, top=thin, bottom=thin)
-    fills = {"2": "1F4E78", "2 (benchmark)": "595959", "3": "375623"}
+    fills = {"2": "1F4E78", "2 (benchmark)": "595959", "2 (benchmark v2)": "7030A0", "3": "375623"}
     nbase = base.shape[1]
     # Row 1: step; row 2: dataset; row 3: contrast; row 4: statistic.
     for j, col in enumerate(base.columns, 1):
@@ -293,7 +309,8 @@ def write_xlsx(wide, status, base, DATASETS, filename, restricted):
         "Markers: the 31 Step 1 literature-curated positive intestinal oncofetal candidates (step2_fetal/config/literature_candidates_31.tsv).",
         "Sign convention: positive log2FC = higher in fetal (Step 2) or tumour/malignant (Step 3). Blue-white-red scale spans log2FC -3..+3.",
         "P value / FDR: blank where the frozen analysis did not produce one (Gao: effect-only; Pikkupeura and TCGA paired/GTEx: only FDR retained).",
-        "Fawkner-Corbett (GSE158702) has no adult arm: the value shown is the median fraction of fetal EpCAM+ cells with non-zero expression, not a fold change.",
+        "Fawkner-Corbett (GSE158702) v1 benchmark column: median fraction of fetal EpCAM+ cells with non-zero expression (no FC). In benchmark v2 the same fetal data form the fetal arm of H-new2 (vs Burclaff adult).",
+        "Benchmark v2 (purple headers): H-new1 Visium (adult n = 2 sections; fetal spots less epithelial), H-new2 (study confounded with stage), H-new3 and Gao-original recomputed (cross-platform, effect-only; Welch P descriptive). See step2_benchmark_v2/docs.",
         "Step 2 primary datasets (HGCA, Gao, GSE230581) belong to an INVALIDATED analysis (failed biological QA); values are reported for audit, not as evidence.",
         "Symbols: CCN1/CCN2 are looked up as CYR61/CTGF in annotations that predate the HGNC rename (HGCA, Gao, Senger, Fawkner, TCGA/GENCODE v26, Pelka, Joanito).",
         "Mouse: Ensembl 116 one2one orthologues; LY6A/REG3B use the mouse-defined genes Ly6a/Reg3b; CXADR uses high-confidence Cxadr (one2many). Benchmarks map by one2one Entrez only, so these are blank there.",

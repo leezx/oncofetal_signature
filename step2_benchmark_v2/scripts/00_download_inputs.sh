@@ -24,7 +24,9 @@ fetch "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158328&targ=gsm&for
 # H-new2 fetal: Fawkner-Corbett 2021 epithelial pools (GEX) + hashtag (HTO) libraries.
 fawk_sc="$DATA_ROOT/scRNAseq/GSE158702_FawknerCorbett2021/raw"
 for f in GSM4808339_EPI1_RUN3 GSM4808340_EPI2_RUN3 GSM4808341_EPI3_RUN3 GSM4808345_EPI_run2 \
-         GSM4808349_HTO1 GSM4808350_HTO2 GSM4808351_HTO3 GSM4808355_HTO_epi_4; do
+         GSM4808349_HTO1 GSM4808350_HTO2 GSM4808351_HTO3 GSM4808352_HTO4 GSM4808353_HTO5 \
+         GSM4808354_HTO6 GSM4808355_HTO_epi_4 GSM4808356_HTO_stromal_4 GSM4808357_Pool5_HTO \
+         GSM4808358_Pool6_HTO; do
   fetch "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4808nnn/${f%%_*}/suppl/$f.tar.gz" "$fawk_sc/$f.tar.gz"
 done
 fetch "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158702&targ=gsm&form=text&view=brief" \

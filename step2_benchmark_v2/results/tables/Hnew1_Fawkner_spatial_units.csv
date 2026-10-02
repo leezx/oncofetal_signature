@@ -1,0 +1,9 @@
+pseudobulk,patient,group,region,tissue,pcw,gsm,n_tissue_spots,n_cells,epi_score_q75,epithelial_umi_fraction,stromal_immune_umi_fraction,library_size,eligible
+A1__Adult,A1,Adult,colon,Adult colon,Adult,GSM4797916,2649,628,0.01586,0.02114,0.00023,3498350,True
+A2__Adult,A2,Adult,colon,Adult colon,Adult,GSM4797917,2316,565,0.01691,0.02128,0.00021,5913254,True
+A3__Fetal,A3,Fetal,colon,Fetal Colon,12PCW,GSM4797918,1080,207,0.00121,0.00366,0.00646,754267,True
+A4__Fetal,A4,Fetal,colon,Fetal Colon,19PCW,GSM4797919,1242,282,0.00568,0.00768,0.00371,1464913,True
+A6__Fetal,A6,Fetal,small_intestine,Fetal Small Intestine,12PCW,GSM4797920,346,81,0.00348,0.00399,0.0038,1235273,True
+A7__Fetal,A7,Fetal,small_intestine,Fetal Small Intestine,12PCW,GSM4797921,344,80,0.00329,0.0039,0.00417,786210,True
+A8__Fetal,A8,Fetal,small_intestine,Fetal Small Intestine,12PCW,GSM4797922,709,173,0.00338,0.00488,0.00714,1300159,True
+A9__Fetal,A9,Fetal,small_intestine,Fetal Small Intestine,12PCW,GSM4797923,644,156,0.00391,0.00512,0.008,996962,True

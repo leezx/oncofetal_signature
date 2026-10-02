@@ -8,6 +8,7 @@ Chronological append-only record; newest entries are at the bottom.
 |---|---|---|---|
 | 1. Literature candidate collection | completed | — | Curated evidence tables under `docs/step1_literature_candidates/` |
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
+| 2b. Human benchmark v2 | **completed; in review** | branch `analysis/step2-human-benchmark-v2` | H-new2 (Fawkner fetal + Burclaff adult) is the only qualifying human contrast; no signature built |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
@@ -286,3 +287,35 @@ only; no gate computed.
    changes.
 
 **Data terms**: the full summary contains Joanito-derived values and is git-ignored; a public version without Joanito columns or Step 3 labels is committed.
+
+## 2026-10-02 — Step 2 human benchmark v2 (three new human contrasts)
+
+**Plan**: `step2_benchmark_v2/docs/QUALIFICATION_PLAN.md`, frozen (`5c3bcef`)
+before any new dataset was opened. Rule: TNFRSF12A fetal-high with P < 0.05 and
+the 31-marker panel significantly fetal-biased (one-sided binomial P < 0.05).
+No signature is built.
+
+**Data added**: GSE158328 (Fawkner Visium), GSE158702 hashtag libraries
+(Fawkner fetal scRNA), GSE185224 (Burclaff adult epithelium), GSE125970 (Wang
+adult epithelium). DATA `link.md` files and `dataset.index.md` updated.
+
+**Results**: only H-new2 (Fawkner fetal EPCAM+ scRNA, 22 hashtag samples, vs
+Burclaff adult, 3 donors) qualifies among human contrasts: TNFRSF12A +1.83,
+TACSTD2 +3.97, CLU +2.25 (all P < 0.001), ANXA1 −0.95 (n.s.); 18/24 markers
+fetal-positive (binomial P = 0.011). H-new1 Visium fails and is
+composition-confounded (fetal epithelial-rich spots carry ~4× less epithelial
+UMI fraction; EPCAM adult-high). H-new3 passes panel bias (17/24) but not
+TNFRSF12A. The Gao debug pair (Gao-original −0.08 → debug +0.70, n.s.) places
+the Gao failure in the fetal arm (TNFRSF12A varies 34-fold across embryos,
+lowest at 6–9 weeks), not the adult reference. Pikkupeura mouse cultures
+qualify. Details: `step2_benchmark_v2/docs/BENCHMARK_V2_REPORT.md`.
+
+**Technical fixes during the run** (documented in code): GEO mis-pairs the
+Fawkner GEX/HTO libraries (re-paired by ≥ 99% barcode overlap); Burclaff's h5ad
+keeps 23,170 genes, so counts for the same annotated cells come from the
+full-gene per-donor matrices; the shared edgeR script gained an optional
+minimum-units argument (H-new1 adult arm has two sections).
+
+**Not done**: no replacement Step 2 signature; no change to Step 3; the
+proposed manual TNFRSF12A follow-up (donor × gestational age × region ×
+subtype) awaits review.
