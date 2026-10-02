@@ -1,0 +1,94 @@
+# Step 2 human benchmark v2 — qualification plan
+
+- Version: step2_benchmark_v2 plan v1
+- Date: 2026-10-02
+- Status: **frozen before any new dataset was opened** (only GEO series and
+  sample-level metadata were read).
+- Scope: dataset qualification only. **No fetal-high signature, genome-wide
+  intersection, or threshold for gene selection is produced.**
+
+## Purpose
+
+The original Step 2 human contrasts (HGCA, Gao + GSE103154) failed the
+31-marker biological QA. This benchmark adds three human fetal-vs-adult
+contrasts and asks, for every contrast, whether the 31 Step 1 positive markers
+are recovered — and, as a debugging experiment, whether a failure is caused by
+the adult reference or by the fetal compartment.
+
+## Contrasts
+
+Positive log2FC always means higher in fetal epithelium.
+
+| ID | Fetal | Adult | Unit | Statistic |
+|---|---|---|---|---|
+| H-new1 | Fawkner-Corbett 2021 Visium (GSE158328): fetal colon 12/19 PCW + fetal small intestine 12 PCW sections | same study: adult colon sections | section | edgeR QL on raw-count epithelial-spot pseudobulk, `~ stage` |
+| H-new1-colon | as H-new1, fetal colon sections only | adult colon sections | section | sensitivity, same model |
+| H-new2 | Fawkner-Corbett 2021 EPCAM+ scRNA (GSE158702), hashtag-demultiplexed samples | Burclaff 2022 (GSE185224) healthy adult epithelium, all regions | fetal sample / adult donor | edgeR QL on raw counts, `~ stage` (study confounded with stage) |
+| H-new3 | Gao 2018 fetal SI + LI epithelium (GSE95630) | Wang 2020 (GSE125970) adult ileum + colon + rectum epithelium | embryo / adult sample | effect-only, cross-platform (see below) |
+| H-new3-debug | Gao fetal **LI** epithelium (identical to Gao-original) | Wang adult colon + rectum | embryo / adult sample | isolates the adult reference: only the adult arm differs from Gao-original |
+| Gao-original (recomputed) | Gao fetal LI epithelium | GSE103154 adult LI (P1, P2) | embryo / adult donor | same effect-only machinery as H-new3 |
+
+Existing contrasts carried into the matrix unchanged: HGCA (H1), Senger
+(GSE101531), Pikkupeura LN and collagen arms (GSE160449, mouse).
+
+### Epithelial selection (no candidate marker is used)
+
+- **Visium spots (H-new1)**: epithelial score = fraction of spot UMIs from
+  `EPCAM, CDH1, KRT8, KRT18, KRT19, KRT20, CLDN7, VIL1`. Within each section,
+  spots in the top quartile of this score that also have `EPCAM` > 0 are
+  epithelial-rich spots. Stromal carry-over is reported (fraction of UMIs from
+  `VIM, COL1A1, COL3A1, DCN, ACTA2, PTPRC`) per section and is not corrected.
+- **Fawkner scRNA (H-new2)**: all cells of the four EPCAM+ epithelial pools
+  (EPI1–3, EPI pool 4); cells assigned to a single hashtag (highest HTO count
+  ≥ 2× the second and ≥ 10 counts) form one fetal sample; negatives and
+  doublets are dropped. QC: ≥ 500 UMIs and ≥ 200 genes per cell.
+- **Burclaff (H-new2)**: all cells of the authors' annotated epithelial object;
+  one pseudobulk per donor.
+- **Wang (H-new3)**: all annotated epithelial cells; one pseudobulk per sample.
+- **Gao fetal (H-new3)**: author-labelled fetal small- and large-intestinal
+  epithelial cells (oesophagus/stomach excluded), aggregated per embryo, using
+  the same author labels as the original Step 2 H2.
+- Eligibility: ≥ 50 cells (scRNA) or ≥ 20 spots (Visium) per unit.
+
+### Cross-platform effect-only statistic (H-new3, H-new3-debug, Gao-original)
+
+Gao fetal values are TPM; adult values are UMI-based. Each unit is the mean
+per-cell expression on a per-million scale (TPM for Gao; UMI CPM for Wang and
+GSE103154). Effect: `log2((median fetal unit + 1) / (median adult unit + 1))`.
+Statistical support: Welch t-test on `log2(unit + 1)` between fetal and adult
+units. Platform is completely confounded with stage; the P value is descriptive.
+
+## Frozen qualification rule (applied identically to every contrast)
+
+1. **Biological positive control**: TNFRSF12A must be fetal-high with
+   statistical support — log2FC > 0 **and** P < 0.05 (single prespecified
+   gene, nominal P).
+2. **Panel bias**: among the 31 markers measured in the contrast, the number
+   with log2FC > 0 must exceed 50% by a one-sided exact binomial test,
+   P < 0.05.
+
+A contrast **qualifies** only if both hold. TACSTD2, CLU and ANXA1 are reported
+at the top of every table but are not individually required. Markers without a
+human orthologue (LY6A, REG3B) are not counted in human contrasts.
+
+## Interpretation rules for the Gao debug pair
+
+| Gao-original | H-new3-debug | Reading |
+|---|---|---|
+| TNFRSF12A ≤ 0 | TNFRSF12A > 0, supported | adult reference GSE103154 is the problem |
+| TNFRSF12A ≤ 0 | TNFRSF12A ≤ 0 | fetal compartment/stage/composition is the problem |
+
+If, after this benchmark, TNFRSF12A is still fetal ≤ adult in every human
+contrast, the automated pipeline stops and TNFRSF12A is examined manually by
+donor × gestational age × region × epithelial subtype.
+
+## Outputs
+
+- `results/tables/Benchmark_v2_31_marker_matrix.csv` — one row per marker
+  (TACSTD2, CLU, ANXA1, TNFRSF12A first), log2FC / P / FDR per contrast.
+- `results/tables/Benchmark_v2_qualification.csv` — rule 1, rule 2, verdict per contrast.
+- `results/tables/*_units.csv` — per-unit inclusion (cells/spots, library size).
+- `results/tables/*_marker_unit_values.csv` — per-unit values of the 31 markers
+  (donor-level consistency).
+- Raw and intermediate data stay under `DATA`; this directory holds code,
+  tables, and figures only.
