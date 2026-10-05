@@ -62,3 +62,5 @@ core_oncofetal/HANDOFF_RESTRICTED.md
 core_oncofetal/results/Breadth_annotation.xlsx
 core_oncofetal/results/Breadth_CIOC8_heatmap.pdf
 core_oncofetal/results/Breadth_2D_classification.pdf
+core_oncofetal/results/Cancer_breadth_annotation.xlsx
+core_oncofetal/results/Cancer_breadth_CIOC8.pdf

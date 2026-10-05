@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Tissue and cancer breadth annotation (supplementary; NOT signature construction).
+"""EXPLORATORY ONLY (superseded by breadth plan v2, 48cff09): v1 fetal tissue + cancer breadth.
+Not a deliverable; outputs go to DATA restricted exploratory_breadth_v1/. Its cancer() and
+helper functions are imported unchanged by scripts/cancer_breadth_annotation.py.
+
+Original description: tissue and cancer breadth annotation (supplementary; NOT signature construction).
 
 Applies the frozen plan core_oncofetal/docs/BREADTH_ANNOTATION_PLAN.md (commit 9c958ee) once.
   A. Fetal tissue breadth: Cao et al. 2020 fetal atlas (GSE156793) aggregated
@@ -13,7 +17,7 @@ Genes: 338 cross-species fetal–CRC candidates ∪ Literature-31 ∪ calibrator
 Membership labels are restricted -> outputs git-ignored, mirrored to DATA.
 Outputs: results/Breadth_annotation.xlsx, results/Breadth_CIOC8_heatmap.pdf,
          results/Breadth_2D_classification.pdf
-Usage (repo root): python3 core_oncofetal/scripts/breadth_annotation.py
+Usage (repo root): python3 core_oncofetal/exploratory/breadth_fetal_cancer_v1.py
 """
 import gzip
 import pathlib
@@ -323,8 +327,11 @@ def main():
     d.insert(0, "Calibrator", [CALIB.get(g, "") for g in d.index])
     d.index.name = "Gene"
     organs = list(ORGAN_EPI)
-    heatmap(d, cioc, organs, elig, OUT / "Breadth_CIOC8_heatmap.pdf")
-    scatter2d(d.loc[c338], cioc, e38, e222, OUT / "Breadth_2D_classification.pdf")
+    global OUT_W
+    OUT_W = RESTRICTED / "exploratory_breadth_v1"
+    OUT_W.mkdir(parents=True, exist_ok=True)
+    heatmap(d, cioc, organs, elig, OUT_W / "Breadth_CIOC8_heatmap.pdf")
+    scatter2d(d.loc[c338], cioc, e38, e222, OUT_W / "Breadth_2D_classification.pdf")
 
     def tab(names):
         x = d.loc[names].groupby("combined_class").size().sort_values(ascending=False)
@@ -377,11 +384,8 @@ def main():
         ws.freeze_panes = "B2"
         ws.row_dimensions[1].height = 40
         ws.auto_filter.ref = ws.dimensions
-    xl = OUT / "Breadth_annotation.xlsx"
+    xl = OUT_W / "Breadth_annotation.xlsx"
     wb.save(xl)
-    RESTRICTED.mkdir(parents=True, exist_ok=True)
-    for f in (xl, OUT / "Breadth_CIOC8_heatmap.pdf", OUT / "Breadth_2D_classification.pdf"):
-        shutil.copy2(f, RESTRICTED / f.name)
     pd.set_option("display.width", 250)
     print(info.to_string(index=False))
     print(d[d.Calibrator != ""][["Gene", "Calibrator", "fetal_class", "n_organ_epithelia_expressed", "cancer_class",

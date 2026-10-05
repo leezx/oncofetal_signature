@@ -1,6 +1,6 @@
 # Session handoff: oncofetal signature construction
 
-Last updated: 2026-10-05 (breadth annotation added).
+Last updated: 2026-10-05 (pan-cancer breadth annotation v2).
 - Branch: `analysis/core-oncofetal`, last commit `bc07628`, pushed.
 - PR: #6, chained on PRs #2 → #3 → #4 → #5, all open for review.
 
@@ -138,7 +138,7 @@ All commands run from the repo root.
 | 9 | `ext_03_gate_e_profile.py` | Blinded compartment profile and calibrators |
 | 10 | `ext_04_ecos38.py` | ECOS-38 (rules v1.0) |
 | 11 | `ext_05_extended_cioc.py` | Extended CIOC v2.0; imports the ext_04 functions; reproduction asserted |
-| 13 | `breadth_annotation.py` | Supplementary breadth annotation (Cao 2020 fetal atlas + Toil TCGA/GTEx); plan `docs/BREADTH_ANNOTATION_PLAN.md` |
+| 13 | `cancer_breadth_annotation.py` | Pan-cancer breadth annotation v2 (Toil TCGA/GTEx; imports the cancer statistic from `exploratory/breadth_fetal_cancer_v1.py`) |
 | 12 | `build_references.py` | `results/Methods_references.{md,tsv}` from provenance files, metadata via Crossref (cached) |
 
 **DATA locations** (never committed):
@@ -193,23 +193,39 @@ freeze text rather than changing the rule.
 - Keep `WORKLOG.md` updated at each substantial checkpoint. Commit messages
   end with the Co-Authored-By line.
 
-## 5b. Supplementary breadth annotation (done 2026-10-05)
+## 5b. Supplementary annotation: pan-cancer breadth of CIOC reactivation in bulk tumours
 
-`core_oncofetal/docs/BREADTH_ANNOTATION_PLAN.md` was frozen at `9c958ee`
-and applied once.
-- **Fetal tissue breadth:** Cao 2020 GSE156793, 8 organ epithelia,
-  expressed = CPM ≥ 10.
-- **Cancer reactivation breadth:** Toil TCGA + GTEx, 21 carcinomas vs
-  matched normal; "up" = Δ median log2(TPM + 1) ≥ 1 and FDR < 0.05.
-- **Annotation only:** no gate and no membership change.
-- **Reading rule:** read the fetal class together with the fetal-intestine
-  compartment flag. The stromal calibrator COL1A2 is otherwise
-  misclassified as pan-fetal epithelial.
-- **Data:** `DATA/scRNAseq/GSE156793_Cao2020_fetal_atlas/` (aggregated
-  tables only; the 12 GB loom was not downloaded) and
-  `DATA/bulkRNAseq/UCSC_Toil_TCGA_GTEx/`.
-- **Outputs (restricted):** `results/Breadth_annotation.xlsx`,
-  `Breadth_CIOC8_heatmap.pdf` and `Breadth_2D_classification.pdf`.
+**Current version: v2** (`48cff09`; applied once). See
+`core_oncofetal/docs/BREADTH_ANNOTATION_PLAN.md`.
+
+**Scope.** Cancer breadth only, as an annotation and not a validation.
+- **Data:** Toil TCGA + GTEx, 21 carcinomas vs matched normal.
+- **Classes:** conditioned on whether CRC bulk itself is up:
+  - CRC-biased (< 25% of 19 other carcinomas up);
+  - multi-cancer (25% to < 50%);
+  - broad (≥ 50%).
+- **CRC bulk down:** "epithelial reactivation not captured by bulk".
+- **CRC bulk n.s.:** "bulk cancer breadth not interpretable".
+- **Qualifier:** ", composition-sensitive" when Gate E E1 fails.
+
+**Removed.** v1 (`9c958ee`) included fetal tissue breadth from Cao 2020; it
+is now **internal exploration only**. It is not part of the CIOC definition
+and is not presented. The code is
+`core_oncofetal/exploratory/breadth_fetal_cancer_v1.py`; the outputs are in
+DATA restricted `exploratory_breadth_v1/`. Do not use the terms
+"pan-fetal", "pan-tissue" or "pan-oncofetal".
+
+**Script:** `core_oncofetal/scripts/cancer_breadth_annotation.py`.
+**Outputs (restricted):** `results/Cancer_breadth_annotation.xlsx` and
+`Cancer_breadth_CIOC8.pdf`.
+
+**Concept to keep.** The CIOC defines oncofetal *identity*:
+- fetal intestinal epithelium > adult intestinal epithelium;
+- conserved in mouse;
+- CRC epithelium > normal epithelium.
+
+It does not define tissue or cancer *specificity*. A member that is broad
+across carcinomas is still a CIOC member.
 
 ## 6. Open items / next steps
 

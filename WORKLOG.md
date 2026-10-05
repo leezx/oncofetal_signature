@@ -677,3 +677,30 @@ The names were replaced with restricted pointers. The text is clean from
 this commit onward. **Earlier pushed commits still contain these mentions in
 history.** Removing them requires a history rewrite and force-push of
 `analysis/core-oncofetal`; that is the user's decision and has not been done.
+
+### 2026-10-05 — Breadth annotation v2: cancer breadth only
+By review decision, fetal tissue breadth (Cao 2020) is removed from the
+deliverables. Fetal tissue and cancer specificity are not part of the CIOC
+definition, which concerns oncofetal identity. The v1 code was moved to
+`core_oncofetal/exploratory/` and its outputs to DATA restricted
+`exploratory_breadth_v1/`.
+
+**Freeze and application.** The v2 rules were frozen at `48cff09` before
+recomputing and applied once by `cancer_breadth_annotation.py`. The Toil
+statistic and thresholds are unchanged.
+
+**Interpretation.** Classes are conditioned on CRC bulk:
+- CRC bulk up: CRC-biased, multi-cancer or broad;
+- CRC bulk down: "epithelial reactivation not captured by bulk";
+- CRC bulk n.s.: "bulk breadth not interpretable".
+
+", composition-sensitive" is added when Gate E E1 fails.
+
+**Counts.** 199 of the 338 have no interpretable bulk breadth; per-set
+counts are in the plan.
+
+**Other updates:**
+- The restricted Methods.md gained a paragraph on this annotation.
+- The Cao reference was removed from the reference list (13 dataset
+  references).
+- The dataset registry marks Cao as exploratory only.

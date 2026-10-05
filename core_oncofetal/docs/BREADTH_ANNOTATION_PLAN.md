@@ -302,3 +302,25 @@ Extended CIOC and ECOS-38 labels):
 - **Script:** `core_oncofetal/scripts/cancer_breadth_annotation.py`.
 - The v1 outputs (`Breadth_annotation.xlsx`, `Breadth_CIOC8_heatmap.pdf`,
   `Breadth_2D_classification.pdf`) are removed from `results/`.
+
+### Application of v2 (2026-10-05; applied once)
+
+Produced by `scripts/cancer_breadth_annotation.py`. The cancer statistic is
+imported unchanged from the v1 code. Per-gene results are in the restricted
+workbook `results/Cancer_breadth_annotation.xlsx`; the figure is
+`Cancer_breadth_CIOC8.pdf`.
+
+**Interpretation counts** (n; of which composition-sensitive):
+
+| Set | CRC-biased | Multi-cancer | Broad | Epithelial reactivation not captured by bulk (CRC bulk down) | Bulk breadth not interpretable (CRC bulk n.s.) | Not measured |
+|---|---|---|---|---|---|---|
+| CIOC (8) | 1; 0 | 1; 0 | 2; 1 | 1; 1 | 3; 2 | 0 |
+| ECOS-38 | 2; 0 | 8; 0 | 3; 0 | 4; 0 | 21; 0 | 0 |
+| Extended CIOC (222) | 34; 0 | 37; 2 | 11; 2 | 17; 10 | 120; 19 | 3 |
+| Cross-species (338) | 40; 0 | 43; 4 | 12; 3 | 39; 19 | 199; 43 | 5 |
+
+**Reading.** Most candidates have no interpretable bulk breadth, because
+CRC bulk does not show their epithelial gain. This is consistent with
+cell-intrinsic epithelial reactivation being diluted or opposed by
+composition in bulk tissue. It does not count against the
+epithelial-resolved evidence.
