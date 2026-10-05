@@ -599,3 +599,42 @@ for mixed-cell data.
 - **Reproduction:** the 189 genes tested in v1.0 reproduce exactly.
 
 Signature construction is complete.
+
+### 2026-10-05 — Methods.md check; generated references
+`core_oncofetal/Methods.md` was checked against the scripts, unit tables and
+provenance files and then corrected. The file is restricted (it contains
+memberships): it is git-ignored and mirrored to DATA. The original is backed
+up as `Methods_original_2026-10-05.md` (md5
+`05122d57eee6ee3aa4abe550cc2f7d80`).
+
+**Corrections:**
+- **Gao comparison:** now stated explicitly as Gao fetal LI ≥ 9 W (7
+  embryos) vs GSE103154 adult LI (P1, P2), cross-platform, effect-only, with
+  a descriptive Welch P.
+- **Unit counts:** given for every gate dataset.
+- **H-new2:** hashtag-sample pseudoreplication and the two retained
+  QC-failed units are disclosed.
+- **9-week breakpoint:** its origin is stated (Gao fetal-only TNFRSF12A).
+- **Statistical support:** disclosure of which dataset supplied it (H-new2
+  alone for 4 CIOC genes and 48 of the 338; Gao alone for 2 of the 338).
+- **Orthology exceptions:** CXADR, LY6A, REG3B and SPRR1A.
+- **FDR universe** for the prespecified panel.
+- **Unresolved provenance:** RBP1, SPRR1A and EPS8L1.
+- **Extended CIOC:** stated that coherence excluded no gene (membership =
+  H/M/C + detectability).
+- **Gate E:** compartments now include mast cells, and the timing of the −5
+  arm is stated.
+- **Che:** chemotherapy disclosed.
+- **Revision history:** disclosed.
+
+**References.** `core_oncofetal/scripts/build_references.py` generates
+`results/Methods_references.{md,tsv}`. Sources:
+- `literature_audit_31.tsv` (A/B/C primary studies);
+- `paper_inventory.tsv` DOIs, plus `config/reference_doi_supplement.tsv`
+  for 6 DOIs resolved by Crossref search with titles verified;
+- `DATASET_REGISTRY.csv`;
+- `config/reference_methods.tsv`.
+
+Metadata comes from Crossref, cached in `config/crossref_cache.json`. The
+dataset registry gained the Khaliq, Che and Tabula Sapiens rows, and the
+final gate roles were added for HGCA, Gao, GSE230581 and GSE44433.
