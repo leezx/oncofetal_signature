@@ -704,3 +704,22 @@ counts are in the plan.
 - The Cao reference was removed from the reference list (13 dataset
   references).
 - The dataset registry marks Cao as exploratory only.
+
+### 2026-10-05 — Dataset registry update
+`docs/DATASET_REGISTRY.{md,csv,xlsx}` now lists every dataset downloaded for
+the project: 25 datasets plus 3 deferred.
+
+**Added:**
+- Kang 2024 pan-cancer tumour–normal atlas. The Zenodo download is in
+  progress, with md5 recorded; the six construction-overlapping datasets
+  excluded for independence are listed.
+- HGNC mapping (symbol resolution).
+
+**Relabelled:** Toil TCGA + GTEx is now a secondary annotation
+(composition-confounded).
+
+**Other:** a DATA `link.md` was written for Kang, and Kang was added to the
+generated references. The draft plan
+`core_oncofetal/docs/PANCANCER_EPITHELIAL_PLAN.md` and the extraction script
+`pancancer_01_extract_kang.py` (data preparation only) were added; the plan
+will be frozen after the metadata scan.

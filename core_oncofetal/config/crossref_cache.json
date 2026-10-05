@@ -16694,6 +16694,1534 @@
   ],
   "volume": "7"
  },
+ "10.1038/s41467-024-48310-4": {
+  "DOI": "10.1038/s41467-024-48310-4",
+  "ISSN": [
+   "2041-1723"
+  ],
+  "URL": "https://doi.org/10.1038/s41467-024-48310-4",
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>\n                    The complexity of the tumor microenvironment poses significant challenges in cancer therapy. Here, to comprehensively investigate the tumor-normal ecosystems, we perform an integrative analysis of 4.9 million single-cell transcriptomes from 1070 tumor and 493 normal samples in combination with pan-cancer 137 spatial transcriptomics, 8887 TCGA, and 1261 checkpoint inhibitor-treated bulk tumors. We define a myriad of cell states constituting the tumor-normal ecosystems and also identify hallmark gene signatures across different cell types and organs. Our atlas characterizes distinctions between inflammatory fibroblasts marked by\n                    <jats:italic>AKR1C1</jats:italic>\n                    or\n                    <jats:italic>WNT5A</jats:italic>\n                    in terms of cellular interactions and spatial co-localization patterns. Co-occurrence analysis reveals interferon-enriched community states including tertiary lymphoid structure (TLS) components, which exhibit differential rewiring between tumor, adjacent normal, and healthy normal tissues. The favorable response of interferon-enriched community states to immunotherapy is validated using immunotherapy-treated cancers (\n                    <jats:italic>n</jats:italic>\n                    \u2009=\u20091261) including our lung cancer cohort (\n                    <jats:italic>n</jats:italic>\n                    \u2009=\u2009497). Deconvolution of spatial transcriptomes discriminates TLS-enriched from non-enriched cell types among immunotherapy-favorable components. Our systematic dissection of tumor-normal ecosystems provides a deeper understanding of inter- and intra-tumoral heterogeneity.\n                  </jats:p>",
+  "alternative-id": [
+   "48310"
+  ],
+  "article-number": "4067",
+  "assertion": [
+   {
+    "group": {
+     "label": "Article History",
+     "name": "ArticleHistory"
+    },
+    "label": "Received",
+    "name": "received",
+    "order": 1,
+    "value": "26 May 2023"
+   },
+   {
+    "group": {
+     "label": "Article History",
+     "name": "ArticleHistory"
+    },
+    "label": "Accepted",
+    "name": "accepted",
+    "order": 2,
+    "value": "26 April 2024"
+   },
+   {
+    "group": {
+     "label": "Article History",
+     "name": "ArticleHistory"
+    },
+    "label": "First Online",
+    "name": "first_online",
+    "order": 3,
+    "value": "14 May 2024"
+   },
+   {
+    "group": {
+     "label": "Article History",
+     "name": "ArticleHistory"
+    },
+    "label": "Change Date",
+    "name": "change_date",
+    "order": 4,
+    "value": "21 March 2025"
+   },
+   {
+    "group": {
+     "label": "Article History",
+     "name": "ArticleHistory"
+    },
+    "label": "Change Type",
+    "name": "change_type",
+    "order": 5,
+    "value": "Correction"
+   },
+   {
+    "group": {
+     "label": "Article History",
+     "name": "ArticleHistory"
+    },
+    "label": "Change Details",
+    "name": "change_details",
+    "order": 6,
+    "value": "A Correction to this paper has been published:"
+   },
+   {
+    "URL": "https://doi.org/10.1038/s41467-025-58068-y",
+    "group": {
+     "label": "Article History",
+     "name": "ArticleHistory"
+    },
+    "label": "Change Details",
+    "name": "change_details",
+    "order": 7,
+    "value": "https://doi.org/10.1038/s41467-025-58068-y"
+   },
+   {
+    "group": {
+     "label": "Competing interests",
+     "name": "EthicsHeading"
+    },
+    "name": "Ethics",
+    "order": 1,
+    "value": "The authors declare no competing interests."
+   }
+  ],
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Kang",
+    "given": "Junho",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Lee",
+    "given": "Jun Hyeong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Cha",
+    "given": "Hongui",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7905-3321",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "An",
+    "given": "Jinhyeon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-6607-0277",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Kwon",
+    "given": "Joonha",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Lee",
+    "given": "Seongwoo",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kim",
+    "given": "Seongryong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-7474-4577",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Baykan",
+    "given": "Mert Yakup",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kim",
+    "given": "So Yeon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "An",
+    "given": "Dohyeon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0746-9018",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Kwon",
+    "given": "Ah-Young",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "An",
+    "given": "Hee Jung",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9219-3350",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Lee",
+    "given": "Se-Hoon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2077-8947",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Choi",
+    "given": "Jung Kyoon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1687-2423",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Park",
+    "given": "Jong-Eun",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Nature Communications"
+  ],
+  "content-domain": {
+   "crossmark-restriction": false,
+   "domain": [
+    "link.springer.com"
+   ]
+  },
+  "created": {
+   "date-parts": [
+    [
+     2024,
+     5,
+     14
+    ]
+   ],
+   "date-time": "2024-05-14T08:02:02Z",
+   "timestamp": 1715673722000
+  },
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     3,
+     24
+    ]
+   ],
+   "date-time": "2025-03-24T11:43:16Z",
+   "timestamp": 1742816596000
+  },
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     1
+    ]
+   ],
+   "date-time": "2026-10-01T18:12:10Z",
+   "timestamp": 1790878330592,
+   "version": "4.1.0"
+  },
+  "is-referenced-by-count": 88,
+  "issn-type": [
+   {
+    "type": "electronic",
+    "value": "2041-1723"
+   }
+  ],
+  "issue": "1",
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     5,
+     14
+    ]
+   ]
+  },
+  "journal-issue": {
+   "issue": "1",
+   "published-online": {
+    "date-parts": [
+     [
+      2024,
+      12
+     ]
+    ]
+   }
+  },
+  "language": "en",
+  "license": [
+   {
+    "URL": "https://creativecommons.org/licenses/by/4.0",
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       5,
+       14
+      ]
+     ],
+     "date-time": "2024-05-14T00:00:00Z",
+     "timestamp": 1715644800000
+    }
+   },
+   {
+    "URL": "https://creativecommons.org/licenses/by/4.0",
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       5,
+       14
+      ]
+     ],
+     "date-time": "2024-05-14T00:00:00Z",
+     "timestamp": 1715644800000
+    }
+   }
+  ],
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s41467-024-48310-4.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-024-48310-4",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-024-48310-4.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "member": "297",
+  "original-title": [],
+  "prefix": "10.1038",
+  "published": {
+   "date-parts": [
+    [
+     2024,
+     5,
+     14
+    ]
+   ]
+  },
+  "published-online": {
+   "date-parts": [
+    [
+     2024,
+     5,
+     14
+    ]
+   ]
+  },
+  "publisher": "Springer Science and Business Media LLC",
+  "reference": [
+   {
+    "DOI": "10.1016/j.cell.2011.02.013",
+    "author": "D Hanahan",
+    "doi-asserted-by": "publisher",
+    "first-page": "646",
+    "journal-title": "Cell",
+    "key": "48310_CR1",
+    "unstructured": "Hanahan, D. & Weinberg, R. A. Hallmarks of cancer: the next generation. Cell 144, 646\u2013674 (2011).",
+    "volume": "144",
+    "year": "2011"
+   },
+   {
+    "DOI": "10.1126/science.1254257",
+    "author": "AP Patel",
+    "doi-asserted-by": "publisher",
+    "first-page": "1396",
+    "journal-title": "Science",
+    "key": "48310_CR2",
+    "unstructured": "Patel, A. P. et al. Single-cell RNA-seq highlights intratumoral heterogeneity in primary glioblastoma. Science 344, 1396\u20131401 (2014).",
+    "volume": "344",
+    "year": "2014"
+   },
+   {
+    "DOI": "10.1016/j.cell.2017.10.044",
+    "author": "SV Puram",
+    "doi-asserted-by": "publisher",
+    "first-page": "1611",
+    "journal-title": "Cell",
+    "key": "48310_CR3",
+    "unstructured": "Puram, S. V. et al. Single-cell transcriptomic analysis of primary and metastatic tumor ecosystems in head and neck cancer. Cell 171, 1611\u20131624.e24 (2017).",
+    "volume": "171",
+    "year": "2017"
+   },
+   {
+    "DOI": "10.1038/s41591-021-01323-8",
+    "author": "A Bassez",
+    "doi-asserted-by": "publisher",
+    "first-page": "820",
+    "journal-title": "Nat. Med.",
+    "key": "48310_CR4",
+    "unstructured": "Bassez, A. et al. A single-cell map of intratumoral changes during anti-PD1 treatment of patients with breast cancer. Nat. Med. 27, 820\u2013832 (2021).",
+    "volume": "27",
+    "year": "2021"
+   },
+   {
+    "DOI": "10.1016/j.cell.2021.01.010",
+    "author": "S Cheng",
+    "doi-asserted-by": "publisher",
+    "first-page": "792",
+    "journal-title": "Cell",
+    "key": "48310_CR5",
+    "unstructured": "Cheng, S. et al. A pan-cancer single-cell transcriptional atlas of tumor infiltrating myeloid cells. Cell 184, 792\u2013809.e23 (2021).",
+    "volume": "184",
+    "year": "2021"
+   },
+   {
+    "DOI": "10.1126/science.abe6474",
+    "author": "L Zheng",
+    "doi-asserted-by": "publisher",
+    "journal-title": "Science",
+    "key": "48310_CR6",
+    "unstructured": "Zheng, L. et al. Pan-cancer single-cell landscape of tumor-infiltrating T cells. Science 374, abe6474 (2021).",
+    "volume": "374",
+    "year": "2021"
+   },
+   {
+    "DOI": "10.1038/s41588-022-01141-9",
+    "author": "D Barkley",
+    "doi-asserted-by": "publisher",
+    "first-page": "1192",
+    "journal-title": "Nat. Genet.",
+    "key": "48310_CR7",
+    "unstructured": "Barkley, D. et al. Cancer cell states recur across tumor types and form specific interactions with the tumor microenvironment. Nat. Genet. 54, 1192\u20131201 (2022).",
+    "volume": "54",
+    "year": "2022"
+   },
+   {
+    "DOI": "10.1038/s41586-023-06130-4",
+    "author": "A Gavish",
+    "doi-asserted-by": "publisher",
+    "first-page": "598",
+    "journal-title": "Nature",
+    "key": "48310_CR8",
+    "unstructured": "Gavish, A. et al. Hallmarks of transcriptional intratumour heterogeneity across a thousand tumours. Nature 618, 598\u2013606 (2023).",
+    "volume": "618",
+    "year": "2023"
+   },
+   {
+    "DOI": "10.1038/s41416-018-0327-z",
+    "author": "NA Giraldo",
+    "doi-asserted-by": "publisher",
+    "first-page": "45",
+    "journal-title": "Br. J. Cancer",
+    "key": "48310_CR9",
+    "unstructured": "Giraldo, N. A. et al. The clinical role of the TME in solid cancer. Br. J. Cancer 120, 45\u201353 (2019).",
+    "volume": "120",
+    "year": "2019"
+   },
+   {
+    "DOI": "10.1016/j.canlet.2019.07.010",
+    "author": "R Burgos-Panadero",
+    "doi-asserted-by": "publisher",
+    "first-page": "112",
+    "journal-title": "Cancer Lett.",
+    "key": "48310_CR10",
+    "unstructured": "Burgos-Panadero, R. et al. The tumour microenvironment as an integrated framework to understand cancer biology. Cancer Lett. 461, 112\u2013122 (2019).",
+    "volume": "461",
+    "year": "2019"
+   },
+   {
+    "DOI": "10.1016/j.isci.2020.101985",
+    "author": "SE Shelton",
+    "doi-asserted-by": "publisher",
+    "first-page": "101985",
+    "journal-title": "iScience",
+    "key": "48310_CR11",
+    "unstructured": "Shelton, S. E., Nguyen, H. T., Barbie, D. A. & Kamm, R. D. Engineering approaches for studying immune-tumor cell interactions and immunotherapy. iScience 24, 101985 (2021).",
+    "volume": "24",
+    "year": "2021"
+   },
+   {
+    "DOI": "10.1038/s41568-019-0144-6",
+    "author": "C Saut\u00e8s-Fridman",
+    "doi-asserted-by": "publisher",
+    "first-page": "307",
+    "journal-title": "Nat. Rev. Cancer",
+    "key": "48310_CR12",
+    "unstructured": "Saut\u00e8s-Fridman, C., Petitprez, F., Calderaro, J. & Fridman, W. H. Tertiary lymphoid structures in the era of cancer immunotherapy. Nat. Rev. Cancer 19, 307\u2013325 (2019).",
+    "volume": "19",
+    "year": "2019"
+   },
+   {
+    "DOI": "10.1126/science.abf9419",
+    "author": "TN Schumacher",
+    "doi-asserted-by": "publisher",
+    "first-page": "eabf9419",
+    "journal-title": "Science",
+    "key": "48310_CR13",
+    "unstructured": "Schumacher, T. N. & Thommen, D. S. Tertiary lymphoid structures in cancer. Science 375, eabf9419 (2022).",
+    "volume": "375",
+    "year": "2022"
+   },
+   {
+    "DOI": "10.1186/s40364-020-00228-x",
+    "author": "D Jorgovanovic",
+    "doi-asserted-by": "publisher",
+    "journal-title": "Biomark. Res.",
+    "key": "48310_CR14",
+    "unstructured": "Jorgovanovic, D., Song, M., Wang, L. & Zhang, Y. Roles of IFN-\u03b3 in tumor progression and regression: a review. Biomark. Res. 8, 49 (2020).",
+    "volume": "8",
+    "year": "2020"
+   },
+   {
+    "DOI": "10.1038/ng.3818",
+    "author": "H Li",
+    "doi-asserted-by": "publisher",
+    "first-page": "708",
+    "journal-title": "Nat. Genet.",
+    "key": "48310_CR15",
+    "unstructured": "Li, H. et al. Reference component analysis of single-cell transcriptomes elucidates cellular heterogeneity in human colorectal tumors. Nat. Genet. 49, 708\u2013718 (2017).",
+    "volume": "49",
+    "year": "2017"
+   },
+   {
+    "DOI": "10.3390/cancers14102429",
+    "author": "A Di Federico",
+    "doi-asserted-by": "publisher",
+    "first-page": "2429",
+    "journal-title": "Cancers",
+    "key": "48310_CR16",
+    "unstructured": "Di Federico, A. et al. Immunotherapy in pancreatic cancer: why do we keep failing? A focus on tumor immune microenvironment, predictive biomarkers and treatment outcomes. Cancers 14, 2429 (2022).",
+    "volume": "14",
+    "year": "2022"
+   },
+   {
+    "DOI": "10.1038/s41467-019-09276-w",
+    "author": "M Delacher",
+    "doi-asserted-by": "publisher",
+    "journal-title": "Nat. Commun.",
+    "key": "48310_CR17",
+    "unstructured": "Delacher, M. et al. Rbpj expression in regulatory T cells is critical for restraining TH2 responses. Nat. Commun. 10, 1621 (2019).",
+    "volume": "10",
+    "year": "2019"
+   },
+   {
+    "DOI": "10.1016/j.cell.2020.07.038",
+    "author": "A Sadik",
+    "doi-asserted-by": "publisher",
+    "first-page": "1252",
+    "journal-title": "Cell",
+    "key": "48310_CR18",
+    "unstructured": "Sadik, A. et al. IL4I1 is a metabolic immune checkpoint that activates the AHR and promotes tumor progression. Cell 182, 1252\u20131270.e34 (2020).",
+    "volume": "182",
+    "year": "2020"
+   },
+   {
+    "DOI": "10.1016/j.yexcr.2017.08.028",
+    "author": "Y Zhang",
+    "doi-asserted-by": "publisher",
+    "first-page": "449",
+    "journal-title": "Exp. Cell Res.",
+    "key": "48310_CR19",
+    "unstructured": "Zhang, Y., Du, W., Chen, Z. & Xiang, C. Upregulation of PD-L1 by SPP1 mediates macrophage polarization and facilitates immune escape in lung adenocarcinoma. Exp. Cell Res. 359, 449\u2013457 (2017).",
+    "volume": "359",
+    "year": "2017"
+   },
+   {
+    "author": "H Li",
+    "first-page": "814",
+    "journal-title": "Oncol. Lett.",
+    "key": "48310_CR20",
+    "unstructured": "Li, H., Liu, W., Zhang, X. & Wang, Y. Cancer-associated fibroblast-secreted collagen triple helix repeat containing-1 promotes breast cancer cell migration, invasiveness and epithelial-mesenchymal transition by activating the Wnt/\u03b2-catenin pathway. Oncol. Lett. 22, 814 (2021).",
+    "volume": "22",
+    "year": "2021"
+   },
+   {
+    "DOI": "10.1038/s41416-019-0509-3",
+    "author": "KA Gieniec",
+    "doi-asserted-by": "publisher",
+    "first-page": "293",
+    "journal-title": "Br. J. Cancer",
+    "key": "48310_CR21",
+    "unstructured": "Gieniec, K. A., Butler, L. M., Worthley, D. L. & Woods, S. L. Cancer-associated fibroblasts-heroes or villains? Br. J. Cancer 121, 293\u2013302 (2019).",
+    "volume": "121",
+    "year": "2019"
+   },
+   {
+    "author": "E Pan",
+    "first-page": "713",
+    "journal-title": "J. Clin. Orthod.",
+    "key": "48310_CR22",
+    "unstructured": "Pan, E. et al. Characterization of FOLH1 expression in renal cell carcinoma (RCC). J. Clin. Orthod. 41, 713\u2013713 (2023).",
+    "volume": "41",
+    "year": "2023"
+   },
+   {
+    "DOI": "10.18632/aging.202247",
+    "author": "Y Wang",
+    "doi-asserted-by": "publisher",
+    "first-page": "2264",
+    "journal-title": "Aging",
+    "key": "48310_CR23",
+    "unstructured": "Wang, Y. et al. Silencing LINC00482 inhibits tumor-associated inflammation and angiogenesis through down-regulation of MMP-15 via FOXA1 in bladder cancer. Aging 13, 2264\u20132278 (2020).",
+    "volume": "13",
+    "year": "2020"
+   },
+   {
+    "DOI": "10.5483/BMBRep.2017.50.11.129",
+    "author": "WK Kim",
+    "doi-asserted-by": "publisher",
+    "first-page": "590",
+    "journal-title": "BMB Rep.",
+    "key": "48310_CR24",
+    "unstructured": "Kim, W. K. et al. Identification of specifically activated angiogenic molecules in HMGB-1-induced angiogenesis. BMB Rep. 50, 590\u2013595 (2017).",
+    "volume": "50",
+    "year": "2017"
+   },
+   {
+    "DOI": "10.1002/embj.201488027",
+    "author": "M Dalod",
+    "doi-asserted-by": "publisher",
+    "first-page": "1104",
+    "journal-title": "EMBO J.",
+    "key": "48310_CR25",
+    "unstructured": "Dalod, M., Chelbi, R., Malissen, B. & Lawrence, T. Dendritic cell maturation: functional specialization through signaling specificity and transcriptional programming. EMBO J. 33, 1104\u20131116 (2014).",
+    "volume": "33",
+    "year": "2014"
+   },
+   {
+    "DOI": "10.1016/j.ajpath.2020.02.010",
+    "author": "A Zhang",
+    "doi-asserted-by": "publisher",
+    "first-page": "1224",
+    "journal-title": "Am. J. Pathol.",
+    "key": "48310_CR26",
+    "unstructured": "Zhang, A., Lacy-Hulbert, A., Anderton, S., Haslett, C. & Savill, J. Apoptotic cell-directed resolution of lung inflammation requires myeloid \u03b1v integrin-mediated induction of regulatory T Lymphocytes. Am. J. Pathol. 190, 1224\u20131235 (2020).",
+    "volume": "190",
+    "year": "2020"
+   },
+   {
+    "DOI": "10.1038/mi.2016.94",
+    "author": "TM Fenton",
+    "doi-asserted-by": "publisher",
+    "first-page": "624",
+    "journal-title": "Mucosal Immunol.",
+    "key": "48310_CR27",
+    "unstructured": "Fenton, T. M. et al. Inflammatory cues enhance TGF\u03b2 activation by distinct subsets of human intestinal dendritic cells via integrin \u03b1v\u03b28. Mucosal Immunol. 10, 624\u2013634 (2017).",
+    "volume": "10",
+    "year": "2017"
+   },
+   {
+    "DOI": "10.1083/jcb.201707027",
+    "author": "M Yurchenko",
+    "doi-asserted-by": "publisher",
+    "first-page": "1411",
+    "journal-title": "J. Cell Biol.",
+    "key": "48310_CR28",
+    "unstructured": "Yurchenko, M. et al. SLAMF1 is required for TLR4-mediated TRAM-TRIF-dependent signaling in human macrophages. J. Cell Biol. 217, 1411\u20131429 (2018).",
+    "volume": "217",
+    "year": "2018"
+   },
+   {
+    "DOI": "10.1016/j.cell.2018.09.006",
+    "author": "L Jerby-Arnon",
+    "doi-asserted-by": "publisher",
+    "first-page": "984",
+    "journal-title": "Cell",
+    "key": "48310_CR29",
+    "unstructured": "Jerby-Arnon, L. et al. A cancer cell program promotes T cell exclusion and resistance to checkpoint blockade. Cell 175, 984\u2013997.e24 (2018).",
+    "volume": "175",
+    "year": "2018"
+   },
+   {
+    "DOI": "10.1038/s41467-022-34395-2",
+    "author": "H Luo",
+    "doi-asserted-by": "publisher",
+    "journal-title": "Nat. Commun.",
+    "key": "48310_CR30",
+    "unstructured": "Luo, H. et al. Pan-cancer single-cell analysis reveals the heterogeneity and plasticity of cancer-associated fibroblasts in the tumor microenvironment. Nat. Commun. 13, 6619 (2022).",
+    "volume": "13",
+    "year": "2022"
+   },
+   {
+    "DOI": "10.1158/1078-0432.CCR-20-4226",
+    "author": "PM Galbo Jr",
+    "doi-asserted-by": "publisher",
+    "first-page": "2636",
+    "journal-title": "Clin. Cancer Res.",
+    "key": "48310_CR31",
+    "unstructured": "Galbo, P. M. Jr, Zang, X. & Zheng, D. Molecular features of cancer-associated fibroblast subtypes and their implication on cancer pathogenesis, prognosis, and immunotherapy resistance. Clin. Cancer Res. 27, 2636\u20132647 (2021).",
+    "volume": "27",
+    "year": "2021"
+   },
+   {
+    "DOI": "10.1158/0008-5472.CAN-11-3687",
+    "author": "A Facciabene",
+    "doi-asserted-by": "publisher",
+    "first-page": "2162",
+    "journal-title": "Cancer Res.",
+    "key": "48310_CR32",
+    "unstructured": "Facciabene, A., Motz, G. T. & Coukos, G. T-regulatory cells: key players in tumor immune escape and angiogenesis. Cancer Res. 72, 2162\u20132171 (2012).",
+    "volume": "72",
+    "year": "2012"
+   },
+   {
+    "DOI": "10.1038/s41568-019-0238-1",
+    "author": "E Sahai",
+    "doi-asserted-by": "publisher",
+    "first-page": "174",
+    "journal-title": "Nat. Rev. Cancer",
+    "key": "48310_CR33",
+    "unstructured": "Sahai, E. et al. A framework for advancing our understanding of cancer-associated fibroblasts. Nat. Rev. Cancer 20, 174\u2013186 (2020).",
+    "volume": "20",
+    "year": "2020"
+   },
+   {
+    "DOI": "10.3389/fimmu.2019.01835",
+    "author": "L Monteran",
+    "doi-asserted-by": "publisher",
+    "first-page": "1835",
+    "journal-title": "Front. Immunol.",
+    "key": "48310_CR34",
+    "unstructured": "Monteran, L. & Erez, N. The dark side of fibroblasts: cancer-associated fibroblasts as mediators of immunosuppression in the tumor microenvironment. Front. Immunol. 10, 1835 (2019).",
+    "volume": "10",
+    "year": "2019"
+   },
+   {
+    "DOI": "10.1002/1873-3468.14169",
+    "author": "W Liu",
+    "doi-asserted-by": "publisher",
+    "first-page": "2290",
+    "journal-title": "FEBS Lett.",
+    "key": "48310_CR35",
+    "unstructured": "Liu, W. et al. Siglec-15 promotes the migration of liver cancer cells by repressing lysosomal degradation of CD44. FEBS Lett. 595, 2290\u20132302 (2021).",
+    "volume": "595",
+    "year": "2021"
+   },
+   {
+    "DOI": "10.3889/oamjms.2019.589",
+    "author": "DC Chonov",
+    "doi-asserted-by": "publisher",
+    "first-page": "2391",
+    "journal-title": "Open Access Maced. J. Med. Sci.",
+    "key": "48310_CR36",
+    "unstructured": "Chonov, D. C., Ignatova, M. M. K., Ananiev, J. R. & Gulubova, M. V. IL-6 activities in the tumour microenvironment. Part 1. Open Access Maced. J. Med. Sci. 7, 2391\u20132398 (2019).",
+    "volume": "7",
+    "year": "2019"
+   },
+   {
+    "DOI": "10.1016/j.biopha.2018.09.177",
+    "author": "A Masjedi",
+    "doi-asserted-by": "publisher",
+    "first-page": "1415",
+    "journal-title": "Biomed. Pharmacother.",
+    "key": "48310_CR37",
+    "unstructured": "Masjedi, A. et al. The significant role of interleukin-6 and its signaling pathway in the immunopathogenesis and treatment of breast cancer. Biomed. Pharmacother. 108, 1415\u20131424 (2018).",
+    "volume": "108",
+    "year": "2018"
+   },
+   {
+    "DOI": "10.1152/physrev.00045.2017",
+    "author": "C Dostert",
+    "doi-asserted-by": "publisher",
+    "first-page": "115",
+    "journal-title": "Physiol. Rev.",
+    "key": "48310_CR38",
+    "unstructured": "Dostert, C., Grusdat, M., Letellier, E. & Brenner, D. The TNF family of ligands and receptors: communication modules in the immune system and beyond. Physiol. Rev. 99, 115\u2013160 (2019).",
+    "volume": "99",
+    "year": "2019"
+   },
+   {
+    "DOI": "10.15252/embr.202254895",
+    "author": "G Fuertes",
+    "doi-asserted-by": "publisher",
+    "first-page": "e54895",
+    "journal-title": "EMBO Rep.",
+    "key": "48310_CR39",
+    "unstructured": "Fuertes, G. et al. Noncanonical Wnt signaling promotes colon tumor growth, chemoresistance and tumor fibroblast activation. EMBO Rep. 24, e54895 (2023).",
+    "volume": "24",
+    "year": "2023"
+   },
+   {
+    "DOI": "10.1016/j.bbrc.2021.06.062",
+    "author": "T Hirashima",
+    "doi-asserted-by": "publisher",
+    "first-page": "37",
+    "journal-title": "Biochem. Biophys. Res. Commun.",
+    "key": "48310_CR40",
+    "unstructured": "Hirashima, T. et al. Wnt5a in cancer-associated fibroblasts promotes colorectal cancer progression. Biochem. Biophys. Res. Commun. 568, 37\u201342 (2021).",
+    "volume": "568",
+    "year": "2021"
+   },
+   {
+    "DOI": "10.1016/j.cell.2023.03.031",
+    "author": "S Liu",
+    "doi-asserted-by": "publisher",
+    "first-page": "2127",
+    "journal-title": "Cell",
+    "key": "48310_CR41",
+    "unstructured": "Liu, S. et al. A tissue injury sensing and repair pathway distinct from host pathogen defense. Cell 186, 2127\u20132143.e22 (2023).",
+    "volume": "186",
+    "year": "2023"
+   },
+   {
+    "DOI": "10.1074/jbc.M115.697615",
+    "author": "S Martinez",
+    "doi-asserted-by": "publisher",
+    "first-page": "30562",
+    "journal-title": "J. Biol. Chem.",
+    "key": "48310_CR42",
+    "unstructured": "Martinez, S. et al. The PTK7 and ROR2 protein receptors interact in the vertebrate WNT/Planar Cell Polarity (PCP) pathway. J. Biol. Chem. 290, 30562\u201330572 (2015).",
+    "volume": "290",
+    "year": "2015"
+   },
+   {
+    "DOI": "10.1161/ATVBAHA.113.302517",
+    "author": "M Corsini",
+    "doi-asserted-by": "publisher",
+    "first-page": "136",
+    "journal-title": "Arterioscler. Thromb. Vasc. Biol.",
+    "key": "48310_CR43",
+    "unstructured": "Corsini, M. et al. Cyclic adenosine monophosphate-response element-binding protein mediates the proangiogenic or proinflammatory activity of gremlin. Arterioscler. Thromb. Vasc. Biol. 34, 136\u2013145 (2014).",
+    "volume": "34",
+    "year": "2014"
+   },
+   {
+    "DOI": "10.1186/s13058-019-1194-0",
+    "author": "J Ren",
+    "doi-asserted-by": "publisher",
+    "journal-title": "Breast Cancer Res.",
+    "key": "48310_CR44",
+    "unstructured": "Ren, J. et al. Cancer-associated fibroblast-derived Gremlin 1 promotes breast cancer progression. Breast Cancer Res. 21, 109 (2019).",
+    "volume": "21",
+    "year": "2019"
+   },
+   {
+    "DOI": "10.1007/s00018-015-2076-y",
+    "author": "K Kumawat",
+    "doi-asserted-by": "publisher",
+    "first-page": "567",
+    "journal-title": "Cell. Mol. Life Sci.",
+    "key": "48310_CR45",
+    "unstructured": "Kumawat, K. & Gosens, R. WNT-5A: signaling and functions in health and disease. Cell. Mol. Life Sci. 73, 567\u2013587 (2016).",
+    "volume": "73",
+    "year": "2016"
+   },
+   {
+    "DOI": "10.1136/gutjnl-2018-317645",
+    "author": "M Maeda",
+    "doi-asserted-by": "publisher",
+    "first-page": "243",
+    "journal-title": "Gut",
+    "key": "48310_CR46",
+    "unstructured": "Maeda, M. et al. Cancer cell niche factors secreted from cancer-associated fibroblast by loss of H3K27me3. Gut 69, 243\u2013251 (2020).",
+    "volume": "69",
+    "year": "2020"
+   },
+   {
+    "DOI": "10.1158/1078-0432.CCR-21-3570",
+    "author": "A Obradovic",
+    "doi-asserted-by": "publisher",
+    "first-page": "2094",
+    "journal-title": "Clin. Cancer Res.",
+    "key": "48310_CR47",
+    "unstructured": "Obradovic, A. et al. Immunostimulatory cancer-associated fibroblast subpopulations can predict immunotherapy response in head and neck cancer. Clin. Cancer Res. 28, 2094\u20132109 (2022).",
+    "volume": "28",
+    "year": "2022"
+   },
+   {
+    "DOI": "10.1016/j.trecan.2022.02.006",
+    "author": "M Revel",
+    "doi-asserted-by": "publisher",
+    "first-page": "517",
+    "journal-title": "Trends Cancer Res.",
+    "key": "48310_CR48",
+    "unstructured": "Revel, M., Saut\u00e8s-Fridman, C., Fridman, W.-H. & Roumenina, L. T. C1q+ macrophages: passengers or drivers of cancer progression. Trends Cancer Res. 8, 517\u2013526 (2022).",
+    "volume": "8",
+    "year": "2022"
+   },
+   {
+    "DOI": "10.3389/fimmu.2021.685978",
+    "author": "Y Zhang",
+    "doi-asserted-by": "publisher",
+    "first-page": "685978",
+    "journal-title": "Front. Immunol.",
+    "key": "48310_CR49",
+    "unstructured": "Zhang, Y., Zhao, Y., Li, Q. & Wang, Y. Macrophages, as a promising strategy to targeted treatment for colorectal cancer metastasis in tumor immune microenvironment. Front. Immunol. 12, 685978 (2021).",
+    "volume": "12",
+    "year": "2021"
+   },
+   {
+    "DOI": "10.1016/j.immuni.2022.02.001",
+    "author": "M Meylan",
+    "doi-asserted-by": "publisher",
+    "first-page": "527",
+    "journal-title": "Immunity",
+    "key": "48310_CR50",
+    "unstructured": "Meylan, M. et al. Tertiary lymphoid structures generate and propagate anti-tumor antibody-producing plasma cells in renal cell cancer. Immunity 55, 527\u2013541.e5 (2022).",
+    "volume": "55",
+    "year": "2022"
+   },
+   {
+    "DOI": "10.18632/oncotarget.14303",
+    "author": "W Hu",
+    "doi-asserted-by": "publisher",
+    "first-page": "6809",
+    "journal-title": "Oncotarget",
+    "key": "48310_CR51",
+    "unstructured": "Hu, W., Yang, Y., Li, X. & Zheng, S. Pan-organ transcriptome variation across 21 cancer types. Oncotarget 8, 6809\u20136818 (2017).",
+    "volume": "8",
+    "year": "2017"
+   },
+   {
+    "DOI": "10.1007/s10147-015-0924-2",
+    "author": "A Wenners",
+    "doi-asserted-by": "publisher",
+    "first-page": "548",
+    "journal-title": "Int. J. Clin. Oncol.",
+    "key": "48310_CR52",
+    "unstructured": "Wenners, A. et al. Stromal markers AKR1C1 and AKR1C2 are prognostic factors in primary human breast cancer. Int. J. Clin. Oncol. 21, 548\u2013556 (2016).",
+    "volume": "21",
+    "year": "2016"
+   },
+   {
+    "DOI": "10.1016/j.ccell.2022.11.005",
+    "author": "Z Ma",
+    "doi-asserted-by": "publisher",
+    "first-page": "1550",
+    "journal-title": "Cancer Cell",
+    "key": "48310_CR53",
+    "unstructured": "Ma, Z. et al. Interferon-dependent SLC14A1+ cancer-associated fibroblasts promote cancer stemness via WNT5A in bladder cancer. Cancer Cell 40, 1550\u20131565.e7 (2022).",
+    "volume": "40",
+    "year": "2022"
+   },
+   {
+    "DOI": "10.1186/s12935-021-02267-2",
+    "author": "F Huang",
+    "doi-asserted-by": "publisher",
+    "journal-title": "Cancer Cell Int.",
+    "key": "48310_CR54",
+    "unstructured": "Huang, F., Zheng, Y., Li, X., Luo, H. & Luo, L. Ferroptosis-related gene AKR1C1 predicts the prognosis of non-small cell lung cancer. Cancer Cell Int. 21, 567 (2021).",
+    "volume": "21",
+    "year": "2021"
+   },
+   {
+    "DOI": "10.1016/j.ccell.2016.04.014",
+    "author": "CW Steele",
+    "doi-asserted-by": "publisher",
+    "first-page": "832",
+    "journal-title": "Cancer Cell",
+    "key": "48310_CR55",
+    "unstructured": "Steele, C. W. et al. CXCR2 inhibition profoundly suppresses metastases and augments immunotherapy in pancreatic ductal adenocarcinoma. Cancer Cell 29, 832\u2013845 (2016).",
+    "volume": "29",
+    "year": "2016"
+   },
+   {
+    "DOI": "10.3389/fmolb.2022.723846",
+    "author": "X Xiong",
+    "doi-asserted-by": "publisher",
+    "journal-title": "Front. Mol. Biosci.",
+    "key": "48310_CR56",
+    "unstructured": "Xiong, X. et al. CXCL8 in tumor biology and its implications for clinical translation. Front. Mol. Biosci. 9, 723846 (2022).",
+    "volume": "9",
+    "year": "2022"
+   },
+   {
+    "author": "H Tian",
+    "first-page": "53",
+    "journal-title": "Lung Cancer",
+    "key": "48310_CR57",
+    "unstructured": "Tian, H. et al. High expression of AKR1C1 is associated with proliferation and migration of small-cell lung cancer cells. Lung Cancer 7, 53\u201361 (2016).",
+    "volume": "7",
+    "year": "2016"
+   },
+   {
+    "DOI": "10.1016/j.tice.2020.101455",
+    "author": "X Zhang",
+    "doi-asserted-by": "publisher",
+    "first-page": "101455",
+    "journal-title": "Tissue Cell",
+    "key": "48310_CR58",
+    "unstructured": "Zhang, X., Xue, J., Yang, H., Zhou, T. & Zu, G. TNFAIP6 promotes invasion and metastasis of gastric cancer and indicates poor prognosis of patients. Tissue Cell 68, 101455 (2021).",
+    "volume": "68",
+    "year": "2021"
+   },
+   {
+    "DOI": "10.1038/s41575-020-0300-1",
+    "author": "AN Hosein",
+    "doi-asserted-by": "publisher",
+    "first-page": "487",
+    "journal-title": "Nat. Rev. Gastroenterol. Hepatol.",
+    "key": "48310_CR59",
+    "unstructured": "Hosein, A. N., Brekken, R. A. & Maitra, A. Pancreatic cancer stroma: an update on therapeutic targeting strategies. Nat. Rev. Gastroenterol. Hepatol. 17, 487\u2013505 (2020).",
+    "volume": "17",
+    "year": "2020"
+   },
+   {
+    "DOI": "10.1016/j.ccell.2018.01.011",
+    "author": "A Costa",
+    "doi-asserted-by": "publisher",
+    "first-page": "463",
+    "journal-title": "Cancer Cell",
+    "key": "48310_CR60",
+    "unstructured": "Costa, A. et al. Fibroblast heterogeneity and immunosuppressive environment in human breast cancer. Cancer Cell 33, 463\u2013479.e10 (2018).",
+    "volume": "33",
+    "year": "2018"
+   },
+   {
+    "DOI": "10.1038/s41586-022-05272-1",
+    "author": "AT Krishnamurty",
+    "doi-asserted-by": "publisher",
+    "first-page": "148",
+    "journal-title": "Nature",
+    "key": "48310_CR61",
+    "unstructured": "Krishnamurty, A. T. et al. LRRC15+ myofibroblasts dictate the stromal setpoint to suppress tumour immunity. Nature 611, 148\u2013154 (2022).",
+    "volume": "611",
+    "year": "2022"
+   },
+   {
+    "DOI": "10.1152/ajpgi.00474.2010",
+    "author": "RC Mifflin",
+    "doi-asserted-by": "publisher",
+    "first-page": "G684",
+    "journal-title": "Am. J. Physiol. Gastrointest. Liver Physiol.",
+    "key": "48310_CR62",
+    "unstructured": "Mifflin, R. C., Pinchuk, I. V., Saada, J. I. & Powell, D. W. Intestinal myofibroblasts: targets for stem cell therapy. Am. J. Physiol. Gastrointest. Liver Physiol. 300, G684\u2013G696 (2011).",
+    "volume": "300",
+    "year": "2011"
+   },
+   {
+    "DOI": "10.1016/j.diff.2016.05.002",
+    "author": "M Roulis",
+    "doi-asserted-by": "publisher",
+    "first-page": "116",
+    "journal-title": "Differentiation",
+    "key": "48310_CR63",
+    "unstructured": "Roulis, M. & Flavell, R. A. Fibroblasts and myofibroblasts of the intestinal lamina propria in physiology and disease. Differentiation 92, 116\u2013131 (2016).",
+    "volume": "92",
+    "year": "2016"
+   },
+   {
+    "DOI": "10.1158/0008-5472.CAN-22-0432",
+    "author": "W Roh",
+    "doi-asserted-by": "publisher",
+    "first-page": "3917",
+    "journal-title": "Cancer Res.",
+    "key": "48310_CR64",
+    "unstructured": "Roh, W. et al. High-resolution profiling of lung adenocarcinoma identifies expression subtypes with specific biomarkers and clinically relevant vulnerabilities. Cancer Res. 82, 3917\u20133931 (2022).",
+    "volume": "82",
+    "year": "2022"
+   },
+   {
+    "DOI": "10.1186/s13059-017-1382-0",
+    "author": "FA Wolf",
+    "doi-asserted-by": "publisher",
+    "journal-title": "Genome Biol.",
+    "key": "48310_CR65",
+    "unstructured": "Wolf, F. A., Angerer, P. & Theis, F. J. SCANPY: large-scale single-cell gene expression data analysis. Genome Biol. 19, 15 (2018).",
+    "volume": "19",
+    "year": "2018"
+   },
+   {
+    "DOI": "10.1016/j.cels.2018.11.005",
+    "author": "SL Wolock",
+    "doi-asserted-by": "publisher",
+    "first-page": "281",
+    "journal-title": "Cell Syst.",
+    "key": "48310_CR66",
+    "unstructured": "Wolock, S. L., Lopez, R. & Klein, A. M. Scrublet: computational identification of cell doublets in single-cell transcriptomic data. Cell Syst. 8, 281\u2013291.e9 (2019).",
+    "volume": "8",
+    "year": "2019"
+   },
+   {
+    "DOI": "10.1016/j.cels.2019.05.003",
+    "author": "B Hie",
+    "doi-asserted-by": "publisher",
+    "first-page": "483",
+    "journal-title": "Cell Syst.",
+    "key": "48310_CR67",
+    "unstructured": "Hie, B., Cho, H., DeMeo, B., Bryson, B. & Berger, B. Geometric sketching compactly summarizes the single-cell transcriptomic landscape. Cell Syst. 8, 483\u2013493.e7 (2019).",
+    "volume": "8",
+    "year": "2019"
+   },
+   {
+    "DOI": "10.1093/bioinformatics/btz625",
+    "author": "K Pola\u0144ski",
+    "doi-asserted-by": "publisher",
+    "first-page": "964",
+    "journal-title": "Bioinformatics",
+    "key": "48310_CR68",
+    "unstructured": "Pola\u0144ski, K. et al. BBKNN: fast batch alignment of single cell transcriptomes. Bioinformatics 36, 964\u2013965 (2020).",
+    "volume": "36",
+    "year": "2020"
+   },
+   {
+    "DOI": "10.1126/science.aad0501",
+    "author": "I Tirosh",
+    "doi-asserted-by": "publisher",
+    "first-page": "189",
+    "journal-title": "Science",
+    "key": "48310_CR69",
+    "unstructured": "Tirosh, I. et al. Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq. Science 352, 189\u2013196 (2016).",
+    "volume": "352",
+    "year": "2016"
+   },
+   {
+    "DOI": "10.1016/j.heliyon.2023.e16214",
+    "author": "Z Kuai",
+    "doi-asserted-by": "publisher",
+    "first-page": "e16214",
+    "journal-title": "Heliyon",
+    "key": "48310_CR70",
+    "unstructured": "Kuai, Z. & Hu, Y. Integration single-cell and bulk RNA-sequencing data to reveal senescence gene expression profiles in heart failure. Heliyon 9, e16214 (2023).",
+    "volume": "9",
+    "year": "2023"
+   },
+   {
+    "DOI": "10.1093/nar/gkw377",
+    "author": "MV Kuleshov",
+    "doi-asserted-by": "publisher",
+    "first-page": "W90",
+    "journal-title": "Nucleic Acids Res.",
+    "key": "48310_CR71",
+    "unstructured": "Kuleshov, M. V. et al. Enrichr: a comprehensive gene set enrichment analysis web server 2016 update. Nucleic Acids Res. 44, W90\u2013W97 (2016).",
+    "volume": "44",
+    "year": "2016"
+   },
+   {
+    "DOI": "10.1186/1471-2105-9-559",
+    "author": "P Langfelder",
+    "doi-asserted-by": "publisher",
+    "journal-title": "BMC Bioinforma.",
+    "key": "48310_CR72",
+    "unstructured": "Langfelder, P. & Horvath, S. WGCNA: an R package for weighted correlation network analysis. BMC Bioinforma. 9, 559 (2008).",
+    "volume": "9",
+    "year": "2008"
+   },
+   {
+    "DOI": "10.1093/bioinformatics/btu393",
+    "author": "Z Gu",
+    "doi-asserted-by": "publisher",
+    "first-page": "2811",
+    "journal-title": "Bioinformatics",
+    "key": "48310_CR73",
+    "unstructured": "Gu, Z., Gu, L., Eils, R., Schlesner, M. & Brors, B. circlize implements and enhances circular visualization in R. Bioinformatics 30, 2811\u20132812 (2014).",
+    "volume": "30",
+    "year": "2014"
+   },
+   {
+    "DOI": "10.1038/s41596-020-0292-x",
+    "author": "M Efremova",
+    "doi-asserted-by": "publisher",
+    "first-page": "1484",
+    "journal-title": "Nat. Protoc.",
+    "key": "48310_CR74",
+    "unstructured": "Efremova, M., Vento-Tormo, M., Teichmann, S. A. & Vento-Tormo, R. CellPhoneDB: inferring cell-cell communication from combined expression of multi-subunit ligand-receptor complexes. Nat. Protoc. 15, 1484\u20131506 (2020).",
+    "volume": "15",
+    "year": "2020"
+   },
+   {
+    "DOI": "10.1038/s41587-020-0546-8",
+    "author": "MJ Goldman",
+    "doi-asserted-by": "publisher",
+    "first-page": "675",
+    "journal-title": "Nat. Biotechnol.",
+    "key": "48310_CR75",
+    "unstructured": "Goldman, M. J. et al. Visualizing and interpreting cancer genomics data via the Xena platform. Nat. Biotechnol. 38, 675\u2013678 (2020).",
+    "volume": "38",
+    "year": "2020"
+   },
+   {
+    "DOI": "10.1016/j.cell.2018.02.052",
+    "author": "J Liu",
+    "doi-asserted-by": "publisher",
+    "first-page": "400",
+    "journal-title": "Cell",
+    "key": "48310_CR76",
+    "unstructured": "Liu, J. et al. An integrated TCGA pan-cancer clinical data resource to drive high-quality survival outcome analytics. Cell 173, 400\u2013416.e11 (2018).",
+    "volume": "173",
+    "year": "2018"
+   },
+   {
+    "DOI": "10.1093/bioinformatics/btaa223",
+    "author": "D Mercatelli",
+    "doi-asserted-by": "publisher",
+    "first-page": "3916",
+    "journal-title": "Bioinformatics",
+    "key": "48310_CR77",
+    "unstructured": "Mercatelli, D., Lopez-Garcia, G. & Giorgi, F. M. corto: a lightweight R package for gene network inference and master regulator analysis. Bioinformatics 36, 3916\u20133917 (2020).",
+    "volume": "36",
+    "year": "2020"
+   },
+   {
+    "DOI": "10.1609/icwsm.v3i1.13937",
+    "author": "M Bastian",
+    "doi-asserted-by": "publisher",
+    "first-page": "361",
+    "journal-title": "ICWSM",
+    "key": "48310_CR78",
+    "unstructured": "Bastian, M., Heymann, S. & Jacomy, M. Gephi: an Open source software for exploring and manipulating networks. ICWSM 3, 361\u2013362 (2009).",
+    "volume": "3",
+    "year": "2009"
+   },
+   {
+    "DOI": "10.1126/science.aad0095",
+    "author": "EM Van Allen",
+    "doi-asserted-by": "publisher",
+    "first-page": "207",
+    "journal-title": "Science",
+    "key": "48310_CR79",
+    "unstructured": "Van Allen, E. M. et al. Genomic correlates of response to CTLA-4 blockade in metastatic melanoma. Science 350, 207\u2013211 (2015).",
+    "volume": "350",
+    "year": "2015"
+   },
+   {
+    "DOI": "10.1016/j.ccell.2019.01.003",
+    "author": "TN Gide",
+    "doi-asserted-by": "publisher",
+    "first-page": "238",
+    "journal-title": "Cancer Cell",
+    "key": "48310_CR80",
+    "unstructured": "Gide, T. N. et al. Distinct immune cell populations define response to Anti-PD-1 monotherapy and Anti-PD-1/Anti-CTLA-4 combined therapy. Cancer Cell 35, 238\u2013255.e6 (2019).",
+    "volume": "35",
+    "year": "2019"
+   },
+   {
+    "DOI": "10.1016/j.cell.2017.09.028",
+    "author": "N Riaz",
+    "doi-asserted-by": "publisher",
+    "first-page": "934",
+    "journal-title": "Cell",
+    "key": "48310_CR81",
+    "unstructured": "Riaz, N. et al. Tumor and microenvironment evolution during immunotherapy with nivolumab. Cell 171, 934\u2013949.e16 (2017).",
+    "volume": "171",
+    "year": "2017"
+   },
+   {
+    "DOI": "10.1016/j.cell.2016.02.065",
+    "author": "W Hugo",
+    "doi-asserted-by": "publisher",
+    "first-page": "35",
+    "journal-title": "Cell",
+    "key": "48310_CR82",
+    "unstructured": "Hugo, W. et al. Genomic and transcriptomic features of response to Anti-PD-1 therapy in metastatic melanoma. Cell 165, 35\u201344 (2016).",
+    "volume": "165",
+    "year": "2016"
+   },
+   {
+    "DOI": "10.1038/nature25501",
+    "author": "S Mariathasan",
+    "doi-asserted-by": "publisher",
+    "first-page": "544",
+    "journal-title": "Nature",
+    "key": "48310_CR83",
+    "unstructured": "Mariathasan, S. et al. TGF\u03b2 attenuates tumour response to PD-L1 blockade by contributing to exclusion of T cells. Nature 554, 544\u2013548 (2018).",
+    "volume": "554",
+    "year": "2018"
+   },
+   {
+    "DOI": "10.1038/s41591-018-0053-3",
+    "author": "DF McDermott",
+    "doi-asserted-by": "publisher",
+    "first-page": "749",
+    "journal-title": "Nat. Med.",
+    "key": "48310_CR84",
+    "unstructured": "McDermott, D. F. et al. Clinical activity and molecular correlates of response to atezolizumab alone or in combination with bevacizumab versus sunitinib in renal cell carcinoma. Nat. Med. 24, 749\u2013757 (2018).",
+    "volume": "24",
+    "year": "2018"
+   },
+   {
+    "DOI": "10.1126/science.aan5951",
+    "author": "D Miao",
+    "doi-asserted-by": "publisher",
+    "first-page": "801",
+    "journal-title": "Science",
+    "key": "48310_CR85",
+    "unstructured": "Miao, D. et al. Genomic correlates of response to immune checkpoint therapies in clear cell renal cell carcinoma. Science 359, 801\u2013806 (2018).",
+    "volume": "359",
+    "year": "2018"
+   },
+   {
+    "DOI": "10.1093/bioinformatics/btu170",
+    "author": "AM Bolger",
+    "doi-asserted-by": "publisher",
+    "first-page": "2114",
+    "journal-title": "Bioinformatics",
+    "key": "48310_CR86",
+    "unstructured": "Bolger, A. M., Lohse, M. & Usadel, B. Trimmomatic: a flexible trimmer for Illumina sequence data. Bioinformatics 30, 2114\u20132120 (2014).",
+    "volume": "30",
+    "year": "2014"
+   },
+   {
+    "DOI": "10.1093/bioinformatics/bts611",
+    "author": "E Kopylova",
+    "doi-asserted-by": "publisher",
+    "first-page": "3211",
+    "journal-title": "Bioinformatics",
+    "key": "48310_CR87",
+    "unstructured": "Kopylova, E., No\u00e9, L. & Touzet, H. SortMeRNA: fast and accurate filtering of ribosomal RNAs in metatranscriptomic data. Bioinformatics 28, 3211\u20133217 (2012).",
+    "volume": "28",
+    "year": "2012"
+   },
+   {
+    "DOI": "10.1093/bioinformatics/bts635",
+    "author": "A Dobin",
+    "doi-asserted-by": "publisher",
+    "first-page": "15",
+    "journal-title": "Bioinformatics",
+    "key": "48310_CR88",
+    "unstructured": "Dobin, A. et al. STAR: ultrafast universal RNA-seq aligner. Bioinformatics 29, 15\u201321 (2013).",
+    "volume": "29",
+    "year": "2013"
+   },
+   {
+    "DOI": "10.1093/nar/gkaa1087",
+    "author": "A Frankish",
+    "doi-asserted-by": "publisher",
+    "first-page": "D916",
+    "journal-title": "Nucleic Acids Res.",
+    "key": "48310_CR89",
+    "unstructured": "Frankish, A. et al. GENCODE 2021. Nucleic Acids Res. 49, D916\u2013D923 (2021).",
+    "volume": "49",
+    "year": "2021"
+   },
+   {
+    "DOI": "10.1093/bioinformatics/btp352",
+    "author": "H Li",
+    "doi-asserted-by": "publisher",
+    "first-page": "2078",
+    "journal-title": "Bioinformatics",
+    "key": "48310_CR90",
+    "unstructured": "Li, H. et al. The Sequence Alignment/Map format and SAMtools. Bioinformatics 25, 2078\u20132079 (2009).",
+    "volume": "25",
+    "year": "2009"
+   },
+   {
+    "DOI": "10.1093/bioinformatics/btu638",
+    "author": "S Anders",
+    "doi-asserted-by": "publisher",
+    "first-page": "166",
+    "journal-title": "Bioinformatics",
+    "key": "48310_CR91",
+    "unstructured": "Anders, S., Pyl, P. T. & Huber, W. HTSeq\u2013a Python framework to work with high-throughput sequencing data. Bioinformatics 31, 166\u2013169 (2015).",
+    "volume": "31",
+    "year": "2015"
+   },
+   {
+    "DOI": "10.1073/pnas.0506580102",
+    "author": "A Subramanian",
+    "doi-asserted-by": "publisher",
+    "first-page": "15545",
+    "journal-title": "Proc. Natl Acad. Sci. USA",
+    "key": "48310_CR92",
+    "unstructured": "Subramanian, A. et al. Gene set enrichment analysis: a knowledge-based approach for interpreting genome-wide expression profiles. Proc. Natl Acad. Sci. USA 102, 15545\u201315550 (2005).",
+    "volume": "102",
+    "year": "2005"
+   },
+   {
+    "DOI": "10.1007/978-3-319-21416-0",
+    "doi-asserted-by": "publisher",
+    "key": "48310_CR93",
+    "unstructured": "Schwarzer, G., Carpenter, J. R. & R\u00fccker, G. Meta-Analysis with R. (Springer International Publishing). https://doi.org/10.1007/978-3-319-21416-0."
+   },
+   {
+    "DOI": "10.1038/s41587-021-01139-4",
+    "author": "V Kleshchevnikov",
+    "doi-asserted-by": "publisher",
+    "first-page": "661",
+    "journal-title": "Nat. Biotechnol.",
+    "key": "48310_CR94",
+    "unstructured": "Kleshchevnikov, V. et al. Cell2location maps fine-grained cell types in spatial transcriptomics. Nat. Biotechnol. 40, 661\u2013671 (2022).",
+    "volume": "40",
+    "year": "2022"
+   },
+   {
+    "DOI": "10.1101/2022.12.22.521551",
+    "doi-asserted-by": "publisher",
+    "key": "48310_CR95",
+    "unstructured": "Zhou, Z., Zhong, Y., Zhang, Z. & Ren, X. Spatial transcriptomics deconvolution at single-cell resolution by Redeconve. bioRxiv 2022.12.22.521551 https://doi.org/10.1101/2022.12.22.521551 (2022)."
+   },
+   {
+    "DOI": "10.1038/s41467-023-36983-2",
+    "author": "L Massier",
+    "doi-asserted-by": "publisher",
+    "journal-title": "Nat. Commun.",
+    "key": "48310_CR96",
+    "unstructured": "Massier, L. et al. An integrated single cell and spatial transcriptomic map of human white adipose tissue. Nat. Commun. 14, 1438 (2023).",
+    "volume": "14",
+    "year": "2023"
+   },
+   {
+    "DOI": "10.1093/bioinformatics/btad547",
+    "author": "B Muzellec",
+    "doi-asserted-by": "publisher",
+    "first-page": "btad547",
+    "journal-title": "Bioinformatics",
+    "key": "48310_CR97",
+    "unstructured": "Muzellec, B., Tele\u0144czuk, M., Cabeli, V. & Andreux, M. PyDESeq2: a python package for bulk RNA-seq differential expression analysis. Bioinformatics 39, btad547 (2023).",
+    "volume": "39",
+    "year": "2023"
+   },
+   {
+    "DOI": "10.5281/ZENODO.10651059",
+    "doi-asserted-by": "publisher",
+    "key": "48310_CR98",
+    "unstructured": "Kang, J., Lee, J. H., Choi, J. K. & Park, J.-E. Systematic dissection of tumor-normal single-cell ecosystems across a thousand tumors of 30 cancer types. https://doi.org/10.5281/ZENODO.10651059 (2024)."
+   }
+  ],
+  "reference-count": 98,
+  "references-count": 98,
+  "relation": {},
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41467-024-48310-4"
+   }
+  },
+  "score": 1,
+  "short-container-title": [
+   "Nat Commun"
+  ],
+  "short-title": [],
+  "source": "Crossref",
+  "subject": [],
+  "subtitle": [],
+  "title": [
+   "Systematic dissection of tumor-normal single-cell ecosystems across a thousand tumors of 30 cancer types"
+  ],
+  "type": "journal-article",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "updated-by": [
+   {
+    "DOI": "10.1038/s41467-025-58068-y",
+    "label": "Correction",
+    "source": "publisher",
+    "type": "correction",
+    "updated": {
+     "date-parts": [
+      [
+       2025,
+       3,
+       21
+      ]
+     ],
+     "date-time": "2025-03-21T00:00:00Z",
+     "timestamp": 1742515200000
+    }
+   }
+  ],
+  "volume": "15"
+ },
  "10.1038/s41556-018-0105-4": {
   "DOI": "10.1038/s41556-018-0105-4",
   "ISSN": [

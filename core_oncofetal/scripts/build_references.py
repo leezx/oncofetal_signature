@@ -40,7 +40,8 @@ DATASETS = [  # (registry Dataset, role in Methods)
     ("Khaliq CRC single-cell atlas", "Gate E and coherence, primary (GSE200997)"),
     ("Che CRC + liver-metastasis atlas", "Gate E and coherence, replication (GSE178318)"),
     ("Tabula Sapiens large intestine", "Compartment annotation only"),
-    ("UCSC Toil TCGA + GTEx", "Pan-cancer breadth annotation (bulk tumours vs matched normal)"),
+    ("UCSC Toil TCGA + GTEx", "Secondary bulk cancer-breadth annotation (tumours vs matched normal)"),
+    ("Kang pan-cancer tumour–normal scRNA atlas", "Pan-cancer epithelial reactivation annotation (primary)"),
 ]
 
 
