@@ -13,12 +13,11 @@
 - **Status: frozen.**
   - The v3.0 statement "permanently frozen" is superseded by this correction,
     which review approved as the last framework revision.
-  - Disclosure: when v4.0 was approved, it was already known that RBP1 was
-    the gene blocked only by the literature gate (it passed H, M and C under
-    v3.0).
+  - Disclosure: when v4.0 was approved, it was already known which gene's
+    status the change would affect (identity in the restricted workbook).
   - The correction applies identically to all 31 genes.
-  - RBP1 was confirmed as an original member of the frozen candidate list
-    (present since `3b08761`; the file is unchanged).
+  - The affected gene was confirmed as an original member of the frozen
+    candidate list (present since `3b08761`; the file is unchanged).
   - No further framework revisions will be made.
 - **Earlier disclosure (v2.0–v3.0):** the per-gene human and mouse
   developmental values were visible when the rules were set. The rules were
@@ -54,8 +53,8 @@
   threshold margin; thresholds are not adjusted in response.
 - **Compartment.** CRC validation was performed specifically in epithelial /
   malignant epithelial pseudobulks. Downstream spatial or bulk readouts need
-  cell-type resolution before a member-high signal (for example SPP1, which is
-  also macrophage-expressed) is read as CIOC-high cancer cells.
+  cell-type resolution before a member-high signal (for example from a gene
+  also expressed by macrophages) is read as CIOC-high cancer cells.
 
 ## 1. Principle
 
@@ -202,10 +201,9 @@ one-to-one orthologue (CXADR: high-confidence one2many).
   microarray; missing probes include CCN1, MIF, BASP1, CXADR, EPS8L1 and
   REG3B).
 - **Per-gene consequences were shown before the decision.** The two
-  direction-based rules would exclude TACSTD2 (GSE44433 −0.17, FDR 0.18) and
-  SPP1 (−0.33, FDR 0.057) on non-significant differences. All three rules
-  would exclude AREG, EREG and EMP1, which are significantly adult-high in
-  GSE44433.
+  direction-based rules would exclude genes on non-significant GSE44433
+  differences, and all three rules would exclude genes that are significantly
+  adult-high in GSE44433 (per-gene consequences in the restricted workbook).
 - **Review chose GSE230581 alone (unchanged from v2.0).** This choice was
   made with those consequences visible, and is disclosed as such.
   Significant GSE44433 contradictions are flagged in the evidence matrix.

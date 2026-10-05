@@ -466,7 +466,8 @@ L passes 20/31 (v2.0: 16): AREG, EREG, EDN1, IL1RN gained a second primary B
 study. RBP1 has no source in the corpus or a Europe PMC search (fails L as
 unsourced). Fumagalli 2025 not located.
 **Mouse axis**: GSE44433 replication rules evaluated (coverage 23/30); both
-direction-based rules would exclude TACSTD2/SPP1 on n.s. differences; review
+direction-based rules would exclude genes on n.s. differences (identities
+restricted; wording corrected 2026-10-05); review
 kept GSE230581 alone (decision disclosed in Methods); GSE44433 contradiction
 flag added to the matrix.
 **H missing data**: NA neither lowers the denominator nor supports; 2
@@ -499,14 +500,14 @@ source that defined the 31 candidates, with a threshold ("A, or B with ≥ 2
 studies") that was never part of the candidate definition.
 **Change**: all 31 = Literature candidate YES; A/B/C classes, primary studies
 and resolved/unresolved status are annotation; Core = H ∧ M ∧ C. Applied to all 31.
-RBP1 confirmed in the original frozen candidate list (`3b08761`, unchanged).
-**Disclosed**: RBP1 was known to be the only gene blocked solely by the
-literature gate before v4.0 was approved; no other gene changes (BASP1 fails C,
-MIF fails H).
+The affected gene was confirmed in the original frozen candidate list
+(`3b08761`, unchanged). **Disclosed**: which gene the change would affect was
+known before v4.0 was approved (identity restricted). [Wording corrected
+2026-10-05 to remove a restricted membership inference.]
 **Outputs**: Methods v4.0; provenance as annotation; public evidence matrix;
 restricted gate funnel workbook (`build_gate_funnel.py`) and manuscript text.
-Final membership restricted (Joanito). Open curation item: RBP1 nomination
-source unresolved.
+Final membership restricted (Joanito). Open curation item: unresolved
+nomination sources (see provenance table).
 
 ## 2026-10-02 — Data-QC fix: panel genes exempt from genome-wide expression filter
 
@@ -650,7 +651,7 @@ The plan was frozen before computation (`9c958ee`) and applied once by
 **Results.** All 338 candidates were annotated, with no membership change.
 - Pan-tissue pan-cancer oncofetal genes: 0 of the CIOC, 2 of ECOS-38, 10
   of the Extended CIOC and 12 of the 338.
-- EREG is intestine-biased fetal and CRC-biased.
+- Per-gene classes are in the restricted workbook.
 
 **Calibrators.** EPCAM, CDX2 and MKI67 behaved as expected. COL1A2 leaks
 into the Cao epithelial pseudobulks and is caught only by the compartment
@@ -659,3 +660,20 @@ flag, which is disclosed.
 **Records.** New DATA datasets were registered with `link.md` files. Cao
 and Toil were added to the dataset registry and the references (14 dataset
 references). Per-gene outputs are restricted.
+
+### 2026-10-05 — Restricted-membership wording scrub (public docs)
+A leak check found that public docs named genes in ways that implied CIOC,
+338 or Extended CIOC membership, or stated Joanito-derived results.
+
+Affected files:
+- `docs/HANDOFF.md`;
+- `core_oncofetal/README.md`;
+- `EXTENDED_CIOC_PLAN.md` and `BREADTH_ANNOTATION_PLAN.md`;
+- the RBP1 disclosure and GSE44433-consequence passages in
+  `Method_core_oncofetal_validated.md`;
+- WORKLOG lines.
+
+The names were replaced with restricted pointers. The text is clean from
+this commit onward. **Earlier pushed commits still contain these mentions in
+history.** Removing them requires a history rewrite and force-push of
+`analysis/core-oncofetal`; that is the user's decision and has not been done.

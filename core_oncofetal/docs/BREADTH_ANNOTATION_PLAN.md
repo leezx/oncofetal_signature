@@ -236,5 +236,5 @@ The fetal-intestine compartment flag is set for 96 of the 338 genes.
 - **The cancer axis measures tumour vs the patient's own tissue type.**
   Genes that define normal intestinal identity (for example CDX2) are not
   "CRC-up".
-- **Bulk composition affects the cancer axis.** SPP1's pan-cancer gain, for
-  example, is consistent with myeloid infiltration (Gate E).
+- **Bulk composition affects the cancer axis.** A gene's pan-cancer gain can
+  reflect immune or stromal infiltration rather than tumour-cell expression.

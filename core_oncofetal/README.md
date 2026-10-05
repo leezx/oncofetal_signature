@@ -66,6 +66,6 @@ genome-wide, removing only the Literature-31 restriction.
     - **Use:** bulk RNA-seq and unresolved or mixed-cell spatial data.
     - **Description:** epithelial-compatible, not epithelial-specific.
     - **Outputs:** `ECOS_38.{xlsx,gmt}`, `ECOS_38_calls.csv`.
-- **State vs lineage specificity:** non-epithelial expression (for example
-  SPP1, CCN2, CLU, RBP1) limits mixed-cell scoring. It is not evidence
+- **State vs lineage specificity:** non-epithelial expression limits
+  mixed-cell scoring. It is not evidence
   against epithelial oncofetal-state membership.

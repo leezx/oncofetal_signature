@@ -40,8 +40,8 @@ Genes are not removed by hand. H, M and C are not modified.
 
 **Intent:** exclude genes whose apparent signal is predominantly
 attributable to non-epithelial compartments. It does **not** require
-epithelial specificity, because shared programs (for example SPP1) are
-legitimate.
+epithelial specificity, because programs shared with other compartments
+are legitimate.
 
 **Candidate metrics, per gene, from an atlas with all compartments:**
 - detection in epithelial (tumour-derived or fetal) cells;
@@ -316,9 +316,9 @@ CIOC should answer, so the two are now separate objects.
   resolution?
 
 A gene can be a valid epithelial oncofetal-state marker and still be
-expressed more strongly by stromal or immune cells. SPP1, CCN2, CLU and
-RBP1 are examples: they show epithelial induction in Joanito and Pelka, but
-higher myeloid, stromal or mast expression. **Non-epithelial expression
+expressed more strongly by stromal or immune cells: several genes show
+epithelial induction but higher myeloid, stromal or mast expression (gene
+identities in the restricted workbook). **Non-epithelial expression
 limits mixed-cell scoring. It is not evidence against epithelial
 oncofetal-state membership.**
 

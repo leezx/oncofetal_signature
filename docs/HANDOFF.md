@@ -37,9 +37,9 @@ Also kept, never used for scoring:
   members. Conceptually, present it as a separate branch from the 338.
 - **Internal validation.** The genome-wide search recovers all 8 CIOC genes,
   and no other Literature-31 gene passes.
-- **State vs lineage specificity.** SPP1, CCN2, CLU and RBP1 are induced in
+- **State vs lineage specificity.** Four CIOC genes are induced in
   epithelium but are dominated by myeloid, stromal, endothelial or mast
-  compartments in tumour tissue.
+  compartments in tumour tissue (identities in HANDOFF_RESTRICTED.md).
   - They fail Gate E, so they are absent from ECOS-38.
   - They remain in the CIOC and the Extended CIOC.
   - An 8-gene CIOC score in bulk data is microenvironment-dominated.
@@ -224,8 +224,9 @@ and applied once.
 2. **`core_oncofetal/results/CIOC_manuscript_text.md`** (restricted)
    predates the Extended CIOC and ECOS-38. Sync it with Methods.md if it is
    still used.
-3. **RBP1, SPRR1A and EPS8L1** have unresolved literature provenance
-   (disclosed; RBP1 is retained in the CIOC by design).
+3. **Three Literature-31 genes** have unresolved literature provenance
+   (disclosed; see the provenance table). CIOC handling is in
+   HANDOFF_RESTRICTED.md.
 4. **Supportive datasets** (GSE44433, TCGA, organoid cultures) still carry
    old NA labels ("not re-audited"). Run the same feature audit before
    making final figures.
