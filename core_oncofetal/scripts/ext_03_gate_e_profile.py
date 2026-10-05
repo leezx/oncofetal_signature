@@ -4,7 +4,7 @@
 For each independent CRC atlas (Khaliq 2022, Che 2021), patient x compartment
 pseudobulks are built from tumour-tissue cells (Khaliq tumour samples; Che
 primary CRC + liver metastasis), excluding Ambiguous clusters:
-  Epithelial (tumour tissue -> malignant/tumour epithelium; no CNV inference),
+  Epithelial (tumour-derived epithelial cells; malignancy not inferred),
   Stromal, Endothelial, Myeloid, T_NK, B_plasma, Mast.
 A patient contributes to a compartment only with >= 20 cells; a compartment is
 used only with >= 3 such patients (Khaliq mast: 2 patients, excluded).

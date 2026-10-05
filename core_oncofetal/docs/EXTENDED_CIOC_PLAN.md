@@ -1,4 +1,4 @@
-# Extended CIOC — plan (rules v0.1 PROPOSED; not frozen, not applied)
+# Extended CIOC — plan (rules v1.0 FROZEN 2026-10-05, before computation)
 
 ## Architecture
 
@@ -26,7 +26,7 @@ smooth-muscle, endothelial and lymphoid programs. Examples are COL1A1, SPARC,
 COL6A1, CALD1, MYL9, NOTCH3, PDGFB and LCK. DE gates cannot tell whether
 the signal comes from:
 - non-epithelial cells retained in "epithelial" pseudobulks or annotations;
-- or mesenchymal-like transcription in developing or malignant epithelium.
+- or mesenchymal-like transcription in developing or tumour epithelium.
 
 Level 2a also mixes proliferation, translation, YAP, wound, EMT,
 metabolism, stress and inflammatory programs. Two further requirements
@@ -44,7 +44,7 @@ epithelial specificity, because shared programs (for example SPP1) are
 legitimate.
 
 **Candidate metrics, per gene, from an atlas with all compartments:**
-- detection in epithelial (malignant or fetal) cells;
+- detection in epithelial (tumour-derived or fetal) cells;
 - epithelial share of expression across epithelial, fibroblast/stromal,
   endothelial, myeloid and lymphoid compartments.
 
@@ -63,7 +63,7 @@ Each metric is computed on donor-level compartment means.
 
 **Reference requirement (open decision).** The reference must contain
 epithelial and non-epithelial cells. It must also represent the states in
-which these genes are expressed: malignant and/or fetal epithelium. It
+which these genes are expressed: tumour and/or fetal epithelium. It
 should be independent of the gate datasets.
 - **Locally available:** Tabula Sapiens Large Intestine is independent and
   has all compartments. It is **adult normal**, however. Oncofetal genes are
@@ -82,13 +82,13 @@ should be independent of the gate datasets.
 **Question:** when the eight-gene CIOC state is high, is the candidate also
 systematically high?
 
-- **Data:** independent malignant epithelial cells, not Joanito or Pelka.
+- **Data:** independent tumour-derived epithelial cells, not Joanito or Pelka.
   Ideally the same independent CRC atlas used for Gate E.
 - **Candidate statistic:** within-tumour (patient-blocked) correlation
   between the candidate and the CIOC score.
   - The CIOC score is computed leaving the candidate out, which matters
     only for the CIOC genes themselves.
-  - The correlation is computed on malignant epithelial cells or
+  - The correlation is computed on tumour-derived epithelial cells or
     metacells, and summarised across patients.
 - **Controls:**
   - Use metacells or pseudobulk to limit dropout.
@@ -115,8 +115,11 @@ systematically high?
     canonical marker modules, scored as mean marker detection. No module
     contains a Level 2 candidate gene.
   - Khaliq: 1,236 ambiguous cells are excluded.
-  - Tumour-tissue epithelium is treated as malignant. No CNV inference was
-    run.
+  - Epithelial cells from tumour tissue are called **tumour-derived
+    epithelial cells** (the tumour epithelial compartment). Malignancy is
+    not inferred (no CNV or mutation calling), and they are never called
+    malignant. Gate E asks about compartment attribution, which does not
+    require per-cell malignancy.
 
 ## Gate E — blinded descriptive profile (done)
 
@@ -156,55 +159,111 @@ library composition, so a truly shared gene is not expected at 0.
   a median of 789 detected genes, against about 1,000 in other compartments.
   Che is more sensitive.
 
-## Gate E — proposed rule v0.1 (for approval; not applied)
+## Frozen rules v1.0 (approved 2026-10-05; committed before computation)
 
-**E1 — non-epithelial attribution.**
-- In an atlas, E1 fails if log2 ratio < −3.
-- The threshold is calibrated between the ubiquitous calibrators (≥ −2.5)
-  and the ambient-prone non-epithelial markers (≤ −4.2).
-- The gene **fails E1 only if it fails in both atlases** (replicated
-  non-epithelial attribution). If it is measured in only one atlas, that
-  atlas decides.
+Rule history:
+- **v0.1** was proposed after the blinded profile.
+- **Review changed one rule:** E1 gained a severe-contradiction arm.
+- **Review defined the coherence pass:** an empirical one-sided P.
+- No gene identities were inspected before this freeze.
 
-**E2 — technical detectability.**
-- The epithelial detection fraction must be ≥ 0.05 in at least one atlas.
-- **Rationale:**
-  - Ambient-free non-epithelial markers sit at ≤ 0.03 in epithelium.
-  - In each atlas, 5% of tumour epithelial cells is several hundred cells,
-    the minimum needed for the coherence step to have signal.
-  - "At least one atlas" allows for the shallower Khaliq epithelium.
+**Signature construction ends with this application.** Whatever set size
+results, thresholds are not revisited and no gene is rescued.
+
+### Gate E — epithelial compatibility
+
+Ratio = log2((tumour-derived epithelial CPM + 1) / (top non-epithelial
+compartment CPM + 1)), using patient medians. Atlases: Khaliq 2022 and Che
+2021.
+
+**E1 fails if either:**
+- (a) the ratio is < −3 in both atlases; or
+- (b) the ratio is < −5 in either atlas.
+
+If the gene is measured in only one atlas, it fails if that atlas is < −3.
+
+- **Methods wording for −3:** "A prespecified conservative threshold of
+  −3 was chosen from blinded lineage calibrators to identify genes showing
+  > 8-fold enrichment in a non-epithelial compartment relative to the tumour
+  epithelial compartment."
+- **−5 (> 32-fold)** lies in strict lineage-marker territory (calibrators
+  −5.1 to −11.8). It is a severe contradiction on its own.
+
+**E2 (detectability).** Detected (≥ 1 UMI) in ≥ 5% of tumour-derived
+epithelial cells (patient median) in at least one atlas. Requiring it in
+both would turn sequencing depth (Khaliq median 789 genes per epithelial
+cell) into a biological veto.
 
 **Gate E pass = E2 AND NOT E1-fail.**
-- Tabula Sapiens adult-normal attribution is reported beside each gene and
-  never selects.
 
-## CIOC program coherence — proposed rule v0.1 (for approval; not applied)
+Tabula Sapiens adult-normal attribution is annotation only.
 
-- **Cells:** tumour-tissue epithelial cells in Khaliq and Che. A patient
-  needs ≥ 200 epithelial cells.
-- **Units:** metacells within each patient: k-means on the patient's
-  epithelial PCA, k = n_cells / 20, aggregated counts, log-CPM. A patient
-  needs ≥ 10 metacells.
-- **CIOC score:** the mean within-patient z-score of the eight CIOC genes.
-  When the candidate is itself a CIOC gene, it is left out of the score.
-- **Statistic:**
-  - Within-patient Spearman ρ between the candidate and the CIOC score,
-    after regressing out S and G2M cell-cycle scores.
-  - Patients are combined by their Fisher-z mean per atlas.
-- **Null:**
-  - 1,000 random 8-gene sets, matched to the CIOC genes by expression bin.
-  - The candidate's mean ρ with each random-set score gives an empirical
-    P per gene and atlas.
-  - BH is applied across Gate-E-passing candidates within each atlas.
-- **Pass:** mean ρ > 0 in both atlases, and BH FDR < 0.05 in at least one.
-  This mirrors Gate H: concordant in ≥ 2, supported in ≥ 1.
+### CIOC program coherence (on Gate E passes)
 
-## Extended CIOC
+**Strata.** One stratum per sample (patient × tissue). These are Khaliq
+tumour samples and Che primary-CRC and liver-metastasis samples, each with
+≥ 200 tumour-derived epithelial cells. Coherence is computed within
+strata, so tissue and patient differences cannot create it.
 
-**Extended CIOC = Level 2a ∩ Gate E ∩ coherence.**
-- The set size is not predetermined.
-- **Order of work:**
-  1. Approve the rules.
-  2. Freeze them (commit).
-  3. Apply them once.
-  4. Report without revision.
+**Metacells.** Within each stratum:
+- k-means (seed 0) on 20 PCs of the stratum's log-normalised epithelial
+  cells, using atlas-level epithelial HVGs (2,000), with k = ⌊n/20⌋;
+- counts are summed per metacell and converted to log2(CPM + 1);
+- a stratum needs ≥ 10 metacells.
+
+**Cell cycle.** S and G2M scores come from the Tirosh 2016 genes
+(per-cell `score_genes_cell_cycle`, then the metacell mean). Within each
+stratum, the candidate and the CIOC score are each residualised on
+[1, S, G2M].
+
+**CIOC score.** The mean within-stratum z-score of the eight CIOC genes.
+- When the candidate is a CIOC gene, it is left out of the score (seven
+  genes).
+- A gene that is constant in a stratum is dropped from that stratum's
+  score.
+
+**Statistic.**
+- Within each stratum: Spearman ρ between the residualised candidate and
+  the residualised score.
+- Per atlas: T = the mean Fisher z over strata where the candidate is
+  non-constant.
+- A candidate is evaluable in an atlas if it has ≥ 3 such strata.
+
+**Null.**
+- 1,000 random gene sets, the same sets for all candidates within an atlas.
+- Each set is matched gene-for-gene to the score's genes by atlas-level
+  mean-expression bin: 20 quantile bins over metacell-expressed genes,
+  excluding the CIOC genes.
+- Leave-one-out scores get matched seven-gene sets.
+- The candidate is not excluded from the random pool, which is
+  conservative.
+- Empirical one-sided P = (1 + #{T_null ≥ T_obs}) / 1,001.
+
+**Coherence pass:**
+- evaluable in both atlases;
+- T_obs > 0 in both atlases;
+- empirical P < 0.05 in at least one atlas.
+
+BH-FDR across candidates is reported as annotation only and is not a hard
+gate.
+
+### Extended CIOC
+
+**Extended CIOC = cross-species fetal–CRC candidates (338) ∩ Gate E ∩
+coherence.**
+
+### Role of the two atlases
+
+- **Khaliq and Che** are **independent replication within the refinement
+  stage**. They contribute to construction, so they are **not** external
+  validation datasets.
+- **External validation** will use other CRC atlases and spatial datasets.
+  It will never feed back into membership.
+
+### Final layers
+
+| Layer | Role |
+|---|---|
+| CIOC (8) | High-specificity biological anchor |
+| 338 cross-species fetal–CRC candidates | Genome-wide discovery universe; not for scoring |
+| Extended CIOC | Epithelial-compatible, Core-coherent program for robust scoring |
