@@ -305,3 +305,94 @@ values are in the restricted workbook `Extended_CIOC.xlsx`.
 - **Construction ends here.** Thresholds are not revised and no gene is
   rescued. Khaliq and Che are refinement-stage replication, not external
   validation.
+
+## Revision v2.0 — state specificity vs lineage specificity (frozen 2026-10-05, before computation)
+
+The v1.0 output answered a different question from the one the Extended
+CIOC should answer, so the two are now separate objects.
+- **State specificity:** does the gene track the oncofetal state within
+  epithelial cells?
+- **Lineage specificity:** is the gene safe to score without cell-type
+  resolution?
+
+A gene can be a valid epithelial oncofetal-state marker and still be
+expressed more strongly by stromal or immune cells. SPP1, CCN2, CLU and
+RBP1 are examples: they show epithelial induction in Joanito and Pelka, but
+higher myeloid, stromal or mast expression. **Non-epithelial expression
+limits mixed-cell scoring. It is not evidence against epithelial
+oncofetal-state membership.**
+
+H, M and C, the eight-gene CIOC, the 338-gene universe and the v1.0 output
+are not changed.
+
+```mermaid
+flowchart TD
+  U["338 cross-species fetal–CRC candidates (frozen universe)"]
+  U --> X["Epithelial detectability + epithelial-state coherence → Extended CIOC"]
+  U --> E["Compartment compatibility (Gate E) + stringent coherence → ECOS-38"]
+  C["CIOC Core (8): literature + H/M/C anchor"]
+```
+
+ECOS-38 and the Extended CIOC are two branches from the 338 candidates.
+Neither is described as a subset of the other.
+
+### ECOS-38 (the v1.0 output, renamed; membership not recomputed)
+
+- **Name:** Epithelial-Compatible Oncofetal Signature (ECOS-38), with
+  identifier `ECOS_38`.
+- **Members:** exactly the 38 genes from the v1.0 application.
+- **Use:** bulk RNA-seq, unresolved or mixed-cell spatial data, and any
+  dataset where epithelial cells cannot first be isolated.
+- **Wording:**
+  - It is *epithelial-compatible*: there is no strong, reproducible
+    non-epithelial attribution, and there is epithelial detectability.
+  - It is never "epithelial-specific" or "epithelial-exclusive".
+- **Annotations:** the Gate E results are retained as
+  compartment-attribution annotations.
+
+### Extended CIOC v2.0 — epithelial-only (rule frozen here)
+
+**Question:** among the 338, which genes reproducibly track the CIOC state
+within the tumour-derived epithelial compartment?
+
+**Data:** tumour-derived epithelial cells only (Khaliq 2022, Che 2021).
+- The existing compartment annotation and strata are used.
+- Malignancy is not inferred.
+- Stromal, immune and endothelial expression is ignored entirely. Gate E
+  E1 is **not** a criterion.
+
+**D — detectability (minimal).** The gene must be detected in ≥ 5% of
+tumour-derived epithelial cells (patient median) in at least one atlas.
+This is an evaluability criterion, not a lineage test.
+
+**Coherence.** The v1.0 framework is used unchanged:
+- ~20-cell metacells within sample strata (≥ 200 cells, ≥ 10 metacells);
+- the cell cycle (S and G2M) is regressed out;
+- the eight-gene CIOC score, leaving the gene out when the candidate is a
+  CIOC gene;
+- within-stratum Spearman, then the mean Fisher z over strata, T (≥ 3
+  strata to be evaluable);
+- the same seed and null construction.
+
+**Membership: Extended CIOC = D pass AND evaluable in both atlases AND
+T > 0 in both atlases.**
+
+**Annotations, never selecting:**
+- empirical P per atlas against the 1,000 expression-matched random sets;
+- P < 0.05 in either atlas, and P < 0.05 in both;
+- the **high-confidence CIOC-coherent** flag (T > 0 in both and P < 0.05
+  in ≥ 1);
+- the Gate E compartment-attribution values and the E1 call;
+- Tabula Sapiens;
+- ECOS-38 membership.
+
+**Foreseeable property, recorded before computation.** In v1.0, all 189
+genes tested had T > 0 in both atlases: tumour-derived epithelial
+metacells share a strong common axis. Membership under v2.0 is therefore
+expected to be driven mainly by detectability and evaluability. In that
+case the high-confidence flag carries the discriminating coherence
+information. This is noted for interpretation and does not change the
+rule.
+
+**Construction ends with this application.** No rule is tuned and no gene
+is rescued or removed.
