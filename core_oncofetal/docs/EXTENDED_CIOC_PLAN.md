@@ -267,3 +267,41 @@ coherence.**
 | CIOC (8) | High-specificity biological anchor |
 | 338 cross-species fetal–CRC candidates | Genome-wide discovery universe; not for scoring |
 | Extended CIOC | Epithelial-compatible, Core-coherent program for robust scoring |
+
+## Application (2026-10-05; frozen rules v1.0, applied once)
+
+Produced by `scripts/ext_04_extended_cioc.py`. Membership and per-gene
+values are in the restricted workbook `Extended_CIOC.xlsx`.
+
+**Funnel:**
+
+| Step | Genes |
+|---|---|
+| Cross-species fetal–CRC candidates | 338 |
+| Gate E: E1 fail (66 via both < −3; 3 via the < −5 arm only) | 69 |
+| Gate E: E2 fail | 116 |
+| Gate E pass | 189 |
+| Coherence evaluable in both atlases | 189 |
+| **Coherence pass = Extended CIOC** | **38** |
+
+- **Coherence strata:** 8 in Khaliq and 8 in Che.
+- **Two CIOC core genes are in the Extended CIOC.** Gate E failures
+  (non-epithelial attribution) account for four core genes, and coherence
+  failures account for two.
+- **Gate E applies only to Level 2.** The eight-gene CIOC (Level 1) is
+  unchanged.
+- **Interpretation:**
+  - Several CIOC genes are expressed far more strongly by stromal, myeloid,
+    endothelial or mast compartments in tumour tissue than by tumour-derived
+    epithelium. This holds even though their epithelial expression rises
+    (Joanito and Pelka).
+  - Readouts of the eight-gene CIOC in bulk or spatial data without
+    cell-type resolution will therefore be dominated by the
+    microenvironment.
+  - The Extended CIOC is the epithelial-compatible scoring set.
+- **Coherence:** every Gate E candidate correlates positively with the CIOC
+  score within strata (a shared axis). The expression-matched null absorbs
+  this axis, and membership requires beating that null.
+- **Construction ends here.** Thresholds are not revised and no gene is
+  rescued. Khaliq and Che are refinement-stage replication, not external
+  validation.

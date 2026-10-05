@@ -552,3 +552,18 @@ Literature-31 gene. Extended CIOC (Level 3) = Level 2 ∩ Gate E (epithelial
 compatibility) ∩ CIOC coherence, rules to be frozen before computation
 (`core_oncofetal/docs/EXTENDED_CIOC_PLAN.md`). Open decision: independent
 all-compartment CRC atlas (Tabula Sapiens LI is adult-normal only).
+
+### 2026-10-05 — Extended CIOC (construction complete)
+Rules v1.0 frozen before computation (`4f2d9bd`):
+- **Gate E:** E1 fails if the log2 ratio is < −3 in both atlases or < −5 in
+  either; E2 requires detection in ≥ 5% of tumour-derived epithelial cells
+  in ≥ 1 atlas.
+- **Coherence:** within-stratum metacells, leave-one-out CIOC score,
+  cell-cycle adjusted, against 1,000 expression-matched null sets; pass if
+  positive in both atlases and empirical P < 0.05 in ≥ 1.
+
+Applied once: 338 → 189 (Gate E) → 38 Extended CIOC, which includes 2 of
+the 8 CIOC genes. Four CIOC genes fail Gate E because they are dominated by
+non-epithelial compartments in tumour tissue; two fail coherence.
+Signature construction ends here. Outputs are restricted (git-ignored,
+mirrored to DATA).

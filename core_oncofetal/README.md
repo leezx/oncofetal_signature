@@ -51,5 +51,10 @@ genome-wide, removing only the Literature-31 restriction.
   - `Genomewide_fetal_CRC_candidates.xlsx`
   - `Genomewide_fetal_CRC_candidates.gmt`
 - **Extended CIOC (Level 3):** Level 2 plus Gate E (epithelial
-  compatibility) plus CIOC program coherence in independent data. The rules
-  will be frozen before computation; see `docs/EXTENDED_CIOC_PLAN.md`.
+  compatibility) plus CIOC program coherence in two independent CRC atlases
+  (Khaliq 2022, Che 2021).
+  - Rules v1.0 were frozen (`4f2d9bd`) before computation and applied once
+    by `scripts/ext_01`–`ext_04`.
+  - See `docs/EXTENDED_CIOC_PLAN.md`.
+  - Restricted outputs: `Extended_CIOC.{xlsx,gmt}`,
+    `Extended_CIOC_calls.csv`.
