@@ -238,3 +238,67 @@ The fetal-intestine compartment flag is set for 96 of the 338 genes.
   "CRC-up".
 - **Bulk composition affects the cancer axis.** A gene's pan-cancer gain can
   reflect immune or stromal infiltration rather than tumour-cell expression.
+
+## Revision v2: cancer breadth only (frozen 2026-10-05, before recomputation)
+
+This revision was made after the v1 results were seen, by review decision.
+It changes scope and interpretation labels only. The cancer-axis data,
+cancer types, statistic and thresholds (Δ ≥ 1, FDR < 0.05; 25% and 50%
+cut-offs) are unchanged.
+
+**Rationale.** The CIOC defines oncofetal **identity**: fetal intestinal
+epithelium > adult intestinal epithelium, conserved in mouse, and CRC
+epithelium > normal epithelium. Fetal *tissue* specificity (fetal intestine
+vs other fetal organs) and *cancer* specificity are different questions,
+and neither is part of the definition.
+- A gene expressed in several fetal organs, or reactivated in several
+  carcinomas, is still a valid intestinal oncofetal marker.
+- Organ-of-origin labels for shared developmental programs lead to an
+  ontology problem that does not need solving.
+
+**Scope changes:**
+1. **The fetal tissue breadth axis (Cao 2020) is removed from all
+   deliverables.**
+   - The v1 code (`core_oncofetal/exploratory/breadth_fetal_cancer_v1.py`)
+     and its outputs are kept as internal exploration only. The outputs are
+     in DATA restricted `exploratory_breadth_v1/`.
+   - It is not presented in the manuscript or the supplement.
+   - The terms "pan-fetal", "pan-tissue" and "pan-oncofetal" are not used.
+2. **Title:** "Pan-cancer breadth of CIOC reactivation in bulk tumours".
+   It is an annotation, not a validation, and creates no hierarchy over the
+   epithelial-resolved CIOC evidence.
+3. **Bulk cannot overrule epithelial evidence.** Bulk expression is the sum
+   over cell types of cell fraction × expression. A gene without a bulk CRC
+   gain gets no cancer-breadth class.
+
+**Per-gene annotation** (genes: the 338 cross-species candidates, with CIOC,
+Extended CIOC and ECOS-38 labels):
+
+| Column | Definition |
+|---|---|
+| CRC epithelial evidence | Gate C (Joanito + Pelka epithelial pseudobulk). Positive for all 338 by construction. |
+| CRC bulk | **up** = Δ ≥ 1 and FDR < 0.05 in COAD or READ; **down** = Δ ≤ −1 and FDR < 0.05 in COAD or READ (and up in neither); else **n.s.** |
+| Other carcinomas up | n of 19 eligible non-CRC carcinomas |
+| Composition-sensitive | Gate E E1 FAIL in the Khaliq/Che atlases (strong non-epithelial attribution); this is an existing annotation |
+
+**Interpretation:**
+
+| CRC bulk | Other carcinomas up | Interpretation |
+|---|---|---|
+| up | < 25% | **CRC-biased reactivation** |
+| up | 25% to < 50% | **multi-cancer reactivation** |
+| up | ≥ 50% | **broad reactivation across carcinomas** |
+| down | any | **epithelial reactivation not captured by bulk (CRC bulk down)**; bulk cancer breadth not interpretable |
+| n.s. | any | **bulk cancer breadth not interpretable (CRC bulk n.s.)** |
+
+- The suffix ", composition-sensitive" is added when E1 fails.
+- The count of other carcinomas is always reported, but it is descriptive
+  when CRC bulk is not up.
+
+**Outputs:**
+- **Restricted:** `results/Cancer_breadth_annotation.xlsx` (sheets CIOC_8,
+  ECOS_38, Extended_222, Candidates_338, Cancer_types, Legend) and
+  `results/Cancer_breadth_CIOC8.pdf` (CIOC heatmap, carcinoma panel only).
+- **Script:** `core_oncofetal/scripts/cancer_breadth_annotation.py`.
+- The v1 outputs (`Breadth_annotation.xlsx`, `Breadth_CIOC8_heatmap.pdf`,
+  `Breadth_2D_classification.pdf`) are removed from `results/`.
