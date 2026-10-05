@@ -638,3 +638,24 @@ up as `Methods_original_2026-10-05.md` (md5
 Metadata comes from Crossref, cached in `config/crossref_cache.json`. The
 dataset registry gained the Khaliq, Che and Tabula Sapiens rows, and the
 final gate roles were added for HGCA, Gao, GSE230581 and GSE44433.
+
+### 2026-10-05 — Supplementary tissue / cancer breadth annotation
+The plan was frozen before computation (`9c958ee`) and applied once by
+`core_oncofetal/scripts/breadth_annotation.py`.
+
+**Inputs:**
+- Cao 2020 fetal atlas (GSE156793 aggregated tables): 8 organ epithelia.
+- UCSC Toil TCGA + GTEx: 21 carcinomas vs matched normal.
+
+**Results.** All 338 candidates were annotated, with no membership change.
+- Pan-tissue pan-cancer oncofetal genes: 0 of the CIOC, 2 of ECOS-38, 10
+  of the Extended CIOC and 12 of the 338.
+- EREG is intestine-biased fetal and CRC-biased.
+
+**Calibrators.** EPCAM, CDX2 and MKI67 behaved as expected. COL1A2 leaks
+into the Cao epithelial pseudobulks and is caught only by the compartment
+flag, which is disclosed.
+
+**Records.** New DATA datasets were registered with `link.md` files. Cao
+and Toil were added to the dataset registry and the references (14 dataset
+references). Per-gene outputs are restricted.

@@ -14484,6 +14484,735 @@
   "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
   "volume": "526"
  },
+ "10.1038/nbt.3772": {
+  "DOI": "10.1038/nbt.3772",
+  "ISSN": [
+   "1087-0156",
+   "1546-1696"
+  ],
+  "URL": "https://doi.org/10.1038/nbt.3772",
+  "alternative-id": [
+   "BFnbt3772"
+  ],
+  "assertion": [
+   {
+    "group": {
+     "label": "Article History",
+     "name": "ArticleHistory"
+    },
+    "label": "First Online",
+    "name": "first_online",
+    "order": 1,
+    "value": "11 April 2017"
+   },
+   {
+    "group": {
+     "label": "Competing interests",
+     "name": "EthicsHeading"
+    },
+    "name": "Ethics",
+    "order": 1,
+    "value": "The authors received support from AWS, Microsoft, and Google."
+   }
+  ],
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Vivian",
+    "given": "John",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Rao",
+    "given": "Arjun Arkal",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Nothaft",
+    "given": "Frank Austin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Ketchum",
+    "given": "Christopher",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Armstrong",
+    "given": "Joel",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-5828-047X",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Novak",
+    "given": "Adam",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Pfeil",
+    "given": "Jacob",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Narkizian",
+    "given": "Jake",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Deran",
+    "given": "Alden D",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Musselman-Brown",
+    "given": "Audrey",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Schmidt",
+    "given": "Hannes",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Amstutz",
+    "given": "Peter",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Craft",
+    "given": "Brian",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Goldman",
+    "given": "Mary",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Rosenbloom",
+    "given": "Kate",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Cline",
+    "given": "Melissa",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "O'Connor",
+    "given": "Brian",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Hanna",
+    "given": "Megan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Birger",
+    "given": "Chet",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kent",
+    "given": "W James",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Patterson",
+    "given": "David A",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Joseph",
+    "given": "Anthony D",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhu",
+    "given": "Jingchun",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zaranek",
+    "given": "Sasha",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0936-0753",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Getz",
+    "given": "Gad",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Haussler",
+    "given": "David",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Paten",
+    "given": "Benedict",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Nature Biotechnology"
+  ],
+  "content-domain": {
+   "crossmark-restriction": false,
+   "domain": [
+    "link.springer.com"
+   ]
+  },
+  "created": {
+   "date-parts": [
+    [
+     2017,
+     4,
+     11
+    ]
+   ],
+   "date-time": "2017-04-11T11:26:35Z",
+   "timestamp": 1491909995000
+  },
+  "deposited": {
+   "date-parts": [
+    [
+     2023,
+     5,
+     18
+    ]
+   ],
+   "date-time": "2023-05-18T14:35:34Z",
+   "timestamp": 1684420534000
+  },
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     5
+    ]
+   ],
+   "date-time": "2026-10-05T11:05:28Z",
+   "timestamp": 1791198328587,
+   "version": "4.1.0"
+  },
+  "is-referenced-by-count": 1221,
+  "issn-type": [
+   {
+    "type": "print",
+    "value": "1087-0156"
+   },
+   {
+    "type": "electronic",
+    "value": "1546-1696"
+   }
+  ],
+  "issue": "4",
+  "issued": {
+   "date-parts": [
+    [
+     2017,
+     4
+    ]
+   ]
+  },
+  "journal-issue": {
+   "issue": "4",
+   "published-print": {
+    "date-parts": [
+     [
+      2017,
+      4
+     ]
+    ]
+   }
+  },
+  "language": "en",
+  "license": [
+   {
+    "URL": "http://www.springer.com/tdm",
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "start": {
+     "date-parts": [
+      [
+       2017,
+       4,
+       1
+      ]
+     ],
+     "date-time": "2017-04-01T00:00:00Z",
+     "timestamp": 1491004800000
+    }
+   }
+  ],
+  "link": [
+   {
+    "URL": "http://www.nature.com/articles/nbt.3772.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "http://www.nature.com/articles/nbt.3772",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "http://www.nature.com/doifinder/10.1038/nbt.3772",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   },
+   {
+    "URL": "http://www.nature.com/articles/nbt.3772.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "member": "297",
+  "original-title": [],
+  "page": "314-316",
+  "prefix": "10.1038",
+  "published": {
+   "date-parts": [
+    [
+     2017,
+     4
+    ]
+   ]
+  },
+  "published-online": {
+   "date-parts": [
+    [
+     2017,
+     4,
+     11
+    ]
+   ]
+  },
+  "published-print": {
+   "date-parts": [
+    [
+     2017,
+     4
+    ]
+   ]
+  },
+  "publisher": "Springer Science and Business Media LLC",
+  "reference": [
+   {
+    "DOI": "10.1038/ng.2764",
+    "author": "JN Weinstein",
+    "doi-asserted-by": "publisher",
+    "first-page": "1113",
+    "journal-title": "Nat. Genet.",
+    "key": "BFnbt3772_CR1",
+    "unstructured": "Weinstein, J.N. et al. Nat. Genet. 45, 1113\u20131120 (2013).",
+    "volume": "45",
+    "year": "2013"
+   },
+   {
+    "DOI": "10.1093/database/bar026",
+    "doi-asserted-by": "publisher",
+    "key": "BFnbt3772_CR2",
+    "unstructured": "Zhang, J. et al. Database. \n                    http://dx.doi.org/10.1093/database/bar026\n                    \n                   (2011)"
+   },
+   {
+    "DOI": "10.1016/S0140-6736(14)62453-3",
+    "author": "N Siva",
+    "doi-asserted-by": "publisher",
+    "first-page": "103",
+    "journal-title": "Lancet",
+    "key": "BFnbt3772_CR3",
+    "unstructured": "Siva, N. Lancet 385, 103\u2013104 (2015).",
+    "volume": "385",
+    "year": "2015"
+   },
+   {
+    "DOI": "10.1101/gr.107524.110",
+    "author": "A McKenna",
+    "doi-asserted-by": "publisher",
+    "first-page": "1297",
+    "journal-title": "Genome Res.",
+    "key": "BFnbt3772_CR4",
+    "unstructured": "McKenna, A. et al. Genome Res. 20, 1297\u20131303 (2010).",
+    "volume": "20",
+    "year": "2010"
+   },
+   {
+    "key": "BFnbt3772_CR5",
+    "unstructured": "UNC Bioinformatics. TCGA mRNA-seq pipeline for UNC data. \n                    https://webshare.bioinf.unc.edu/public/mRNAseq_TCGA/UNC_mRNAseq_summary.pdf\n                    \n                   (2013)."
+   },
+   {
+    "DOI": "10.1145/2443416.2443417",
+    "author": "M Albrecht",
+    "doi-asserted-by": "publisher",
+    "key": "BFnbt3772_CR6",
+    "unstructured": "Albrecht, M., Michael, A., Patrick, D., Peter, B. & Douglas, T. in Proceedings of the 1st ACM SIGMOD Workshop on Scalable Workflow Execution Engines and Technologies (SWEET '12) 1. ACM (Association of Computing Machinery. \n                    http://dx.doi.org/10.1145/2443416.2443417\n                    \n                   (2012).",
+    "volume-title": "Proceedings of the 1st ACM SIGMOD Workshop on Scalable Workflow Execution Engines and Technologies",
+    "year": "2012"
+   },
+   {
+    "author": "E Bernhardsson",
+    "key": "BFnbt3772_CR7",
+    "unstructured": "Bernhardsson, E. & Frieder, E. Luigi. Github \n                    https://github.com/spotify/luigi\n                    \n                   (2016).",
+    "volume-title": "Github",
+    "year": "2016"
+   },
+   {
+    "DOI": "10.1186/gb-2010-11-8-r86",
+    "author": "J Goecks",
+    "doi-asserted-by": "publisher",
+    "first-page": "R86",
+    "journal-title": "Genome Biol.",
+    "key": "BFnbt3772_CR8",
+    "unstructured": "Goecks, J., Nekrutenko, A. & Taylor, J. Genome Biol. 11, R86 (2010).",
+    "volume": "11",
+    "year": "2010"
+   },
+   {
+    "key": "BFnbt3772_CR9",
+    "unstructured": "UCSC. Xena \n                    http://xena.ucsc.edu\n                    \n                   (2016)."
+   },
+   {
+    "author": "P Amstutz",
+    "key": "BFnbt3772_CR10",
+    "unstructured": "Amstutz, P. Common workflow language. Github \n                    https://github.com/common-workflow-language/common-workflow-language\n                    \n                   (2016).",
+    "volume-title": "Github",
+    "year": "2016"
+   },
+   {
+    "author": "S Frazer",
+    "key": "BFnbt3772_CR11",
+    "unstructured": "Frazer, S. Workflow description language. Github \n                    https://github.com/broadinstitute/wdl\n                    \n                   (2014).",
+    "volume-title": "Github",
+    "year": "2014"
+   },
+   {
+    "author": "J Vivian",
+    "key": "BFnbt3772_CR12",
+    "unstructured": "Vivian, J. Toil scripts. Github \n                    https://github.com/BD2KGenomics/toil-scripts/tree/master/src/toil_scripts\n                    \n                   (2016).",
+    "volume-title": "Github",
+    "year": "2016"
+   },
+   {
+    "key": "BFnbt3772_CR13",
+    "unstructured": "Apache Software Foundation. Apache Spark \n                    http://spark.apache.org/\n                    \n                   (2017)."
+   },
+   {
+    "key": "BFnbt3772_CR14",
+    "unstructured": "Massie, M. et al. ADAM: genomics formats and processing patterns for cloud scale computing. University of California, Berkeley, Technical Report No. UCB/EECS-2013-207 (2013)."
+   },
+   {
+    "DOI": "10.1109/CCGRID.2001.923173",
+    "author": "W Gentzsch",
+    "doi-asserted-by": "publisher",
+    "first-page": "35",
+    "key": "BFnbt3772_CR15",
+    "unstructured": "Gentzsch, W. in Proceedings First IEEE/ACM International Symposium on Cluster Computing and the Grid 35\u201336 \n                    http://dx.doi.org/10.1109/ccgrid.2001.923173\n                    \n                   (IEEE, 2001).",
+    "volume-title": "Proceedings First IEEE/ACM International Symposium on Cluster Computing and the Grid",
+    "year": "2001"
+   },
+   {
+    "author": "AB Yoo",
+    "first-page": "44",
+    "key": "BFnbt3772_CR16",
+    "unstructured": "Yoo, A.B., Jette, M.A. & Mark, G. in Lecture Notes in Computer Science 44\u201360 (2003) Springer, Berlin, Heidelberg.",
+    "volume-title": "Lecture Notes in Computer Science",
+    "year": "2003"
+   },
+   {
+    "key": "BFnbt3772_CR17",
+    "unstructured": "Apache Software Foundation. Apache Mesos \n                    http://mesos.apache.org/"
+   },
+   {
+    "DOI": "10.1126/science.aaa0355",
+    "doi-asserted-by": "crossref",
+    "key": "BFnbt3772_CR18",
+    "unstructured": "GTEx Consortium. Science 348, 648\u2013660 (2015)."
+   },
+   {
+    "DOI": "10.1093/bioinformatics/bts635",
+    "author": "A Dobin",
+    "doi-asserted-by": "publisher",
+    "first-page": "15",
+    "journal-title": "Bioinformatics",
+    "key": "BFnbt3772_CR19",
+    "unstructured": "Dobin, A. et al. Bioinformatics 29, 15\u201321 (2013).",
+    "volume": "29",
+    "year": "2013"
+   },
+   {
+    "DOI": "10.1186/1471-2105-12-323",
+    "author": "B Li",
+    "doi-asserted-by": "publisher",
+    "first-page": "323",
+    "journal-title": "BMC Bioinformatics",
+    "key": "BFnbt3772_CR20",
+    "unstructured": "Li, B. & Dewey, C.N. BMC Bioinformatics 12, 323 (2011).",
+    "volume": "12",
+    "year": "2011"
+   },
+   {
+    "DOI": "10.1038/nbt.3519",
+    "author": "NL Bray",
+    "doi-asserted-by": "publisher",
+    "first-page": "525",
+    "journal-title": "Nat. Biotechnol.",
+    "key": "BFnbt3772_CR21",
+    "unstructured": "Bray, N.L., Pimentel, H., Melsted, P. & Pachter, L. Nat. Biotechnol. 34, 525\u2013527 (2016).",
+    "volume": "34",
+    "year": "2016"
+   },
+   {
+    "DOI": "10.1038/clpt.2009.68",
+    "author": "AD Barker",
+    "doi-asserted-by": "publisher",
+    "first-page": "97",
+    "journal-title": "Clin. Pharmacol. Ther.",
+    "key": "BFnbt3772_CR22",
+    "unstructured": "Barker, A.D. et al. Clin. Pharmacol. Ther. 86, 97\u2013100 (2009).",
+    "volume": "86",
+    "year": "2009"
+   },
+   {
+    "DOI": "10.1101/gr.229102",
+    "author": "WJ Kent",
+    "doi-asserted-by": "publisher",
+    "first-page": "996",
+    "journal-title": "Genome Res.",
+    "key": "BFnbt3772_CR23",
+    "unstructured": "Kent, W.J. et al. Genome Res. 12, 996\u20131006 (2002).",
+    "volume": "12",
+    "year": "2002"
+   }
+  ],
+  "reference-count": 23,
+  "references-count": 23,
+  "relation": {
+   "has-preprint": [
+    {
+     "asserted-by": "object",
+     "id": "10.1101/062497",
+     "id-type": "doi"
+    }
+   ]
+  },
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/nbt.3772"
+   }
+  },
+  "score": 1,
+  "short-container-title": [
+   "Nat Biotechnol"
+  ],
+  "short-title": [],
+  "source": "Crossref",
+  "subject": [],
+  "subtitle": [],
+  "title": [
+   "Toil enables reproducible, open source, big biomedical data analyses"
+  ],
+  "type": "journal-article",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "volume": "35"
+ },
  "10.1038/s41421-021-00312-y": {
   "DOI": "10.1038/s41421-021-00312-y",
   "ISSN": [
@@ -40761,6 +41490,1700 @@
   ],
   "type": "journal-article",
   "volume": "352"
+ },
+ "10.1126/science.aba7721": {
+  "DOI": "10.1126/science.aba7721",
+  "ISSN": [
+   "0036-8075",
+   "1095-9203"
+  ],
+  "URL": "https://doi.org/10.1126/science.aba7721",
+  "abstract": "<jats:title>The genomics of human development</jats:title>\n                  <jats:p>\n                    Understanding the trajectory of a developing human requires an understanding of how genes are regulated and expressed. Two papers now present a pooled approach using three levels of combinatorial indexing to examine the single-cell gene expression and chromatin landscapes from 15 organs in fetal samples. Cao\n                    <jats:italic>et al.</jats:italic>\n                    focus on measurements of RNA in broadly distributed cell types and provide insights into organ specificity. Domcke\n                    <jats:italic>et al.</jats:italic>\n                    examined the chromatin accessibility of cells from these organs and identify the regulatory elements that regulate gene expression. Together, these analyses generate comprehensive atlases of early human development.\n                  </jats:p>\n                  <jats:p>\n                    <jats:italic>Science</jats:italic>\n                    , this issue p.\n                    <jats:related-article xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"doi\" related-article-type=\"in-this-issue\" xlink:href=\"10.1126/science.aba7721\">eaba7721</jats:related-article>\n                    , p.\n                    <jats:related-article xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"doi\" related-article-type=\"in-this-issue\" xlink:href=\"10.1126/science.aba7612\">eaba7612</jats:related-article>\n                  </jats:p>",
+  "alternative-id": [
+   "10.1126/science.aba7721"
+  ],
+  "article-number": "eaba7721",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-4097-489X",
+    "affiliation": [
+     {
+      "name": "Department of Genome Sciences, University of Washington School of Medicine, Seattle, WA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Cao",
+    "given": "Junyue",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8398-8389",
+    "affiliation": [
+     {
+      "name": "Department of Pediatrics, University of Washington School of Medicine, Seattle, WA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "O\u2019Day",
+    "given": "Diana R.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1484-6501",
+    "affiliation": [
+     {
+      "name": "Brotman Baty Institute for Precision Medicine, Seattle, WA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Pliner",
+    "given": "Hannah A.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-3997-7436",
+    "affiliation": [
+     {
+      "name": "Department of Pediatrics, University of Rochester Medical Center, Rochester, NY, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Kingsley",
+    "given": "Paul D.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0480-5730",
+    "affiliation": [
+     {
+      "name": "Department of Pediatrics, University of Washington School of Medicine, Seattle, WA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Deng",
+    "given": "Mei",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1635-8675",
+    "affiliation": [
+     {
+      "name": "Department of Genome Sciences, University of Washington School of Medicine, Seattle, WA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Daza",
+    "given": "Riza M.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9416-8685",
+    "affiliation": [
+     {
+      "name": "Brotman Baty Institute for Precision Medicine, Seattle, WA, USA."
+     },
+     {
+      "name": "Center for Data Visualization, Fred Hutchinson Cancer Research Center, Seattle, WA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Zager",
+    "given": "Michael A.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5406-8911",
+    "affiliation": [
+     {
+      "name": "Department of Pediatrics, University of Washington School of Medicine, Seattle, WA, USA."
+     },
+     {
+      "name": "Center for Integrative Brain Research, Seattle Children's Research Institute, Seattle, WA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Aldinger",
+    "given": "Kimberly A.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2847-1149",
+    "affiliation": [
+     {
+      "name": "Department of Genome Sciences, University of Washington School of Medicine, Seattle, WA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Blecher-Gonen",
+    "given": "Ronnie",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4340-3435",
+    "affiliation": [
+     {
+      "name": "Illumina Inc., San Diego, CA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Zhang",
+    "given": "Fan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0583-4683",
+    "affiliation": [
+     {
+      "name": "Human Molecular Genomics Group, Max Planck Institute for Molecular Genetics, Berlin, Germany."
+     },
+     {
+      "name": "Institute of Human Genetics, University of L\u00fcbeck, L\u00fcbeck, Germany."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Spielmann",
+    "given": "Malte",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7324-1049",
+    "affiliation": [
+     {
+      "name": "Department of Pediatrics, University of Rochester Medical Center, Rochester, NY, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Palis",
+    "given": "James",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-9377-028X",
+    "affiliation": [
+     {
+      "name": "Department of Pediatrics, University of Washington School of Medicine, Seattle, WA, USA."
+     },
+     {
+      "name": "Brotman Baty Institute for Precision Medicine, Seattle, WA, USA."
+     },
+     {
+      "name": "Center for Integrative Brain Research, Seattle Children's Research Institute, Seattle, WA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Doherty",
+    "given": "Dan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Illumina Inc., San Diego, CA, USA."
+     }
+    ],
+    "family": "Steemers",
+    "given": "Frank J.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-6762-8407",
+    "affiliation": [
+     {
+      "name": "Department of Pediatrics, University of Washington School of Medicine, Seattle, WA, USA."
+     },
+     {
+      "name": "Brotman Baty Institute for Precision Medicine, Seattle, WA, USA."
+     },
+     {
+      "name": "Center for Integrative Brain Research, Seattle Children's Research Institute, Seattle, WA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Glass",
+    "given": "Ian A.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8105-4347",
+    "affiliation": [
+     {
+      "name": "Department of Genome Sciences, University of Washington School of Medicine, Seattle, WA, USA."
+     },
+     {
+      "name": "Brotman Baty Institute for Precision Medicine, Seattle, WA, USA."
+     },
+     {
+      "name": "Allen Discovery Center for Cell Lineage Tracing, Seattle, WA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Trapnell",
+    "given": "Cole",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1516-1865",
+    "affiliation": [
+     {
+      "name": "Department of Genome Sciences, University of Washington School of Medicine, Seattle, WA, USA."
+     },
+     {
+      "name": "Brotman Baty Institute for Precision Medicine, Seattle, WA, USA."
+     },
+     {
+      "name": "Allen Discovery Center for Cell Lineage Tracing, Seattle, WA, USA."
+     },
+     {
+      "name": "Howard Hughes Medical Institute, Seattle, WA, USA."
+     }
+    ],
+    "authenticated-orcid": true,
+    "family": "Shendure",
+    "given": "Jay",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Science"
+  ],
+  "content-domain": {
+   "crossmark-restriction": false,
+   "domain": []
+  },
+  "created": {
+   "date-parts": [
+    [
+     2020,
+     11,
+     12
+    ]
+   ],
+   "date-time": "2020-11-12T19:05:24Z",
+   "timestamp": 1605207924000
+  },
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     1,
+     15
+    ]
+   ],
+   "date-time": "2024-01-15T18:48:43Z",
+   "timestamp": 1705344523000
+  },
+  "funder": [
+   {
+    "DOI": "10.13039/100000002",
+    "award": [
+     "NICHD R24HD000836"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "NICHD R24HD000836"
+      ]
+     }
+    ],
+    "doi-asserted-by": "publisher",
+    "id": [
+     {
+      "asserted-by": "publisher",
+      "id": "10.13039/100000002",
+      "id-type": "DOI"
+     }
+    ],
+    "name": "National Institutes of Health"
+   },
+   {
+    "DOI": "10.13039/100000011",
+    "doi-asserted-by": "publisher",
+    "id": [
+     {
+      "asserted-by": "publisher",
+      "id": "10.13039/100000011",
+      "id-type": "DOI"
+     }
+    ],
+    "name": "Howard Hughes Medical Institute"
+   },
+   {
+    "DOI": "10.13039/100000052",
+    "award": [
+     "R01 DK119285"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "R01 DK119285"
+      ]
+     }
+    ],
+    "doi-asserted-by": "publisher",
+    "id": [
+     {
+      "asserted-by": "publisher",
+      "id": "10.13039/100000052",
+      "id-type": "DOI"
+     }
+    ],
+    "name": "NIH Office of the Director"
+   },
+   {
+    "DOI": "10.13039/501100001659",
+    "award": [
+     "SP1532/3-1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "SP1532/3-1"
+      ]
+     }
+    ],
+    "doi-asserted-by": "publisher",
+    "id": [
+     {
+      "asserted-by": "publisher",
+      "id": "10.13039/501100001659",
+      "id-type": "DOI"
+     }
+    ],
+    "name": "Deutsche Forschungsgemeinschaft"
+   },
+   {
+    "DOI": "10.13039/501100001659",
+    "award": [
+     "SP1532/4-1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "SP1532/4-1"
+      ]
+     }
+    ],
+    "doi-asserted-by": "publisher",
+    "id": [
+     {
+      "asserted-by": "publisher",
+      "id": "10.13039/501100001659",
+      "id-type": "DOI"
+     }
+    ],
+    "name": "Deutsche Forschungsgemeinschaft"
+   },
+   {
+    "DOI": "10.13039/501100001659",
+    "award": [
+     "SP1532/5-1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "SP1532/5-1"
+      ]
+     }
+    ],
+    "doi-asserted-by": "publisher",
+    "id": [
+     {
+      "asserted-by": "publisher",
+      "id": "10.13039/501100001659",
+      "id-type": "DOI"
+     }
+    ],
+    "name": "Deutsche Forschungsgemeinschaft"
+   },
+   {
+    "award": [
+     "Allen Discovery Center grant"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "Allen Discovery Center grant"
+      ]
+     }
+    ],
+    "name": "Paul G. Allen Frontiers Foundation"
+   },
+   {
+    "name": "Brotman Baty Institute for Precision Medicine"
+   },
+   {
+    "name": "Brotman Baty Institute for Precision Medicine"
+   },
+   {
+    "award": [
+     "Allen Discovery Center grant"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "Allen Discovery Center grant"
+      ]
+     }
+    ],
+    "name": "Paul G. Allen Frontiers Foundation"
+   }
+  ],
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     4
+    ]
+   ],
+   "date-time": "2026-10-04T20:19:19Z",
+   "timestamp": 1791145159815,
+   "version": "4.1.0"
+  },
+  "is-referenced-by-count": 800,
+  "issn-type": [
+   {
+    "type": "print",
+    "value": "0036-8075"
+   },
+   {
+    "type": "electronic",
+    "value": "1095-9203"
+   }
+  ],
+  "issue": "6518",
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     11,
+     13
+    ]
+   ]
+  },
+  "journal-issue": {
+   "issue": "6518",
+   "published-print": {
+    "date-parts": [
+     [
+      2020,
+      11,
+      13
+     ]
+    ]
+   }
+  },
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://syndication.highwire.org/content/doi/10.1126/science.aba7721",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://www.science.org/doi/pdf/10.1126/science.aba7721",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "member": "221",
+  "original-title": [],
+  "prefix": "10.1126",
+  "published": {
+   "date-parts": [
+    [
+     2020,
+     11,
+     13
+    ]
+   ]
+  },
+  "published-print": {
+   "date-parts": [
+    [
+     2020,
+     11,
+     13
+    ]
+   ]
+  },
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "reference": [
+   {
+    "DOI": "10.1126/science.aag0053",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_2_2"
+   },
+   {
+    "DOI": "10.1002/dvdy.22316",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_3_2"
+   },
+   {
+    "key": "e_1_3_2_4_2",
+    "unstructured": "J. E. Jirasek An Atlas of the Human Embryo and Fetus: A Photographic Review of Human Prenatal Development (CRC Press 2000)."
+   },
+   {
+    "DOI": "10.1086/514346",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_5_2"
+   },
+   {
+    "DOI": "10.1056/NEJMra1114194",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_6_2"
+   },
+   {
+    "DOI": "10.1086/381053",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_7_2"
+   },
+   {
+    "DOI": "10.1038/gim.2018.17",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_8_2"
+   },
+   {
+    "DOI": "10.1073/pnas.1507125112",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_9_2"
+   },
+   {
+    "DOI": "10.1186/s13059-019-1906-x",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_10_2"
+   },
+   {
+    "DOI": "10.1242/dev.152561",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_11_2"
+   },
+   {
+    "DOI": "10.1038/s41586-019-0969-x",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_12_2"
+   },
+   {
+    "DOI": "10.1126/science.aba7612",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_13_2"
+   },
+   {
+    "DOI": "10.1038/nmeth.3629",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_14_2"
+   },
+   {
+    "DOI": "10.21105/joss.00861",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_15_2"
+   },
+   {
+    "DOI": "10.1016/j.cell.2019.05.031",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_16_2"
+   },
+   {
+    "DOI": "10.1016/j.cell.2018.05.012",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_17_2"
+   },
+   {
+    "DOI": "10.1126/science.aam8999",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_18_2"
+   },
+   {
+    "DOI": "10.1126/science.aam8940",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_19_2"
+   },
+   {
+    "DOI": "10.1126/science.aaq1723",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_20_2"
+   },
+   {
+    "DOI": "10.1016/j.cels.2018.11.005",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_21_2"
+   },
+   {
+    "DOI": "10.1002/cpbi.5",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_22_2"
+   },
+   {
+    "DOI": "10.1016/B978-1-4832-8363-0.50242-1",
+    "doi-asserted-by": "crossref",
+    "key": "e_1_3_2_23_2",
+    "unstructured": "G. Teitelman H. Baker T. H. Joh D. J. Reis in Catecholamines: Basic and Clinical Frontiers E. Usdin I. J. Kopin J. Barchas Eds. (Pergamon 1979) pp. 794\u2013796."
+   },
+   {
+    "DOI": "10.1101/423830",
+    "doi-asserted-by": "crossref",
+    "key": "e_1_3_2_24_2",
+    "unstructured": "Y. Lu W. Yi Q. Wu S. Zhong Z. Zuo F. Zhao M. Zhang N. Tsai Y. Zhuo S. He J. Zhang X. Duan X. Wang T. Xue Single-cell RNA-seq analysis maps the development of human fetal retina. bioRxiv 423830 [Preprint]. 23 September 2018. 10.1101/423830"
+   },
+   {
+    "DOI": "10.1093/nar/gkw1099",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_25_2"
+   },
+   {
+    "key": "e_1_3_2_26_2",
+    "unstructured": "Gene_Cryab (2020); www.ncbi.nlm.nih.gov/gene/12955."
+   },
+   {
+    "key": "e_1_3_2_27_2",
+    "unstructured": "CRBB3_HUMAN UniProt accession no. P26998; www.uniprot.org/uniprot/P26998."
+   },
+   {
+    "key": "e_1_3_2_28_2",
+    "unstructured": "K1C12_HUMAN UniProt accession no. Q99456; www.uniprot.org/uniprot/Q99456."
+   },
+   {
+    "DOI": "10.1038/s41586-018-0590-4",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_29_2"
+   },
+   {
+    "DOI": "10.1371/journal.pbio.1002581",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_30_2"
+   },
+   {
+    "DOI": "10.1242/dev.00866",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_31_2"
+   },
+   {
+    "DOI": "10.1016/S1471-4906(01)01936-6",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_32_2"
+   },
+   {
+    "DOI": "10.1038/ncb2610",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_33_2"
+   },
+   {
+    "DOI": "10.1016/j.celrep.2019.01.079",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_34_2"
+   },
+   {
+    "DOI": "10.1002/ana.10466",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_35_2"
+   },
+   {
+    "DOI": "10.1126/sciadv.aau4788",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_36_2"
+   },
+   {
+    "DOI": "10.1194/jlr.M200205-JLR200",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_37_2"
+   },
+   {
+    "DOI": "10.1126/science.aal3753",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_38_2"
+   },
+   {
+    "DOI": "10.1098/rsob.170108",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_39_2"
+   },
+   {
+    "DOI": "10.1182/blood.v97.2.419",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_40_2"
+   },
+   {
+    "DOI": "10.1165/rcmb.2010-0015RC",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_41_2"
+   },
+   {
+    "DOI": "10.1016/j.exer.2007.01.006",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_42_2"
+   },
+   {
+    "DOI": "10.3389/fncel.2018.00410",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_43_2"
+   },
+   {
+    "DOI": "10.1523/JNEUROSCI.4046-07.2007",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_44_2"
+   },
+   {
+    "DOI": "10.1186/s13072-018-0212-2",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_45_2"
+   },
+   {
+    "DOI": "10.1523/JNEUROSCI.2331-11.2011",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_46_2"
+   },
+   {
+    "DOI": "10.1007/s00401-009-0619-8",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_47_2"
+   },
+   {
+    "DOI": "10.1093/hmg/ddu744",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_48_2"
+   },
+   {
+    "article-title": "Expression analysis of human pterygium shows a predominance of conjunctival and limbal markers and genes associated with cell migration",
+    "author": "Jaworski C. J.",
+    "first-page": "2421",
+    "journal-title": "Mol. Vis.",
+    "key": "e_1_3_2_49_2",
+    "unstructured": "C. J. Jaworski, M. Aryankalayil-John, M. M. Campos, R. N. Fariss, J. Rowsey, N. Agarwalla, T. W. Reid, N. Dushku, C. A. Cox, D. Carper, G. Wistow, Expression analysis of human pterygium shows a predominance of conjunctival and limbal markers and genes associated with cell migration. Mol. Vis. 15, 2421\u20132434 (2009). 19956562",
+    "volume": "15",
+    "year": "2009"
+   },
+   {
+    "DOI": "10.1523/JNEUROSCI.19-02-00783.1999",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_50_2"
+   },
+   {
+    "DOI": "10.1016/j.cell.2018.06.021",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_51_2"
+   },
+   {
+    "DOI": "10.1242/dev.164038",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_52_2"
+   },
+   {
+    "DOI": "10.1016/j.ajhg.2013.11.017",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_53_2"
+   },
+   {
+    "DOI": "10.1074/jbc.M114.629717",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_54_2"
+   },
+   {
+    "DOI": "10.1016/j.mvr.2014.05.006",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_55_2"
+   },
+   {
+    "DOI": "10.1096/fj.04-3019com",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_56_2"
+   },
+   {
+    "DOI": "10.1038/s41586-018-0698-6",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_57_2"
+   },
+   {
+    "DOI": "10.1083/jcb.201503019",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_58_2"
+   },
+   {
+    "DOI": "10.1194/jlr.M066019",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_59_2"
+   },
+   {
+    "DOI": "10.1016/j.ydbio.2005.01.007",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_60_2"
+   },
+   {
+    "article-title": "Who is hematopoietic stem cell: CD34+ or CD34-?",
+    "author": "Pei X.",
+    "first-page": "213",
+    "journal-title": "Int. J. Hematol.",
+    "key": "e_1_3_2_61_2",
+    "unstructured": "X. Pei, Who is hematopoietic stem cell: CD34+ or CD34-? Int. J. Hematol. 70, 213\u2013215 (1999). 10643145",
+    "volume": "70",
+    "year": "1999"
+   },
+   {
+    "DOI": "10.1002/stem.2385",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_62_2"
+   },
+   {
+    "DOI": "10.1083/jcb.200805155",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_63_2"
+   },
+   {
+    "DOI": "10.1073/pnas.1421535112",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_64_2"
+   },
+   {
+    "DOI": "10.1007/s12035-017-0554-y",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_65_2"
+   },
+   {
+    "DOI": "10.1523/JNEUROSCI.0116-13.2013",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_66_2"
+   },
+   {
+    "DOI": "10.1186/1749-8104-4-14",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_67_2"
+   },
+   {
+    "DOI": "10.1007/978-1-4614-3209-8_6",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_68_2"
+   },
+   {
+    "DOI": "10.1186/s40478-015-0203-5",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_69_2"
+   },
+   {
+    "DOI": "10.1038/nature25980",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_70_2"
+   },
+   {
+    "DOI": "10.1016/j.ydbio.2017.02.010",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_71_2"
+   },
+   {
+    "DOI": "10.1242/dev.00816",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_72_2"
+   },
+   {
+    "DOI": "10.1016/j.cub.2018.07.062",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_73_2"
+   },
+   {
+    "DOI": "10.1126/science.aar2131",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_74_2"
+   },
+   {
+    "DOI": "10.1369/jhc.6A7100.2007",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_75_2"
+   },
+   {
+    "DOI": "10.1016/j.celrep.2019.04.052",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_76_2"
+   },
+   {
+    "DOI": "10.1186/s12931-017-0567-0",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_77_2"
+   },
+   {
+    "DOI": "10.1164/rccm.201712-2410OC",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_78_2"
+   },
+   {
+    "DOI": "10.3389/fncel.2018.00467",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_79_2"
+   },
+   {
+    "DOI": "10.1038/s41422-018-0066-y",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_80_2"
+   },
+   {
+    "DOI": "10.1242/jcs.02908",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_81_2"
+   },
+   {
+    "DOI": "10.1016/j.pharmthera.2018.04.008",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_82_2"
+   },
+   {
+    "DOI": "10.1016/j.ydbio.2015.08.010",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_83_2"
+   },
+   {
+    "DOI": "10.1126/science.aau0730",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_84_2"
+   },
+   {
+    "DOI": "10.1016/j.stem.2019.04.004",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_85_2"
+   },
+   {
+    "DOI": "10.1164/rccm.201712-2410OC",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_87_2"
+   },
+   {
+    "DOI": "10.1038/nature24489",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_88_2"
+   },
+   {
+    "DOI": "10.1038/s41467-018-06318-7",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_89_2"
+   },
+   {
+    "DOI": "10.1016/j.immuni.2017.08.008",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_90_2"
+   },
+   {
+    "DOI": "10.1002/jnr.20767",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_91_2"
+   },
+   {
+    "DOI": "10.4049/jimmunol.1301738",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_92_2"
+   },
+   {
+    "DOI": "10.1002/jnr.22182",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_93_2"
+   },
+   {
+    "DOI": "10.1523/JNEUROSCI.0543-12.2012",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_94_2"
+   },
+   {
+    "DOI": "10.1093/jb/mvq034",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_95_2"
+   },
+   {
+    "DOI": "10.1371/journal.pone.0006468",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_96_2"
+   },
+   {
+    "DOI": "10.1155/2015/259627",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_97_2"
+   },
+   {
+    "DOI": "10.1073/pnas.1806635115",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_98_2"
+   },
+   {
+    "DOI": "10.1080/23723556.2015.1127314",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_99_2"
+   },
+   {
+    "DOI": "10.1038/s41592-019-0535-3",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_100_2"
+   },
+   {
+    "DOI": "10.1016/j.cels.2016.08.011",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_101_2"
+   },
+   {
+    "DOI": "10.1186/s13059-019-1795-z",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_102_2"
+   },
+   {
+    "DOI": "10.1038/s41592-019-0619-0",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_103_2"
+   },
+   {
+    "DOI": "10.1016/j.immuni.2012.12.005",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_104_2"
+   },
+   {
+    "DOI": "10.1038/s41598-018-26693-x",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_105_2"
+   },
+   {
+    "DOI": "10.5483/BMBRep.2015.48.12.158",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_106_2"
+   },
+   {
+    "DOI": "10.1126/science.aah4573",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_107_2"
+   },
+   {
+    "DOI": "10.1016/j.immuni.2014.06.013",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_108_2"
+   },
+   {
+    "DOI": "10.1038/s41586-019-1652-y",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_109_2"
+   },
+   {
+    "DOI": "10.1038/s41586-020-2316-7",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_110_2"
+   },
+   {
+    "key": "e_1_3_2_111_2",
+    "unstructured": "Immune cell markers (BD Biosciences); www.bdbiosciences.com/us/s/cdmarkers."
+   },
+   {
+    "key": "e_1_3_2_112_2",
+    "unstructured": "Immune cell markers (proteintech); www.ptglab.com/products/featured-products/markers-for-immune-cells/."
+   },
+   {
+    "key": "e_1_3_2_113_2",
+    "unstructured": "Immune cell marker (Invitrogen eBioscience); www.thermofisher.com/us/en/home/life-science/cell-analysis/cell-analysis-learning-center/cell-analysis-resource-library/ebioscience-resources/human-cd-other-cellular-antigens.html."
+   },
+   {
+    "DOI": "10.4049/jimmunol.186.Supp.158.8",
+    "article-title": "Ligation of CD4 on human blood monocytes triggers macrophage differentiation (158.8)",
+    "author": "Kitchen S.",
+    "doi-asserted-by": "crossref",
+    "first-page": "158.8",
+    "journal-title": "J. Immunol.",
+    "key": "e_1_3_2_114_2",
+    "unstructured": "S. Kitchen, S. Krutzik, B. Levin, V. Rezek, C. Kitchen, J. Zack, Ligation of CD4 on human blood monocytes triggers macrophage differentiation (158.8). J. Immunol. 186, 158.8 (2011); www.jimmunol.org/content/186/1_Supplement/158.8.",
+    "volume": "186",
+    "year": "2011"
+   },
+   {
+    "DOI": "10.1002/eji.201545663",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_115_2"
+   },
+   {
+    "DOI": "10.1111/imm.12697",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_116_2"
+   },
+   {
+    "DOI": "10.1084/jem.20190490",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_117_2"
+   },
+   {
+    "DOI": "10.1101/cshperspect.a011601",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_118_2"
+   },
+   {
+    "DOI": "10.1038/s41598-019-50672-5",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_119_2"
+   },
+   {
+    "DOI": "10.1101/gad.268409.115",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_120_2"
+   },
+   {
+    "DOI": "10.1186/s13059-016-0939-7",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_121_2"
+   },
+   {
+    "DOI": "10.1084/jem.20110447",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_122_2"
+   },
+   {
+    "DOI": "10.1186/s13045-015-0116-6",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_123_2"
+   },
+   {
+    "DOI": "10.1038/nature25741",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_124_2"
+   },
+   {
+    "DOI": "10.1038/s41467-019-10291-0",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_125_2"
+   },
+   {
+    "DOI": "10.5045/br.2017.52.1.10",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_126_2"
+   },
+   {
+    "DOI": "10.1007/978-1-4614-0019-6",
+    "doi-asserted-by": "crossref",
+    "key": "e_1_3_2_127_2",
+    "unstructured": "L. M. Ernst E. D. Ruchelli D. S. Huff Color Atlas of Fetal and Neonatal Histology (Springer 2011)."
+   },
+   {
+    "DOI": "10.1542/peds.17.3.414",
+    "article-title": "Adrenal function in the premature and newborn",
+    "author": "Gardner L. I.",
+    "doi-asserted-by": "crossref",
+    "first-page": "414",
+    "journal-title": "Pediatrics",
+    "key": "e_1_3_2_128_2",
+    "unstructured": "L. I. Gardner, Adrenal function in the premature and newborn. Pediatrics 17, 414\u2013417 (1956). 13297523",
+    "volume": "17",
+    "year": "1956"
+   },
+   {
+    "DOI": "10.1007/978-1-4939-7428-3_10",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_129_2"
+   },
+   {
+    "DOI": "10.1159/000111642",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_130_2"
+   },
+   {
+    "DOI": "10.1186/s13041-018-0383-6",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_131_2"
+   },
+   {
+    "DOI": "10.1038/s41467-018-06684-2",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_132_2"
+   },
+   {
+    "DOI": "10.1038/emboj.2013.200",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_133_2"
+   },
+   {
+    "DOI": "10.3389/fimmu.2018.02033",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_134_2"
+   },
+   {
+    "DOI": "10.1038/s41577-018-0056-9",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_135_2"
+   },
+   {
+    "DOI": "10.1016/j.gene.2012.12.001",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_136_2"
+   },
+   {
+    "DOI": "10.1080/15548627.2015.1017183",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_137_2"
+   },
+   {
+    "DOI": "10.4049/jimmunol.1400574",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_138_2"
+   },
+   {
+    "DOI": "10.1084/jem.20141642",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_139_2"
+   },
+   {
+    "DOI": "10.1016/j.cell.2020.01.015",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_140_2"
+   },
+   {
+    "DOI": "10.1152/ajprenal.00572.2014",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_141_2"
+   },
+   {
+    "DOI": "10.3389/fphys.2018.01234",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_142_2"
+   },
+   {
+    "DOI": "10.1016/j.neuron.2017.03.043",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_143_2"
+   },
+   {
+    "DOI": "10.1083/jcb.200912037",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_144_2"
+   },
+   {
+    "DOI": "10.1194/jlr.M063065",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_145_2"
+   },
+   {
+    "DOI": "10.1038/emboj.2013.85",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_146_2"
+   },
+   {
+    "DOI": "10.1677/ERC-08-0127",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_147_2"
+   },
+   {
+    "DOI": "10.1016/j.devcel.2018.05.009",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_148_2"
+   },
+   {
+    "DOI": "10.1016/j.ydbio.2013.03.018",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_149_2"
+   },
+   {
+    "DOI": "10.7554/eLife.20010",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_150_2"
+   },
+   {
+    "DOI": "10.1371/journal.pone.0052026",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_151_2"
+   },
+   {
+    "DOI": "10.1146/annurev-physiol-021115-105439",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_152_2"
+   },
+   {
+    "DOI": "10.1242/dev.165480",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_153_2"
+   },
+   {
+    "DOI": "10.1177/002215540205000803",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_154_2"
+   },
+   {
+    "DOI": "10.1165/rcmb.2006-0270OC",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_155_2"
+   },
+   {
+    "DOI": "10.1016/S0016-5085(81)80061-3",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_156_2"
+   },
+   {
+    "DOI": "10.1164/rccm.200707-1104OC",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_157_2"
+   },
+   {
+    "DOI": "10.1371/journal.pbio.3000152",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_158_2"
+   },
+   {
+    "DOI": "10.1158/0008-5472.CAN-05-4528",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_159_2"
+   },
+   {
+    "DOI": "10.1128/MCB.00001-06",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_160_2"
+   },
+   {
+    "DOI": "10.1681/ASN.2013121307",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_161_2"
+   },
+   {
+    "DOI": "10.1172/jci.insight.97497",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_162_2"
+   },
+   {
+    "DOI": "10.1016/0028-2243(79)90068-6",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_163_2"
+   },
+   {
+    "key": "e_1_3_2_164_2",
+    "unstructured": "K. Theiler The House Mouse: Atlas of Embryonic Development (Springer 2013)."
+   },
+   {
+    "DOI": "10.3389/fnhum.2016.00566",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_165_2"
+   },
+   {
+    "DOI": "10.1523/JNEUROSCI.4962-14.2015",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_166_2"
+   },
+   {
+    "DOI": "10.1016/j.mcn.2004.04.004",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_167_2"
+   },
+   {
+    "DOI": "10.1016/j.celrep.2017.11.084",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_168_2"
+   },
+   {
+    "DOI": "10.1007/s00281-016-0562-4",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_169_2"
+   },
+   {
+    "DOI": "10.1016/B978-0-12-385991-4.00005-2",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_170_2"
+   },
+   {
+    "DOI": "10.1182/blood-2010-04-282350",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_171_2"
+   },
+   {
+    "DOI": "10.1038/nri3920",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_172_2"
+   },
+   {
+    "DOI": "10.1038/nmeth.4402",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_173_2"
+   },
+   {
+    "DOI": "10.1038/ni.3585",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_174_2"
+   },
+   {
+    "DOI": "10.1172/JCI90604",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_175_2"
+   },
+   {
+    "DOI": "10.1038/8964",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_176_2"
+   },
+   {
+    "DOI": "10.1016/j.cell.2019.11.025",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_177_2"
+   },
+   {
+    "DOI": "10.1126/science.aar4362",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_178_2"
+   },
+   {
+    "DOI": "10.1126/science.aar5780",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_179_2"
+   },
+   {
+    "DOI": "10.1126/science.aan3235",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_180_2"
+   },
+   {
+    "DOI": "10.1242/dev.131235",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_181_2"
+   },
+   {
+    "DOI": "10.1038/s41586-019-0933-9",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_182_2"
+   },
+   {
+    "DOI": "10.1016/j.celrep.2018.08.056",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_183_2"
+   },
+   {
+    "DOI": "10.1038/s41467-019-11266-x",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_184_2"
+   },
+   {
+    "DOI": "10.1038/s41556-018-0105-4",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_185_2"
+   },
+   {
+    "DOI": "10.5489/cuaj.1389",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_186_2"
+   },
+   {
+    "DOI": "10.1016/j.ijscr.2016.05.024",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_187_2"
+   },
+   {
+    "DOI": "10.17504/protocols.io.9yih7ue",
+    "doi-asserted-by": "crossref",
+    "key": "e_1_3_2_188_2",
+    "unstructured": "J. Cao J. Shendure sci-RNA-seq3 protocols.io (2019); https://dx.doi.org/10.17504/protocols.io.9yih7ue."
+   },
+   {
+    "DOI": "10.1016/J.CELS.2018.11.005",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_189_2"
+   },
+   {
+    "DOI": "10.1002/pro.3307",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_190_2"
+   },
+   {
+    "DOI": "10.1038/nmeth.4463",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_191_2"
+   },
+   {
+    "DOI": "10.1038/ng.3119",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_192_2"
+   },
+   {
+    "key": "e_1_3_2_193_2",
+    "unstructured": "J. Cao sci-RNA-seq3 processing pipeline Zenodo (2020); http://doi.org/10.5281/zenodo.4013713."
+   },
+   {
+    "DOI": "10.1038/nmeth.2688",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_194_2"
+   },
+   {
+    "DOI": "10.1093/bioinformatics/btu719",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_195_2"
+   },
+   {
+    "DOI": "10.1093/bioinformatics/bts635",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_196_2"
+   },
+   {
+    "DOI": "10.1093/bioinformatics/btu638",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_197_2"
+   },
+   {
+    "DOI": "10.1038/ncomms14049",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_198_2"
+   },
+   {
+    "DOI": "10.1186/s13059-017-1382-0",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_199_2"
+   },
+   {
+    "DOI": "10.1371/journal.pone.0044973",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_200_2"
+   },
+   {
+    "DOI": "10.18632/oncotarget.14864",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_201_2"
+   },
+   {
+    "DOI": "10.1016/j.stem.2011.08.013",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_202_2"
+   },
+   {
+    "DOI": "10.1111/aji.12471",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_203_2"
+   },
+   {
+    "DOI": "10.1038/srep30507",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_204_2"
+   },
+   {
+    "DOI": "10.1038/nrn.2016.92",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_205_2"
+   },
+   {
+    "DOI": "10.18632/oncotarget.17606",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_206_2"
+   },
+   {
+    "DOI": "10.1002/path.4686",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_207_2"
+   },
+   {
+    "DOI": "10.1093/jnci/djv152",
+    "doi-asserted-by": "publisher",
+    "key": "e_1_3_2_208_2"
+   }
+  ],
+  "reference-count": 206,
+  "references-count": 206,
+  "relation": {},
+  "resource": {
+   "primary": {
+    "URL": "https://www.science.org/doi/10.1126/science.aba7721"
+   }
+  },
+  "score": 1,
+  "short-container-title": [
+   "Science"
+  ],
+  "short-title": [],
+  "source": "Crossref",
+  "subject": [],
+  "subtitle": [],
+  "title": [
+   "A human cell atlas of fetal gene expression"
+  ],
+  "type": "journal-article",
+  "volume": "370"
  },
  "10.1126/science.abl4896": {
   "DOI": "10.1126/science.abl4896",

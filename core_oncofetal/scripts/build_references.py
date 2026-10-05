@@ -40,6 +40,8 @@ DATASETS = [  # (registry Dataset, role in Methods)
     ("Khaliq CRC single-cell atlas", "Gate E and coherence, primary (GSE200997)"),
     ("Che CRC + liver-metastasis atlas", "Gate E and coherence, replication (GSE178318)"),
     ("Tabula Sapiens large intestine", "Compartment annotation only"),
+    ("Cao fetal atlas (sci-RNA-seq3)", "Breadth annotation: fetal tissue breadth (GSE156793)"),
+    ("UCSC Toil TCGA + GTEx", "Breadth annotation: cancer reactivation breadth"),
 ]
 
 

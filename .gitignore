@@ -59,3 +59,6 @@ core_oncofetal/results/ECOS_38.gmt
 core_oncofetal/results/ECOS_38_calls.csv
 core_oncofetal/Methods.md
 core_oncofetal/HANDOFF_RESTRICTED.md
+core_oncofetal/results/Breadth_annotation.xlsx
+core_oncofetal/results/Breadth_CIOC8_heatmap.pdf
+core_oncofetal/results/Breadth_2D_classification.pdf

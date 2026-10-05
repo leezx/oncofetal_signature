@@ -177,3 +177,64 @@ solid-tissue normals of the same type:
     plus the 2D classification plot.
 - **Public:** the code and this plan.
 - **Script:** `core_oncofetal/scripts/breadth_annotation.py`.
+
+## Application (2026-10-05; applied once)
+
+Produced by `scripts/breadth_annotation.py`. Per-gene results are in the
+restricted `results/Breadth_annotation.xlsx`; the figures are
+`Breadth_CIOC8_heatmap.pdf` and `Breadth_2D_classification.pdf`, also
+restricted.
+- **Cancer types:** all 21 prespecified carcinomas were eligible (19 non-CRC).
+- **Fetal organs:** 8 organ epithelia.
+
+**Fetal tissue breadth:**
+
+| Set | Pan-fetal epithelial | Multi-organ | Intestine-biased | Not detected in fetal intestinal epithelium | Not measured |
+|---|---|---|---|---|---|
+| CIOC (8) | 3 | 1 | 1 | 3 | 0 |
+| ECOS-38 | 26 | 5 | 1 | 6 | 0 |
+| Extended CIOC (222) | 159 | 10 | 7 | 43 | 3 |
+| Cross-species (338) | 219 | 19 | 11 | 84 | 5 |
+
+The fetal-intestine compartment flag is set for 96 of the 338 genes.
+
+**Cancer reactivation breadth:**
+
+| Set | Pan-cancer | Multi-cancer | CRC-biased | Not CRC-up in bulk | Not measured |
+|---|---|---|---|---|---|
+| CIOC (8) | 2 | 1 | 1 | 4 | 0 |
+| ECOS-38 | 3 | 11 | 2 | 22 | 0 |
+| Extended CIOC (222) | 12 | 59 | 33 | 115 | 3 |
+| Cross-species (338) | 14 | 82 | 39 | 198 | 5 |
+
+**Combined.** "Pan-tissue pan-cancer oncofetal" genes:
+
+| Set | Genes |
+|---|---|
+| CIOC | 0 |
+| ECOS-38 | 2 |
+| Extended CIOC | 10 |
+| Cross-species 338 | 12 |
+
+**Calibrators (reported, not used for tuning):**
+- **Behaved as expected:**
+  - EPCAM, KRT8 and CDH1 are pan-fetal epithelial and pan-cancer.
+  - CDX2 and CDH17 are intestine-biased fetal.
+  - MKI67 and TOP2A are pan-cancer.
+  - PTPRC is not detected in fetal intestinal epithelium.
+- **COL1A2** (stromal) classifies as "pan-fetal epithelial", because
+  stroma-level expression leaks into Cao epithelial pseudobulks at ≥ 10 CPM.
+  The compartment flag catches it (−6.9).
+  - **The fetal class must therefore be read together with the compartment
+    flag.**
+- **MKI67** is also flagged (erythroblasts).
+- **Cao intestinal "Chromaffin cells"** express CDX2 and EPCAM (probably
+  enteroendocrine cells) but are counted as non-epithelial by the frozen
+  plan. This makes the flag slightly conservative against epithelial genes.
+
+**Interpretation limits:**
+- **The cancer axis measures tumour vs the patient's own tissue type.**
+  Genes that define normal intestinal identity (for example CDX2) are not
+  "CRC-up".
+- **Bulk composition affects the cancer axis.** SPP1's pan-cancer gain, for
+  example, is consistent with myeloid infiltration (Gate E).

@@ -1,6 +1,6 @@
 # Session handoff: oncofetal signature construction
 
-Last updated: 2026-10-05.
+Last updated: 2026-10-05 (breadth annotation added).
 - Branch: `analysis/core-oncofetal`, last commit `bc07628`, pushed.
 - PR: #6, chained on PRs #2 → #3 → #4 → #5, all open for review.
 
@@ -138,6 +138,7 @@ All commands run from the repo root.
 | 9 | `ext_03_gate_e_profile.py` | Blinded compartment profile and calibrators |
 | 10 | `ext_04_ecos38.py` | ECOS-38 (rules v1.0) |
 | 11 | `ext_05_extended_cioc.py` | Extended CIOC v2.0; imports the ext_04 functions; reproduction asserted |
+| 13 | `breadth_annotation.py` | Supplementary breadth annotation (Cao 2020 fetal atlas + Toil TCGA/GTEx); plan `docs/BREADTH_ANNOTATION_PLAN.md` |
 | 12 | `build_references.py` | `results/Methods_references.{md,tsv}` from provenance files, metadata via Crossref (cached) |
 
 **DATA locations** (never committed):
@@ -191,6 +192,24 @@ freeze text rather than changing the rule.
   had no selective power, and CIOC genes fail Gate E).
 - Keep `WORKLOG.md` updated at each substantial checkpoint. Commit messages
   end with the Co-Authored-By line.
+
+## 5b. Supplementary breadth annotation (done 2026-10-05)
+
+`core_oncofetal/docs/BREADTH_ANNOTATION_PLAN.md` was frozen at `9c958ee`
+and applied once.
+- **Fetal tissue breadth:** Cao 2020 GSE156793, 8 organ epithelia,
+  expressed = CPM ≥ 10.
+- **Cancer reactivation breadth:** Toil TCGA + GTEx, 21 carcinomas vs
+  matched normal; "up" = Δ median log2(TPM + 1) ≥ 1 and FDR < 0.05.
+- **Annotation only:** no gate and no membership change.
+- **Reading rule:** read the fetal class together with the fetal-intestine
+  compartment flag. The stromal calibrator COL1A2 is otherwise
+  misclassified as pan-fetal epithelial.
+- **Data:** `DATA/scRNAseq/GSE156793_Cao2020_fetal_atlas/` (aggregated
+  tables only; the 12 GB loom was not downloaded) and
+  `DATA/bulkRNAseq/UCSC_Toil_TCGA_GTEx/`.
+- **Outputs (restricted):** `results/Breadth_annotation.xlsx`,
+  `Breadth_CIOC8_heatmap.pdf` and `Breadth_2D_classification.pdf`.
 
 ## 6. Open items / next steps
 
