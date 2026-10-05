@@ -54,3 +54,6 @@ core_oncofetal/results/Genomewide_fetal_CRC_candidates.gmt
 core_oncofetal/results/Extended_CIOC.xlsx
 core_oncofetal/results/Extended_CIOC.gmt
 core_oncofetal/results/Extended_CIOC_calls.csv
+core_oncofetal/results/ECOS_38.xlsx
+core_oncofetal/results/ECOS_38.gmt
+core_oncofetal/results/ECOS_38_calls.csv

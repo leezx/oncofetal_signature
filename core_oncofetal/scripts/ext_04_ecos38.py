@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
-"""Extended CIOC, step 4: apply the FROZEN rules v1.0
+"""ECOS-38 (Epithelial-Compatible Oncofetal Signature), step 4: apply the FROZEN rules v1.0
 (core_oncofetal/docs/EXTENDED_CIOC_PLAN.md, frozen at commit 4f2d9bd) once.
+Originally named "Extended CIOC"; renamed ECOS-38 at v2.0 (72a98b6), membership
+unchanged. Epithelial-compatible, NOT epithelial-specific; for mixed-cell data.
+The epithelial-only Extended CIOC (v2.0) is ext_05_extended_cioc.py, which
+imports the coherence functions from this module.
 
 Universe: the 338 cross-species fetal–CRC candidates (Level 2a).
 Gate E (Khaliq 2022, Che 2021; profile from ext_03_gate_e_profile.py):
@@ -18,8 +22,8 @@ Tabula Sapiens Large Intestine (adult normal, 10x, raw counts): epithelial vs
   top non-epithelial ratio as annotation only.
 Symbols are resolved to each atlas via HGNC previous symbols (e.g. CCN2 = CTGF).
 Outputs (restricted; git-ignored; mirrored to DATA restricted_joanito/core_oncofetal/):
-  results/Extended_CIOC.xlsx, results/Extended_CIOC.gmt, results/Extended_CIOC_calls.csv
-Usage (repo root): python3 core_oncofetal/scripts/ext_04_extended_cioc.py
+  results/ECOS_38.xlsx, results/ECOS_38.gmt, results/ECOS_38_calls.csv
+Usage (repo root): python3 core_oncofetal/scripts/ext_04_ecos38.py
 """
 import pathlib
 import shutil
@@ -310,16 +314,16 @@ def main():
     pos = (d[[f"{n} T (mean Fisher z)" for n in RAW]] > 0).all(axis=1)
     sig = (d[[f"{n} empirical P" for n in RAW]] < P_CUT).any(axis=1)
     d["Coherence"] = np.where(d["Gate E"] != "PASS", "", np.where(ev & pos & sig, "PASS", "FAIL"))
-    d["Extended CIOC"] = np.where((d["Gate E"] == "PASS") & (d.Coherence == "PASS"), "YES", "")
+    d["ECOS-38"] = np.where((d["Gate E"] == "PASS") & (d.Coherence == "PASS"), "YES", "")
     d["CIOC core"] = ["YES" if g in CIOC else "" for g in d.index]
     d["Tabula Sapiens LI log2 ratio (annotation)"] = ts_annotation(d.index)
     d = d.reset_index()
-    d.to_csv(OUT / "Extended_CIOC_calls.csv", index=False)
-    pd.concat(strat).to_csv(WORK / "Extended_CIOC_coherence_per_stratum.csv.gz", index=False)
+    d.to_csv(OUT / "ECOS_38_calls.csv", index=False)
+    pd.concat(strat).to_csv(WORK / "ECOS_38_coherence_per_stratum.csv.gz", index=False)
     info = pd.concat(info)
-    info.to_csv(WORK / "Extended_CIOC_coherence_strata.csv", index=False)
+    info.to_csv(WORK / "ECOS_38_coherence_strata.csv", index=False)
 
-    ext = d[d["Extended CIOC"] == "YES"].copy()
+    ext = d[d["ECOS-38"] == "YES"].copy()
     ext["_t"] = ext[[f"{n} T (mean Fisher z)" for n in RAW]].mean(axis=1)
     ext = ext.sort_values(["CIOC core", "_t"], ascending=False).drop(columns="_t")
     funnel = pd.DataFrame([
@@ -328,8 +332,8 @@ def main():
         ("Gate E: fail E2 (detectability)", int((d["E2 detectability"] == "FAIL").sum())),
         ("Gate E pass", int((d["Gate E"] == "PASS").sum())),
         ("Coherence: not evaluable in both atlases", int(((d["Gate E"] == "PASS") & ~ev).sum())),
-        ("Coherence pass = Extended CIOC", len(ext)),
-        ("CIOC core genes in Extended CIOC", f"{int(ext['CIOC core'].eq('YES').sum())}/8"),
+        ("Coherence pass = ECOS-38", len(ext)),
+        ("CIOC core genes in ECOS-38", f"{int(ext['CIOC core'].eq('YES').sum())}/8"),
         ("Coherence strata (Khaliq / Che)", " / ".join(str(int((info.dataset == n).sum())) for n in RAW)),
     ], columns=["Step", "Genes"])
 
@@ -350,7 +354,7 @@ def main():
     num = [c for c in d.columns if any(k in c for k in ("ratio", "detect", "Fisher", "P", "FDR"))]
     show = d.copy()
     show[num] = show[num].apply(pd.to_numeric, errors="coerce").round(4)
-    first = ["Gene", "CIOC core", "Extended CIOC", "Gate E", "E1 non-epithelial attribution", "E2 detectability",
+    first = ["Gene", "CIOC core", "ECOS-38", "Gate E", "E1 non-epithelial attribution", "E2 detectability",
              "Coherence"]
     show = show[first + [c for c in show.columns if c not in first]]
     ext_show = show.set_index("Gene").loc[ext.Gene].reset_index()
@@ -358,7 +362,7 @@ def main():
     wb.remove(wb.active)
     thin = Side(style="thin", color="BFBFBF")
     fill = {"PASS": "C6EFCE", "pass": "C6EFCE", "FAIL": "F8CBAD"}
-    for nm, df in (("Extended_CIOC", ext_show), ("All_338_candidates", show), ("Funnel", funnel),
+    for nm, df in (("ECOS_38", ext_show), ("All_338_candidates", show), ("Funnel", funnel),
                    ("Coherence_strata", info), ("Legend", legend)):
         ws = wb.create_sheet(nm)
         for j, c in enumerate(df.columns, 1):
@@ -376,7 +380,7 @@ def main():
                 x.border = Border(top=thin, bottom=thin, left=thin, right=thin)
                 if v in fill:
                     x.fill = PatternFill("solid", start_color=fill[v])
-                if v == "YES" and c in ("Extended CIOC", "CIOC core"):
+                if v == "YES" and c in ("ECOS-38", "CIOC core"):
                     x.fill = PatternFill("solid", start_color="00B050")
                 if isinstance(v, float) and "P" in c.split()[-1:] and v < P_CUT:
                     x.font = Font(name="Arial", size=9, bold=True)
@@ -387,14 +391,14 @@ def main():
         ws.row_dimensions[1].height = 45
         if nm == "All_338_candidates":
             ws.auto_filter.ref = ws.dimensions
-    xl = OUT / "Extended_CIOC.xlsx"
+    xl = OUT / "ECOS_38.xlsx"
     wb.save(xl)
-    gmt = OUT / "Extended_CIOC.gmt"
-    gmt.write_text("\t".join(["EXTENDED_CIOC", "Extended CIOC: 338 cross-species fetal–CRC candidates ∩ Gate E "
+    gmt = OUT / "ECOS_38.gmt"
+    gmt.write_text("\t".join(["ECOS_38", "Epithelial-Compatible Oncofetal Signature (ECOS-38): 338 cross-species fetal–CRC candidates ∩ Gate E "
                               "(epithelial compatibility) ∩ CIOC coherence; frozen rules v1.0 (4f2d9bd); HGNC symbols; "
                               "RESTRICTED (Joanito-derived universe)"] + ext.Gene.tolist()) + "\n")
     RESTRICTED.mkdir(parents=True, exist_ok=True)
-    for f in (xl, gmt, OUT / "Extended_CIOC_calls.csv"):
+    for f in (xl, gmt, OUT / "ECOS_38_calls.csv"):
         shutil.copy2(f, RESTRICTED / f.name)
     print(funnel.to_string(index=False))
 

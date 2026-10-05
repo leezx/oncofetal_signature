@@ -567,3 +567,35 @@ the 8 CIOC genes. Four CIOC genes fail Gate E because they are dominated by
 non-epithelial compartments in tumour tissue; two fail coherence.
 Signature construction ends here. Outputs are restricted (git-ignored,
 mirrored to DATA).
+
+### 2026-10-05 — ECOS-38 rename; Extended CIOC v2.0 (epithelial-only)
+**Rule freeze.** The rule was frozen before computation (`72a98b6`). The
+plan separates state specificity from lineage specificity.
+
+**Rename (membership unchanged).** The v1.0 output "Extended CIOC" (38
+genes) is now **ECOS-38**, the Epithelial-Compatible Oncofetal Signature
+for mixed-cell data.
+- Script renamed: `ext_04_extended_cioc.py` → `ext_04_ecos38.py`.
+- Superseded files are kept unmodified in DATA
+  `restricted_joanito/core_oncofetal/superseded_2026-10-05_v1.0_named_Extended_CIOC/`:
+
+  | File | md5 |
+  |---|---|
+  | `Extended_CIOC_calls.csv` | `553e042ba848f12de3b8b88ced84a479` |
+  | `Extended_CIOC.gmt` | `8a0a56c552239bf0c4dc94fea39b329e` |
+  | `Extended_CIOC.xlsx` | `5ebf7a9f62c961f9a3ce2fbff9d7e196` |
+
+- The ECOS_38 files were produced from these by relabelling only. The 38
+  genes were asserted identical.
+
+**Extended CIOC v2.0** (`ext_05_extended_cioc.py`, applied once).
+- **Rule:** epithelial detectability (≥ 5% in ≥ 1 atlas) and T > 0 in both
+  atlases. Gate E E1 is an annotation only.
+- **Result:** 338 → 222 detectable → 222 Extended CIOC. As recorded before
+  computation, coherence positivity excluded no gene.
+- **Annotations:** 56 genes are high-confidence CIOC-coherent (P < 0.05 in
+  ≥ 1 atlas); 10 reach P < 0.05 in both atlases.
+- **Overlap:** all 8 CIOC genes and all 38 ECOS-38 genes are included.
+- **Reproduction:** the 189 genes tested in v1.0 reproduce exactly.
+
+Signature construction is complete.

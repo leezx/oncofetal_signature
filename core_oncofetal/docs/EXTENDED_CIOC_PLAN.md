@@ -396,3 +396,45 @@ rule.
 
 **Construction ends with this application.** No rule is tuned and no gene
 is rescued or removed.
+
+### Application of v2.0 (2026-10-05; applied once)
+
+Produced by `scripts/ext_05_extended_cioc.py`. Membership is in the
+restricted workbook `Extended_CIOC.xlsx`.
+- **Reproduction:** the coherence functions are imported unchanged from
+  `ext_04_ecos38.py`. All 189 genes tested in v1.0 reproduce T and the
+  empirical P exactly.
+
+**Funnel:**
+
+| Step | Genes |
+|---|---|
+| Cross-species fetal–CRC candidates | 338 |
+| D fail (epithelial detectability < 5% in both atlases) | 116 |
+| D pass | 222 |
+| Not evaluable in both atlases / T ≤ 0 in ≥ 1 atlas | 0 / 0 |
+| **Extended CIOC** | **222** |
+| High-confidence CIOC-coherent (annotation) | 56 |
+| P < 0.05 in both atlases (annotation) | 10 |
+| E1 non-epithelial attribution FAIL (annotation) | 33 |
+
+- All 8 CIOC genes and all 38 ECOS-38 genes are in the Extended CIOC.
+- **The positivity criterion excluded no gene, as recorded before
+  computation.** The Extended CIOC therefore equals the 338 restricted to
+  epithelial-detectable genes, and the high-confidence flag carries the
+  discriminating coherence information.
+- **Relationship between the two branches.** ECOS-38 equals the
+  high-confidence genes with E1 pass. Of the 56 high-confidence genes, 18
+  fail E1. These include CIOC genes that are coherent within epithelium
+  despite strong non-epithelial expression, which supports the
+  state-vs-lineage distinction.
+- **Caveat.** Membership based only on epithelial cells cannot separate
+  true epithelial expression from immune or stromal doublets or ambient RNA
+  in epithelial clusters. Examples are LCK and FYN (T/NK-dominant, and
+  high-confidence) and MYL9 and TPM2 (stromal-dominant). The E1 annotation
+  marks such genes. They are reported, not removed.
+- **Signature construction is complete.** The final objects are:
+  - CIOC Core (8);
+  - the 338 cross-species fetal–CRC candidates (universe);
+  - Extended CIOC v2.0;
+  - ECOS-38.

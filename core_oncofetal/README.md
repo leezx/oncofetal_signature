@@ -50,11 +50,22 @@ genome-wide, removing only the Literature-31 restriction.
   - `Genomewide_fetal_CRC_candidates_calls.csv`
   - `Genomewide_fetal_CRC_candidates.xlsx`
   - `Genomewide_fetal_CRC_candidates.gmt`
-- **Extended CIOC (Level 3):** Level 2 plus Gate E (epithelial
-  compatibility) plus CIOC program coherence in two independent CRC atlases
-  (Khaliq 2022, Che 2021).
-  - Rules v1.0 were frozen (`4f2d9bd`) before computation and applied once
-    by `scripts/ext_01`–`ext_04`.
-  - See `docs/EXTENDED_CIOC_PLAN.md`.
-  - Restricted outputs: `Extended_CIOC.{xlsx,gmt}`,
-    `Extended_CIOC_calls.csv`.
+- **Final objects** (restricted outputs; see `docs/EXTENDED_CIOC_PLAN.md`).
+  Two branches come from the 338 candidates; neither is defined as a
+  subset of the other.
+  - **Extended CIOC v2.0** (`scripts/ext_05_extended_cioc.py`, rule frozen
+    at `72a98b6`):
+    - **Rule:** epithelial detectability, plus positive CIOC coherence
+      within tumour-derived epithelial cells in both Khaliq and Che.
+    - **Use:** cell-resolved epithelial data.
+    - **Outputs:** `Extended_CIOC.{xlsx,gmt}`, `Extended_CIOC_calls.csv`.
+  - **ECOS-38**, the Epithelial-Compatible Oncofetal Signature
+    (`scripts/ext_04_ecos38.py`, rules v1.0 frozen at `4f2d9bd`):
+    - **Rule:** compartment compatibility (Gate E) plus stringent
+      coherence.
+    - **Use:** bulk RNA-seq and unresolved or mixed-cell spatial data.
+    - **Description:** epithelial-compatible, not epithelial-specific.
+    - **Outputs:** `ECOS_38.{xlsx,gmt}`, `ECOS_38_calls.csv`.
+- **State vs lineage specificity:** non-epithelial expression (for example
+  SPP1, CCN2, CLU, RBP1) limits mixed-cell scoring. It is not evidence
+  against epithelial oncofetal-state membership.
