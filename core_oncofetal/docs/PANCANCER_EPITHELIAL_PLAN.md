@@ -1,4 +1,4 @@
-# Pan-cancer epithelial reactivation of CIOC genes: plan (DRAFT; freeze pending the metadata scan)
+# Pan-cancer epithelial reactivation of CIOC genes: plan (FROZEN 2026-10-05, before any statistics)
 
 ## Question (narrow, by review decision)
 
@@ -47,39 +47,119 @@ These Kang datasets overlap data used to build the signatures and are
 
 The CRC column therefore uses only independent Kang CRC datasets.
 
-## Analysis (to be frozen)
+## Metadata scan (counts only; no expression values inspected)
 
-- **Tumour arm:** CNV-inferred malignant epithelial (or parenchymal) cells
-  (`cnv_status` = tumour) from primary-tumour samples. These are "malignant"
-  by the authors' CNV inference; "tumour-derived" is used where no CNV call
-  exists.
-- **Normal arm:** epithelial (or parenchymal) cells with `cnv_status` = normal,
-  from adjacent-normal or healthy-normal samples of the matching organ.
-- **Unit:** patient × arm pseudobulk, pooling that patient's samples. A unit
-  needs ≥ 20 cells. Values are log2(mean CP10k + 1). **Never cell-level
-  tests.**
-- **Evidence tier per cancer type:**
-  - **Tier 1 (within-study):** datasets with both arms (≥ 2 units each).
-    The model is y ~ arm + dataset (OLS), with ≥ 3 units per arm in total.
-  - **Tier 2 (cross-study; weaker):** if Tier 1 is unavailable, tumour
-    units vs normal units of the same organ from any dataset, using y ~ arm
-    and ≥ 3 units per arm.
-  - Otherwise the cancer type is not evaluable.
-- **Reactivation:** arm coefficient ≥ 0.5 and BH FDR < 0.05 within the cancer
-  type, across the gene universe. This matches the CIOC CRC gate threshold.
-- **Breadth:** k / n = the number of evaluable non-CRC carcinomas with
-  reactivation over the number evaluable, reported as a count. No pan-cancer
-  dichotomy is imposed. The CRC column is reported separately, and a
-  Tier 1-only breadth is reported as a sensitivity analysis.
-- **Carcinomas only:** non-epithelial malignancies are excluded (glioma,
-  melanoma, uveal melanoma, lymphoma, myeloma, leukaemia, sarcoma,
-  neuroblastoma, neuroendocrine tumours).
+The extraction processed 103 dataset files and resolved 369 of the 371
+universe genes. LY6A and REG3B have no human orthologue.
 
-## Pending before freeze (metadata only)
+**Vocabulary:**
+- **Tissue:** Tumor, Normal or Metaplasia. Adjacent and healthy normal are
+  not separate labels; healthy normal = Normal samples in normal-only
+  datasets.
+- **Celltype:** a single "Epithelial" label covers all epithelial and
+  parenchymal cells, including hepatocytes and renal epithelium.
+- **cnv_status:** tumor or normal (authors' inferCNVpy call).
+- **Cancer types:** "LC" pools lung cancers, so LUAD and LUSC cannot be
+  separated.
 
-1. Tissue values that define primary tumour, adjacent normal and healthy
-   normal.
-2. Celltype labels counted as epithelial/parenchymal lineage (for example
-   hepatocytes for HCC and renal epithelium for RCC).
-3. The Cancer type → normal organ mapping and the carcinoma list.
-4. Units available per cancer type and tier (counts only).
+## Frozen analysis
+
+**Cells:**
+- **Malignant arm:** Celltype = Epithelial, cnv_status = tumor, Tissue = Tumor.
+  These are CNV-inferred malignant epithelial cells, by the authors'
+  inference.
+- **Normal arm:** Celltype = Epithelial, cnv_status = normal, Tissue = Normal,
+  with Organ_origin matching the cancer type.
+- Metaplasia is excluded, and the six construction-overlapping datasets are
+  excluded (see above).
+
+**Unit.** Patient (within dataset) × arm. Cells are pooled across that
+patient's samples by a cell-weighted mean of the sample pseudobulks. A unit
+needs ≥ 20 cells. The value is y = log2(mean CP10k + 1). No cell-level
+tests are used.
+
+**Carcinomas and matched normal organ:**
+
+| Cancer type | Normal organ |
+|---|---|
+| CRC | Colon |
+| STAD | Stomach |
+| PAAD | Pancreas |
+| HCC | Liver |
+| CHOL | Bile Duct |
+| LC | Lung |
+| BRCA | Breast |
+| RCC | Kidney |
+| OV | Ovary + Fallopian Tube |
+| THCA | Thyroid |
+| PRAD | Prostate |
+| BLCA | Bladder |
+| HNSC | Head and Neck |
+| UCEC | Uterus |
+| SSCC | Skin |
+
+Non-carcinomas are excluded: GBM, LGG, sarcomas, UVM, MEL, NHL, MM, NB,
+ALL, CLL, NET and WILM.
+
+**Tiers, per cancer type:**
+- **Tier 1 (within-study):** datasets with ≥ 2 units in each arm. The model
+  is OLS y ~ arm + dataset on those datasets only, with ≥ 3 units per arm
+  in total. Pairing within patients is not modelled, which is conservative.
+- **Tier 2 (cross-study; weaker):** used if Tier 1 is unavailable. All
+  tumour units vs all normal units of the matched organ, OLS y ~ arm, with
+  ≥ 3 units per arm.
+- Otherwise the cancer type is **not evaluable**.
+
+**Units available:**
+
+| Cancer | Tier | Malignant / normal units |
+|---|---|---|
+| CRC | 1 (`crc_GSE166555`, independent) | 12 / 11 |
+| PAAD | 1 | 12 / 3 |
+| HCC | 1 | 8 / 13 |
+| CHOL | 1 | 3 / 3 |
+| LC | 1 | 47 / 33 |
+| BRCA | 1 | 30 / 22 |
+| RCC | 1 | 13 / 24 |
+| OV | 1 | 6 / 6 |
+| SSCC | 1 | 7 / 10 |
+| STAD | 2 | 4 / 11 |
+| PRAD | 2 | 5 / 6 |
+| BLCA | 2 | 4 / 3 |
+| HNSC | 2 (normals: gingiva, salivary, nasopharynx) | 35 / 11 |
+| THCA | not evaluable | 1 normal unit |
+| UCEC | not evaluable | no normal |
+
+**Reactivation.** The arm coefficient (log2FC) must be ≥ 0.5 with BH
+FDR < 0.05. BH is applied within each cancer type across the resolved gene
+universe (338 + Literature-31 + calibrators). The thresholds match the CIOC
+CRC gate.
+
+**Breadth:**
+- **Primary:** k / n over the 12 evaluable non-CRC carcinomas (8 Tier 1 and
+  4 Tier 2). The CRC column is reported separately.
+- **Sensitivity:** k / n over the 8 Tier 1 non-CRC carcinomas.
+- Counts are reported, with no pan-cancer dichotomy and no
+  "pan-oncofetal" wording.
+- **Descriptive labels:** "CRC-biased" when CRC is reactivated and
+  k / n ≤ 2 / 12; otherwise "reactivated in k/n other carcinomas". These
+  are descriptive only.
+
+**Calibrators** (reported, not used for tuning): EPCAM, KRT8, CDH1, MKI67,
+TOP2A, CEACAM5, CDX2, PTPRC, COL1A2, LYZ.
+
+**Caveats (disclosed):**
+- Kang matrices are log-normalised, so a pseudobulk mean of CP10k is used
+  rather than raw counts.
+- CNV calls come from the authors.
+- Lung cancers are pooled.
+- Tier 2 comparisons are cross-study.
+- Several types have small n (CHOL 3/3, BLCA 4/3, STAD 4).
+
+**Outputs:**
+- **Restricted:** `results/Pancancer_epithelial_annotation.xlsx` (sheets
+  CIOC_8, ECOS_38, Extended_222, Candidates_338, Calibrators, Cancer_types,
+  Legend) and `results/Pancancer_epithelial_CIOC8.pdf`.
+- **Script:** `scripts/pancancer_02_reactivation.py`.
+- **Relationship to the bulk TCGA/GTEx annotation (breadth plan v2):** the
+  bulk annotation is retained as a secondary annotation only.
