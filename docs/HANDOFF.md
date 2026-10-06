@@ -1,6 +1,6 @@
 # Session handoff: oncofetal signature construction
 
-Last updated: 2026-10-05 (pan-cancer breadth annotation v2).
+Last updated: 2026-10-05 (pan-cancer epithelial annotation, Kang 2024).
 - Branch: `analysis/core-oncofetal`, last commit `bc07628`, pushed.
 - PR: #6, chained on PRs #2 → #3 → #4 → #5, all open for review.
 
@@ -138,6 +138,7 @@ All commands run from the repo root.
 | 9 | `ext_03_gate_e_profile.py` | Blinded compartment profile and calibrators |
 | 10 | `ext_04_ecos38.py` | ECOS-38 (rules v1.0) |
 | 11 | `ext_05_extended_cioc.py` | Extended CIOC v2.0; imports the ext_04 functions; reproduction asserted |
+| 14 | `pancancer_01_extract_kang.py`, `pancancer_02_reactivation.py` | Pan-cancer epithelial reactivation (primary annotation; Kang 2024) |
 | 13 | `cancer_breadth_annotation.py` | Pan-cancer breadth annotation v2 (Toil TCGA/GTEx; imports the cancer statistic from `exploratory/breadth_fetal_cancer_v1.py`) |
 | 12 | `build_references.py` | `results/Methods_references.{md,tsv}` from provenance files, metadata via Crossref (cached) |
 
@@ -193,39 +194,39 @@ freeze text rather than changing the rule.
 - Keep `WORKLOG.md` updated at each substantial checkpoint. Commit messages
   end with the Co-Authored-By line.
 
-## 5b. Supplementary annotation: pan-cancer breadth of CIOC reactivation in bulk tumours
+## 5b. Supplementary annotation: pan-cancer epithelial reactivation (primary) and bulk breadth (secondary)
 
-**Current version: v2** (`48cff09`; applied once). See
-`core_oncofetal/docs/BREADTH_ANNOTATION_PLAN.md`.
+**Primary: Kang 2024 pan-cancer tumour–normal scRNA atlas.**
+- **Plan:** `core_oncofetal/docs/PANCANCER_EPITHELIAL_PLAN.md`, frozen at
+  `eaa522b`, plus amendment A1 at `a734402`.
+- **A1:** the frozen log2(CP10k + 1) scale compressed genes below 100 CPM,
+  so it was replaced by log2(CPM + 1). The v1 outputs are archived.
+- **Comparison:** CNV-inferred malignant epithelium vs normal epithelium of
+  the matched organ, using patient pseudobulks. Tier 1 is within-study and
+  Tier 2 is cross-study.
+- **Reactivation:** log2FC ≥ 0.5 and FDR < 0.05.
+- **Breadth:** k/12 non-CRC carcinomas.
+- **Independence:** CRC comes only from the independent `crc_GSE166555`; six
+  construction-overlapping datasets are excluded.
+- **Scripts:** `pancancer_01_extract_kang.py` (extraction) and
+  `pancancer_02_reactivation.py` (statistics).
+- **Data:** DATA `scRNAseq/Kang2024_pancancer_tumor_normal_atlas/` (md5
+  verified); pseudobulks are in
+  `2.PROJECTS/.../2026-10-05_pancancer_epithelial_v0.1/`.
+- **Outputs (restricted):** `Pancancer_epithelial_annotation.xlsx` and
+  `Pancancer_epithelial_CIOC8.pdf`.
 
-**Scope.** Cancer breadth only, as an annotation and not a validation.
-- **Data:** Toil TCGA + GTEx, 21 carcinomas vs matched normal.
-- **Classes:** conditioned on whether CRC bulk itself is up:
-  - CRC-biased (< 25% of 19 other carcinomas up);
-  - multi-cancer (25% to < 50%);
-  - broad (≥ 50%).
-- **CRC bulk down:** "epithelial reactivation not captured by bulk".
-- **CRC bulk n.s.:** "bulk cancer breadth not interpretable".
-- **Qualifier:** ", composition-sensitive" when Gate E E1 fails.
+**Secondary: bulk Toil TCGA + GTEx** (`cancer_breadth_annotation.py`,
+breadth plan v2). It is composition-confounded, so it is reported
+secondarily only.
 
-**Removed.** v1 (`9c958ee`) included fetal tissue breadth from Cao 2020; it
-is now **internal exploration only**. It is not part of the CIOC definition
-and is not presented. The code is
-`core_oncofetal/exploratory/breadth_fetal_cancer_v1.py`; the outputs are in
-DATA restricted `exploratory_breadth_v1/`. Do not use the terms
-"pan-fetal", "pan-tissue" or "pan-oncofetal".
+**Removed: fetal tissue breadth** (Cao). It is internal exploration only and
+is not presented.
 
-**Script:** `core_oncofetal/scripts/cancer_breadth_annotation.py`.
-**Outputs (restricted):** `results/Cancer_breadth_annotation.xlsx` and
-`Cancer_breadth_CIOC8.pdf`.
-
-**Concept to keep.** The CIOC defines oncofetal *identity*:
-- fetal intestinal epithelium > adult intestinal epithelium;
-- conserved in mouse;
-- CRC epithelium > normal epithelium.
-
-It does not define tissue or cancer *specificity*. A member that is broad
-across carcinomas is still a CIOC member.
+**Concept to keep.** The CIOC defines oncofetal *identity*, not tissue or
+cancer specificity. Breadth is measured as tumour vs the organ's own normal
+epithelium, so a gene already high in a normal epithelium cannot be
+reactivated there.
 
 ## 6. Open items / next steps
 

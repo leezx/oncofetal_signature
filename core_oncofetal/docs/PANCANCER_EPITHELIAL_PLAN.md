@@ -174,7 +174,7 @@ this covers most CIOC genes in epithelium.
 
 **How it was found.** The v1 run returned no CIOC gene reactivated in the
 independent CRC dataset. Inspection of the CRC arm means showed, for
-example, TACSTD2 at 0.05 vs 0.80 CP10k (5 vs 80 CPM, about 16-fold) in
+example, one candidate at 0.05 vs 0.80 CP10k (5 vs 80 CPM, about 16-fold) in
 normal vs malignant epithelium, which v1 scored as about +0.8 on its
 compressed scale and as non-significant.
 
@@ -191,3 +191,37 @@ FDR < 0.05), breadth definitions and exclusions are as frozen.
 - The v1 summary is in WORKLOG: no CIOC gene reactivated in independent
   CRC, and at most 2/12 other carcinomas for any CIOC gene.
 - The amended analysis is applied once.
+
+## Application (amendment A1 applied once, 2026-10-05)
+
+Produced by `scripts/pancancer_02_reactivation.py`. Per-gene results are in
+the restricted workbook `results/Pancancer_epithelial_annotation.xlsx`; the
+figure is `Pancancer_epithelial_CIOC8.pdf`.
+- **Evaluable carcinomas:** 13 (CRC + 12 others; 8 non-CRC Tier 1, 4 Tier 2).
+- **Not evaluable:** THCA and UCEC.
+
+**Reactivation counts.** Columns 3–6 count genes by the number of the 12
+non-CRC carcinomas in which they are reactivated.
+
+| Set | Reactivated in independent CRC | 0 others | 1–2 others | 3–5 others | ≥ 6 others |
+|---|---|---|---|---|---|
+| CIOC (8) | 6/8 | 4 | 3 | 1 | 0 |
+| ECOS-38 | 28/38 | 4 | 20 | 13 | 1 |
+| Extended CIOC (222) | 156/222 | 39 | 103 | 74 | 6 |
+| Cross-species (338) | 225/338 | 59 | 170 | 103 | 6 |
+
+**Calibrators:**
+- **Proliferation:** MKI67 and TOP2A are up in CRC and in 5/12 other
+  carcinomas. This is the practical sensitivity ceiling, given small n in
+  several types.
+- **Immune/stromal:** PTPRC and COL1A2 are not up in CRC, but are "up" in
+  2–3 other carcinomas. This is consistent with doublets or ambient RNA in
+  some malignant-epithelial pseudobulks.
+- **Epithelial:** KRT8 is down in CRC.
+
+**Reading.**
+- Breadth is tumour-vs-own-normal-epithelium. A gene already high in the
+  normal epithelium of an organ cannot be "reactivated" there, so low
+  breadth can reflect normal-tissue baselines as well as CRC bias.
+- Counts are reported without a dichotomy.
+- The bulk TCGA/GTEx annotation remains secondary.

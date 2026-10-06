@@ -733,7 +733,7 @@ The plan was frozen at `eaa522b`. The v1 run used y = log2(mean CP10k + 1).
 - Calibrators were odd: KRT8 was "down" in CRC and CEACAM5 was n.s.
 
 **Cause.** A pseudocount of 1 CP10k equals 100 CPM, which compresses genes
-below 100 CPM. Example: TACSTD2 at 5 vs 80 CPM in normal vs malignant CRC
+below 100 CPM. Example: one candidate at 5 vs 80 CPM in normal vs malignant CRC
 epithelium.
 
 **Amendment A1.** y = log2(CPM + 1); nothing else changes. Disclosed in
@@ -741,3 +741,17 @@ epithelium.
 
 **v1 outputs archived** unmodified in DATA restricted
 `pancancer_v1_scale_error/`.
+
+### 2026-10-05 — Pan-cancer epithelial annotation (Kang 2024), amendment A1 applied once
+Amendment A1 (y = log2(CPM + 1)) was applied once by
+`pancancer_02_reactivation.py`. There are 13 evaluable carcinomas: CRC
+(independent `crc_GSE166555`) + 8 Tier 1 + 4 Tier 2. THCA and UCEC are not
+evaluable. Counts by gene set are in `PANCANCER_EPITHELIAL_PLAN.md`; per-gene
+results are restricted.
+
+**Calibrators:** the proliferation markers (MKI67, TOP2A) are up in CRC and
+5/12 others, which is the sensitivity ceiling. PTPRC and COL1A2 appear "up"
+in 2–3 carcinomas, which suggests doublets or ambient RNA.
+
+**Outputs:** `results/Pancancer_epithelial_annotation.xlsx` and
+`Pancancer_epithelial_CIOC8.pdf` (restricted; git-ignored; mirrored).
