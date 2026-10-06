@@ -64,3 +64,5 @@ core_oncofetal/results/Breadth_CIOC8_heatmap.pdf
 core_oncofetal/results/Breadth_2D_classification.pdf
 core_oncofetal/results/Cancer_breadth_annotation.xlsx
 core_oncofetal/results/Cancer_breadth_CIOC8.pdf
+core_oncofetal/results/Pancancer_epithelial_annotation.xlsx
+core_oncofetal/results/Pancancer_epithelial_CIOC8.pdf

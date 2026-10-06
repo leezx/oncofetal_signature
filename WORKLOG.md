@@ -723,3 +723,21 @@ generated references. The draft plan
 `core_oncofetal/docs/PANCANCER_EPITHELIAL_PLAN.md` and the extraction script
 `pancancer_01_extract_kang.py` (data preparation only) were added; the plan
 will be frozen after the metadata scan.
+
+### 2026-10-05 — Pan-cancer epithelial (Kang 2024): v1 run and amendment A1
+The plan was frozen at `eaa522b`. The v1 run used y = log2(mean CP10k + 1).
+
+**v1 result:**
+- No CIOC gene was reactivated in independent CRC (`crc_GSE166555`).
+- No CIOC gene was reactivated in more than 2/12 other carcinomas.
+- Calibrators were odd: KRT8 was "down" in CRC and CEACAM5 was n.s.
+
+**Cause.** A pseudocount of 1 CP10k equals 100 CPM, which compresses genes
+below 100 CPM. Example: TACSTD2 at 5 vs 80 CPM in normal vs malignant CRC
+epithelium.
+
+**Amendment A1.** y = log2(CPM + 1); nothing else changes. Disclosed in
+`PANCANCER_EPITHELIAL_PLAN.md`.
+
+**v1 outputs archived** unmodified in DATA restricted
+`pancancer_v1_scale_error/`.

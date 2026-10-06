@@ -163,3 +163,31 @@ TOP2A, CEACAM5, CDX2, PTPRC, COL1A2, LYZ.
 - **Script:** `scripts/pancancer_02_reactivation.py`.
 - **Relationship to the bulk TCGA/GTEx annotation (breadth plan v2):** the
   bulk annotation is retained as a secondary annotation only.
+
+## Amendment A1: expression scale (frozen 2026-10-05, after the v1 run, before recomputation)
+
+**Problem.** The frozen transform y = log2(mean CP10k + 1) uses a pseudocount
+of 1 CP10k, which equals **100 CPM**. That is about 100× the CPM + 1 scale
+of the edgeR CRC gate, yet the plan states that its thresholds "match the
+CIOC CRC gate". Genes below about 100 CPM are compressed towards zero, and
+this covers most CIOC genes in epithelium.
+
+**How it was found.** The v1 run returned no CIOC gene reactivated in the
+independent CRC dataset. Inspection of the CRC arm means showed, for
+example, TACSTD2 at 0.05 vs 0.80 CP10k (5 vs 80 CPM, about 16-fold) in
+normal vs malignant epithelium, which v1 scored as about +0.8 on its
+compressed scale and as non-significant.
+
+This is a units error, not a threshold choice. It is disclosed as an
+amendment made after seeing the v1 output.
+
+**Change.** y = log2(CPM + 1), with CPM = mean CP10k × 100. Nothing else
+changes: cells, units, tiers, models, thresholds (log2FC ≥ 0.5, BH
+FDR < 0.05), breadth definitions and exclusions are as frozen.
+
+**Record.**
+- The v1 outputs are archived unmodified in DATA restricted
+  `pancancer_v1_scale_error/`, with md5 values in WORKLOG.
+- The v1 summary is in WORKLOG: no CIOC gene reactivated in independent
+  CRC, and at most 2/12 other carcinomas for any CIOC gene.
+- The amended analysis is applied once.
