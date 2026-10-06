@@ -1,0 +1,9 @@
+key	doi	cited_for
+edgeR	10.1093/bioinformatics/btp616	edgeR differential expression
+edgeR_QL_filterByExpr	10.12688/f1000research.8987.2	edgeR quasi-likelihood pipeline and filterByExpr
+BH	10.1111/j.2517-6161.1995.tb02031.x	Benjamini–Hochberg false-discovery rate
+Ensembl	10.1093/nar/gkae1071	Ensembl (release 116) one-to-one orthologues
+HGNC	10.1093/nar/gkac888	HGNC approved and previous gene symbols
+Scanpy	10.1186/s13059-017-1382-0	single-cell processing (Scanpy)
+Leiden	10.1038/s41598-019-41695-z	Leiden clustering
+Tirosh_cellcycle	10.1126/science.aad0501	S and G2/M cell-cycle gene sets

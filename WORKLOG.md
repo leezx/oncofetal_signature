@@ -10,6 +10,7 @@ Chronological append-only record; newest entries are at the bottom.
 | 2. Conserved developmental axis | **invalidated; dataset review required** | [#1](https://github.com/leezx/oncofetal_signature/pull/1) | 706-gene output is provisional and must not be used downstream |
 | 2b. Human benchmark v2 | **closed (review round 3); stage-resolved addendum v1.2 run** | [#3](https://github.com/leezx/oncofetal_signature/pull/3) | H-new2 = tier A (cross-study, not used alone for discovery); bulk H-bulk1/2 = 1 dataset, fail; Visium dropped; no more datasets |
 | 2c. Fetal epithelial state (manual) | **executed; in review** | (this PR) | Gao early-embryo effect; TNFRSF12A pan-fetal-epithelial, stem/TA-enriched detection; no adult arm |
+| Core. Conserved Intestinal Oncofetal Core | **CIOC method v4.0 frozen (last revision)** | [#6](https://github.com/leezx/oncofetal_signature/pull/6) | Literature31 (candidate definition) → H(replicated) ∧ M ∧ C(replicated); v1.0 intersection = stringent sensitivity set; membership restricted (Joanito) |
 | 3. CRC-high axis | **executed (plan v3); in review** | [#2](https://github.com/leezx/oncofetal_signature/pull/2) | CRC_high = Joanito S1 ∩ Pelka S2 passing P; Joanito-derived results restricted (not in git) |
 
 ## 2026-10-01 — Step 2 design frozen (PR #1, commit `3a6c329`)
@@ -426,3 +427,331 @@ Ineligible H-new2 ≥ 9 PCW 16/22, 14 FDR-supported. HGCA ∩ Pikkupeura in vivo
 FDR-supported fetal-high: GJA1, CLU, ANXA6, SPP1, RBP1.
 **Outputs**: `Core_gate_dataset_recovery.csv`, `Core_gate_marker_by_dataset.csv`
 (step2_benchmark_v2/results/tables and marker_summary/results).
+
+## 2026-10-02 — Core oncofetal method v1.0 and gate workbook (`core_oncofetal/`)
+
+**Method**: frozen (`9e150dd`) before CRC-gate values of the developmental
+genes were read. Gates: G1 HGCA ≥ 9 PCW fetal vs adult epithelium; G2
+GSE230581 E16.5 vs adult crypt (mouse in vivo); G3 Joanito malignant vs normal;
+G4 Pelka tumour vs normal; pass = measured, log2FC ≥ 0.5, FDR < 0.05.
+Supportive evidence (H-new2, Gao ≥ 9 W, GSE44433, Pikkupeura cultures, TCGA,
+Joanito sensitivity, Pelka P) reported only.
+**Results**: Developmental Core (G1 ∧ G2) = GJA1, CLU, ANXA6, SPP1, RBP1.
+TNFRSF12A fails G1 and G2. Final Core membership (needs G3) is recorded only
+in the restricted workbook (DATA restricted_joanito/core_oncofetal/).
+**Outputs**: public `core_oncofetal/results/Core_oncofetal_gate_statistics_public.{xlsx,csv}`.
+
+## 2026-10-02 — Core method v2.0: literature-anchored evidence framework
+
+**Why**: review — a four-dataset intersection makes one imperfect human dataset
+(HGCA, strict literature recovery 7/25) an absolute veto, and treated "not
+measured" as fail.
+**Method**: frozen (`ef58297`) before labels were computed. Axes L (curator code
+contains A, or B with ≥ 2 named studies), H (HGCA/H-new2/Gao ≥ 9 W: ≥ 2/3
+fetal-positive and ≥ 1 with log2FC ≥ 0.5 & FDR < 0.05), M (GSE230581), C (Joanito
+and Pelka). Calls pass/fail/not evaluable. v1.0 retained as stringent
+intersection sensitivity set.
+**Public results**: L passes 16/31 (RBP1 fails: its curated provenance has no
+named study). H passes TACSTD2 (via H-new2/Gao), not SPP1 (Gao −0.01, H-new2 not
+measured). TNFRSF12A fails H and M. Final Core labels are restricted (Joanito).
+**Outputs**: 31-gene evidence matrix workbook (public / restricted).
+
+## 2026-10-02 — Core method v3.0 (final framework): literature audit, missing-data rule
+
+**Literature audit**: all 31 genes searched (symbols, mouse symbols, aliases)
+in 60 full texts (55 Step 1 papers + Mustata 2013, Pikkupeura 2023, Elmentaite
+2021, Fernandez-Vallone 2016, Karo-Atar 2022, Vaquero-Siguero 2026); A/B/C
+classified from each study's own data (`config/literature_audit_31.tsv`).
+L passes 20/31 (v2.0: 16): AREG, EREG, EDN1, IL1RN gained a second primary B
+study. RBP1 has no source in the corpus or a Europe PMC search (fails L as
+unsourced). Fumagalli 2025 not located.
+**Mouse axis**: GSE44433 replication rules evaluated (coverage 23/30); both
+direction-based rules would exclude genes on n.s. differences (identities
+restricted; wording corrected 2026-10-05); review
+kept GSE230581 alone (decision disclosed in Methods); GSE44433 contradiction
+flag added to the matrix.
+**H missing data**: NA neither lowers the denominator nor supports; 2
+evaluable → 2/2 required; < 2 → not evaluable.
+**Frozen**: `05f8812` (before labels). Final Core labels are restricted
+(Joanito); public workbook updated.
+
+## 2026-10-02 — CIOC v3.0 permanently frozen; presentation finalised
+
+**Decision (review)**: v3.0 frozen permanently; no further membership
+optimisation. Name: Conserved Intestinal Oncofetal Core (CIOC); claim =
+developmental evidence + malignant epithelial reacquisition, not fetal-specific
+markers.
+**Presentation-only changes (membership unchanged)**: H wording ("concordant
+across ≥ 2 independent comparisons, statistical support in ≥ 1"); H-new2 = statistical-
+support dataset; matrix shows all three human log2FC plus the support source;
+discordance flags (opposite human contrast, significant GSE44433 adult-high,
+significant TCGA tumour-low) in red; v1.0 renamed "sensitivity analysis using
+single-dataset hard intersections". Methods §0/§11/§12 updated; the public
+GJA1/Joanito statement removed. Restricted manuscript text (definition, Methods,
+Results, legends, reviewer answers) in `results/CIOC_manuscript_text.md`
+(git-ignored, mirrored to DATA restricted).
+**Next (not started)**: program coherence of the CIOC in independent scRNA/spatial
+data; relation to revCSC/proCSC, TWEAKR and YAP.
+
+## 2026-10-02 — CIOC method v4.0: literature nominates, data validate
+
+**Why (review)**: the v2.0–v3.0 literature gate re-filtered the same literature
+source that defined the 31 candidates, with a threshold ("A, or B with ≥ 2
+studies") that was never part of the candidate definition.
+**Change**: all 31 = Literature candidate YES; A/B/C classes, primary studies
+and resolved/unresolved status are annotation; Core = H ∧ M ∧ C. Applied to all 31.
+The affected gene was confirmed in the original frozen candidate list
+(`3b08761`, unchanged). **Disclosed**: which gene the change would affect was
+known before v4.0 was approved (identity restricted). [Wording corrected
+2026-10-05 to remove a restricted membership inference.]
+**Outputs**: Methods v4.0; provenance as annotation; public evidence matrix;
+restricted gate funnel workbook (`build_gate_funnel.py`) and manuscript text.
+Final membership restricted (Joanito). Open curation item: unresolved
+nomination sources (see provenance table).
+
+## 2026-10-02 — Data-QC fix: panel genes exempt from genome-wide expression filter
+
+**Bug (review)**: "not measured" mixed orthology gaps, expression-filter removal,
+mapping and zero expression. **Audit** (`feature_audit_31.py`): no mapping failures;
+every non-orthology NA in the gate contrasts came from edgeR `filterByExpr` (e.g.
+GJA1 present in both CRC matrices) or true zero (mouse Sox17, SPRR1A in H-new2);
+Gao MIF zero in every unit (implausible; not_available_in_source).
+**Fix** (frozen `ae871ec` before recomputation): 31 panel genes exempt from the
+filter in all edgeR gate contrasts (any counts kept); zero_expression evaluable
+(no enrichment); fixed NA vocabulary; low-count display flag. Original contrasts
+reproduced (|Δlog2FC| ≤ 0.0005). Gate rules unchanged.
+**Effect (public)**: SPP1 now passes H (H-new2 +7.30); MSLN passes M (+7.18);
+GJA1 evaluable in Pelka (+3.89); LY6A and IL1RN now measured mouse fails. Final
+membership restricted (Joanito).
+
+### 2026-10-02 — CIOC final freeze (wording only)
+**FDR universe confirmed**: rescued panel genes are fitted jointly with the
+genome-wide filtered genes; BH is computed once over that enlarged tested set
+(4–6 extra hypotheses per contrast), not a separate 31-gene BH. Max |ΔFDR| vs
+original ≤ 3.7e-3 (all genes), ≤ 8.6e-4 (panel genes); no panel gate call
+changes. Methods now state the exemption rationale and FDR universe, member
+wording, no-ranking and CRC-compartment statements; NE wording no longer says
+"not measured". No numerical or membership change; membership frozen
+(restricted).
+
+### 2026-10-02 — CIOC-extended (exploratory)
+Frozen gates H, M, C applied genome-wide without the Literature-31
+restriction (`core_oncofetal/scripts/build_extended_core.py`). Universe and
+counts are in the restricted funnel workbook; the CIOC is fully recovered
+inside the extended set. Outputs restricted (Joanito), git-ignored, mirrored
+to DATA.
+
+### 2026-10-02 — Level 2 renaming; Extended CIOC plan
+Review: the genome-wide H∧M∧C set includes strong, concordant non-epithelial
+programs (collagen, smooth-muscle, endothelial, lymphoid genes), so it is
+not an epithelial oncofetal signature. Renamed: H∧M∧C = cross-species
+fetal–CRC candidates; H∧C = human conserved fetal–CRC candidates (Level 2,
+discovery universe, not for scoring). Script renamed to
+`build_genomewide_candidates.py`; old CIOC_extended outputs removed.
+Internal validation: genome-wide search recovers all CIOC genes and no other
+Literature-31 gene. Extended CIOC (Level 3) = Level 2 ∩ Gate E (epithelial
+compatibility) ∩ CIOC coherence, rules to be frozen before computation
+(`core_oncofetal/docs/EXTENDED_CIOC_PLAN.md`). Open decision: independent
+all-compartment CRC atlas (Tabula Sapiens LI is adult-normal only).
+
+### 2026-10-05 — Extended CIOC (construction complete)
+Rules v1.0 frozen before computation (`4f2d9bd`):
+- **Gate E:** E1 fails if the log2 ratio is < −3 in both atlases or < −5 in
+  either; E2 requires detection in ≥ 5% of tumour-derived epithelial cells
+  in ≥ 1 atlas.
+- **Coherence:** within-stratum metacells, leave-one-out CIOC score,
+  cell-cycle adjusted, against 1,000 expression-matched null sets; pass if
+  positive in both atlases and empirical P < 0.05 in ≥ 1.
+
+Applied once: 338 → 189 (Gate E) → 38 Extended CIOC, which includes 2 of
+the 8 CIOC genes. Four CIOC genes fail Gate E because they are dominated by
+non-epithelial compartments in tumour tissue; two fail coherence.
+Signature construction ends here. Outputs are restricted (git-ignored,
+mirrored to DATA).
+
+### 2026-10-05 — ECOS-38 rename; Extended CIOC v2.0 (epithelial-only)
+**Rule freeze.** The rule was frozen before computation (`72a98b6`). The
+plan separates state specificity from lineage specificity.
+
+**Rename (membership unchanged).** The v1.0 output "Extended CIOC" (38
+genes) is now **ECOS-38**, the Epithelial-Compatible Oncofetal Signature
+for mixed-cell data.
+- Script renamed: `ext_04_extended_cioc.py` → `ext_04_ecos38.py`.
+- Superseded files are kept unmodified in DATA
+  `restricted_joanito/core_oncofetal/superseded_2026-10-05_v1.0_named_Extended_CIOC/`:
+
+  | File | md5 |
+  |---|---|
+  | `Extended_CIOC_calls.csv` | `553e042ba848f12de3b8b88ced84a479` |
+  | `Extended_CIOC.gmt` | `8a0a56c552239bf0c4dc94fea39b329e` |
+  | `Extended_CIOC.xlsx` | `5ebf7a9f62c961f9a3ce2fbff9d7e196` |
+
+- The ECOS_38 files were produced from these by relabelling only. The 38
+  genes were asserted identical.
+
+**Extended CIOC v2.0** (`ext_05_extended_cioc.py`, applied once).
+- **Rule:** epithelial detectability (≥ 5% in ≥ 1 atlas) and T > 0 in both
+  atlases. Gate E E1 is an annotation only.
+- **Result:** 338 → 222 detectable → 222 Extended CIOC. As recorded before
+  computation, coherence positivity excluded no gene.
+- **Annotations:** 56 genes are high-confidence CIOC-coherent (P < 0.05 in
+  ≥ 1 atlas); 10 reach P < 0.05 in both atlases.
+- **Overlap:** all 8 CIOC genes and all 38 ECOS-38 genes are included.
+- **Reproduction:** the 189 genes tested in v1.0 reproduce exactly.
+
+Signature construction is complete.
+
+### 2026-10-05 — Methods.md check; generated references
+`core_oncofetal/Methods.md` was checked against the scripts, unit tables and
+provenance files and then corrected. The file is restricted (it contains
+memberships): it is git-ignored and mirrored to DATA. The original is backed
+up as `Methods_original_2026-10-05.md` (md5
+`05122d57eee6ee3aa4abe550cc2f7d80`).
+
+**Corrections:**
+- **Gao comparison:** now stated explicitly as Gao fetal LI ≥ 9 W (7
+  embryos) vs GSE103154 adult LI (P1, P2), cross-platform, effect-only, with
+  a descriptive Welch P.
+- **Unit counts:** given for every gate dataset.
+- **H-new2:** hashtag-sample pseudoreplication and the two retained
+  QC-failed units are disclosed.
+- **9-week breakpoint:** its origin is stated (Gao fetal-only TNFRSF12A).
+- **Statistical support:** disclosure of which dataset supplied it (H-new2
+  alone for 4 CIOC genes and 48 of the 338; Gao alone for 2 of the 338).
+- **Orthology exceptions:** CXADR, LY6A, REG3B and SPRR1A.
+- **FDR universe** for the prespecified panel.
+- **Unresolved provenance:** RBP1, SPRR1A and EPS8L1.
+- **Extended CIOC:** stated that coherence excluded no gene (membership =
+  H/M/C + detectability).
+- **Gate E:** compartments now include mast cells, and the timing of the −5
+  arm is stated.
+- **Che:** chemotherapy disclosed.
+- **Revision history:** disclosed.
+
+**References.** `core_oncofetal/scripts/build_references.py` generates
+`results/Methods_references.{md,tsv}`. Sources:
+- `literature_audit_31.tsv` (A/B/C primary studies);
+- `paper_inventory.tsv` DOIs, plus `config/reference_doi_supplement.tsv`
+  for 6 DOIs resolved by Crossref search with titles verified;
+- `DATASET_REGISTRY.csv`;
+- `config/reference_methods.tsv`.
+
+Metadata comes from Crossref, cached in `config/crossref_cache.json`. The
+dataset registry gained the Khaliq, Che and Tabula Sapiens rows, and the
+final gate roles were added for HGCA, Gao, GSE230581 and GSE44433.
+
+### 2026-10-05 — Supplementary tissue / cancer breadth annotation
+The plan was frozen before computation (`9c958ee`) and applied once by
+`core_oncofetal/scripts/breadth_annotation.py`.
+
+**Inputs:**
+- Cao 2020 fetal atlas (GSE156793 aggregated tables): 8 organ epithelia.
+- UCSC Toil TCGA + GTEx: 21 carcinomas vs matched normal.
+
+**Results.** All 338 candidates were annotated, with no membership change.
+- Pan-tissue pan-cancer oncofetal genes: 0 of the CIOC, 2 of ECOS-38, 10
+  of the Extended CIOC and 12 of the 338.
+- Per-gene classes are in the restricted workbook.
+
+**Calibrators.** EPCAM, CDX2 and MKI67 behaved as expected. COL1A2 leaks
+into the Cao epithelial pseudobulks and is caught only by the compartment
+flag, which is disclosed.
+
+**Records.** New DATA datasets were registered with `link.md` files. Cao
+and Toil were added to the dataset registry and the references (14 dataset
+references). Per-gene outputs are restricted.
+
+### 2026-10-05 — Restricted-membership wording scrub (public docs)
+A leak check found that public docs named genes in ways that implied CIOC,
+338 or Extended CIOC membership, or stated Joanito-derived results.
+
+Affected files:
+- `docs/HANDOFF.md`;
+- `core_oncofetal/README.md`;
+- `EXTENDED_CIOC_PLAN.md` and `BREADTH_ANNOTATION_PLAN.md`;
+- the RBP1 disclosure and GSE44433-consequence passages in
+  `Method_core_oncofetal_validated.md`;
+- WORKLOG lines.
+
+The names were replaced with restricted pointers. The text is clean from
+this commit onward. **Earlier pushed commits still contain these mentions in
+history.** Removing them requires a history rewrite and force-push of
+`analysis/core-oncofetal`; that is the user's decision and has not been done.
+
+### 2026-10-05 — Breadth annotation v2: cancer breadth only
+By review decision, fetal tissue breadth (Cao 2020) is removed from the
+deliverables. Fetal tissue and cancer specificity are not part of the CIOC
+definition, which concerns oncofetal identity. The v1 code was moved to
+`core_oncofetal/exploratory/` and its outputs to DATA restricted
+`exploratory_breadth_v1/`.
+
+**Freeze and application.** The v2 rules were frozen at `48cff09` before
+recomputing and applied once by `cancer_breadth_annotation.py`. The Toil
+statistic and thresholds are unchanged.
+
+**Interpretation.** Classes are conditioned on CRC bulk:
+- CRC bulk up: CRC-biased, multi-cancer or broad;
+- CRC bulk down: "epithelial reactivation not captured by bulk";
+- CRC bulk n.s.: "bulk breadth not interpretable".
+
+", composition-sensitive" is added when Gate E E1 fails.
+
+**Counts.** 199 of the 338 have no interpretable bulk breadth; per-set
+counts are in the plan.
+
+**Other updates:**
+- The restricted Methods.md gained a paragraph on this annotation.
+- The Cao reference was removed from the reference list (13 dataset
+  references).
+- The dataset registry marks Cao as exploratory only.
+
+### 2026-10-05 — Dataset registry update
+`docs/DATASET_REGISTRY.{md,csv,xlsx}` now lists every dataset downloaded for
+the project: 25 datasets plus 3 deferred.
+
+**Added:**
+- Kang 2024 pan-cancer tumour–normal atlas. The Zenodo download is in
+  progress, with md5 recorded; the six construction-overlapping datasets
+  excluded for independence are listed.
+- HGNC mapping (symbol resolution).
+
+**Relabelled:** Toil TCGA + GTEx is now a secondary annotation
+(composition-confounded).
+
+**Other:** a DATA `link.md` was written for Kang, and Kang was added to the
+generated references. The draft plan
+`core_oncofetal/docs/PANCANCER_EPITHELIAL_PLAN.md` and the extraction script
+`pancancer_01_extract_kang.py` (data preparation only) were added; the plan
+will be frozen after the metadata scan.
+
+### 2026-10-05 — Pan-cancer epithelial (Kang 2024): v1 run and amendment A1
+The plan was frozen at `eaa522b`. The v1 run used y = log2(mean CP10k + 1).
+
+**v1 result:**
+- No CIOC gene was reactivated in independent CRC (`crc_GSE166555`).
+- No CIOC gene was reactivated in more than 2/12 other carcinomas.
+- Calibrators were odd: KRT8 was "down" in CRC and CEACAM5 was n.s.
+
+**Cause.** A pseudocount of 1 CP10k equals 100 CPM, which compresses genes
+below 100 CPM. Example: one candidate at 5 vs 80 CPM in normal vs malignant CRC
+epithelium.
+
+**Amendment A1.** y = log2(CPM + 1); nothing else changes. Disclosed in
+`PANCANCER_EPITHELIAL_PLAN.md`.
+
+**v1 outputs archived** unmodified in DATA restricted
+`pancancer_v1_scale_error/`.
+
+### 2026-10-05 — Pan-cancer epithelial annotation (Kang 2024), amendment A1 applied once
+Amendment A1 (y = log2(CPM + 1)) was applied once by
+`pancancer_02_reactivation.py`. There are 13 evaluable carcinomas: CRC
+(independent `crc_GSE166555`) + 8 Tier 1 + 4 Tier 2. THCA and UCEC are not
+evaluable. Counts by gene set are in `PANCANCER_EPITHELIAL_PLAN.md`; per-gene
+results are restricted.
+
+**Calibrators:** the proliferation markers (MKI67, TOP2A) are up in CRC and
+5/12 others, which is the sensitivity ceiling. PTPRC and COL1A2 appear "up"
+in 2–3 carcinomas, which suggests doublets or ambient RNA.
+
+**Outputs:** `results/Pancancer_epithelial_annotation.xlsx` and
+`Pancancer_epithelial_CIOC8.pdf` (restricted; git-ignored; mirrored).

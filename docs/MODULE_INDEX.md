@@ -80,3 +80,10 @@ optional minimum-units argument; default 3, H-new1 uses 2).
 | `step2_fetal_state/scripts/04_plot_fetal_state.R` | unit heatmap; gene by state × age | PDF/PNG + source data |
 | `step2_fetal_state/scripts/run_fetal_state.sh` | run all | complete package |
 
+
+## Core oncofetal
+
+| Module | Purpose | Primary outputs |
+|---|---|---|
+| `core_oncofetal/docs/Method_core_oncofetal_validated.md` | frozen Core method v1.0 (gates, thresholds, supportive evidence, restrictions) | method |
+| `core_oncofetal/scripts/build_core_gates.py` | gate calls for 31 markers; Core and Developmental Core; supportive evidence | full (restricted) + public xlsx/csv |
